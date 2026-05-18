@@ -13,7 +13,8 @@ export const EQUIPEMENTS: GridItem[] = [
         "marque":  "ERBA",
         "desc":  "ERBA XL 200",
         "cat":  "biochimie",
-        "conditionnement":  "200 tests/h"
+        "conditionnement":  "200 tests/h",
+        "image": "/images/equipements/INS00002_ERBA_XL200.png"
     },
     {
         "ref":  "INS00008",
@@ -23,7 +24,8 @@ export const EQUIPEMENTS: GridItem[] = [
         "marque":  "ERBA",
         "desc":  "ERBA XL 640",
         "cat":  "biochimie",
-        "conditionnement":  "400 tests/h"
+        "conditionnement":  "400 tests/h",
+        "image": "/images/equipements/INS00008_ERBA_XL640.png"
     },
     {
         "ref":  "INS00009",
@@ -33,7 +35,8 @@ export const EQUIPEMENTS: GridItem[] = [
         "marque":  "ERBA",
         "desc":  "ERBA XL 1000",
         "cat":  "biochimie",
-        "conditionnement":  "800 tests/h"
+        "conditionnement":  "800 tests/h",
+        "image": "/images/equipements/INS00009_ERBA_XL1000.png"
     },
     {
         "ref":  "INS00014",
@@ -43,7 +46,8 @@ export const EQUIPEMENTS: GridItem[] = [
         "marque":  "ERBA",
         "desc":  "ERBA CHEM-7",
         "cat":  "biochimie",
-        "conditionnement":  "Semi-automatisé"
+        "conditionnement":  "Semi-automatisé",
+        "image": "/images/equipements/INS00014_ERBA_CHEM7.png"
     },
     {
         "ref":  "INS00079",
@@ -53,7 +57,8 @@ export const EQUIPEMENTS: GridItem[] = [
         "marque":  "ERBA",
         "desc":  "ERBA EC 90",
         "cat":  "biochimie",
-        "conditionnement":  "Ionogramme"
+        "conditionnement":  "Ionogramme",
+        "image": "/images/equipements/INS00079_ERBA_EC90.png"
     },
     {
         "label":  "Hématologie",
@@ -67,7 +72,8 @@ export const EQUIPEMENTS: GridItem[] = [
         "marque":  "ERBA",
         "desc":  "ERBA H360",
         "cat":  "hematologie",
-        "conditionnement":  "60 tests/h"
+        "conditionnement":  "60 tests/h",
+        "image": "/images/equipements/INS00077_ERBA_H360.png"
     },
     {
         "ref":  "INS00078",
@@ -77,7 +83,8 @@ export const EQUIPEMENTS: GridItem[] = [
         "marque":  "ERBA",
         "desc":  "ERBA H560",
         "cat":  "hematologie",
-        "conditionnement":  "60 tests/h"
+        "conditionnement":  "60 tests/h",
+        "image": "/images/equipements/INS00078_ERBA_H560.png"
     },
     {
         "ref":  "INS00071",
@@ -87,7 +94,8 @@ export const EQUIPEMENTS: GridItem[] = [
         "marque":  "ERBA",
         "desc":  "ERBA ELITE 580",
         "cat":  "hematologie",
-        "conditionnement":  "80 tests/h"
+        "conditionnement":  "80 tests/h",
+        "image": "/images/equipements/INS00071_ERBA_ELITE580.png"
     },
     {
         "ref":  "INS00087",
@@ -97,7 +105,8 @@ export const EQUIPEMENTS: GridItem[] = [
         "marque":  "ERBA",
         "desc":  "ERBA H7100",
         "cat":  "hematologie",
-        "conditionnement":  "100 tests/h"
+        "conditionnement":  "100 tests/h",
+        "image": "/images/equipements/INS00087_ERBA_H7100.png"
     },
     {
         "label":  "Hémostase",
@@ -111,7 +120,8 @@ export const EQUIPEMENTS: GridItem[] = [
         "marque":  "ERBA",
         "desc":  "ERBA ECL 412",
         "cat":  "hemostase",
-        "conditionnement":  "Semi-automatique"
+        "conditionnement":  "Semi-automatique",
+        "image": "/images/equipements/INS00060_ERBA_ECL412.png"
     },
     {
         "ref":  "INS00070",
@@ -121,7 +131,8 @@ export const EQUIPEMENTS: GridItem[] = [
         "marque":  "ERBA",
         "desc":  "ERBA ECL 760",
         "cat":  "hemostase",
-        "conditionnement":  "Entièrement automatisé"
+        "conditionnement":  "Entièrement automatisé",
+        "image": "/images/equipements/INS00070_ERBA_ECL760.png"
     },
     {
         "label":  "Analyse des Urines",
@@ -135,7 +146,8 @@ export const EQUIPEMENTS: GridItem[] = [
         "marque":  "ERBA",
         "desc":  "LAURA Smart",
         "cat":  "urines",
-        "conditionnement":  "Portable"
+        "conditionnement":  "Portable",
+        "image": "/images/equipements/INS00064_ERBA_LAURA_SMART.png"
     },
     {
         "ref":  "INS00065",
@@ -145,7 +157,8 @@ export const EQUIPEMENTS: GridItem[] = [
         "marque":  "ERBA",
         "desc":  "LAURA XL",
         "cat":  "urines",
-        "conditionnement":  "Combiné"
+        "conditionnement":  "Combiné",
+        "image": "/images/equipements/INS00065_ERBA_LAURA_XL.png"
     },
     {
         "label":  "Chaîne ELISA",
@@ -159,7 +172,8 @@ export const EQUIPEMENTS: GridItem[] = [
         "marque":  "ERBA",
         "desc":  "ERBA LISA WASH",
         "cat":  "elisa",
-        "conditionnement":  "Laveur ELISA"
+        "conditionnement":  "Laveur ELISA",
+        "image": "/images/equipements/52000131_ERBA_LISA_WASH.png"
     },
     {
         "ref":  "52000121",
@@ -169,7 +183,8 @@ export const EQUIPEMENTS: GridItem[] = [
         "marque":  "ERBA",
         "desc":  "ERBA LISA SCAN",
         "cat":  "elisa",
-        "conditionnement":  "Lecteur ELISA"
+        "conditionnement":  "Lecteur ELISA",
+        "image": "/images/equipements/52000121_ERBA_LISA_SCAN.png"
     },
     {
         "label":  "Auto-Immunité",
@@ -183,7 +198,8 @@ export const EQUIPEMENTS: GridItem[] = [
         "marque":  "Generic Assays",
         "desc":  "DOT DIVER 2.0",
         "cat":  "autoimmunite",
-        "conditionnement":  "1-24 échantillons"
+        "conditionnement":  "1-24 échantillons",
+        "image": "/images/equipements/5075_GENERIC_ASSAYS_DOTDIVER2.png"
     },
     {
         "ref":  "4450",
@@ -193,7 +209,8 @@ export const EQUIPEMENTS: GridItem[] = [
         "marque":  "Generic Assays",
         "desc":  "AKIRON NEO",
         "cat":  "autoimmunite",
-        "conditionnement":  "Analyseur IFA"
+        "conditionnement":  "Analyseur IFA",
+        "image": "/images/equipements/4450_MEDIPAN_AKIRON_NEO.png"
     },
     {
         "ref":  "MA01073",
@@ -203,7 +220,8 @@ export const EQUIPEMENTS: GridItem[] = [
         "marque":  "HOB Biotech",
         "desc":  "BioCLIA 1900",
         "cat":  "autoimmunite",
-        "conditionnement":  "75 tests/h"
+        "conditionnement":  "75 tests/h",
+        "image": "/images/equipements/MA01073_HOB_BIOCLIA1900.png"
     },
     {
         "ref":  "MA00502",
@@ -213,7 +231,8 @@ export const EQUIPEMENTS: GridItem[] = [
         "marque":  "HOB Biotech",
         "desc":  "BioCLIA 500",
         "cat":  "autoimmunite",
-        "conditionnement":  "120 tests/h"
+        "conditionnement":  "120 tests/h",
+        "image": "/images/equipements/MA00502_HOB_BIOCLIA500.png"
     },
     {
         "ref":  "MA00243",
@@ -223,6 +242,7 @@ export const EQUIPEMENTS: GridItem[] = [
         "marque":  "HOB Biotech",
         "desc":  "BioCLIA 6500",
         "cat":  "autoimmunite",
-        "conditionnement":  "218 tests/h"
+        "conditionnement":  "218 tests/h",
+        "image": "/images/equipements/MA00243_HOB_BIOCLIA6500.png"
     }
 ];

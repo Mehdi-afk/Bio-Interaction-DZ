@@ -8,6 +8,7 @@
   conditionnement: string;
   description: string;
   testsKit?: string;
+  image?: string;
 };
 
 export type SectionLabel = {

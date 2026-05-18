@@ -2,6 +2,7 @@
 
 import { useState, useMemo, useEffect, useRef } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
+import Image from "next/image";
 import type { GridItem, Product } from "@/src/data/products-reactifs";
 import { useApp } from "@/src/context/AppContext";
 
@@ -114,11 +115,21 @@ function ProductCard({
     >
       {/* Image area */}
       <div
-        className={`flex items-center justify-center text-[42px] shrink-0
-          ${isList ? "w-[120px] min-h-[100px] text-[36px]" : "h-[130px] w-full"}`}
-        style={{ background: bg }}
+        className={`relative flex items-center justify-center shrink-0
+          ${isList ? "w-[120px] min-h-[100px]" : "h-[130px] w-full"}`}
+        style={{ background: product.image ? "#F7F6F2" : bg }}
       >
-        <span style={{ opacity: 0.55 }}>{typeIcon(product.type)}</span>
+        {product.image ? (
+          <Image
+            src={product.image}
+            alt={product.desc}
+            fill
+            className="object-contain p-2"
+            sizes={isList ? "120px" : "300px"}
+          />
+        ) : (
+          <span className="text-[42px]" style={{ opacity: 0.55 }}>{typeIcon(product.type)}</span>
+        )}
       </div>
 
       {/* Body */}
@@ -246,24 +257,23 @@ function ProductPage({
           {/* Gallery */}
           <div className="flex flex-col gap-3">
             <div
-              className="w-full border border-[#E5E3DC] rounded-2xl flex items-center justify-center bg-[#F7F6F2] overflow-hidden max-[900px]:max-w-[400px]"
+              className="relative w-full border border-[#E5E3DC] rounded-2xl flex items-center justify-center bg-[#F7F6F2] overflow-hidden max-[900px]:max-w-[400px]"
               style={{ aspectRatio: "4/3" }}
             >
-              <div className="flex flex-col items-center gap-2">
-                <span className="text-[72px] opacity-45 leading-none">{typeIcon(product.type)}</span>
-                <span className="text-[12px] text-[#A9ADAA] tracking-[0.3px]">Image produit</span>
-              </div>
-            </div>
-            <div className="flex gap-2.5 max-[480px]:hidden">
-              {["Vue 2", "Vue 3", "Vue 4"].map((label) => (
-                <div
-                  key={label}
-                  className="flex-1 border border-dashed border-[#E5E3DC] rounded-[10px] flex items-center justify-center bg-[#F7F6F2] text-[11px] text-[#A9ADAA]"
-                  style={{ aspectRatio: "1" }}
-                >
-                  {label}
+              {product.image ? (
+                <Image
+                  src={product.image}
+                  alt={product.desc}
+                  fill
+                  className="object-contain p-6"
+                  sizes="(max-width: 900px) 90vw, 420px"
+                />
+              ) : (
+                <div className="flex flex-col items-center gap-2">
+                  <span className="text-[72px] opacity-45 leading-none">{typeIcon(product.type)}</span>
+                  <span className="text-[12px] text-[#A9ADAA] tracking-[0.3px]">Image produit</span>
                 </div>
-              ))}
+              )}
             </div>
           </div>
 
