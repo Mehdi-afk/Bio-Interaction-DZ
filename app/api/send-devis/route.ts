@@ -1,10 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
 const RECIPIENT = "messaoudenemehdi8@gmail.com";
 
 export async function POST(req: NextRequest) {
+  const resend = new Resend(process.env.RESEND_API_KEY);
   const { organisme, nom, tel, email, products } = await req.json() as {
     organisme: string;
     nom: string;
