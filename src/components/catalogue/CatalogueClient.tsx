@@ -115,17 +115,16 @@ function ProductCard({
     >
       {/* Image area */}
       <div
-        className={`relative flex items-center justify-center shrink-0
-          ${isList ? "w-[120px] min-h-[100px]" : "h-[130px] w-full"}`}
+        className={`flex items-center justify-center shrink-0 overflow-hidden
+          ${isList ? "w-[120px] h-[100px]" : "h-[130px] w-full"}`}
         style={{ background: product.image ? "#F7F6F2" : bg }}
       >
         {product.image ? (
-          <Image
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
             src={product.image}
             alt={product.desc}
-            fill
-            className="object-contain p-2"
-            sizes={isList ? "120px" : "300px"}
+            className="w-full h-full object-contain p-2"
           />
         ) : (
           <span className="text-[42px]" style={{ opacity: 0.55 }}>{typeIcon(product.type)}</span>
@@ -257,16 +256,15 @@ function ProductPage({
           {/* Gallery */}
           <div className="flex flex-col gap-3">
             <div
-              className="relative w-full border border-[#E5E3DC] rounded-2xl flex items-center justify-center bg-[#F7F6F2] overflow-hidden max-[900px]:max-w-[400px]"
+              className="w-full border border-[#E5E3DC] rounded-2xl flex items-center justify-center bg-[#F7F6F2] overflow-hidden max-[900px]:max-w-[400px]"
               style={{ aspectRatio: "4/3" }}
             >
               {product.image ? (
-                <Image
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
                   src={product.image}
                   alt={product.desc}
-                  fill
-                  className="object-contain p-6"
-                  sizes="(max-width: 900px) 90vw, 420px"
+                  className="w-full h-full object-contain p-6"
                 />
               ) : (
                 <div className="flex flex-col items-center gap-2">
