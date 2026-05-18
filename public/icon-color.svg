@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="BioInteraction Algérie icon">
+  <defs>
+    <clipPath id="flaskInterior">
+      <circle cx="130" cy="140" r="48"></circle>
+    </clipPath>
+  </defs>
+  <g fill="#29A864" stroke="#29A864" stroke-linecap="round" stroke-linejoin="round">
+    <g fill="none" stroke-width="8">
+      <line x1="44" y1="84" x2="83" y2="110"></line>
+      <line x1="186" y1="139" x2="205" y2="138"></line>
+      <line x1="76" y1="186" x2="91" y2="176"></line>
+      <line x1="179" y1="168" x2="195" y2="177"></line>
+    </g>
+    <circle cx="34" cy="78" r="16"></circle>
+    <circle cx="215" cy="138" r="14"></circle>
+    <circle cx="62" cy="198" r="22"></circle>
+    <circle cx="200" cy="180" r="10"></circle>
+    <circle cx="178" cy="26" r="5"></circle>
+    <circle cx="196" cy="40" r="3"></circle>
+    <circle cx="160" cy="34" r="2.4"></circle>
+    <path clip-path="url(#flaskInterior)" stroke="none" d="M 70 150 Q 92 134 120 148 T 195 144 L 195 200 L 70 200 Z"></path>
+    <circle cx="130" cy="140" r="52" fill="none" stroke-width="8"></circle>
+    <g fill="none" stroke-width="8">
+      <line x1="138" y1="89" x2="154" y2="43"></line>
+      <line x1="157" y1="95" x2="173" y2="50"></line>
+      <line x1="146" y1="42" x2="181" y2="52"></line>
+    </g>
+  </g>
+</svg>
