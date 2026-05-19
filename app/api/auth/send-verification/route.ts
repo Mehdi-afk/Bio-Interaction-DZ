@@ -3,7 +3,7 @@ import { Resend } from "resend";
 import { adminAuth } from "@/src/lib/firebase-admin";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
-const FROM   = "BioInteraction <onboarding@resend.dev>";
+const FROM   = "BioInteraction <noreply@biointeractiondz.com>";
 const BASE   = process.env.NEXT_PUBLIC_SITE_URL ?? "https://biointeractiondz.com";
 
 export async function POST(req: NextRequest) {
