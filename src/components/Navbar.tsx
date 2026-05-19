@@ -151,14 +151,22 @@ export default function Navbar() {
                   </svg>
                 </Link>
               )}
-              <div className="flex items-center gap-2 px-3 py-1.5 bg-[#F7F6F2] border border-[#E5E3DC] rounded-[9px]">
-                <span className="w-6 h-6 rounded-full bg-[#29A864] text-white text-[11px] font-bold flex items-center justify-center shrink-0">
-                  {initials}
-                </span>
+              <Link
+                href="/profile"
+                className="flex items-center gap-2 px-3 py-1.5 bg-[#F7F6F2] border border-[#E5E3DC] rounded-[9px] no-underline transition-all duration-150 hover:border-[#29A864]"
+              >
+                {user.photoURL ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img src={user.photoURL} alt="" className="w-6 h-6 rounded-full object-cover shrink-0" />
+                ) : (
+                  <span className="w-6 h-6 rounded-full bg-[#29A864] text-white text-[11px] font-bold flex items-center justify-center shrink-0">
+                    {initials}
+                  </span>
+                )}
                 <span className="text-[13px] font-medium text-[#1B1F1D] max-w-[120px] truncate">
                   {displayName}
                 </span>
-              </div>
+              </Link>
               <button
                 onClick={handleLogout}
                 title="Se déconnecter"
@@ -210,6 +218,12 @@ export default function Navbar() {
                 </span>
                 <span className="text-[14px] font-medium text-[#1B1F1D] truncate">{displayName}</span>
               </div>
+              <Link
+                href="/profile"
+                className="block px-4 py-3 rounded-lg text-[#1B1F1D] text-[15px] font-medium no-underline transition-colors hover:bg-[#F7F6F2] hover:text-[#29A864]"
+              >
+                Mon profil
+              </Link>
               {isAdmin && (
                 <Link
                   href="/admin"
