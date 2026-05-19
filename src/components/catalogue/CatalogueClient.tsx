@@ -116,15 +116,15 @@ function ProductCard({
       {/* Image area */}
       <div
         className={`flex items-center justify-center shrink-0 overflow-hidden
-          ${isList ? "w-[120px] h-[100px]" : "h-[130px] w-full"}`}
-        style={{ background: product.image ? "#F7F6F2" : bg }}
+          ${isList ? "w-[130px] h-[110px]" : "h-[160px] w-full"}`}
+        style={{ background: product.image ? "#fff" : bg }}
       >
         {product.image ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img
             src={product.image}
             alt={product.desc}
-            className="w-full h-full object-contain p-2"
+            className="w-full h-full object-cover"
           />
         ) : (
           <span className="text-[42px]" style={{ opacity: 0.55 }}>{typeIcon(product.type)}</span>
@@ -264,7 +264,7 @@ function ProductPage({
                 <img
                   src={product.image}
                   alt={product.desc}
-                  className="w-full h-full object-contain p-6"
+                  className="w-full h-full object-contain p-4"
                 />
               ) : (
                 <div className="flex flex-col items-center gap-2">
