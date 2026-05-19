@@ -53,7 +53,7 @@ export default function Footer() {
           <div className="text-white">
             <span
               className="block text-[20px] text-white mb-3"
-              style={{ fontFamily: "var(--font-dm-serif, 'DM Serif Display', serif)" }}
+              style={{ fontFamily: "var(--font-dm-serif, 'Geist', sans-serif)" }}
             >
               bioInteraction
             </span>
@@ -66,7 +66,7 @@ export default function Footer() {
 
           {/* Catalogue */}
           <div>
-            <h4 className={colHeadCls}>Catalogue</h4>
+            <h4 className={colHeadCls}>Nos Produit</h4>
             {CATALOGUE_LINKS.map(({ href, label }) => (
               <Link key={href} href={href} className={colLinkCls}>
                 {label}

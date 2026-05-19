@@ -9,14 +9,13 @@ import DevisButton from "@/src/components/DevisButton";
 export const metadata: Metadata = {
   title: "Accueil",
   description:
-    "Votre partenaire de confiance pour l'approvisionnement en réactifs analytiques, " +
-    "équipements de laboratoire et instruments de précision pour les établissements de santé algériens.",
+    "Votre partenaire de confiance pour l'approvisionnement en équipement, réactif et consommable de laboratoire d'analyse médical.",
 };
 
 // ── Static data ───────────────────────────────────────────────────────────────
 
 const STATS = [
-  { value: "370+",  label: "Produits en catalogue" },
+  { value: "370+",  label: "Produits en Nos Produit" },
   { value: "200+",  label: "Clients actifs" },
   { value: "48h",   label: "Délai moyen de livraison" },
   { value: "10 ans", label: "D'expertise sectorielle" },
@@ -36,6 +35,7 @@ export default function HomePage() {
           py-20 px-12
           max-w-[1200px] mx-auto
           min-h-[calc(100vh-68px)]
+          border-b border-[#E5E3DC]
           max-[1024px]:px-6 max-[1024px]:py-[60px] max-[1024px]:gap-10
           max-[900px]:grid-cols-1 max-[900px]:px-5 max-[900px]:py-10
           max-[900px]:gap-8 max-[900px]:min-h-0
@@ -61,7 +61,7 @@ export default function HomePage() {
               <circle cx="7" cy="7" r="5" />
               <path d="M7 4v3l2 2" />
             </svg>
-            Distribution spécialisée depuis 2016
+            Spécialiste de la distribution depuis 2016
           </div>
 
           {/* Titre principal */}
@@ -85,8 +85,8 @@ export default function HomePage() {
               max-[600px]:text-sm
             "
           >
-            Votre partenaire de confiance pour l&apos;approvisionnement en
-            consommables analytiques, réactifs chimiques et instruments de précision.
+            Votre partenaire de confiance pour l&apos;approvisionnement en équipement,
+            réactif et consommable de laboratoire d&apos;analyses médicales.
           </p>
 
           {/* CTA buttons */}
@@ -102,7 +102,7 @@ export default function HomePage() {
                 max-[600px]:w-full max-[600px]:justify-center
               "
             >
-              Voir le catalogue →
+              Voir Nos Produit →
             </Link>
 
             <DevisButton
@@ -140,16 +140,16 @@ export default function HomePage() {
               🧪
             </div>
             <h3 className="text-[15px] font-semibold text-[#1B1F1D] mb-1.5">
-              Réactifs analytiques
+              Réactifs de laboratoire
             </h3>
             <p className="text-[13px] text-[#6E6E6E] leading-[1.55]">
-              Solvants HPLC, standards de référence, tampons et milieux de culture certifiés.
+              Biochimie Clinique · Hématologie · Hémostase · Analyse des Urines
             </p>
             <span
               className="inline-block mt-3 text-[11px] font-semibold tracking-[0.4px] uppercase px-2.5 py-[3px] rounded-full"
               style={{ background: "#EDF8F1", color: "#29A864" }}
             >
-              +350 références
+              +353 RÉFÉRENCES
             </span>
           </Link>
 
@@ -171,40 +171,20 @@ export default function HomePage() {
               🔬
             </div>
             <h3 className="text-[15px] font-semibold text-[#1B1F1D] mb-1.5">
-              Équipements de précision
+              Équipements de laboratoire
             </h3>
             <p className="text-[13px] text-[#6E6E6E] leading-[1.55]">
-              Spectrophotomètres, centrifugeuses, agitateurs et systèmes chromatographiques.
+              Biochimie Clinique · Hématologie · Hémostase · Analyse des Urines · Chaîne ELISA · Auto-Immunité
             </p>
             <span
               className="inline-block mt-3 text-[11px] font-semibold tracking-[0.4px] uppercase px-2.5 py-[3px] rounded-full"
               style={{ background: "#D2EFDF", color: "#15623A" }}
             >
-              +20 modèles
+              +20 MODÈLES
             </span>
           </Link>
         </div>
       </section>
-
-      {/* ════════════════════════════════════════
-          STATS STRIP
-          ════════════════════════════════════════ */}
-      <div className="bg-[#29A864] py-10 px-12 max-[1024px]:px-6 max-[1024px]:py-8 max-[600px]:py-6 max-[600px]:px-4">
-        <div className="max-w-[1200px] mx-auto grid grid-cols-4 gap-5 max-[900px]:grid-cols-2 max-[600px]:gap-3">
-          {STATS.map(({ value, label }) => (
-            <div key={value} className="text-center">
-              <span
-                className="font-serif text-[36px] text-white block max-[600px]:text-[26px]"
-              >
-                {value}
-              </span>
-              <div className="text-[13px] text-white/65 mt-1 max-[600px]:text-[12px]">
-                {label}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
 
       {/* ════════════════════════════════════════
           NOS GAMMES DE PRODUITS
@@ -236,7 +216,7 @@ export default function HomePage() {
             </h2>
             <p className="text-[#6E6E6E] max-w-[480px]">
               Notre équipe technique est disponible pour vous orienter vers la solution
-              la mieux adaptée à vos besoins analytiques et préparer un devis personnalisé.
+              la mieux adaptée à vos besoins et préparer un devis personnalisé.
             </p>
           </div>
 
@@ -250,6 +230,26 @@ export default function HomePage() {
               hover:bg-[#48BC7E] hover:-translate-y-px
             "
           />
+        </div>
+      </div>
+
+      {/* ════════════════════════════════════════
+          STATS STRIP
+          ════════════════════════════════════════ */}
+      <div className="bg-[#29A864] py-10 px-12 max-[1024px]:px-6 max-[1024px]:py-8 max-[600px]:py-6 max-[600px]:px-4">
+        <div className="max-w-[1200px] mx-auto grid grid-cols-4 gap-5 max-[900px]:grid-cols-2 max-[600px]:gap-3">
+          {STATS.map(({ value, label }) => (
+            <div key={value} className="text-center">
+              <span
+                className="font-serif text-[36px] text-white block max-[600px]:text-[26px]"
+              >
+                {value}
+              </span>
+              <div className="text-[13px] text-white/65 mt-1 max-[600px]:text-[12px]">
+                {label}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </>

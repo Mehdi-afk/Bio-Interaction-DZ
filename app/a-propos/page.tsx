@@ -146,19 +146,25 @@ export default function AProposPage() {
               Notre histoire
             </h2>
             <p className="text-[#6E6E6E] text-[15px] leading-[1.8] mb-3.5">
-              Fondée à Alger en 2016, Bio Interaction Algérie s&apos;est spécialisée dès
-              le départ dans la distribution de réactifs et d&apos;équipements pour le
-              diagnostic médical.
+              Activant depuis 2016 dans le domaine du diagnostic médical,
+              et étant toujours à l&apos;écoute de nos clients nous travaillons à trouver la
+              meilleure façon de répondre à leurs attentes, en commercialisant des
+              solutions innovantes et de grande qualité, répondant aux besoins des
+              patients, en équipements, réactifs et consommables de laboratoires
+              d&apos;analyses médicales.
             </p>
             <p className="text-[#6E6E6E] text-[15px] leading-[1.8] mb-3.5">
-              Nous proposons une gamme complète couvrant la biochimie clinique,
-              l&apos;hématologie, l&apos;hémostase, l&apos;analyse des urines,
-              l&apos;auto-immunité, l&apos;allergie et la parasitologie.
+              Passionnés par le métier que nous exerçons, notre réputation
+              est l&apos;un de nos actifs les plus précieux après le bien-être des patients,
+              et la satisfaction de nos partenaires, voilà pourquoi nous ne mesurons
+              pas nos performances uniquement en considérant les résultats en
+              tant que tels mais également la manière de les obtenir.
             </p>
             <p className="text-[#6E6E6E] text-[15px] leading-[1.8] mb-3.5">
-              Nous accompagnons les laboratoires d&apos;analyses médicales, les hôpitaux
-              et les cliniques à travers tout le territoire national, avec un support
-              technique et commercial dédié.
+              Notre ligne de conduite est dictée par un comportement
+              responsable, éthique, soucieux de développement durable et
+              respectueux des besoins des personnes, de la société ainsi que de
+              l&apos;environnement.
             </p>
             <div className="mt-7">
               <ContactButton
@@ -224,9 +230,8 @@ export default function AProposPage() {
               <div>
                 <h4 className="text-[14px] font-semibold text-[#1B1F1D] mb-1">Téléphone / Fax</h4>
                 <p className="text-[13px] text-[#6E6E6E] leading-[1.7]">
-                  <a href="tel:+21323952151" className="no-underline text-[#6E6E6E] hover:text-[#29A864] transition-colors block">+213.23.95.21.51</a>
-                  <a href="tel:+21323952331" className="no-underline text-[#6E6E6E] hover:text-[#29A864] transition-colors block">+213.23.95.23.31</a>
-                  <a href="tel:+213770980888" className="no-underline text-[#6E6E6E] hover:text-[#29A864] transition-colors block">+213.770.98.08.88</a>
+                  <a href="tel:+213284648300" className="no-underline text-[#6E6E6E] hover:text-[#29A864] transition-colors block">+213.28.46.48.30</a>
+                  <a href="tel:+213284648900" className="no-underline text-[#6E6E6E] hover:text-[#29A864] transition-colors block">+213.28.46.48.90</a>
                 </p>
               </div>
             </div>

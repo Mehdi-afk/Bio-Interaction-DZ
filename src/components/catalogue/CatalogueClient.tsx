@@ -3,6 +3,7 @@
 import { useState, useMemo, useEffect, useRef } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import Image from "next/image";
+import Link from "next/link";
 import type { GridItem, Product } from "@/src/data/products-reactifs";
 import { useApp } from "@/src/context/AppContext";
 
@@ -372,13 +373,14 @@ function ProductPage({
 // ── Main component ─────────────────────────────────────────────────────────────
 
 export default function CatalogueClient({
-  items, title, cats, brands, showTypeFilter,
+  items, title, cats, brands, showTypeFilter, backHref,
 }: {
   items: GridItem[];
   title: string;
   cats: CatConfig[];
   brands: BrandConfig[];
   showTypeFilter?: boolean;
+  backHref?: string;
 }) {
   const router = useRouter();
   const searchParams  = useSearchParams();
@@ -405,6 +407,13 @@ export default function CatalogueClient({
   // Mobile: default to list view
   useEffect(() => {
     if (window.innerWidth <= 768) setView("list");
+  }, []);
+
+  // Close product panel when navbar tab is clicked
+  useEffect(() => {
+    const handler = () => setSelected(null);
+    window.addEventListener("nav:closePanel", handler);
+    return () => window.removeEventListener("nav:closePanel", handler);
   }, []);
 
   useEffect(() => {
@@ -500,14 +509,6 @@ export default function CatalogueClient({
 
   const sidebarContent = (
     <div>
-      <input
-        type="text"
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
-        placeholder="🔍  Rechercher un produit…"
-        className="w-full py-2 px-3 border border-[#E5E3DC] rounded-lg text-[14px] bg-white mb-6 outline-none focus:border-[#29A864] placeholder:text-[#A9ADAA] transition-colors duration-150"
-      />
-
       {/* Specialty */}
       <div className="mb-7">
         <div className="text-[11px] font-semibold tracking-[0.6px] uppercase text-[#A9ADAA] mb-2.5 pb-2 border-b border-[#E5E3DC]">
@@ -640,6 +641,43 @@ export default function CatalogueClient({
 
       {/* ── Main area ── */}
       <main>
+        {/* Sticky search bar */}
+        <div className="sticky top-[68px] z-20 bg-white pb-3 pt-1 -mx-1 px-1">
+          <div className="relative">
+            <svg
+              viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth={1.8}
+              className="absolute left-3.5 top-1/2 -translate-y-1/2 w-[18px] h-[18px] text-[#29A864] pointer-events-none"
+              aria-hidden="true"
+            >
+              <circle cx="8.5" cy="8.5" r="5.5" />
+              <path d="M13.5 13.5l3 3" strokeLinecap="round" />
+            </svg>
+            <input
+              type="text"
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              placeholder="Rechercher un produit, une référence…"
+              className="
+                w-full pl-10 pr-4 py-3
+                border-2 border-[#29A864] rounded-xl
+                text-[14px] bg-white outline-none
+                placeholder:text-[#A9ADAA]
+                focus:shadow-[0_0_0_3px_rgba(41,168,100,0.15)]
+                transition-shadow duration-150
+              "
+            />
+            {search && (
+              <button
+                onClick={() => setSearch("")}
+                className="absolute right-3.5 top-1/2 -translate-y-1/2 text-[#A9ADAA] hover:text-[#1B1F1D] transition-colors text-[18px] leading-none bg-transparent border-none cursor-pointer"
+                aria-label="Effacer"
+              >
+                ×
+              </button>
+            )}
+          </div>
+        </div>
+
         {/* Mobile filter toggle */}
         <button
           onClick={() => setSidebarOpen(true)}
@@ -653,6 +691,23 @@ export default function CatalogueClient({
         >
           ⚙ Filtres
         </button>
+
+        {/* Back link */}
+        {backHref && (
+          <Link
+            href={backHref}
+            className="
+              inline-flex items-center gap-1.5 mb-5
+              text-[13px] font-medium text-[#A9ADAA] no-underline
+              hover:text-[#29A864] transition-colors duration-150
+            "
+          >
+            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth={2} className="w-[15px] h-[15px]" aria-hidden="true">
+              <path d="M12 5l-5 5 5 5" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+            Retour
+          </Link>
+        )}
 
         {/* Header */}
         <div className="flex items-center justify-between mb-7 gap-4 max-[600px]:mb-4">
@@ -727,10 +782,11 @@ export default function CatalogueClient({
                       key={`label-${i}`}
                       className="
                         col-span-full flex items-center gap-3.5
-                        text-[12px] font-bold text-[#A9ADAA] uppercase tracking-[0.7px]
-                        mt-8 mb-1 px-4 py-2.5
-                        bg-[#F7F6F2] rounded-[10px]
-                        border-l-[3px] border-[#15623A]
+                        text-[13px] font-black text-[#1B1F1D] uppercase tracking-[0.7px]
+                        mt-8 mb-1 px-4 py-3
+                        bg-[#EDF8F1] rounded-[10px]
+                        border-l-[6px] border-[#15623A] outline outline-2 outline-[#15623A]
+                        sticky top-[128px] z-10
                       "
                       style={i === 0 ? { marginTop: 0 } : {}}
                     >

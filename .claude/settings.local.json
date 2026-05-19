@@ -1,0 +1,42 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(update-config)",
+      "Bash(vercel --version)",
+      "Bash(echo \"EXIT:$?\")",
+      "Bash(vercel project *)",
+      "Bash(vercel status *)",
+      "Bash(vercel deploy *)",
+      "Bash(vercel link *)",
+      "Bash(git checkout *)",
+      "Bash(grep -n ',$' src/data/products-equip.ts)",
+      "Bash(grep -n '^\\\\s*,$' src/data/products-equip.ts)",
+      "Bash(grep -n '\"\"$\\\\|\"\"\\\\s*$' src/data/products-equip.ts)",
+      "Bash(npx next *)",
+      "WebSearch",
+      "WebFetch(domain:ldbiodiagnostics.com)",
+      "WebFetch(domain:hobbiotech.com)",
+      "WebFetch(domain:www.medipan.de)",
+      "WebFetch(domain:www.erbamannheim.com)",
+      "WebFetch(domain:en.hob-biotech.com)",
+      "WebFetch(domain:www.pngwing.com)",
+      "WebFetch(domain:www.ldbio-diagnostics.com)",
+      "WebFetch(domain:www.erba-mannheim.com)",
+      "WebFetch(domain:www.generic-assays.com)",
+      "WebFetch(domain:www.erba.group)",
+      "WebFetch(domain:ldbio-diagnostics.com)",
+      "WebFetch(domain:medipan.de)",
+      "WebFetch(domain:brandfetch.com)",
+      "WebFetch(domain:hob-biotech.com)",
+      "Bash(npm install *)",
+      "Bash(New-Item -ItemType Directory -Force \"C:\\\\Users\\\\PC\\\\Documents\\\\000-Web Project\\\\Bio-Interaction-Git\\\\app\\\\auth\\\\login\")",
+      "Bash(Out-Null)",
+      "Bash(New-Item -ItemType Directory -Force \"C:\\\\Users\\\\PC\\\\Documents\\\\000-Web Project\\\\Bio-Interaction-Git\\\\app\\\\auth\\\\signup\")",
+      "Bash(Write-Host \"done\")",
+      "PowerShell(New-Item *)",
+      "Bash(npx tsc *)",
+      "Bash(vercel env *)",
+      "Bash(git add *)"
+    ]
+  }
+}

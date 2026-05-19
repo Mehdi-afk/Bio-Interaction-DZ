@@ -4,7 +4,7 @@
   @theme expose les variables CSS de next/font comme utilitaires Tailwind.
   Après ce mapping :
     - `font-sans`  → DM Sans   (corps de texte, labels, boutons)
-    - `font-serif` → DM Serif Display  (titres h1/h2, logo)
+    - `font-serif` → Geist  (titres h1/h2, logo)
   Les variables --font-dm-sans et --font-dm-serif sont injectées par next/font
   via le className sur <html> dans layout.tsx.
 */

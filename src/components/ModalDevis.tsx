@@ -83,7 +83,7 @@ export default function ModalDevis() {
     if (cartEmpty) {
       closeDevis();
       router.push("/catalogue/equipements");
-      showToast("✓ Coordonnées enregistrées — choisissez vos produits dans le catalogue !");
+      showToast("✓ Coordonnées enregistrées — choisissez vos produits dans Nos Produit !");
     } else {
       setSending(true);
       try {

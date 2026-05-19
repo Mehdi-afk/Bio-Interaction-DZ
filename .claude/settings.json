@@ -1,0 +1,17 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "vercel deploy --prod",
+            "shell": "powershell",
+            "async": true,
+            "statusMessage": "Deploying to Vercel..."
+          }
+        ]
+      }
+    ]
+  }
+}

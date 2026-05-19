@@ -9,7 +9,7 @@ import Card, { type CategoryCard } from "@/src/components/Card";
 const CATEGORY_CARDS: CategoryCard[] = [
   {
     href: "/catalogue/reactifs?cat=biochimie",
-    accentColor: "#1D4ED8",
+    accentColor: "#004B9D",
     icon: "⚗️",
     title: "Biochimie Clinique",
     description:
@@ -18,16 +18,25 @@ const CATEGORY_CARDS: CategoryCard[] = [
   },
   {
     href: "/catalogue/reactifs?cat=hematologie",
-    accentColor: "#BE123C",
+    accentColor: "#004B9D",
     icon: "🧪",
-    title: "Hématologie & Hémostase",
+    title: "Hématologie",
     description:
-      "Automates NFS ERBA H360 à H7100, coagulomètres ECL 412/760 et réactifs dédiés.",
+      "Automates NFS ERBA H360 à H7100 et réactifs dédiés.",
     count: "54 références — ERBA",
   },
   {
+    href: "/catalogue/reactifs?cat=hemostase",
+    accentColor: "#004B9D",
+    icon: "🩸",
+    title: "Hémostase",
+    description:
+      "Coagulomètres ECL 412/760 et réactifs dédiés.",
+    count: "ERBA",
+  },
+  {
     href: "/catalogue/reactifs?cat=autoimmunite",
-    accentColor: "#6D28D9",
+    accentColor: "#0082A0",
     icon: "🔬",
     title: "Auto-Immunité",
     description:
@@ -36,7 +45,7 @@ const CATEGORY_CARDS: CategoryCard[] = [
   },
   {
     href: "/catalogue/reactifs?cat=allergie",
-    accentColor: "#C2410C",
+    accentColor: "#0082A0",
     icon: "🧬",
     title: "Allergie",
     description:
@@ -45,7 +54,7 @@ const CATEGORY_CARDS: CategoryCard[] = [
   },
   {
     href: "/catalogue/reactifs?cat=parasitologie",
-    accentColor: "#0F766E",
+    accentColor: "#B30C2F",
     icon: "🧫",
     title: "Parasitologie & Mycologie",
     description:

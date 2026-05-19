@@ -4,7 +4,7 @@ import CatalogueClient from "@/src/components/catalogue/CatalogueClient";
 import { EQUIPEMENTS } from "@/src/data/products-equip";
 
 export const metadata: Metadata = {
-  title: "Catalogue Équipements",
+  title: "Nos Produit Équipements",
   description:
     "20 instruments de précision — analyseurs biochimie, automates hématologie, " +
     "coagulomètres, analyseurs urines et chaînes ELISA. Marque ERBA, Generic Assays, HOB Biotech.",
@@ -15,7 +15,6 @@ const CATS = [
   { value: "hematologie",  label: "Hématologie" },
   { value: "hemostase",    label: "Hémostase" },
   { value: "urines",       label: "Analyse des Urines" },
-  { value: "elisa",        label: "Chaîne ELISA" },
   { value: "autoimmunite", label: "Auto-Immunité" },
 ];
 

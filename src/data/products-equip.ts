@@ -14,7 +14,7 @@ export const EQUIPEMENTS: GridItem[] = [
         "desc":  "ERBA XL 200",
         "cat":  "biochimie",
         "conditionnement":  "200 tests/h",
-        "image": "/images/equipements/INS00002.jpg"
+        
     },
     {
         "ref":  "INS00008",
@@ -25,7 +25,7 @@ export const EQUIPEMENTS: GridItem[] = [
         "desc":  "ERBA XL 640",
         "cat":  "biochimie",
         "conditionnement":  "400 tests/h",
-        "image": "/images/equipements/INS00008.jpg"
+        
     },
     {
         "ref":  "INS00009",
@@ -36,7 +36,7 @@ export const EQUIPEMENTS: GridItem[] = [
         "desc":  "ERBA XL 1000",
         "cat":  "biochimie",
         "conditionnement":  "800 tests/h",
-        "image": "/images/equipements/INS00009.jpg"
+        
     },
     {
         "ref":  "INS00014",
@@ -47,7 +47,7 @@ export const EQUIPEMENTS: GridItem[] = [
         "desc":  "ERBA CHEM-7",
         "cat":  "biochimie",
         "conditionnement":  "Semi-automatisé",
-        "image": "/images/equipements/INS00014.jpg"
+        
     },
     {
         "ref":  "INS00079",
@@ -58,7 +58,7 @@ export const EQUIPEMENTS: GridItem[] = [
         "desc":  "ERBA EC 90",
         "cat":  "biochimie",
         "conditionnement":  "Ionogramme",
-        "image": "/images/equipements/INS00079.jpg"
+        
     },
     {
         "label":  "Hématologie",
@@ -73,7 +73,7 @@ export const EQUIPEMENTS: GridItem[] = [
         "desc":  "ERBA H360",
         "cat":  "hematologie",
         "conditionnement":  "60 tests/h",
-        "image": "/images/equipements/INS00077.jpg"
+        
     },
     {
         "ref":  "INS00078",
@@ -84,7 +84,7 @@ export const EQUIPEMENTS: GridItem[] = [
         "desc":  "ERBA H560",
         "cat":  "hematologie",
         "conditionnement":  "60 tests/h",
-        "image": "/images/equipements/INS00078.jpg"
+        
     },
     {
         "ref":  "INS00071",
@@ -95,7 +95,7 @@ export const EQUIPEMENTS: GridItem[] = [
         "desc":  "ERBA ELITE 580",
         "cat":  "hematologie",
         "conditionnement":  "80 tests/h",
-        "image": "/images/equipements/INS00071.jpg"
+        
     },
     {
         "ref":  "INS00087",
@@ -106,7 +106,7 @@ export const EQUIPEMENTS: GridItem[] = [
         "desc":  "ERBA H7100",
         "cat":  "hematologie",
         "conditionnement":  "100 tests/h",
-        "image": "/images/equipements/INS00087.jpg"
+        
     },
     {
         "label":  "Hémostase",
@@ -121,7 +121,7 @@ export const EQUIPEMENTS: GridItem[] = [
         "desc":  "ERBA ECL 412",
         "cat":  "hemostase",
         "conditionnement":  "Semi-automatique",
-        "image": "/images/equipements/INS00060.jpg"
+        
     },
     {
         "ref":  "INS00070",
@@ -132,7 +132,7 @@ export const EQUIPEMENTS: GridItem[] = [
         "desc":  "ERBA ECL 760",
         "cat":  "hemostase",
         "conditionnement":  "Entièrement automatisé",
-        "image": "/images/equipements/INS00070.jpg"
+        
     },
     {
         "label":  "Analyse des Urines",
@@ -147,7 +147,7 @@ export const EQUIPEMENTS: GridItem[] = [
         "desc":  "LAURA Smart",
         "cat":  "urines",
         "conditionnement":  "Portable",
-        "image": "/images/equipements/INS00064.jpg"
+        
     },
     {
         "ref":  "INS00065",
@@ -158,33 +158,7 @@ export const EQUIPEMENTS: GridItem[] = [
         "desc":  "LAURA XL",
         "cat":  "urines",
         "conditionnement":  "Combiné",
-        "image": "/images/equipements/INS00065.jpg"
-    },
-    {
-        "label":  "Chaîne ELISA",
-        "kind":  "section"
-    },
-    {
-        "ref":  "52000131",
-        "kind":  "product",
-        "type":  "instrument",
-        "description":  "Laveur automatique ELISA — 50 protocoles, plaques U/V/fond plat, tête 8/12 canaux, volume résiduel ≤3 µl",
-        "marque":  "ERBA",
-        "desc":  "ERBA LISA WASH",
-        "cat":  "elisa",
-        "conditionnement":  "Laveur ELISA",
-        "image": "/images/equipements/52000131.jpg"
-    },
-    {
-        "ref":  "52000121",
-        "kind":  "product",
-        "type":  "instrument",
-        "description":  "Scanner ELISA — 100 protocoles programmables, lecture min 8 s (96 puits), logiciel ELI-LIMS",
-        "marque":  "ERBA",
-        "desc":  "ERBA LISA SCAN",
-        "cat":  "elisa",
-        "conditionnement":  "Lecteur ELISA",
-        "image": "/images/equipements/52000121.jpg"
+        
     },
     {
         "label":  "Auto-Immunité",
@@ -199,7 +173,7 @@ export const EQUIPEMENTS: GridItem[] = [
         "desc":  "DOT DIVER 2.0",
         "cat":  "autoimmunite",
         "conditionnement":  "1-24 échantillons",
-        "image": "/images/equipements/5075.jpg"
+        
     },
     {
         "ref":  "4450",
@@ -210,7 +184,7 @@ export const EQUIPEMENTS: GridItem[] = [
         "desc":  "AKIRON NEO",
         "cat":  "autoimmunite",
         "conditionnement":  "Analyseur IFA",
-        "image": "/images/equipements/4450.jpg"
+        
     },
     {
         "ref":  "MA01073",
@@ -221,7 +195,7 @@ export const EQUIPEMENTS: GridItem[] = [
         "desc":  "BioCLIA 1900",
         "cat":  "autoimmunite",
         "conditionnement":  "75 tests/h",
-        "image": "/images/equipements/MA01073.jpg"
+        
     },
     {
         "ref":  "MA00502",
@@ -232,17 +206,6 @@ export const EQUIPEMENTS: GridItem[] = [
         "desc":  "BioCLIA 500",
         "cat":  "autoimmunite",
         "conditionnement":  "120 tests/h",
-        "image": "/images/equipements/MA00502.jpg"
+        
     },
-    {
-        "ref":  "MA00243",
-        "kind":  "product",
-        "type":  "instrument",
-        "description":  "Analyseur chimiluminescence — 218 tests/h, jusqu à 96 échantillons, connexion middleware, 12 positions auto-immunité + 33 allergie",
-        "marque":  "HOB Biotech",
-        "desc":  "BioCLIA 6500",
-        "cat":  "autoimmunite",
-        "conditionnement":  "218 tests/h",
-        "image": "/images/equipements/MA00243.jpg"
-    }
 ];

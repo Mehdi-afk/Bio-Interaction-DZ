@@ -1,16 +1,17 @@
 import type { Metadata } from "next";
-import { DM_Sans, DM_Serif_Display } from "next/font/google";
+import { DM_Sans, Geist } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/src/components/Navbar";
 import Footer from "@/src/components/Footer";
 import { AppProvider } from "@/src/context/AppContext";
+import { AuthProvider } from "@/src/context/AuthContext";
 import ModalDevis from "@/src/components/ModalDevis";
 import ModalContact from "@/src/components/ModalContact";
 import Toast from "@/src/components/Toast";
 import BackToTop from "@/src/components/BackToTop";
 
 // ── Polices ───────────────────────────────────────────────────────────────────
-// Originale : Google CDN  ?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display:ital@0;1
+// Originale : Google CDN  ?family=DM+Sans:wght@300;400;500;600&family=Geist:wght@400;500;600
 // Next.js auto-héberge les fichiers woff2 au build — plus de requête CDN externe.
 
 const dmSans = DM_Sans({
@@ -20,10 +21,9 @@ const dmSans = DM_Sans({
   display: "swap",
 });
 
-const dmSerifDisplay = DM_Serif_Display({
+const geist = Geist({
   subsets: ["latin"],
-  weight: "400",           // seul grammage disponible pour cette fonte
-  style: ["normal", "italic"],
+  weight: ["400", "500", "600"],
   variable: "--font-dm-serif",
   display: "swap",
 });
@@ -77,14 +77,16 @@ export default function RootLayout({
   return (
     <html
       lang="fr"
-      className={`${dmSans.variable} ${dmSerifDisplay.variable} h-full`}
+      className={`${dmSans.variable} ${geist.variable} h-full`}
     >
       {/*
         font-sans → DM Sans (via --font-dm-sans, défini dans globals.css @theme)
+        font-serif → Geist (via --font-dm-serif, titres h1/h2, logo)
         bg-white  → #FFFFFF  (--bg du projet original)
         text-[#1B1F1D] → couleur de texte principale (--text du projet original)
       */}
       <body className="min-h-full flex flex-col antialiased font-sans bg-white text-[#1B1F1D]">
+        <AuthProvider>
         <AppProvider>
           <Navbar />
 
@@ -104,6 +106,7 @@ export default function RootLayout({
           <Toast />
           <BackToTop />
         </AppProvider>
+        </AuthProvider>
       </body>
     </html>
   );
