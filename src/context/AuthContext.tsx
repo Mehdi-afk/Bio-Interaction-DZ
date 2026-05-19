@@ -92,6 +92,13 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
     // Immediately sign out — account must be approved first
     await signOut(auth);
+
+    // Notify admin of new signup (fire-and-forget)
+    fetch("/api/admin/notify", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email, name: name.trim(), action: "new_signup" }),
+    }).catch(() => {});
   }
 
   async function logout() {
