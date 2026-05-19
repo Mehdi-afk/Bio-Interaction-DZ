@@ -7,6 +7,7 @@ import {
   onAuthStateChanged,
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
+  sendEmailVerification,
   signOut,
   updateProfile,
   type User,
@@ -44,13 +45,22 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const isAdmin = !!user && !!ADMIN_EMAIL && user.email === ADMIN_EMAIL;
 
   async function login(email: string, password: string) {
-    // Admin bypasses the Firestore status check
     if (email === ADMIN_EMAIL) {
       await signInWithEmailAndPassword(auth, email, password);
       return;
     }
 
     const cred = await signInWithEmailAndPassword(auth, email, password);
+
+    // 1. Email must be verified before anything else
+    if (!cred.user.emailVerified) {
+      await signOut(auth);
+      const e = new Error("Email non vérifié.") as Error & { code: string };
+      e.code = "UNVERIFIED";
+      throw e;
+    }
+
+    // 2. Check admin approval status
     const snap = await getDoc(doc(db, "users", cred.user.uid));
 
     if (!snap.exists()) {
@@ -75,12 +85,12 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       e.code = "REJECTED";
       throw e;
     }
-    // status === "approved" → stays logged in
   }
 
   async function signup(name: string, email: string, password: string) {
     const { user: newUser } = await createUserWithEmailAndPassword(auth, email, password);
     await updateProfile(newUser, { displayName: name });
+    await sendEmailVerification(newUser);
 
     await setDoc(doc(db, "users", newUser.uid), {
       uid:       newUser.uid,
@@ -90,10 +100,9 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       createdAt: serverTimestamp(),
     });
 
-    // Immediately sign out — account must be approved first
     await signOut(auth);
 
-    // Notify admin of new signup (fire-and-forget)
+    // Notify admin (fire-and-forget)
     fetch("/api/admin/notify", {
       method: "POST",
       headers: { "Content-Type": "application/json" },

@@ -63,11 +63,11 @@ export default function SignupPage() {
                 <polyline points="20 6 9 17 4 12" />
               </svg>
             </div>
-            <h2 className="font-serif text-[22px] text-[#1B1F1D] mb-2">Demande envoyée !</h2>
+            <h2 className="font-serif text-[22px] text-[#1B1F1D] mb-2">Vérifiez votre email</h2>
             <p className="text-[13px] text-[#6E6E6E] leading-[1.7] mb-6">
-              Votre demande de compte a bien été reçue. Un administrateur va examiner
-              votre demande et vous serez notifié par e-mail à <strong>{email}</strong> lors
-              de l&apos;approbation ou du refus.
+              Un email de vérification a été envoyé à <strong>{email}</strong>.
+              Confirmez votre adresse, puis votre compte sera examiné par un administrateur
+              avant activation.
             </p>
             <Link
               href="/auth/login"

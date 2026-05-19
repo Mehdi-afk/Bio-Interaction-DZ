@@ -24,7 +24,10 @@ export default function LoginPage() {
       router.push("/");
     } catch (err: unknown) {
       const code = (err as { code?: string }).code ?? "";
-      if (code === "PENDING") {
+      if (code === "UNVERIFIED") {
+        router.push(`/auth/verify-email?email=${encodeURIComponent(email)}`);
+        return;
+      } else if (code === "PENDING") {
         router.push("/auth/pending");
         return;
       } else if (code === "REJECTED") {
