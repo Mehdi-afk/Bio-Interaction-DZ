@@ -52,7 +52,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
     const cred = await signInWithEmailAndPassword(auth, email, password);
 
-    // 1. Email must be verified before anything else
+    // 1. Email must be verified first
     if (!cred.user.emailVerified) {
       await signOut(auth);
       const e = new Error("Email non vérifié.") as Error & { code: string };
@@ -60,16 +60,31 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       throw e;
     }
 
-    // 2. Check admin approval status
-    const snap = await getDoc(doc(db, "users", cred.user.uid));
+    // 2. First login after verification → create pending doc + notify admin
+    const userRef = doc(db, "users", cred.user.uid);
+    const snap    = await getDoc(userRef);
 
     if (!snap.exists()) {
+      const name = cred.user.displayName ?? cred.user.email ?? "";
+      await setDoc(userRef, {
+        uid:       cred.user.uid,
+        name,
+        email,
+        status:    "pending" as UserStatus,
+        createdAt: serverTimestamp(),
+      });
+      fetch("/api/admin/notify", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, name, action: "new_signup" }),
+      }).catch(() => {});
       await signOut(auth);
-      const e = new Error("Compte non trouvé.") as Error & { code: string };
+      const e = new Error("Compte en attente de validation.") as Error & { code: string };
       e.code = "PENDING";
       throw e;
     }
 
+    // 3. Check approval status
     const status = (snap.data() as { status: UserStatus }).status;
 
     if (status === "pending") {
@@ -91,23 +106,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     const { user: newUser } = await createUserWithEmailAndPassword(auth, email, password);
     await updateProfile(newUser, { displayName: name });
     await sendEmailVerification(newUser);
-
-    await setDoc(doc(db, "users", newUser.uid), {
-      uid:       newUser.uid,
-      name:      name.trim(),
-      email,
-      status:    "pending" as UserStatus,
-      createdAt: serverTimestamp(),
-    });
-
+    // Sign out immediately — user must verify email before proceeding
     await signOut(auth);
-
-    // Notify admin (fire-and-forget)
-    fetch("/api/admin/notify", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email, name: name.trim(), action: "new_signup" }),
-    }).catch(() => {});
   }
 
   async function logout() {
