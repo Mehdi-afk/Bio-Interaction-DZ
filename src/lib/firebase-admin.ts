@@ -4,17 +4,18 @@ import { getFirestore } from "firebase-admin/firestore";
 function getAdminApp() {
   if (getApps().length > 0) return getApps()[0];
 
-  const serviceAccount = process.env.FIREBASE_SERVICE_ACCOUNT;
-  if (serviceAccount) {
-    return initializeApp({
-      credential: cert(JSON.parse(serviceAccount)),
-    });
+  const raw = process.env.FIREBASE_SERVICE_ACCOUNT;
+  if (!raw) {
+    return initializeApp({ projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID });
   }
 
-  // Fallback: initialize with project ID only (works with Firestore emulator or ADC)
-  return initializeApp({
-    projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
-  });
+  const parsed = JSON.parse(raw);
+  // Vercel sometimes stores \n as literal \\n — normalize it
+  if (parsed.private_key) {
+    parsed.private_key = parsed.private_key.replace(/\\n/g, "\n");
+  }
+
+  return initializeApp({ credential: cert(parsed) });
 }
 
 export const adminDb = getFirestore(getAdminApp());
