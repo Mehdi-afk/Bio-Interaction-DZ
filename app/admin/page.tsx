@@ -2,6 +2,8 @@
 
 import { useEffect, useState, useCallback } from "react";
 import { useRouter } from "next/navigation";
+import { collection, getDocs, doc, updateDoc } from "firebase/firestore";
+import { db } from "@/src/lib/firebase";
 import { useAuth } from "@/src/context/AuthContext";
 import Link from "next/link";
 
@@ -10,37 +12,34 @@ type UserDoc = {
   name:      string;
   email:     string;
   status:    "pending" | "approved" | "rejected";
-  createdAt: string | null;
+  createdAt: { seconds: number } | null;
 };
 
 export default function AdminPage() {
   const { user, loading, isAdmin } = useAuth();
   const router = useRouter();
 
-  const [allUsers,  setAllUsers]  = useState<UserDoc[]>([]);
-  const [fetching,  setFetching]  = useState(true);
-  const [actionUid, setActionUid] = useState<string | null>(null);
-  const [tab,       setTab]       = useState<"pending" | "all">("pending");
-  const [error,     setError]     = useState("");
+  const [allUsers,   setAllUsers]   = useState<UserDoc[]>([]);
+  const [fetching,   setFetching]   = useState(true);
+  const [actionUid,  setActionUid]  = useState<string | null>(null);
+  const [tab,        setTab]        = useState<"pending" | "all">("pending");
+  const [error,      setError]      = useState("");
 
   const fetchUsers = useCallback(async () => {
-    if (!user?.email) return;
     setFetching(true);
     setError("");
     try {
-      const res = await fetch("/api/admin/users", {
-        headers: { "x-admin-email": user.email },
-      });
-      const json = await res.json() as { users?: UserDoc[]; error?: string };
-      if (!res.ok) throw new Error(json.error ?? `Erreur ${res.status}`);
-      const { users } = json;
-      setAllUsers(users);
+      const snap = await getDocs(collection(db, "users"));
+      const docs = snap.docs.map((d) => d.data() as UserDoc);
+      // Sort by createdAt descending client-side — avoids composite index requirement
+      docs.sort((a, b) => (b.createdAt?.seconds ?? 0) - (a.createdAt?.seconds ?? 0));
+      setAllUsers(docs);
     } catch (e) {
       setError("Erreur de chargement : " + (e as Error).message);
     } finally {
       setFetching(false);
     }
-  }, [user?.email]);
+  }, []);
 
   useEffect(() => {
     if (!loading && !isAdmin) router.replace("/");
@@ -51,14 +50,9 @@ export default function AdminPage() {
   }, [isAdmin, fetchUsers]);
 
   async function handleAction(uid: string, email: string, name: string, action: "approved" | "rejected") {
-    if (!user?.email) return;
     setActionUid(uid);
     try {
-      await fetch("/api/admin/users", {
-        method: "PATCH",
-        headers: { "Content-Type": "application/json", "x-admin-email": user.email },
-        body: JSON.stringify({ uid, status: action }),
-      });
+      await updateDoc(doc(db, "users", uid), { status: action });
       await fetch("/api/admin/notify", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -145,7 +139,7 @@ export default function AdminPage() {
             const st = statusLabel[u.status];
             const busy = actionUid === u.uid;
             const date = u.createdAt
-              ? new Date(u.createdAt).toLocaleDateString("fr-DZ", { day: "2-digit", month: "short", year: "numeric" })
+              ? new Date(u.createdAt.seconds * 1000).toLocaleDateString("fr-DZ", { day: "2-digit", month: "short", year: "numeric" })
               : "—";
             return (
               <div key={u.uid} className="bg-white border border-[#E5E3DC] rounded-xl px-5 py-4 flex items-center gap-4">
