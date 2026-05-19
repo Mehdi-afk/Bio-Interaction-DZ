@@ -9,13 +9,12 @@ function getAdminApp() {
   const projectId    = process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID;
 
   if (privateKey && clientEmail && projectId) {
+    // Strip surrounding quotes if Vercel stored them literally, then restore newlines
+    const cleanKey = privateKey
+      .replace(/^"|"$/g, "")
+      .replace(/\\n/g, "\n");
     return initializeApp({
-      credential: cert({
-        projectId,
-        clientEmail,
-        // Vercel stores \n as literal \\n — restore actual newlines
-        privateKey: privateKey.replace(/\\n/g, "\n"),
-      }),
+      credential: cert({ projectId, clientEmail, privateKey: cleanKey }),
     });
   }
 
