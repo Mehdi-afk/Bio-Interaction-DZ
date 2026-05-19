@@ -36,7 +36,18 @@
       "PowerShell(New-Item *)",
       "Bash(npx tsc *)",
       "Bash(vercel env *)",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(npx vercel *)",
+      "Bash(git commit *)",
+      "Bash(New-Item -ItemType Directory -Force \"C:\\\\Users\\\\PC\\\\Documents\\\\000-Web Project\\\\Bio-Interaction-Git\\\\src\\\\lib\")",
+      "Bash(New-Item -ItemType Directory -Force \"C:\\\\Users\\\\PC\\\\Documents\\\\000-Web Project\\\\Bio-Interaction-Git\\\\app\\\\api\\\\admin\\\\users\")",
+      "Bash(Write-Host \"ok\")",
+      "WebFetch(domain:bio-interaction-dz.vercel.app)",
+      "Bash(node *)",
+      "Bash(rm app/api/admin/users/route.ts)",
+      "Bash(rm app/api/admin/debug/route.ts)"
     ]
   }
 }
