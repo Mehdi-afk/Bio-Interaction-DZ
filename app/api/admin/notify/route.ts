@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
-const FROM   = "BioInteraction <no-reply@biointeractiondz.com>";
+const FROM   = "BioInteraction <onboarding@resend.dev>";
 const ADMIN  = process.env.NEXT_PUBLIC_ADMIN_EMAIL ?? "";
 
 export async function POST(req: NextRequest) {
