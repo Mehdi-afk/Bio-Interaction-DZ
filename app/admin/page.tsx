@@ -31,8 +31,9 @@ export default function AdminPage() {
       const res = await fetch("/api/admin/users", {
         headers: { "x-admin-email": user.email },
       });
-      if (!res.ok) throw new Error(`Erreur ${res.status}`);
-      const { users } = await res.json() as { users: UserDoc[] };
+      const json = await res.json() as { users?: UserDoc[]; error?: string };
+      if (!res.ok) throw new Error(json.error ?? `Erreur ${res.status}`);
+      const { users } = json;
       setAllUsers(users);
     } catch (e) {
       setError("Erreur de chargement : " + (e as Error).message);
