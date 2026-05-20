@@ -3194,13 +3194,40 @@ export const REACTIFS: GridItem[] = [
         "conditionnement":  "100 tests"
     },
     {
-        "label":  "Allergie - Réactifs CLIA BioCLIA",
+        "label":  "Allergie - Instruments BioCLIA",
         "kind":  "section"
     },
     {
-        "kind":  "info",
-        "cat":   "allergie",
-        "text":  "Réactifs CLIA Auto-Immunité (BioCLIA 1900 / 500 / 6500)\n\nDisponibles en conditionnement 100 Tests/kit et 50 Tests/kit :\n\nBioCLIA-dsDNA, Ro-60, SS-B/La, nRNP/Sm, Sm, Jo-1, Scl-70, Ro-52, Rib-P, PCNA, PM-Scl, His, CENP-B, Nuc, MPO, PR3, GBM, gp210, sp100, LKM-1, LC-1, AMA-M2, SLA/LP, aCL-A, aCL-G, aCL-M, aCL-A/M/G, β2GP1-A, β2GP1-G, β2GP1-M, β2GP1-A/M/G, RF-A, RF-G, RF-M, RF-A/M/G, CCP, IAA, h-tTG-A, h-tTG-G, DGP GLIADINE-A, DGP-G, GAD, IA2, ICA, ENA Mix-1, CTD, IF, PCA, ZnT8, MDA5"
+        "ref":  "MA01073",
+        "kind":  "product",
+        "type":  "instrument",
+        "description":  "75 tests/h — Jusqu'à 40 échantillons — 12 positions auto-immunité + 33 positions allergie",
+        "marque":  "HOB Biotech",
+        "desc":  "BioCLIA 1900",
+        "cat":  "allergie",
+        "image":  "/images/equipements/BIOCLIA 1900.webp",
+        "conditionnement":  ""
+    },
+    {
+        "ref":  "MA00502",
+        "kind":  "product",
+        "type":  "instrument",
+        "description":  "120 tests/h — Jusqu'à 24 échantillons — 12 positions auto-immunité + 33 positions allergie",
+        "marque":  "HOB Biotech",
+        "desc":  "BioCLIA 500",
+        "cat":  "allergie",
+        "image":  "/images/equipements/BIOCLIA 500.jpg",
+        "conditionnement":  ""
+    },
+    {
+        "ref":  "MA00243",
+        "kind":  "product",
+        "type":  "instrument",
+        "description":  "218 tests/h — Jusqu'à 96 échantillons — 12 positions auto-immunité + 33 positions allergie",
+        "marque":  "HOB Biotech",
+        "desc":  "BioCLIA 6500",
+        "cat":  "allergie",
+        "conditionnement":  ""
     },
     {
         "label":  "Allergie - Reactifs BioLINE DOT",
