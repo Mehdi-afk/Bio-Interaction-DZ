@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 // ── Static data ───────────────────────────────────────────────────────────────
 
 const STATS = [
-  { value: "370+",  label: "Produits en Nos Produit" },
+  { value: "370+",  label: "Références au catalogue" },
   { value: "200+",  label: "Clients actifs" },
   { value: "48h",   label: "Délai moyen de livraison" },
   { value: "10 ans", label: "D'expertise sectorielle" },
@@ -102,7 +102,7 @@ export default function HomePage() {
                 max-[600px]:w-full max-[600px]:justify-center
               "
             >
-              Voir Nos Produit →
+              Voir Nos Produits →
             </Link>
 
             <DevisButton

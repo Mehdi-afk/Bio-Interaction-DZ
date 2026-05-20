@@ -19,6 +19,7 @@ export default function BlogPage() {
   const { user, loading, isAdmin } = useAuth();
   const [articles, setArticles]     = useState<Article[]>([]);
   const [fetching, setFetching]     = useState(true);
+  const [fetchError, setFetchError] = useState(false);
   const [showModal, setShowModal]   = useState(false);
 
   // Show auth gate once auth is resolved and user is not logged in
@@ -39,6 +40,8 @@ export default function BlogPage() {
           ((a.publishedAt ?? a.createdAt)?.seconds ?? 0)
         );
         setArticles(visible);
+      } catch {
+        setFetchError(true);
       } finally {
         setFetching(false);
       }
@@ -72,7 +75,12 @@ export default function BlogPage() {
         )}
       </div>
 
-      {fetching ? (
+      {fetchError ? (
+        <div className="text-center py-20 text-[#6E6E6E]">
+          <p className="text-[40px] mb-3">⚠️</p>
+          <p className="text-[16px]">Impossible de charger les articles. Veuillez réessayer.</p>
+        </div>
+      ) : fetching ? (
         <div className="grid grid-cols-3 gap-6 max-[900px]:grid-cols-2 max-[600px]:grid-cols-1">
           {[1,2,3].map((i) => (
             <div key={i} className="bg-white border border-[#E5E3DC] rounded-2xl overflow-hidden animate-pulse">
@@ -85,7 +93,7 @@ export default function BlogPage() {
             </div>
           ))}
         </div>
-      ) : articles.length === 0 ? (
+      ) : articles.length === 0 && !fetchError ? (
         <div className="text-center py-20 text-[#6E6E6E]">
           <p className="text-[40px] mb-3">✍️</p>
           <p className="text-[16px]">Aucun article publié pour l&apos;instant.</p>

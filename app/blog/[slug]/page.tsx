@@ -62,15 +62,18 @@ export default function ArticlePage() {
 
   useEffect(() => {
     async function load() {
-      const q    = query(collection(db, "articles"), where("slug", "==", slug));
-      const snap = await getDocs(q);
-      if (snap.empty) { setNotFound(true); setFetching(false); return; }
-      const data = { id: snap.docs[0].id, ...snap.docs[0].data() } as Article;
-      if (data.status !== "published" && !isAdmin) {
-        setNotFound(true); setFetching(false); return;
+      try {
+        const q    = query(collection(db, "articles"), where("slug", "==", slug));
+        const snap = await getDocs(q);
+        if (snap.empty) { setNotFound(true); return; }
+        const data = { id: snap.docs[0].id, ...snap.docs[0].data() } as Article;
+        if (data.status !== "published" && !isAdmin) { setNotFound(true); return; }
+        setArticle(data);
+      } catch {
+        setNotFound(true);
+      } finally {
+        setFetching(false);
       }
-      setArticle(data);
-      setFetching(false);
     }
     load();
   }, [slug, isAdmin]);
