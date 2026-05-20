@@ -1,6 +1,6 @@
 // AUTO-GENERATED — scripts/scrape-medipan.mjs
 // Source: https://www.medipan.de/sdm_categories/ifu/
-// 91 réactifs Generic Assays avec notice IFU (FR prioritaire, EN fallback)
+// 104 réactifs Generic Assays avec notice IFU (FR prioritaire, EN fallback)
 // Téléchargement via API proxy : /api/notice/[ref]
 
 export type MedipanFiche = {
@@ -102,4 +102,17 @@ export const FICHES_MEDIPAN: Record<string, MedipanFiche> = {
   "4129": { dlId: "1953", langue: "EN", fallback: true },
   "4270": { dlId: "1970", langue: "EN", fallback: true },
   "4271": { dlId: "1956", langue: "EN", fallback: true },
+  "4027": { dlId: "3317", langue: "FR", fallback: false },
+  "4046": { dlId: "1857", langue: "EN", fallback: true },
+  "8101": { dlId: "3344", langue: "FR", fallback: false },
+  "81040": { dlId: "3344", langue: "FR", fallback: false },
+  "86048": { dlId: "3356", langue: "FR", fallback: false },
+  "86096": { dlId: "3356", langue: "FR", fallback: false },
+  "81050": { dlId: "3351", langue: "FR", fallback: false },
+  "81100": { dlId: "3351", langue: "FR", fallback: false },
+  "85048": { dlId: "3353", langue: "FR", fallback: false },
+  "85096": { dlId: "3353", langue: "FR", fallback: false },
+  "4063": { dlId: "1963", langue: "EN", fallback: true },
+  "4065": { dlId: "1963", langue: "EN", fallback: true },
+  "4121": { dlId: "1959", langue: "EN", fallback: true },
 };
