@@ -195,7 +195,7 @@ export const EQUIPEMENTS: GridItem[] = [
         "desc":  "BioCLIA 1900",
         "cat":  "autoimmunite",
         "conditionnement":  "75 tests/h",
-        "image": "/images/equipements/BIOCLIA 1900.jpg",
+        "image": "/images/equipements/BIOCLIA 1900.webp",
     },
     {
         "ref":  "MA00502",
