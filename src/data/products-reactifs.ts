@@ -3199,6 +3199,7 @@ export const REACTIFS: GridItem[] = [
         "marque":  "HOB Biotech",
         "desc":  "BioCLIA 1900",
         "cat":  "allergie",
+        "image":  "/images/equipements/BIOCLIA 1900.webp",
         "conditionnement":  ""
     },
     {
