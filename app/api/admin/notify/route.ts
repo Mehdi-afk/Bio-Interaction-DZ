@@ -5,6 +5,10 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 const FROM   = "BioInteraction <noreply@biointeractiondz.com>";
 const ADMIN  = process.env.NEXT_PUBLIC_ADMIN_EMAIL ?? "";
 
+function esc(s: string) {
+  return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+}
+
 export async function POST(req: NextRequest) {
   const { email, name, action } = (await req.json()) as {
     email:  string;
@@ -16,17 +20,20 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Paramètres manquants." }, { status: 400 });
   }
 
+  const safeName  = esc(name  ?? "");
+  const safeEmail = esc(email ?? "");
+
   // Notification to admin on new signup
   if (action === "new_signup") {
     try {
       await resend.emails.send({
         from:    FROM,
         to:      ADMIN,
-        subject: `Nouvelle demande de compte — ${name}`,
+        subject: `Nouvelle demande de compte — ${safeName}`,
         html:    `<p>Une nouvelle demande de compte a été soumise :</p>
                   <ul>
-                    <li><strong>Nom :</strong> ${name}</li>
-                    <li><strong>Email :</strong> ${email}</li>
+                    <li><strong>Nom :</strong> ${safeName}</li>
+                    <li><strong>Email :</strong> ${safeEmail}</li>
                   </ul>
                   <p><a href="https://biointeractiondz.com/admin">Voir les demandes en attente →</a></p>`,
       });
@@ -44,11 +51,11 @@ export async function POST(req: NextRequest) {
 
   const html =
     action === "approved"
-      ? `<p>Bonjour ${name},</p>
+      ? `<p>Bonjour ${safeName},</p>
          <p>Votre compte BioInteraction a été <strong>approuvé</strong>. Vous pouvez désormais vous connecter.</p>
          <p><a href="https://biointeractiondz.com/auth/login">Se connecter →</a></p>
          <p>Cordialement,<br/>L'équipe BioInteraction</p>`
-      : `<p>Bonjour ${name},</p>
+      : `<p>Bonjour ${safeName},</p>
          <p>Votre demande de compte BioInteraction n'a pas pu être approuvée. Pour toute question, contactez-nous à <a href="mailto:contact@biointeractiondz.com">contact@biointeractiondz.com</a>.</p>
          <p>Cordialement,<br/>L'équipe BioInteraction</p>`;
 

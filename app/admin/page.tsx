@@ -53,12 +53,14 @@ export default function AdminPage() {
     setActionUid(uid);
     try {
       await updateDoc(doc(db, "users", uid), { status: action });
-      await fetch("/api/admin/notify", {
+      fetch("/api/admin/notify", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, name, action }),
-      });
+      }).catch(() => {});
       setAllUsers((prev) => prev.map((u) => u.uid === uid ? { ...u, status: action } : u));
+    } catch (e) {
+      setError("Erreur : " + (e as Error).message);
     } finally {
       setActionUid(null);
     }

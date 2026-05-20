@@ -104,12 +104,17 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   async function signup(name: string, email: string, password: string) {
     const { user: newUser } = await createUserWithEmailAndPassword(auth, email, password);
     await updateProfile(newUser, { displayName: name });
-    await fetch("/api/auth/send-verification", {
+    const res = await fetch("/api/auth/send-verification", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ uid: newUser.uid, email, name }),
     });
     await signOut(auth);
+    if (!res.ok) {
+      const e = new Error("Échec d'envoi de l'email de vérification.") as Error & { code: string };
+      e.code = "VERIFICATION_EMAIL_FAILED";
+      throw e;
+    }
   }
 
   async function logout() {

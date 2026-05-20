@@ -98,7 +98,7 @@ function ProductCard({
 }: {
   product: Product;
   isList: boolean;
-  onSelect: (p: Product, sectionLabel: string) => void;
+  onSelect: (p: Product) => void;
   onAddToCart: (p: Product) => void;
 }) {
   const { bg, color } = catStyle(product.cat);
@@ -111,8 +111,8 @@ function ProductCard({
         transition-[box-shadow,border-color,transform] duration-200
         hover:shadow-[0_4px_16px_rgba(0,0,0,0.10)] hover:border-[#BDD0EA] hover:-translate-y-0.5
         ${isList ? "flex flex-row" : ""}`}
-      onClick={() => onSelect(product, "")}
-      onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") onSelect(product, ""); }}
+      onClick={() => onSelect(product)}
+      onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") onSelect(product); }}
     >
       {/* Image area */}
       <div
@@ -827,7 +827,7 @@ export default function CatalogueClient({
                     key={`${item.ref}-${item.desc}-${i}`}
                     product={item}
                     isList={view === "list"}
-                    onSelect={(p) => { setSelected(p); setSelectedSection(sectionForCard); }}
+                    onSelect={(p) => { setSelected(p); setSelectedSection(sectionForCard); } }
                     onAddToCart={handleAddToCart}
                   />
                 );

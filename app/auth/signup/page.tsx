@@ -40,6 +40,8 @@ export default function SignupPage() {
         setError("Cette adresse e-mail est déjà utilisée.");
       } else if (code === "auth/invalid-email") {
         setError("Adresse e-mail invalide.");
+      } else if (code === "VERIFICATION_EMAIL_FAILED") {
+        setDone(true); // account created, email may retry later
       } else {
         setError("Une erreur est survenue. Veuillez réessayer.");
       }

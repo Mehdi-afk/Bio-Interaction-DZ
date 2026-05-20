@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { updateProfile } from "firebase/auth";
-import { doc, getDoc, updateDoc, serverTimestamp } from "firebase/firestore";
+import { doc, getDoc, setDoc, serverTimestamp } from "firebase/firestore";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { auth, db, storage } from "@/src/lib/firebase";
 import { useAuth } from "@/src/context/AuthContext";
@@ -50,6 +50,7 @@ export default function ProfilePage() {
   function handlePhotoChange(e: React.ChangeEvent<HTMLInputElement>) {
     const file = e.target.files?.[0];
     if (!file) return;
+    if (photoPreview) URL.revokeObjectURL(photoPreview);
     setPhotoFile(file);
     setPhotoPreview(URL.createObjectURL(file));
   }
@@ -76,7 +77,7 @@ export default function ProfilePage() {
         photoURL:    newPhotoURL || null,
       });
 
-      await updateDoc(doc(db, "users", user.uid), {
+      await setDoc(doc(db, "users", user.uid), {
         firstName,
         lastName,
         name:      fullName,
@@ -84,7 +85,7 @@ export default function ProfilePage() {
         company,
         photoURL:  newPhotoURL,
         updatedAt: serverTimestamp(),
-      });
+      }, { merge: true });
 
       setPhotoURL(newPhotoURL);
       setPhotoFile(null);

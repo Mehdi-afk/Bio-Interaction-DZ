@@ -1,41 +1,13 @@
 "use client";
 
-import { useState, useEffect, Suspense } from "react";
+import { Suspense } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useSearchParams } from "next/navigation";
-import {
-  signInWithEmailAndPassword,
-  sendEmailVerification,
-  signOut,
-} from "firebase/auth";
-import { auth } from "@/src/lib/firebase";
 
 function VerifyEmailContent() {
-  const params   = useSearchParams();
-  const email    = params.get("email") ?? "";
-  const [sent,   setSent]   = useState(false);
-  const [error,  setError]  = useState("");
-  const [loading, setLoading] = useState(false);
-
-  // Auto-clear "email sent" banner after 5s
-  useEffect(() => {
-    if (!sent) return;
-    const t = setTimeout(() => setSent(false), 5000);
-    return () => clearTimeout(t);
-  }, [sent]);
-
-  async function handleResend() {
-    setError("");
-    setLoading(true);
-    try {
-      // We need the password to re-sign in and send verification
-      // Instead, prompt the user to type it via a small form
-      setError("Entrez votre mot de passe ci-dessous pour renvoyer l'email.");
-    } finally {
-      setLoading(false);
-    }
-  }
+  const params = useSearchParams();
+  const email  = params.get("email") ?? "";
 
   return (
     <div className="min-h-[calc(100vh-68px)] flex items-center justify-center px-4 py-12 bg-[#FAFAF8]">
@@ -65,17 +37,6 @@ function VerifyEmailContent() {
             Cliquez sur le lien dans l&apos;email pour confirmer votre adresse,
             puis connectez-vous.
           </p>
-
-          {sent && (
-            <p className="text-[13px] text-[#29A864] bg-[#EDF8F1] px-3 py-2 rounded-lg mb-4">
-              Email renvoyé avec succès.
-            </p>
-          )}
-          {error && (
-            <p className="text-[13px] text-[#6E6E6E] bg-[#F7F6F2] px-3 py-2 rounded-lg mb-4">
-              {error}
-            </p>
-          )}
 
           <Link
             href="/auth/login"
