@@ -29,13 +29,34 @@ export default function ReactifsLanding() {
   return (
     <div className="max-w-[1200px] mx-auto px-12 py-16 max-[1024px]:px-6 max-[1024px]:py-12 max-[600px]:px-4 max-[600px]:py-9">
 
-      <div className="mb-12 max-[600px]:mb-8">
-        <h1 className="font-serif text-[38px] mb-3 max-[600px]:text-[28px]">
-          Réactifs de laboratoire
-        </h1>
-        <p className="text-[#6E6E6E] text-[16px]">
-          Sélectionnez une spécialité pour explorer nos références.
-        </p>
+      <div className="mb-12 max-[600px]:mb-8 flex items-end justify-between gap-4 flex-wrap">
+        <div>
+          <h1 className="font-serif text-[38px] mb-3 max-[600px]:text-[28px]">
+            Réactifs de laboratoire
+          </h1>
+          <p className="text-[#6E6E6E] text-[16px]">
+            Sélectionnez une spécialité pour explorer nos références.
+          </p>
+        </div>
+        <Link
+          href="/catalogue/reactifs?all=1"
+          className="
+            shrink-0 inline-flex items-center gap-2 px-5 py-2.5
+            border border-[#E5E3DC] rounded-xl bg-white no-underline
+            text-[14px] font-medium text-[#6E6E6E]
+            transition-all duration-150
+            hover:border-[#29A864] hover:text-[#29A864] hover:bg-[#EDF8F1]
+          "
+        >
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4" aria-hidden="true">
+            <rect x="2" y="2" width="7" height="7" rx="1"/><rect x="11" y="2" width="7" height="7" rx="1"/>
+            <rect x="2" y="11" width="7" height="7" rx="1"/><rect x="11" y="11" width="7" height="7" rx="1"/>
+          </svg>
+          Voir tous les réactifs
+          <span className="text-[12px] px-1.5 py-0.5 bg-[#F7F6F2] rounded-full text-[#A9ADAA]">
+            {Object.values(counts).reduce((a, b) => a + b, 0)}
+          </span>
+        </Link>
       </div>
 
       <div className="

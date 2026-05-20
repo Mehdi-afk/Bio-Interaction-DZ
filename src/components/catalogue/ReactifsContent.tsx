@@ -65,11 +65,26 @@ export default function ReactifsContent() {
   const section = searchParams.get("section");
   const marque  = searchParams.get("marque");
   const q       = searchParams.get("q");
+  const all     = searchParams.get("all");
 
-  // ── 1. No cat → category landing ──
-  if (!cat) return <ReactifsLanding />;
+  // ── 1. No cat and no "all" → category landing ──
+  if (!cat && !all) return <ReactifsLanding />;
 
-  const sections = getSectionsForCat(REACTIFS, cat);
+  // ── 2. "all" param → show full catalogue ──
+  if (all) {
+    return (
+      <CatalogueClient
+        items={REACTIFS}
+        title="Tous les réactifs"
+        cats={CATS}
+        brands={BRANDS}
+        showTypeFilter
+        backHref="/catalogue/reactifs"
+      />
+    );
+  }
+
+  const sections = getSectionsForCat(REACTIFS, cat!);
 
   // ── 2. Compat redirect (marque or q present) → skip landing, show filtered catalogue ──
   if (marque || q) {
@@ -87,7 +102,7 @@ export default function ReactifsContent() {
 
   // ── 3. Cat set, no section, multiple sections → sub-category landing ──
   if (!section && sections.length > 1) {
-    return <ReactifsSubcategoryLanding cat={cat} sections={sections} />;
+    return <ReactifsSubcategoryLanding cat={cat!} sections={sections} />;
   }
 
   // ── 4. Section set (or single section) → filtered catalogue ──
