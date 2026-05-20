@@ -4,7 +4,7 @@ import { useState, useMemo, useEffect, useRef } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import type { GridItem, Product } from "@/src/data/products-reactifs";
+import type { GridItem, Product, InfoBlock } from "@/src/data/products-reactifs";
 import { useApp } from "@/src/context/AppContext";
 
 // ── Colour helpers ─────────────────────────────────────────────────────────────
@@ -485,6 +485,11 @@ export default function CatalogueClient({
     for (const item of items) {
       if (item.kind === "section") {
         pendingLabel = item;
+      } else if (item.kind === "info") {
+        if (activeCat === "all" || item.cat === activeCat) {
+          if (pendingLabel) { result.push(pendingLabel); pendingLabel = null; }
+          result.push(item);
+        }
       } else {
         if (passes(item)) {
           if (pendingLabel) { result.push(pendingLabel); pendingLabel = null; }
@@ -818,6 +823,17 @@ export default function CatalogueClient({
                       style={i === 0 ? { marginTop: 0 } : {}}
                     >
                       {item.label}
+                    </div>
+                  );
+                }
+                if (item.kind === "info") {
+                  const [title, ...rest] = (item as InfoBlock).text.split("\n\n");
+                  return (
+                    <div key={`info-${i}`} className="col-span-full bg-white border border-[#E5E3DC] rounded-xl p-5">
+                      <p className="text-[14px] font-semibold text-[#1B1F1D] mb-2">{title}</p>
+                      {rest.map((part, j) => (
+                        <p key={j} className="text-[13px] text-[#6E6E6E] leading-[1.7]">{part}</p>
+                      ))}
                     </div>
                   );
                 }
