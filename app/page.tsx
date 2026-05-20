@@ -61,7 +61,7 @@ export default function HomePage() {
               <circle cx="7" cy="7" r="5" />
               <path d="M7 4v3l2 2" />
             </svg>
-            Spécialiste de la distribution depuis 2016
+            Spécialiste du domaine depuis 2016
           </div>
 
           {/* Titre principal */}
