@@ -153,7 +153,6 @@ function NewArticleContent() {
   const [excerpt,     setExcerpt]     = useState("");
   const [tags,        setTags]        = useState("");
   const [slug,        setSlug]        = useState("");
-  const [slugEdited,  setSlugEdited]  = useState(false);
   const [coverImage,  setCoverImage]  = useState("");
   const [coverFile,   setCoverFile]   = useState<File | null>(null);
   const [coverPreview,setCoverPreview]= useState<string | null>(null);
@@ -182,7 +181,6 @@ function NewArticleContent() {
       setExcerpt(d.excerpt ?? "");
       setTags((d.tags ?? []).join(", "));
       setSlug(d.slug ?? "");
-      setSlugEdited(true);
       setCoverImage(d.coverImage ?? "");
       setStatus(d.status ?? "draft");
       setBlocks(
@@ -197,8 +195,8 @@ function NewArticleContent() {
 
   // Auto-generate slug from title
   useEffect(() => {
-    if (!slugEdited && title) setSlug(generateSlug(title));
-  }, [title, slugEdited]);
+    if (title) setSlug(generateSlug(title));
+  }, [title]);
 
   function handleCoverChange(e: React.ChangeEvent<HTMLInputElement>) {
     const file = e.target.files?.[0];
@@ -381,15 +379,11 @@ function NewArticleContent() {
 
         {/* Slug */}
         <div>
-          <label className="block text-[13px] font-medium text-[#1B1F1D] mb-1.5">Slug URL *</label>
-          <input
-            type="text"
-            value={slug}
-            onChange={(e) => { setSlug(e.target.value); setSlugEdited(true); }}
-            placeholder="url-de-l-article"
-            className={`${inputCls} font-mono text-[13px]`}
-          />
-          <p className="text-[11px] text-[#A9ADAA] mt-1">biointeractiondz.com/blog/<strong>{slug || "slug"}</strong></p>
+          <label className="block text-[13px] font-medium text-[#1B1F1D] mb-1.5">Slug URL</label>
+          <div className="w-full px-4 py-2.5 border border-[#E5E3DC] rounded-xl text-[13px] font-mono bg-[#F7F6F2] text-[#6E6E6E] select-all">
+            {slug || <span className="text-[#C0C4C1]">généré depuis le titre…</span>}
+          </div>
+          <p className="text-[11px] text-[#A9ADAA] mt-1">biointeractiondz.com/blog/<strong>{slug || "…"}</strong></p>
         </div>
 
         {/* Tags */}
