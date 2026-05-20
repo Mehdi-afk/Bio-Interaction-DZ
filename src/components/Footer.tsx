@@ -19,9 +19,8 @@ const CATALOGUE_LINKS = [
 ] as const;
 
 const CONTACT_LINKS = [
-  { href: "tel:+21323952151",                    label: "+213.23.95.21.51" },
-  { href: "tel:+21323952331",                    label: "+213.23.95.23.31" },
-  { href: "tel:+213770980888",                   label: "+213.770.98.08.88" },
+  { href: "tel:+21328464830",                    label: "+213.28.46.48.30" },
+  { href: "tel:+21328464890",                    label: "+213.28.46.48.90" },
   { href: "mailto:support@biointeractiondz.com", label: "support@biointeractiondz.com" },
 ] as const;
 

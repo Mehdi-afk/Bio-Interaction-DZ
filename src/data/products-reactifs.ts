@@ -3188,6 +3188,40 @@ export const REACTIFS: GridItem[] = [
         "conditionnement":  "100 tests"
     },
     {
+        "label":  "Allergie - Instruments BioCLIA",
+        "kind":  "section"
+    },
+    {
+        "ref":  "MA01073",
+        "kind":  "product",
+        "type":  "instrument",
+        "description":  "75 tests/h — Jusqu'à 40 échantillons — 12 positions auto-immunité + 33 positions allergie",
+        "marque":  "HOB Biotech",
+        "desc":  "BioCLIA 1900",
+        "cat":  "allergie",
+        "conditionnement":  ""
+    },
+    {
+        "ref":  "MA00502",
+        "kind":  "product",
+        "type":  "instrument",
+        "description":  "120 tests/h — Jusqu'à 24 échantillons — 12 positions auto-immunité + 33 positions allergie",
+        "marque":  "HOB Biotech",
+        "desc":  "BioCLIA 500",
+        "cat":  "allergie",
+        "conditionnement":  ""
+    },
+    {
+        "ref":  "MA00243",
+        "kind":  "product",
+        "type":  "instrument",
+        "description":  "218 tests/h — Jusqu'à 96 échantillons — 12 positions auto-immunité + 33 positions allergie",
+        "marque":  "HOB Biotech",
+        "desc":  "BioCLIA 6500",
+        "cat":  "allergie",
+        "conditionnement":  ""
+    },
+    {
         "label":  "Allergie - Reactifs BioLINE DOT",
         "kind":  "section"
     },

@@ -84,7 +84,7 @@ const VALUES = [
   {
     Icon: IconClock,
     title: "Réactivité commerciale",
-    text: "Devis rapide, livraison sur Alger et régions. Service commercial joignable au +213.770.08.54.53 — sales@biointeractiondz.com.",
+    text: "Devis rapide, livraison sur tout le territoire national. Service commercial joignable au +213.770.08.54.53 — sales@biointeractiondz.com.",
   },
   {
     Icon: IconWrench,
@@ -94,7 +94,7 @@ const VALUES = [
   {
     Icon: IconLink,
     title: "Partenariats durables",
-    text: "Nous représentons nos fournisseurs en exclusivité ou semi-exclusivité sur le marché algérien, garantissant disponibilité et suivi de chaque produit.",
+    text: "Nous représentons nos fournisseurs en exclusivité sur le marché algérien, garantissant disponibilité et suivi de chaque produit.",
   },
 ] as const;
 

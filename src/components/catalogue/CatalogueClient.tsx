@@ -423,7 +423,7 @@ export default function CatalogueClient({
     initialMarque ? new Set([initialMarque]) : new Set()
   );
   const [activeTypes,  setActiveTypes]  = useState<Set<string>>(new Set());
-  const [view,         setView]         = useState<"grid" | "list">("grid");
+  const [view,         setView]         = useState<"grid" | "list">("list");
   const [selected,     setSelected]     = useState<Product | null>(null);
   const [selectedSection, setSelectedSection] = useState<string>("");
   const [sidebarOpen,  setSidebarOpen]  = useState(false);

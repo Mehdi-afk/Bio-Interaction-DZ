@@ -75,7 +75,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link
           href="/"
-          className="flex items-center gap-2.5 shrink-0 text-[22px] max-[600px]:text-lg text-[#29A864] no-underline"
+          className="flex items-center gap-2.5 shrink-0 no-underline"
           style={{ fontFamily: "var(--font-dm-serif, 'Geist', sans-serif)" }}
         >
           <Image
@@ -85,7 +85,12 @@ export default function Navbar() {
             alt="BioInteraction"
             className="w-11 h-11 max-[600px]:w-[30px] max-[600px]:h-[30px]"
           />
-          BioInteraction
+          <div className="flex flex-col items-center leading-tight">
+            <span className="text-[22px] max-[600px]:text-lg">
+              <span className="text-[#29A864]">Bio</span><span className="text-[#1B1F1D]">Interaction</span>
+            </span>
+            <span className="text-[13px] max-[600px]:text-[11px] text-[#29A864] tracking-[0.3px]">Algérie</span>
+          </div>
         </Link>
 
         {/* Desktop nav links */}

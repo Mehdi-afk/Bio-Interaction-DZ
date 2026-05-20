@@ -32,7 +32,7 @@ const CATEGORY_CARDS: CategoryCard[] = [
     title: "Hémostase",
     description:
       "Coagulomètres ECL 412/760 et réactifs dédiés.",
-    count: "ERBA",
+    count: "12 références — ERBA",
   },
   {
     href: "/catalogue/reactifs?cat=autoimmunite",
