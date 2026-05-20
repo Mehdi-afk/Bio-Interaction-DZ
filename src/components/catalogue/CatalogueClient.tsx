@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { GridItem, Product, InfoBlock } from "@/src/data/products-reactifs";
 import { FICHES_TECHNIQUES } from "@/src/data/fiches-techniques";
+import { FICHES_LDBIO } from "@/src/data/fiches-ldbio";
 import { useApp } from "@/src/context/AppContext";
 
 // ── Colour helpers ─────────────────────────────────────────────────────────────
@@ -187,50 +188,73 @@ function ProductCard({
 
 // ── FicheTechniqueButton ───────────────────────────────────────────────────────
 
+const DownloadIcon = () => (
+  <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth={1.8} className="w-4 h-4 shrink-0" aria-hidden="true">
+    <path d="M10 3v10M6 9l4 4 4-4" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M3 15h14" strokeLinecap="round"/>
+  </svg>
+);
+
 function FicheTechniqueButton({ productRef }: { productRef: string }) {
   const [open, setOpen] = useState(false);
-  const fiches = FICHES_TECHNIQUES[productRef];
 
-  if (!fiches || fiches.length === 0) return null;
+  // Check LDBIO source first (single notice with potential fallback flag)
+  const ldbioFiche = FICHES_LDBIO[productRef];
+  if (ldbioFiche) {
+    return (
+      <div>
+        <a
+          href={ldbioFiche.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center justify-center gap-2 w-full py-[10px] px-7 bg-transparent text-[#1B1F1D] border-[1.5px] border-[#E5E3DC] rounded-[9px] text-[14px] font-medium no-underline hover:border-[#29A864] hover:text-[#29A864] transition-colors duration-150"
+        >
+          <DownloadIcon />
+          Télécharger la notice ({ldbioFiche.langue})
+        </a>
+        {ldbioFiche.fallback && (
+          <p className="text-[11px] text-[#A9ADAA] mt-1 text-center">
+            ⚠️ Notice disponible en anglais uniquement
+          </p>
+        )}
+      </div>
+    );
+  }
 
-  // Single fiche → direct download link
-  if (fiches.length === 1) {
+  // Check ERBA XSYS source (can have multiple IFU entries)
+  const erbaFiches = FICHES_TECHNIQUES[productRef];
+  if (!erbaFiches || erbaFiches.length === 0) return null;
+
+  if (erbaFiches.length === 1) {
     return (
       <a
-        href={fiches[0].url}
+        href={erbaFiches[0].url}
         target="_blank"
         rel="noopener noreferrer"
         className="flex items-center justify-center gap-2 w-full py-[10px] px-7 bg-transparent text-[#1B1F1D] border-[1.5px] border-[#E5E3DC] rounded-[9px] text-[14px] font-medium no-underline hover:border-[#29A864] hover:text-[#29A864] transition-colors duration-150"
       >
-        <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth={1.8} className="w-4 h-4 shrink-0" aria-hidden="true">
-          <path d="M10 3v10M6 9l4 4 4-4" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M3 15h14" strokeLinecap="round"/>
-        </svg>
-        Fiche technique ({fiches[0].label})
+        <DownloadIcon />
+        Télécharger la notice
       </a>
     );
   }
 
-  // Multiple fiches → dropdown
+  // Multiple ERBA fiches → dropdown
   return (
     <div className="relative">
       <button
         onClick={() => setOpen((v) => !v)}
         className="flex items-center justify-center gap-2 w-full py-[10px] px-7 bg-transparent text-[#1B1F1D] border-[1.5px] border-[#E5E3DC] rounded-[9px] text-[14px] font-medium cursor-pointer hover:border-[#29A864] hover:text-[#29A864] transition-colors duration-150"
       >
-        <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth={1.8} className="w-4 h-4 shrink-0" aria-hidden="true">
-          <path d="M10 3v10M6 9l4 4 4-4" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M3 15h14" strokeLinecap="round"/>
-        </svg>
-        Fiches techniques ({fiches.length})
+        <DownloadIcon />
+        Notices disponibles ({erbaFiches.length})
         <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth={2} className={`w-3.5 h-3.5 ml-auto transition-transform ${open ? "rotate-180" : ""}`} aria-hidden="true">
           <path d="M5 8l5 5 5-5" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
       </button>
-
       {open && (
         <div className="absolute top-full left-0 right-0 mt-1.5 bg-white border border-[#E5E3DC] rounded-[10px] shadow-[0_4px_16px_rgba(0,0,0,0.10)] z-10 overflow-hidden">
-          {fiches.map((f, i) => (
+          {erbaFiches.map((f, i) => (
             <a
               key={i}
               href={f.url}
@@ -239,12 +263,9 @@ function FicheTechniqueButton({ productRef }: { productRef: string }) {
               onClick={() => setOpen(false)}
               className="flex items-center gap-3 px-4 py-3 no-underline text-[13px] text-[#1B1F1D] hover:bg-[#EDF8F1] hover:text-[#29A864] transition-colors border-b border-[#F7F6F2] last:border-b-0"
             >
-              <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth={1.8} className="w-4 h-4 shrink-0 text-[#29A864]" aria-hidden="true">
-                <path d="M10 3v10M6 9l4 4 4-4" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M3 15h14" strokeLinecap="round"/>
-              </svg>
+              <DownloadIcon />
               <span className="flex-1">{f.label}</span>
-              <span className="text-[11px] text-[#A9ADAA] bg-[#F7F6F2] px-1.5 py-0.5 rounded-full">{f.type}</span>
+              <span className="text-[11px] text-[#A9ADAA] bg-[#F7F6F2] px-1.5 py-0.5 rounded-full">{f.langue}</span>
             </a>
           ))}
         </div>
