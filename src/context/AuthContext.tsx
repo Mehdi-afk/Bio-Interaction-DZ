@@ -15,14 +15,16 @@ import { doc, setDoc, getDoc, serverTimestamp } from "firebase/firestore";
 import { auth, db } from "@/src/lib/firebase";
 
 type UserStatus = "pending" | "approved" | "rejected";
+export type UserRole = "admin" | "user";
 
 type AuthContextType = {
-  user:     User | null;
-  loading:  boolean;
-  isAdmin:  boolean;
-  login:    (email: string, password: string) => Promise<void>;
-  signup:   (name: string, email: string, password: string) => Promise<void>;
-  logout:   () => Promise<void>;
+  user:      User | null;
+  loading:   boolean;
+  isAdmin:   boolean;
+  userRole:  UserRole | null;
+  login:     (email: string, password: string) => Promise<void>;
+  signup:    (name: string, email: string, password: string) => Promise<void>;
+  logout:    () => Promise<void>;
 };
 
 const AuthContext = createContext<AuthContextType | null>(null);
@@ -30,18 +32,32 @@ const AuthContext = createContext<AuthContextType | null>(null);
 const ADMIN_EMAIL = process.env.NEXT_PUBLIC_ADMIN_EMAIL ?? "";
 
 export function AuthProvider({ children }: { children: ReactNode }) {
-  const [user,    setUser]    = useState<User | null>(null);
-  const [loading, setLoading] = useState(true);
+  const [user,     setUser]     = useState<User | null>(null);
+  const [loading,  setLoading]  = useState(true);
+  const [userRole, setUserRole] = useState<UserRole | null>(null);
 
   useEffect(() => {
-    const unsub = onAuthStateChanged(auth, (u) => {
+    const unsub = onAuthStateChanged(auth, async (u) => {
       setUser(u);
+      if (u && u.email !== ADMIN_EMAIL) {
+        try {
+          const snap = await getDoc(doc(db, "users", u.uid));
+          setUserRole((snap.data()?.role as UserRole) ?? "user");
+        } catch {
+          setUserRole("user");
+        }
+      } else {
+        setUserRole(null);
+      }
       setLoading(false);
     });
     return unsub;
   }, []);
 
-  const isAdmin = !!user && !!ADMIN_EMAIL && user.email === ADMIN_EMAIL;
+  const isAdmin = !!user && (
+    (!!ADMIN_EMAIL && user.email === ADMIN_EMAIL) ||
+    userRole === "admin"
+  );
 
   async function login(email: string, password: string) {
     if (email === ADMIN_EMAIL) {
@@ -122,7 +138,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   }
 
   return (
-    <AuthContext.Provider value={{ user, loading, isAdmin, login, signup, logout }}>
+    <AuthContext.Provider value={{ user, loading, isAdmin, userRole, login, signup, logout }}>
       {children}
     </AuthContext.Provider>
   );

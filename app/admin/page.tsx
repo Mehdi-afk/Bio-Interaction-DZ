@@ -12,6 +12,7 @@ type UserDoc = {
   name:      string;
   email:     string;
   status:    "pending" | "approved" | "rejected";
+  role?:     "admin" | "user";
   createdAt: { seconds: number } | null;
 };
 
@@ -59,6 +60,18 @@ export default function AdminPage() {
         body: JSON.stringify({ email, name, action }),
       }).catch(() => {});
       setAllUsers((prev) => prev.map((u) => u.uid === uid ? { ...u, status: action } : u));
+    } catch (e) {
+      setError("Erreur : " + (e as Error).message);
+    } finally {
+      setActionUid(null);
+    }
+  }
+
+  async function handleRoleChange(uid: string, role: "admin" | "user") {
+    setActionUid(uid);
+    try {
+      await updateDoc(doc(db, "users", uid), { role });
+      setAllUsers((prev) => prev.map((u) => u.uid === uid ? { ...u, role } : u));
     } catch (e) {
       setError("Erreur : " + (e as Error).message);
     } finally {
@@ -159,6 +172,18 @@ export default function AdminPage() {
                 <span className={`text-[11px] font-semibold px-2.5 py-1 rounded-full shrink-0 ${st.cls}`}>
                   {st.label}
                 </span>
+
+                {u.status === "approved" && (
+                  <select
+                    value={u.role ?? "user"}
+                    disabled={busy}
+                    onChange={(e) => handleRoleChange(u.uid, e.target.value as "admin" | "user")}
+                    className="text-[12px] px-2.5 py-1.5 border border-[#E5E3DC] rounded-lg bg-white text-[#1B1F1D] cursor-pointer outline-none focus:border-[#29A864] transition-colors disabled:opacity-50 shrink-0"
+                  >
+                    <option value="user">Utilisateur</option>
+                    <option value="admin">Admin</option>
+                  </select>
+                )}
 
                 {u.status === "pending" && (
                   <div className="flex gap-2 shrink-0">
