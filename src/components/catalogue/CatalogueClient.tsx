@@ -117,7 +117,7 @@ function ProductCard({
       {/* Image area */}
       <div
         className={`flex items-center justify-center shrink-0 overflow-hidden
-          ${isList ? "w-[130px] h-[110px]" : "h-[160px] w-full"}`}
+          ${isList ? "w-[120px] h-[120px]" : "w-full aspect-square"}`}
         style={{ background: product.image ? "#fff" : bg }}
       >
         {product.image ? (
