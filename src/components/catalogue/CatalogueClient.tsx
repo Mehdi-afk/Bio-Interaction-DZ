@@ -7,6 +7,7 @@ import Link from "next/link";
 import type { GridItem, Product, InfoBlock } from "@/src/data/products-reactifs";
 import { FICHES_TECHNIQUES } from "@/src/data/fiches-techniques";
 import { FICHES_LDBIO } from "@/src/data/fiches-ldbio";
+import { FICHES_MEDIPAN } from "@/src/data/fiches-medipan";
 import { useApp } from "@/src/context/AppContext";
 
 // ── Colour helpers ─────────────────────────────────────────────────────────────
@@ -198,7 +199,30 @@ const DownloadIcon = () => (
 function FicheTechniqueButton({ productRef }: { productRef: string }) {
   const [open, setOpen] = useState(false);
 
-  // Check LDBIO source first (single notice with potential fallback flag)
+  // ── Medipan / Generic Assays (via API proxy) ──
+  const medipanFiche = FICHES_MEDIPAN[productRef];
+  if (medipanFiche) {
+    return (
+      <div>
+        <a
+          href={`/api/notice/${productRef}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center justify-center gap-2 w-full py-[10px] px-7 bg-transparent text-[#1B1F1D] border-[1.5px] border-[#E5E3DC] rounded-[9px] text-[14px] font-medium no-underline hover:border-[#29A864] hover:text-[#29A864] transition-colors duration-150"
+        >
+          <DownloadIcon />
+          Télécharger la notice ({medipanFiche.langue})
+        </a>
+        {medipanFiche.fallback && (
+          <p className="text-[11px] text-[#A9ADAA] mt-1 text-center">
+            ⚠️ Notice disponible en anglais uniquement
+          </p>
+        )}
+      </div>
+    );
+  }
+
+  // ── LDBIO (URL directe) ──
   const ldbioFiche = FICHES_LDBIO[productRef];
   if (ldbioFiche) {
     return (
