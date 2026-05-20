@@ -44,3 +44,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Generated scraping data (scripts only — src/data/fiches-techniques.ts is committed)
+/data/
