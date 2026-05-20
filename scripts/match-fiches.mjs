@@ -44,9 +44,8 @@ console.log(`✓ ${products.length} produits chargés depuis products-reactifs.t
 const fichesByRef = {};
 
 for (const fiche of fiches) {
-  // Skip calibrateurs and controles for the main download button
-  // (keep only IFU and AP — actual product instructions)
-  if (!["IFU", "AP", "autre"].includes(fiche.type)) continue;
+  // Keep only IFU (Instructions For Use) — the main product notice
+  if (fiche.type !== "IFU") continue;
 
   for (const ref of fiche.references) {
     if (!fichesByRef[ref]) fichesByRef[ref] = [];
