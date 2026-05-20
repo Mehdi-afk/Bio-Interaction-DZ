@@ -1,4 +1,4 @@
-﻿import type { GridItem } from './products-reactifs';
+import type { GridItem } from './products-reactifs';
 
 export const EQUIPEMENTS: GridItem[] = [
     {
@@ -14,7 +14,7 @@ export const EQUIPEMENTS: GridItem[] = [
         "desc":  "ERBA XL 200",
         "cat":  "biochimie",
         "conditionnement":  "200 tests/h",
-        
+        "image": "/images/equipements/ERBA XL 200.jpg",
     },
     {
         "ref":  "INS00008",
@@ -25,7 +25,7 @@ export const EQUIPEMENTS: GridItem[] = [
         "desc":  "ERBA XL 640",
         "cat":  "biochimie",
         "conditionnement":  "400 tests/h",
-        
+        "image": "/images/equipements/ERBA XL 640.jpg",
     },
     {
         "ref":  "INS00009",
@@ -36,7 +36,7 @@ export const EQUIPEMENTS: GridItem[] = [
         "desc":  "ERBA XL 1000",
         "cat":  "biochimie",
         "conditionnement":  "800 tests/h",
-        
+        "image": "/images/equipements/ERBA XL 1000.webp",
     },
     {
         "ref":  "INS00014",
@@ -47,18 +47,18 @@ export const EQUIPEMENTS: GridItem[] = [
         "desc":  "ERBA CHEM-7",
         "cat":  "biochimie",
         "conditionnement":  "Semi-automatisé",
-        
+        "image": "/images/equipements/ERBA Chem-7.jpg",
     },
     {
         "ref":  "INS00079",
         "kind":  "product",
         "type":  "instrument",
-        "description":  "Ionogramme — Écran tactile 8,4\", cartouches tout-en-un, CV \u003c1%, analyse 35 s, volume 35 µl",
+        "description":  "Ionogramme — Écran tactile 8,4\", cartouches tout-en-un, CV <1%, analyse 35 s, volume 35 µl",
         "marque":  "ERBA",
         "desc":  "ERBA EC 90",
         "cat":  "biochimie",
         "conditionnement":  "Ionogramme",
-        
+        "image": "/images/equipements/ERBA EC 90.jpg",
     },
     {
         "label":  "Hématologie",
@@ -73,7 +73,7 @@ export const EQUIPEMENTS: GridItem[] = [
         "desc":  "ERBA H360",
         "cat":  "hematologie",
         "conditionnement":  "60 tests/h",
-        
+        "image": "/images/equipements/ERBA H360.jpg",
     },
     {
         "ref":  "INS00078",
@@ -84,7 +84,7 @@ export const EQUIPEMENTS: GridItem[] = [
         "desc":  "ERBA H560",
         "cat":  "hematologie",
         "conditionnement":  "60 tests/h",
-        
+        "image": "/images/equipements/ERBA H560.jpg",
     },
     {
         "ref":  "INS00071",
@@ -95,7 +95,7 @@ export const EQUIPEMENTS: GridItem[] = [
         "desc":  "ERBA ELITE 580",
         "cat":  "hematologie",
         "conditionnement":  "80 tests/h",
-        
+        "image": "/images/equipements/ERBA H580.jpg",
     },
     {
         "ref":  "INS00087",
@@ -106,7 +106,7 @@ export const EQUIPEMENTS: GridItem[] = [
         "desc":  "ERBA H7100",
         "cat":  "hematologie",
         "conditionnement":  "100 tests/h",
-        
+        "image": "/images/equipements/ERBA H7100.jpg",
     },
     {
         "label":  "Hémostase",
@@ -121,18 +121,18 @@ export const EQUIPEMENTS: GridItem[] = [
         "desc":  "ERBA ECL 412",
         "cat":  "hemostase",
         "conditionnement":  "Semi-automatique",
-        
+        "image": "/images/equipements/ERBA ECL 412.jpg",
     },
     {
         "ref":  "INS00070",
         "kind":  "product",
         "type":  "instrument",
-        "description":  "Automate d\u0026#39;hémostase entièrement automatisé, 7 canaux, 27 positions échantillons, 72 positions cuves, stockage \u003e10 000 courbes",
+        "description":  "Automate d'hémostase entièrement automatisé, 7 canaux, 27 positions échantillons, 72 positions cuves, stockage >10 000 courbes",
         "marque":  "ERBA",
         "desc":  "ERBA ECL 760",
         "cat":  "hemostase",
         "conditionnement":  "Entièrement automatisé",
-        
+        "image": "/images/equipements/ERBA ECL 760.jpg",
     },
     {
         "label":  "Analyse des Urines",
@@ -147,7 +147,7 @@ export const EQUIPEMENTS: GridItem[] = [
         "desc":  "LAURA Smart",
         "cat":  "urines",
         "conditionnement":  "Portable",
-        
+        "image": "/images/equipements/LAURA SMART.jpg",
     },
     {
         "ref":  "INS00065",
@@ -158,7 +158,7 @@ export const EQUIPEMENTS: GridItem[] = [
         "desc":  "LAURA XL",
         "cat":  "urines",
         "conditionnement":  "Combiné",
-        
+        "image": "/images/equipements/LAURA XL.webp",
     },
     {
         "label":  "Auto-Immunité",
@@ -173,7 +173,7 @@ export const EQUIPEMENTS: GridItem[] = [
         "desc":  "DOT DIVER 2.0",
         "cat":  "autoimmunite",
         "conditionnement":  "1-24 échantillons",
-        
+        "image": "/images/equipements/DOT DIVER 2-0.png",
     },
     {
         "ref":  "4450",
@@ -184,7 +184,7 @@ export const EQUIPEMENTS: GridItem[] = [
         "desc":  "AKIRON NEO",
         "cat":  "autoimmunite",
         "conditionnement":  "Analyseur IFA",
-        
+        "image": "/images/equipements/AKIRON NEO.png",
     },
     {
         "ref":  "MA01073",
@@ -195,7 +195,7 @@ export const EQUIPEMENTS: GridItem[] = [
         "desc":  "BioCLIA 1900",
         "cat":  "autoimmunite",
         "conditionnement":  "75 tests/h",
-        
+        "image": "/images/equipements/BIOCLIA 1900.jpg",
     },
     {
         "ref":  "MA00502",
@@ -206,6 +206,6 @@ export const EQUIPEMENTS: GridItem[] = [
         "desc":  "BioCLIA 500",
         "cat":  "autoimmunite",
         "conditionnement":  "120 tests/h",
-        
+        "image": "/images/equipements/BIOCLIA 500.jpg",
     },
 ];
