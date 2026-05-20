@@ -198,6 +198,7 @@ function ProductPage({
   const { bg, color } = catStyle(product.cat);
   const isInstrument = product.type === "instrument";
   const hasCompat = isInstrument && !!COMPAT_MAP[product.ref];
+  const [lightbox, setLightbox] = useState(false);
 
   // Instruments: split description into bullet points at " — " or " - "
   const rawPoints = product.description
@@ -216,14 +217,16 @@ function ProductPage({
   ];
 
   useEffect(() => {
-    const handler = (e: KeyboardEvent) => { if (e.key === "Escape") onClose(); };
+    const handler = (e: KeyboardEvent) => {
+      if (e.key === "Escape") { if (lightbox) setLightbox(false); else onClose(); }
+    };
     document.addEventListener("keydown", handler);
     document.body.style.overflow = "hidden";
     return () => {
       document.removeEventListener("keydown", handler);
       document.body.style.overflow = "";
     };
-  }, [onClose]);
+  }, [onClose, lightbox]);
 
   return (
     <div className="fixed inset-0 top-[68px] z-[900] bg-white overflow-y-auto">
@@ -257,8 +260,9 @@ function ProductPage({
           {/* Gallery */}
           <div className="flex flex-col gap-3">
             <div
-              className="w-full border border-[#E5E3DC] rounded-2xl flex items-center justify-center bg-[#F7F6F2] overflow-hidden max-[900px]:max-w-[400px]"
+              className={`w-full border border-[#E5E3DC] rounded-2xl flex items-center justify-center bg-[#F7F6F2] overflow-hidden max-[900px]:max-w-[400px] ${product.image ? "cursor-zoom-in" : ""}`}
               style={{ aspectRatio: "1/1" }}
+              onClick={() => { if (product.image) setLightbox(true); }}
             >
               {product.image ? (
                 // eslint-disable-next-line @next/next/no-img-element
@@ -275,6 +279,29 @@ function ProductPage({
               )}
             </div>
           </div>
+
+          {/* Lightbox */}
+          {lightbox && product.image && (
+            <div
+              className="fixed inset-0 z-[1100] flex items-center justify-center bg-black/80 cursor-zoom-out"
+              onClick={() => setLightbox(false)}
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={product.image}
+                alt={product.desc}
+                className="max-w-[90vw] max-h-[90vh] object-contain rounded-xl shadow-2xl"
+                onClick={(e) => e.stopPropagation()}
+              />
+              <button
+                onClick={() => setLightbox(false)}
+                className="absolute top-5 right-5 w-10 h-10 rounded-full bg-white/10 border border-white/20 text-white flex items-center justify-center text-[20px] cursor-pointer hover:bg-white/20 transition-colors"
+                aria-label="Fermer"
+              >
+                ×
+              </button>
+            </div>
+          )}
 
           {/* Info */}
           <div className="pt-2">
