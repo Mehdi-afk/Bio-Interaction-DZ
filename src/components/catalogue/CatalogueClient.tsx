@@ -258,14 +258,14 @@ function ProductPage({
           <div className="flex flex-col gap-3">
             <div
               className="w-full border border-[#E5E3DC] rounded-2xl flex items-center justify-center bg-[#F7F6F2] overflow-hidden max-[900px]:max-w-[400px]"
-              style={{ aspectRatio: "4/3" }}
+              style={{ aspectRatio: "1/1" }}
             >
               {product.image ? (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img
                   src={product.image}
                   alt={product.desc}
-                  className="w-full h-full object-contain p-4"
+                  className="w-full h-full object-cover"
                 />
               ) : (
                 <div className="flex flex-col items-center gap-2">
