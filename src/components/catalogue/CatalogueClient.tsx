@@ -8,6 +8,7 @@ import type { GridItem, Product, InfoBlock } from "@/src/data/products-reactifs"
 import { FICHES_TECHNIQUES } from "@/src/data/fiches-techniques";
 import { FICHES_LDBIO } from "@/src/data/fiches-ldbio";
 import { FICHES_MEDIPAN } from "@/src/data/fiches-medipan";
+import { FICHES_HOB } from "@/src/data/fiches-hob";
 import { useApp } from "@/src/context/AppContext";
 
 // ── Colour helpers ─────────────────────────────────────────────────────────────
@@ -242,6 +243,22 @@ function FicheTechniqueButton({ productRef }: { productRef: string }) {
           </p>
         )}
       </div>
+    );
+  }
+
+  // ── HOB Biotech / BioCLIA (fichiers locaux PDF/DOCX) ──
+  const hobFiche = FICHES_HOB[productRef];
+  if (hobFiche) {
+    return (
+      <a
+        href={hobFiche.path}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center justify-center gap-2 w-full py-[10px] px-7 bg-transparent text-[#1B1F1D] border-[1.5px] border-[#E5E3DC] rounded-[9px] text-[14px] font-medium no-underline hover:border-[#29A864] hover:text-[#29A864] transition-colors duration-150"
+      >
+        <DownloadIcon />
+        Télécharger la notice ({hobFiche.langue})
+      </a>
     );
   }
 
