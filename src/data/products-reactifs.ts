@@ -38,7 +38,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "ALB 440",
         "cat":  "biochimie",
         "conditionnement":  "2000 tests",
-        "image":  "/images/reactifs/erba-xsys-kit.jpg"
+        "image":  "/images/reactifs/erba-xl-syspack.jpg"
     },
     {
         "ref":  "XSYS0002",
@@ -49,7 +49,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "ALP 110",
         "cat":  "biochimie",
         "conditionnement":  "500 tests",
-        "image":  "/images/reactifs/erba-xsys-kit.jpg"
+        "image":  "/images/reactifs/erba-xl-syspack.jpg"
     },
     {
         "ref":  "XSYS0003",
@@ -60,7 +60,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "AMY 110",
         "cat":  "biochimie",
         "conditionnement":  "500 tests",
-        "image":  "/images/reactifs/erba-xsys-kit.jpg"
+        "image":  "/images/reactifs/erba-xl-syspack.jpg"
     },
     {
         "ref":  "XSYS0017",
@@ -71,7 +71,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "ALT/GPT 330",
         "cat":  "biochimie",
         "conditionnement":  "1500 tests",
-        "image":  "/images/reactifs/erba-xsys-kit.jpg"
+        "image":  "/images/reactifs/erba-xl-syspack.jpg"
     },
     {
         "ref":  "XSYS0046",
@@ -82,7 +82,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "ASO",
         "cat":  "biochimie",
         "conditionnement":  "400 tests",
-        "image":  "/images/reactifs/erba-xsys-kit.jpg"
+        "image":  "/images/reactifs/erba-xl-syspack.jpg"
     },
     {
         "ref":  "XSYS0016",
@@ -93,7 +93,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "AST/GOT 330",
         "cat":  "biochimie",
         "conditionnement":  "1500 tests",
-        "image":  "/images/reactifs/erba-xsys-kit.jpg"
+        "image":  "/images/reactifs/erba-xl-syspack.jpg"
     },
     {
         "ref":  "XSYS0028",
@@ -104,7 +104,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "BIL D 330",
         "cat":  "biochimie",
         "conditionnement":  "1200 tests",
-        "image":  "/images/reactifs/erba-xsys-kit.jpg"
+        "image":  "/images/reactifs/erba-xl-syspack.jpg"
     },
     {
         "ref":  "XSYS0023",
@@ -115,7 +115,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "BIL T 330",
         "cat":  "biochimie",
         "conditionnement":  "1200 tests",
-        "image":  "/images/reactifs/erba-xsys-kit.jpg"
+        "image":  "/images/reactifs/erba-xl-syspack.jpg"
     },
     {
         "ref":  "XSYS0007",
@@ -126,7 +126,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "CA 120",
         "cat":  "biochimie",
         "conditionnement":  "500 tests",
-        "image":  "/images/reactifs/erba-xsys-kit.jpg"
+        "image":  "/images/reactifs/erba-xl-syspack.jpg"
     },
     {
         "ref":  "XSYS0009",
@@ -137,7 +137,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "CHOL 440",
         "cat":  "biochimie",
         "conditionnement":  "2000 tests",
-        "image":  "/images/reactifs/erba-xsys-kit.jpg"
+        "image":  "/images/reactifs/erba-xl-syspack.jpg"
     },
     {
         "ref":  "XSYS0047",
@@ -148,7 +148,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "CRP",
         "cat":  "biochimie",
         "conditionnement":  "400 tests",
-        "image":  "/images/reactifs/erba-xsys-kit.jpg"
+        "image":  "/images/reactifs/erba-xl-syspack.jpg"
     },
     {
         "ref":  "XSYS0024",
@@ -159,7 +159,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "CREA 275",
         "cat":  "biochimie",
         "conditionnement":  "1250 tests",
-        "image":  "/images/reactifs/erba-xsys-kit.jpg"
+        "image":  "/images/reactifs/erba-xl-syspack.jpg"
     },
     {
         "ref":  "XSYS0085",
@@ -170,7 +170,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "CREA ENZ 200",
         "cat":  "biochimie",
         "conditionnement":  "750 tests",
-        "image":  "/images/reactifs/erba-xsys-kit.jpg"
+        "image":  "/images/reactifs/erba-xl-syspack.jpg"
     },
     {
         "ref":  "XSYS0022",
@@ -181,7 +181,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "CK 110",
         "cat":  "biochimie",
         "conditionnement":  "500 tests",
-        "image":  "/images/reactifs/erba-xsys-kit.jpg"
+        "image":  "/images/reactifs/erba-xl-syspack.jpg"
     },
     {
         "ref":  "XSYS0029",
@@ -192,7 +192,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "CK MB 110",
         "cat":  "biochimie",
         "conditionnement":  "500 tests",
-        "image":  "/images/reactifs/erba-xsys-kit.jpg"
+        "image":  "/images/reactifs/erba-xl-syspack.jpg"
     },
     {
         "ref":  "XSYS0011",
@@ -203,7 +203,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "GGT 110",
         "cat":  "biochimie",
         "conditionnement":  "500 tests",
-        "image":  "/images/reactifs/erba-xsys-kit.jpg"
+        "image":  "/images/reactifs/erba-xl-syspack.jpg"
     },
     {
         "ref":  "XSYS0012",
@@ -214,7 +214,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "GLU 440",
         "cat":  "biochimie",
         "conditionnement":  "2000 tests",
-        "image":  "/images/reactifs/erba-xsys-kit.jpg"
+        "image":  "/images/reactifs/erba-xl-syspack.jpg"
     },
     {
         "ref":  "XSYS0096",
@@ -225,7 +225,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "HbA1c 2R",
         "cat":  "biochimie",
         "conditionnement":  "200 tests",
-        "image":  "/images/reactifs/erba-xsys-kit.jpg"
+        "image":  "/images/reactifs/erba-xl-syspack.jpg"
     },
     {
         "ref":  "XSYS0043",
@@ -236,7 +236,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "HDL C 160",
         "cat":  "biochimie",
         "conditionnement":  "600 tests",
-        "image":  "/images/reactifs/erba-xsys-kit.jpg"
+        "image":  "/images/reactifs/erba-xl-syspack.jpg"
     },
     {
         "ref":  "XSYS0049",
@@ -247,7 +247,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "FE 125",
         "cat":  "biochimie",
         "conditionnement":  "440 tests",
-        "image":  "/images/reactifs/erba-xsys-kit.jpg"
+        "image":  "/images/reactifs/erba-xl-syspack.jpg"
     },
     {
         "ref":  "XSYS0101",
@@ -258,7 +258,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "FRTN",
         "cat":  "biochimie",
         "conditionnement":  "200 tests",
-        "image":  "/images/reactifs/erba-xsys-kit.jpg"
+        "image":  "/images/reactifs/erba-xl-syspack.jpg"
     },
     {
         "ref":  "XSYS0013",
@@ -269,7 +269,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "LDH 110",
         "cat":  "biochimie",
         "conditionnement":  "500 tests",
-        "image":  "/images/reactifs/erba-xsys-kit.jpg"
+        "image":  "/images/reactifs/erba-xl-syspack.jpg"
     },
     {
         "ref":  "XSYS0044",
@@ -280,7 +280,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "LDL C 80",
         "cat":  "biochimie",
         "conditionnement":  "300 tests",
-        "image":  "/images/reactifs/erba-xsys-kit.jpg"
+        "image":  "/images/reactifs/erba-xl-syspack.jpg"
     },
     {
         "ref":  "XSYS0081",
@@ -291,7 +291,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "LIP 110",
         "cat":  "biochimie",
         "conditionnement":  "500 tests",
-        "image":  "/images/reactifs/erba-xsys-kit.jpg"
+        "image":  "/images/reactifs/erba-xl-syspack.jpg"
     },
     {
         "ref":  "XSYS0040",
@@ -302,7 +302,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "MG 88",
         "cat":  "biochimie",
         "conditionnement":  "400 tests",
-        "image":  "/images/reactifs/erba-xsys-kit.jpg"
+        "image":  "/images/reactifs/erba-xl-syspack.jpg"
     },
     {
         "ref":  "XSYS0083",
@@ -313,7 +313,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "MAL",
         "cat":  "biochimie",
         "conditionnement":  "300 tests",
-        "image":  "/images/reactifs/erba-xsys-kit.jpg"
+        "image":  "/images/reactifs/erba-xl-syspack.jpg"
     },
     {
         "ref":  "XSYS0027",
@@ -324,7 +324,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "MP 120",
         "cat":  "biochimie",
         "conditionnement":  "500 tests",
-        "image":  "/images/reactifs/erba-xsys-kit.jpg"
+        "image":  "/images/reactifs/erba-xl-syspack.jpg"
     },
     {
         "ref":  "XSYS0015",
@@ -335,7 +335,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "PHOS 120",
         "cat":  "biochimie",
         "conditionnement":  "500 tests",
-        "image":  "/images/reactifs/erba-xsys-kit.jpg"
+        "image":  "/images/reactifs/erba-xl-syspack.jpg"
     },
     {
         "ref":  "XSYS0048",
@@ -346,7 +346,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "RF",
         "cat":  "biochimie",
         "conditionnement":  "400 tests",
-        "image":  "/images/reactifs/erba-xsys-kit.jpg"
+        "image":  "/images/reactifs/erba-xl-syspack.jpg"
     },
     {
         "ref":  "XSYS0018",
@@ -357,7 +357,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "TP 440",
         "cat":  "biochimie",
         "conditionnement":  "2000 tests",
-        "image":  "/images/reactifs/erba-xsys-kit.jpg"
+        "image":  "/images/reactifs/erba-xl-syspack.jpg"
     },
     {
         "ref":  "XSYS0041",
@@ -368,7 +368,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "TG 440",
         "cat":  "biochimie",
         "conditionnement":  "2000 tests",
-        "image":  "/images/reactifs/erba-xsys-kit.jpg"
+        "image":  "/images/reactifs/erba-xl-syspack.jpg"
     },
     {
         "ref":  "XSYS0050",
@@ -379,7 +379,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "UIBC 125",
         "cat":  "biochimie",
         "conditionnement":  "440 tests",
-        "image":  "/images/reactifs/erba-xsys-kit.jpg"
+        "image":  "/images/reactifs/erba-xl-syspack.jpg"
     },
     {
         "ref":  "XSYS0020",
@@ -390,7 +390,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "UREA 275",
         "cat":  "biochimie",
         "conditionnement":  "1250 tests",
-        "image":  "/images/reactifs/erba-xsys-kit.jpg"
+        "image":  "/images/reactifs/erba-xl-syspack.jpg"
     },
     {
         "ref":  "XSYS0021",
@@ -401,7 +401,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "UA 275",
         "cat":  "biochimie",
         "conditionnement":  "1000 tests",
-        "image":  "/images/reactifs/erba-xsys-kit.jpg"
+        "image":  "/images/reactifs/erba-xl-syspack.jpg"
     },
     {
         "ref":  "XSYS0042",
@@ -412,7 +412,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "UA 440",
         "cat":  "biochimie",
         "conditionnement":  "2000 tests",
-        "image":  "/images/reactifs/erba-xsys-kit.jpg"
+        "image":  "/images/reactifs/erba-xl-syspack.jpg"
     },
     {
         "label":  "Biochimie Clinique - Controles et Calibrants",
@@ -493,7 +493,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "HbA1c 2R CON L",
         "cat":  "biochimie",
         "conditionnement":  "4×0,5",
-        "image":  "/images/reactifs/erba-xsys-kit.jpg"
+        "image":  "/images/reactifs/erba-xl-syspack.jpg"
     },
     {
         "ref":  "XSYS0099",
@@ -504,7 +504,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "HbA1c 2R CON H",
         "cat":  "biochimie",
         "conditionnement":  "4×0,5",
-        "image":  "/images/reactifs/erba-xsys-kit.jpg"
+        "image":  "/images/reactifs/erba-xl-syspack.jpg"
     },
     {
         "ref":  "BLT20033",
@@ -559,7 +559,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "ASO CAL SH",
         "cat":  "biochimie",
         "conditionnement":  "1×1",
-        "image":  "/images/reactifs/erba-xsys-kit.jpg"
+        "image":  "/images/reactifs/erba-xl-syspack.jpg"
     },
     {
         "ref":  "XSYS0053",
@@ -570,7 +570,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "CRP CAL SH",
         "cat":  "biochimie",
         "conditionnement":  "1×1",
-        "image":  "/images/reactifs/erba-xsys-kit.jpg"
+        "image":  "/images/reactifs/erba-xl-syspack.jpg"
     },
     {
         "ref":  "XSYS0104",
@@ -581,7 +581,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "FRTN CAL",
         "cat":  "biochimie",
         "conditionnement":  "1×1",
-        "image":  "/images/reactifs/erba-xsys-kit.jpg"
+        "image":  "/images/reactifs/erba-xl-syspack.jpg"
     },
     {
         "ref":  "XSYS0097",
@@ -592,7 +592,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "HbA1c 2R CAL SET",
         "cat":  "biochimie",
         "conditionnement":  "5×0,5",
-        "image":  "/images/reactifs/erba-xsys-kit.jpg"
+        "image":  "/images/reactifs/erba-xl-syspack.jpg"
     },
     {
         "ref":  "XSYS0061",
@@ -603,7 +603,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "HDL/LDL CAL",
         "cat":  "biochimie",
         "conditionnement":  "2×1",
-        "image":  "/images/reactifs/erba-xsys-kit.jpg"
+        "image":  "/images/reactifs/erba-xl-syspack.jpg"
     },
     {
         "ref":  "BLT20032",
@@ -625,7 +625,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "RF CAL SH",
         "cat":  "biochimie",
         "conditionnement":  "1×1",
-        "image":  "/images/reactifs/erba-xsys-kit.jpg"
+        "image":  "/images/reactifs/erba-xl-syspack.jpg"
     },
     {
         "ref":  "XSYS0034",
@@ -636,7 +636,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "XL MULTICAL",
         "cat":  "biochimie",
         "conditionnement":  "4×3",
-        "image":  "/images/reactifs/erba-xsys-kit.jpg"
+        "image":  "/images/reactifs/erba-xl-syspack.jpg"
     },
     {
         "ref":  "XSYS0066",
@@ -647,7 +647,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "XL WASH",
         "cat":  "biochimie",
         "conditionnement":  "4×100",
-        "image":  "/images/reactifs/erba-xsys-kit.jpg"
+        "image":  "/images/reactifs/erba-xl-syspack.jpg"
     },
     {
         "ref":  "XSYS0082",
@@ -658,7 +658,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "XL AUTOWASH AC/AL",
         "cat":  "biochimie",
         "conditionnement":  "5×44 / 5×44",
-        "image":  "/images/reactifs/erba-xsys-kit.jpg"
+        "image":  "/images/reactifs/erba-xl-syspack.jpg"
     },
     {
         "ref":  "XSYS0125",
@@ -669,7 +669,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "XL CLEANER",
         "cat":  "biochimie",
         "conditionnement":  "4×100",
-        "image":  "/images/reactifs/erba-xsys-kit.jpg"
+        "image":  "/images/reactifs/erba-xl-syspack.jpg"
     },
     {
         "label":  "Biochimie Clinique - Reactifs Systeme Ouvert",
@@ -1688,7 +1688,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Medizym Anti TPO",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "3102",
@@ -1699,7 +1699,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Medizym Anti Tg",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "3505",
@@ -1710,7 +1710,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Medizym TRA human",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "3506",
@@ -1721,7 +1721,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Medizym IA2 M",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "3507",
@@ -1732,7 +1732,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Medizym Anti GAD M",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "3806",
@@ -1743,7 +1743,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Medizym IAA",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "3600",
@@ -1754,7 +1754,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Anti Intrinsic Factor",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "3610",
@@ -1765,7 +1765,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Anti GPC",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "3665",
@@ -1776,7 +1776,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Anti CCP",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "3710",
@@ -1787,7 +1787,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "GliaDea IgA",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "3810",
@@ -1798,7 +1798,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "GliaDea IgG",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "4033",
@@ -1809,7 +1809,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Anti hu Ttg IgA",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "4044",
@@ -1820,7 +1820,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Anti hu tTG IgG",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "4035",
@@ -1831,7 +1831,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "CeliaK EmA IgA",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "4045",
@@ -1842,7 +1842,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "CeliaK EmA IgG",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "3950",
@@ -1853,7 +1853,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Pancreatitis GP2",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "3900",
@@ -1864,7 +1864,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Anti ASGPR",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "4006",
@@ -1875,7 +1875,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "ASCA IgA",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "4007",
@@ -1886,7 +1886,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "ASCA IgG",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "4010",
@@ -1897,7 +1897,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "ANA screen",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "4012",
@@ -1908,7 +1908,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "ANA Pro",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "4015",
@@ -1919,7 +1919,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Anti dsDNA",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "3750",
@@ -1930,7 +1930,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Anti GP2 IgA",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "3850",
@@ -1941,7 +1941,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Anti GP2 IgG",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "4036",
@@ -1952,7 +1952,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Anti beta2GP-I Screen",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "4041",
@@ -1963,7 +1963,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Anti beta2GP-I",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "4014",
@@ -1974,7 +1974,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Anti cardiolipine screen",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "4016",
@@ -1985,7 +1985,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Anti cardiolipin IgG IgM",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "4050",
@@ -1996,7 +1996,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Anti Phospholipid Screen",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "4056",
@@ -2007,7 +2007,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Anti phosphatidyl-serin",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "4027",
@@ -2018,7 +2018,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "RF IgA",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "4046",
@@ -2029,7 +2029,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "RF IgM",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "4085",
@@ -2040,7 +2040,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "RF IgG",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "4058",
@@ -2051,7 +2051,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Anti MPO",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "4259",
@@ -2062,7 +2062,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Anti PR3",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "4052",
@@ -2073,7 +2073,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Anti M2",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "4053",
@@ -2084,7 +2084,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Anti LKM1",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "4067",
@@ -2095,7 +2095,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Anti Faktor H",
         "cat":  "autoimmunite",
         "conditionnement":  "48 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "6012",
@@ -2106,7 +2106,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Helicobacter pylori Antigen",
         "cat":  "autoimmunite",
         "conditionnement":  "48/96 tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "label":  "Auto-Immunite -DOT Manuel",
@@ -2121,7 +2121,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Dot Anti gangiosid",
         "cat":  "autoimmunite",
         "conditionnement":  "20 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "5012",
@@ -2132,7 +2132,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Dot Anti phospholipide 10",
         "cat":  "autoimmunite",
         "conditionnement":  "20 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "4028",
@@ -2143,7 +2143,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Dot ANCA",
         "cat":  "autoimmunite",
         "conditionnement":  "20 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "4030",
@@ -2154,7 +2154,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Dot HepAk plus",
         "cat":  "autoimmunite",
         "conditionnement":  "24 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "4099",
@@ -2165,7 +2165,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Dot HepAk 7plus",
         "cat":  "autoimmunite",
         "conditionnement":  "24 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "4074",
@@ -2176,7 +2176,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Dot ANAscl plus",
         "cat":  "autoimmunite",
         "conditionnement":  "24 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "4049",
@@ -2187,7 +2187,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Dot PMScl plus",
         "cat":  "autoimmunite",
         "conditionnement":  "24 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "4289",
@@ -2209,7 +2209,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "LINE ANA 18",
         "cat":  "autoimmunite",
         "conditionnement":  "20 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "4202",
@@ -2220,7 +2220,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "LINE CELIAK IgG",
         "cat":  "autoimmunite",
         "conditionnement":  "20 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "4208",
@@ -2231,7 +2231,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "LINE CELIAK IgA",
         "cat":  "autoimmunite",
         "conditionnement":  "20 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "4220",
@@ -2242,7 +2242,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "LINE BiermAK",
         "cat":  "autoimmunite",
         "conditionnement":  "20 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "label":  "Auto-Immunite -IFI Manuel",
@@ -2257,7 +2257,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "ANA HEP-2 PLUS",
         "cat":  "autoimmunite",
         "conditionnement":  "120 Tests (10 Lames de 12 Puits)",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-cytobead-ifa.png"
     },
     {
         "ref":  "81040",
@@ -2268,7 +2268,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "ANA HEP-2 PLUS XL",
         "cat":  "autoimmunite",
         "conditionnement":  "480 Tests (40 Lames de 12 Puits)",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-cytobead-ifa.png"
     },
     {
         "ref":  "86048",
@@ -2279,7 +2279,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "IFA EmA S",
         "cat":  "autoimmunite",
         "conditionnement":  "48 Tests (12 Lames de 4 Puits)",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-cytobead-ifa.png"
     },
     {
         "ref":  "86096",
@@ -2290,7 +2290,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "IFA EmA L",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests (12 Lames de 8 Puits)",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-cytobead-ifa.png"
     },
     {
         "ref":  "81050",
@@ -2301,7 +2301,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "IFA plus nDNA S",
         "cat":  "autoimmunite",
         "conditionnement":  "60 Tests (10 Lames de 6 Puits)",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-cytobead-ifa.png"
     },
     {
         "ref":  "81100",
@@ -2312,7 +2312,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "IFA plus nDNA L",
         "cat":  "autoimmunite",
         "conditionnement":  "120 Tests (10 Lames de 12 Puits)",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-cytobead-ifa.png"
     },
     {
         "ref":  "8049",
@@ -2323,7 +2323,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "IFA Anti-MuSK",
         "cat":  "autoimmunite",
         "conditionnement":  "60 Tests (10 Lames de 6 Puits)",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-cytobead-ifa.png"
     },
     {
         "ref":  "83048",
@@ -2334,7 +2334,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "IFA AMA",
         "cat":  "autoimmunite",
         "conditionnement":  "48 Tests (12 Lames de 4 Puits)",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-cytobead-ifa.png"
     },
     {
         "ref":  "84048",
@@ -2345,7 +2345,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "IFA ASMA",
         "cat":  "autoimmunite",
         "conditionnement":  "48 Tests (12 Lames de 4 Puits)",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-cytobead-ifa.png"
     },
     {
         "ref":  "85048",
@@ -2356,7 +2356,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "IFA Triple Substrat LKS S",
         "cat":  "autoimmunite",
         "conditionnement":  "48 Tests (12 Lames de 4 Puits)",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-cytobead-ifa.png"
     },
     {
         "ref":  "85096",
@@ -2367,7 +2367,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "IFA Triple Substrat LKS L",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests (12 Lames de 8 Puits)",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-cytobead-ifa.png"
     },
     {
         "ref":  "85848",
@@ -2378,7 +2378,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "IFA ICA",
         "cat":  "autoimmunite",
         "conditionnement":  "48 Tests (12 Lames de 4 Puits)",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-cytobead-ifa.png"
     },
     {
         "ref":  "86148",
@@ -2389,7 +2389,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "IFA ASA",
         "cat":  "autoimmunite",
         "conditionnement":  "48 Tests (12 Lames de 4 Puits)",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-cytobead-ifa.png"
     },
     {
         "ref":  "86448",
@@ -2400,7 +2400,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "IFA Anti-GBM",
         "cat":  "autoimmunite",
         "conditionnement":  "48 Tests (12 Lames de 4 Puits)",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-cytobead-ifa.png"
     },
     {
         "ref":  "87061",
@@ -2411,7 +2411,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "IFA plus cANCA",
         "cat":  "autoimmunite",
         "conditionnement":  "60 Tests (10 Lames de 6 Puits)",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-cytobead-ifa.png"
     },
     {
         "ref":  "87161",
@@ -2422,7 +2422,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "IFA plus pANCA",
         "cat":  "autoimmunite",
         "conditionnement":  "60 Tests (10 Lames de 6 Puits)",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-cytobead-ifa.png"
     },
     {
         "ref":  "87261",
@@ -2433,7 +2433,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "IFA ANCA DUAL",
         "cat":  "autoimmunite",
         "conditionnement":  "24 Tests (6 Lames de 4 Puits)",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-cytobead-ifa.png"
     },
     {
         "ref":  "8063",
@@ -2444,7 +2444,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "CytoBead ANCA",
         "cat":  "autoimmunite",
         "conditionnement":  "48 Tests (6 Lames de 8 Puits)",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-cytobead-ifa.png"
     },
     {
         "ref":  "8064",
@@ -2455,7 +2455,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "CytoBead CeliAK",
         "cat":  "autoimmunite",
         "conditionnement":  "48 Tests (6 Lames de 8 Puits)",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-cytobead-ifa.png"
     },
     {
         "ref":  "8065",
@@ -2466,7 +2466,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "CytoBead ANA",
         "cat":  "autoimmunite",
         "conditionnement":  "80 Tests (10 Lames de 6 Puits)",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-cytobead-ifa.png"
     },
     {
         "ref":  "8066",
@@ -2477,7 +2477,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "CytoBead RPGN",
         "cat":  "autoimmunite",
         "conditionnement":  "48 Tests (6 Lames de 8 Puits)",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-cytobead-ifa.png"
     },
     {
         "ref":  "8220",
@@ -2488,7 +2488,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "CytoBead ANA 2",
         "cat":  "autoimmunite",
         "conditionnement":  "80 Tests (10 Lames de 6 Puits)",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-cytobead-ifa.png"
     },
     {
         "ref":  "8260",
@@ -2499,7 +2499,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "CytoBead ANA DFS-70",
         "cat":  "autoimmunite",
         "conditionnement":  "80 Tests (10 Lames de 6 Puits)",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-cytobead-ifa.png"
     },
     {
         "label":  "Auto-Immunite -Reactifs DOT Automatises",
@@ -2514,7 +2514,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "DotDiver CeliAK IgA",
         "cat":  "autoimmunite",
         "conditionnement":  "24 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "5015",
@@ -2525,7 +2525,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "DotDiver CeliAK IgG",
         "cat":  "autoimmunite",
         "conditionnement":  "24 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "5016",
@@ -2536,7 +2536,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "DotDiver ANA",
         "cat":  "autoimmunite",
         "conditionnement":  "24 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "5017",
@@ -2547,7 +2547,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "DotDiver PmScl",
         "cat":  "autoimmunite",
         "conditionnement":  "24 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "5045",
@@ -2558,7 +2558,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "DotDiver PmScl 12",
         "cat":  "autoimmunite",
         "conditionnement":  "24 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "5066",
@@ -2569,7 +2569,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "DotDiver ANAcyto 10",
         "cat":  "autoimmunite",
         "conditionnement":  "24 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "5020",
@@ -2580,7 +2580,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "DotDiver Quantrix ANA",
         "cat":  "autoimmunite",
         "conditionnement":  "24 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "5018",
@@ -2591,7 +2591,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "DotDiver ANCA",
         "cat":  "autoimmunite",
         "conditionnement":  "24 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "5019",
@@ -2602,7 +2602,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "DotDiver BiermAK",
         "cat":  "autoimmunite",
         "conditionnement":  "24 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "5070",
@@ -2613,7 +2613,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "DotDiver HepAK 10",
         "cat":  "autoimmunite",
         "conditionnement":  "24 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "5021",
@@ -2624,7 +2624,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "DotDiver HepAK 7plus",
         "cat":  "autoimmunite",
         "conditionnement":  "24 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "50301",
@@ -2635,7 +2635,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "DotDiver Anti Gangliosid screen",
         "cat":  "autoimmunite",
         "conditionnement":  "24 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "5035",
@@ -2646,7 +2646,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "DotDiver ANA PCNA",
         "cat":  "autoimmunite",
         "conditionnement":  "24 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "50381",
@@ -2657,7 +2657,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "DotDiver Anti Gangliosid IgG",
         "cat":  "autoimmunite",
         "conditionnement":  "24 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "50391",
@@ -2668,7 +2668,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "DotDiver Anti Gangliosid IgM",
         "cat":  "autoimmunite",
         "conditionnement":  "24 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "50401",
@@ -2679,7 +2679,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "DotDiver Anti Phospholipid IgG",
         "cat":  "autoimmunite",
         "conditionnement":  "24 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "50411",
@@ -2690,7 +2690,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "DotDiver Anti Phospholipid IgM",
         "cat":  "autoimmunite",
         "conditionnement":  "24 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "5069",
@@ -2701,7 +2701,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "DotDiver Scleroderma 10",
         "cat":  "autoimmunite",
         "conditionnement":  "24 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "5093",
@@ -2712,7 +2712,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "DotDiver Myositis 12",
         "cat":  "autoimmunite",
         "conditionnement":  "24 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "5291",
@@ -2723,7 +2723,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "DotDiver ANA 18",
         "cat":  "autoimmunite",
         "conditionnement":  "24 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "label":  "Auto-Immunite -Reactifs IFI Automatises AKLIDES",
@@ -2738,7 +2738,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "AKLIDES cANCA",
         "cat":  "autoimmunite",
         "conditionnement":  "60 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "4065",
@@ -2749,7 +2749,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "AKLIDES ANA plus S",
         "cat":  "autoimmunite",
         "conditionnement":  "120 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "4063",
@@ -2760,7 +2760,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "AKLIDES ANA plus L",
         "cat":  "autoimmunite",
         "conditionnement":  "480 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "4072",
@@ -2771,7 +2771,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "AKLIDES pANCA",
         "cat":  "autoimmunite",
         "conditionnement":  "60 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "4117",
@@ -2782,7 +2782,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "AKLIDES AMA",
         "cat":  "autoimmunite",
         "conditionnement":  "48 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "4119",
@@ -2793,7 +2793,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "AKLIDES ASMA",
         "cat":  "autoimmunite",
         "conditionnement":  "48 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "4121",
@@ -2804,7 +2804,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "AKLIDES Triple substrat LKS S",
         "cat":  "autoimmunite",
         "conditionnement":  "48 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "4122",
@@ -2815,7 +2815,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "AKLIDES Triple substrat LKS L",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "4123",
@@ -2826,7 +2826,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "AKLIDES Anti-GBM",
         "cat":  "autoimmunite",
         "conditionnement":  "48 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "4125",
@@ -2837,7 +2837,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "AKLIDES ASA",
         "cat":  "autoimmunite",
         "conditionnement":  "60 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "4129",
@@ -2848,7 +2848,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "AKLIDES ICA",
         "cat":  "autoimmunite",
         "conditionnement":  "48 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "4131",
@@ -2859,7 +2859,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "AKLIDES EmA Endomysium S",
         "cat":  "autoimmunite",
         "conditionnement":  "48 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "4132",
@@ -2870,7 +2870,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "AKLIDES EmA Endomysium L",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "4282",
@@ -2881,7 +2881,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "AKLIDES Ndna",
         "cat":  "autoimmunite",
         "conditionnement":  "60 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "4270",
@@ -2892,7 +2892,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "AKLIDES CytoBead ANCA",
         "cat":  "autoimmunite",
         "conditionnement":  "48 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "4271",
@@ -2903,7 +2903,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "AKLIDES CytoBead CeliAK",
         "cat":  "autoimmunite",
         "conditionnement":  "48 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "4272",
@@ -2914,7 +2914,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "AKLIDES CytoBead ANA",
         "cat":  "autoimmunite",
         "conditionnement":  "80 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "4277",
@@ -2925,7 +2925,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "AKLIDES CytoBead ANA 2",
         "cat":  "autoimmunite",
         "conditionnement":  "80 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "4281",
@@ -2936,7 +2936,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "AKLIDES CytoBead RPGN",
         "cat":  "autoimmunite",
         "conditionnement":  "48 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "ref":  "4471",
@@ -2947,7 +2947,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "AKLIDES ANCA DUAL",
         "cat":  "autoimmunite",
         "conditionnement":  "60 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/ga-medizym-elisa.jpg"
     },
     {
         "label":  "Auto-Immunite - Reactifs CLIA",
@@ -2962,7 +2962,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "BioCLIA dsDNA",
         "cat":  "autoimmunite",
         "conditionnement":  "100 tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/hob-bioclia-kit.jpg"
     },
     {
         "ref":  "CLIA-Ro60",
@@ -2973,7 +2973,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "BioCLIA Ro-60",
         "cat":  "autoimmunite",
         "conditionnement":  "100 tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/hob-bioclia-kit.jpg"
     },
     {
         "ref":  "CLIA-SSBLa",
@@ -2984,7 +2984,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "BioCLIA SS-B/La",
         "cat":  "autoimmunite",
         "conditionnement":  "100 tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/hob-bioclia-kit.jpg"
     },
     {
         "ref":  "CLIA-nRNPSm",
@@ -2995,7 +2995,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "BioCLIA nRNP/Sm",
         "cat":  "autoimmunite",
         "conditionnement":  "100 tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/hob-bioclia-kit.jpg"
     },
     {
         "ref":  "CLIA-Sm",
@@ -3006,7 +3006,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "BioCLIA Sm",
         "cat":  "autoimmunite",
         "conditionnement":  "100 tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/hob-bioclia-kit.jpg"
     },
     {
         "ref":  "CLIA-Jo1",
@@ -3017,7 +3017,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "BioCLIA Jo-1",
         "cat":  "autoimmunite",
         "conditionnement":  "100 tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/hob-bioclia-kit.jpg"
     },
     {
         "ref":  "CLIA-Scl70",
@@ -3028,7 +3028,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "BioCLIA Scl-70",
         "cat":  "autoimmunite",
         "conditionnement":  "100 tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/hob-bioclia-kit.jpg"
     },
     {
         "ref":  "CLIA-Ro52",
@@ -3039,7 +3039,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "BioCLIA Ro-52",
         "cat":  "autoimmunite",
         "conditionnement":  "100 tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/hob-bioclia-kit.jpg"
     },
     {
         "ref":  "CLIA-RibP",
@@ -3050,7 +3050,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "BioCLIA Rib-P",
         "cat":  "autoimmunite",
         "conditionnement":  "100 tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/hob-bioclia-kit.jpg"
     },
     {
         "ref":  "CLIA-PCNA",
@@ -3061,7 +3061,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "BioCLIA PCNA",
         "cat":  "autoimmunite",
         "conditionnement":  "100 tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/hob-bioclia-kit.jpg"
     },
     {
         "ref":  "CLIA-PMScl",
@@ -3072,7 +3072,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "BioCLIA PM-Scl",
         "cat":  "autoimmunite",
         "conditionnement":  "100 tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/hob-bioclia-kit.jpg"
     },
     {
         "ref":  "CLIA-His",
@@ -3083,7 +3083,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "BioCLIA His",
         "cat":  "autoimmunite",
         "conditionnement":  "100 tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/hob-bioclia-kit.jpg"
     },
     {
         "ref":  "CLIA-CENPB",
@@ -3094,7 +3094,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "BioCLIA CENP-B",
         "cat":  "autoimmunite",
         "conditionnement":  "100 tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/hob-bioclia-kit.jpg"
     },
     {
         "ref":  "CLIA-Nuc",
@@ -3105,7 +3105,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "BioCLIA Nuc",
         "cat":  "autoimmunite",
         "conditionnement":  "100 tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/hob-bioclia-kit.jpg"
     },
     {
         "ref":  "CLIA-MPO",
@@ -3116,7 +3116,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "BioCLIA MPO",
         "cat":  "autoimmunite",
         "conditionnement":  "100 tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/hob-bioclia-kit.jpg"
     },
     {
         "ref":  "CLIA-PR3",
@@ -3127,7 +3127,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "BioCLIA PR3",
         "cat":  "autoimmunite",
         "conditionnement":  "100 tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/hob-bioclia-kit.jpg"
     },
     {
         "ref":  "CLIA-GBM",
@@ -3138,7 +3138,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "BioCLIA GBM",
         "cat":  "autoimmunite",
         "conditionnement":  "100 tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/hob-bioclia-kit.jpg"
     },
     {
         "ref":  "CLIA-gp210",
@@ -3149,7 +3149,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "BioCLIA gp210",
         "cat":  "autoimmunite",
         "conditionnement":  "100 tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/hob-bioclia-kit.jpg"
     },
     {
         "ref":  "CLIA-sp100",
@@ -3160,7 +3160,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "BioCLIA sp100",
         "cat":  "autoimmunite",
         "conditionnement":  "100 tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/hob-bioclia-kit.jpg"
     },
     {
         "ref":  "CLIA-LKM1",
@@ -3171,7 +3171,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "BioCLIA LKM-1",
         "cat":  "autoimmunite",
         "conditionnement":  "100 tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/hob-bioclia-kit.jpg"
     },
     {
         "ref":  "CLIA-LC1",
@@ -3182,7 +3182,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "BioCLIA LC-1",
         "cat":  "autoimmunite",
         "conditionnement":  "100 tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/hob-bioclia-kit.jpg"
     },
     {
         "ref":  "CLIA-AMAM2",
@@ -3193,7 +3193,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "BioCLIA AMA-M2",
         "cat":  "autoimmunite",
         "conditionnement":  "100 tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/hob-bioclia-kit.jpg"
     },
     {
         "ref":  "CLIA-SLALP",
@@ -3204,7 +3204,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "BioCLIA SLA/LP",
         "cat":  "autoimmunite",
         "conditionnement":  "100 tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/hob-bioclia-kit.jpg"
     },
     {
         "ref":  "CLIA-aCLA",
@@ -3215,7 +3215,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "BioCLIA aCL-A",
         "cat":  "autoimmunite",
         "conditionnement":  "100 tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/hob-bioclia-kit.jpg"
     },
     {
         "ref":  "CLIA-aCLG",
@@ -3226,7 +3226,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "BioCLIA aCL-G",
         "cat":  "autoimmunite",
         "conditionnement":  "100 tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/hob-bioclia-kit.jpg"
     },
     {
         "ref":  "CLIA-aCLM",
@@ -3237,7 +3237,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "BioCLIA aCL-M",
         "cat":  "autoimmunite",
         "conditionnement":  "100 tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/hob-bioclia-kit.jpg"
     },
     {
         "ref":  "CLIA-aCLAMG",
@@ -3248,7 +3248,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "BioCLIA aCL-A/M/G",
         "cat":  "autoimmunite",
         "conditionnement":  "100 tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/hob-bioclia-kit.jpg"
     },
     {
         "ref":  "CLIA-b2GP1A",
@@ -3259,7 +3259,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "BioCLIA beta2GP1-A",
         "cat":  "autoimmunite",
         "conditionnement":  "100 tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/hob-bioclia-kit.jpg"
     },
     {
         "ref":  "CLIA-b2GP1G",
@@ -3270,7 +3270,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "BioCLIA beta2GP1-G",
         "cat":  "autoimmunite",
         "conditionnement":  "100 tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/hob-bioclia-kit.jpg"
     },
     {
         "ref":  "CLIA-b2GP1M",
@@ -3281,7 +3281,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "BioCLIA beta2GP1-M",
         "cat":  "autoimmunite",
         "conditionnement":  "100 tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/hob-bioclia-kit.jpg"
     },
     {
         "ref":  "CLIA-b2GP1AMG",
@@ -3292,7 +3292,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "BioCLIA beta2GP1-A/M/G",
         "cat":  "autoimmunite",
         "conditionnement":  "100 tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/hob-bioclia-kit.jpg"
     },
     {
         "ref":  "CLIA-RFA",
@@ -3303,7 +3303,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "BioCLIA RF-A",
         "cat":  "autoimmunite",
         "conditionnement":  "100 tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/hob-bioclia-kit.jpg"
     },
     {
         "ref":  "CLIA-RFG",
@@ -3314,7 +3314,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "BioCLIA RF-G",
         "cat":  "autoimmunite",
         "conditionnement":  "100 tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/hob-bioclia-kit.jpg"
     },
     {
         "ref":  "CLIA-RFM",
@@ -3325,7 +3325,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "BioCLIA RF-M",
         "cat":  "autoimmunite",
         "conditionnement":  "100 tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/hob-bioclia-kit.jpg"
     },
     {
         "ref":  "CLIA-RFAMG",
@@ -3336,7 +3336,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "BioCLIA RF-A/M/G",
         "cat":  "autoimmunite",
         "conditionnement":  "100 tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/hob-bioclia-kit.jpg"
     },
     {
         "ref":  "CLIA-CCP",
@@ -3347,7 +3347,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "BioCLIA CCP",
         "cat":  "autoimmunite",
         "conditionnement":  "100 tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/hob-bioclia-kit.jpg"
     },
     {
         "ref":  "CLIA-IAA",
@@ -3358,7 +3358,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "BioCLIA IAA",
         "cat":  "autoimmunite",
         "conditionnement":  "100 tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/hob-bioclia-kit.jpg"
     },
     {
         "ref":  "CLIA-htTGA",
@@ -3369,7 +3369,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "BioCLIA h-tTG-A",
         "cat":  "autoimmunite",
         "conditionnement":  "100 tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/hob-bioclia-kit.jpg"
     },
     {
         "ref":  "CLIA-htTGG",
@@ -3380,7 +3380,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "BioCLIA h-tTG-G",
         "cat":  "autoimmunite",
         "conditionnement":  "100 tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/hob-bioclia-kit.jpg"
     },
     {
         "ref":  "CLIA-DGPA",
@@ -3391,7 +3391,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "BioCLIA DGP GLIADINE-A",
         "cat":  "autoimmunite",
         "conditionnement":  "100 tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/hob-bioclia-kit.jpg"
     },
     {
         "ref":  "CLIA-DGPG",
@@ -3402,7 +3402,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "BioCLIA DGP-G",
         "cat":  "autoimmunite",
         "conditionnement":  "100 tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/hob-bioclia-kit.jpg"
     },
     {
         "ref":  "CLIA-GAD",
@@ -3413,7 +3413,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "BioCLIA GAD",
         "cat":  "autoimmunite",
         "conditionnement":  "100 tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/hob-bioclia-kit.jpg"
     },
     {
         "ref":  "CLIA-IA2",
@@ -3424,7 +3424,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "BioCLIA IA2",
         "cat":  "autoimmunite",
         "conditionnement":  "100 tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/hob-bioclia-kit.jpg"
     },
     {
         "ref":  "CLIA-ICA",
@@ -3435,7 +3435,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "BioCLIA ICA",
         "cat":  "autoimmunite",
         "conditionnement":  "100 tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/hob-bioclia-kit.jpg"
     },
     {
         "ref":  "CLIA-ENAMix1",
@@ -3446,7 +3446,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "BioCLIA ENA Mix-1",
         "cat":  "autoimmunite",
         "conditionnement":  "100 tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/hob-bioclia-kit.jpg"
     },
     {
         "ref":  "CLIA-CTD",
@@ -3457,7 +3457,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "BioCLIA CTD",
         "cat":  "autoimmunite",
         "conditionnement":  "100 tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/hob-bioclia-kit.jpg"
     },
     {
         "ref":  "CLIA-IF",
@@ -3468,7 +3468,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "BioCLIA IF",
         "cat":  "autoimmunite",
         "conditionnement":  "100 tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/hob-bioclia-kit.jpg"
     },
     {
         "ref":  "CLIA-PCA",
@@ -3479,7 +3479,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "BioCLIA PCA",
         "cat":  "autoimmunite",
         "conditionnement":  "100 tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/hob-bioclia-kit.jpg"
     },
     {
         "ref":  "CLIA-ZnT8",
@@ -3490,7 +3490,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "BioCLIA ZnT8",
         "cat":  "autoimmunite",
         "conditionnement":  "100 tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/hob-bioclia-kit.jpg"
     },
     {
         "ref":  "CLIA-MDA5",
@@ -3501,144 +3501,144 @@ export const REACTIFS: GridItem[] = [
         "desc":  "BioCLIA MDA5",
         "cat":  "autoimmunite",
         "conditionnement":  "100 tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/hob-bioclia-kit.jpg"
     },
     {
         "label":  "Auto-immunité : BioCLIA 1900 & 500 & BioCLIA 6500",
         "kind":  "section"
     },
-    { "ref": "MY00148 / MY00097C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-dsDNA",         "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY00149 / MY00098C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-Ro-60",         "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY00150 / MY00099C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-SS-B/La",       "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY00151 / MY00100C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-nRNP/Sm",       "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY00152 / MY00101C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-Sm",             "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY00153 / MY00102C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-Jo-1",           "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY00154 / MY00103C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-Scl-70",         "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY00155 / MY00104C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-Ro-52",          "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY00156 / MY00105C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-Rib-P",          "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY00157 / MY00106C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-PCNA",           "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY00158 / MY00107C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-PM-Scl",         "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY00159 / MY00108C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-His",            "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY00160 / MY00109C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-CENP-B",         "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY00161 / MY00110C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-Nuc",            "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY00162 / MY00111C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-MPO",            "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY00163 / MY00112C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-PR3",            "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY00164 / MY00113C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-GBM",            "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY00165 / MY00114C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-gp210",          "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY00166 / MY00115C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-sp100",          "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY00167 / MY00116C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-LKM-1",          "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY00168 / MY00117C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-LC-1",           "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY00169 / MY00118C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-AMA-M2",         "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY00170 / MY00119C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-SLA/LP",         "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY00171 / MY00120C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-aCL-A",          "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY00172 / MY00121C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-aCL-G",          "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY00173 / MY00122C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-aCL-M",          "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY00174 / MY00123C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-aCL-A/M/G",      "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY00175 / MY00124C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-β2GP1-A",        "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY00176 / MY00125C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-β2GP1-G",        "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY00177 / MY00126C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-β2GP1-M",        "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY00178 / MY00127C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-β2GP1-A/M/G",    "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY00179 / MY00128C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-RF-A",           "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY00180 / MY00129C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-RF-G",           "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY00181 / MY00130C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-RF-M",           "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY00182 / MY00131C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-RF-A/M/G",       "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY00183 / MY00132C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-CCP",            "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY00184 / MY00133C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-IAA",            "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY00189 / MY00138C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-h-tTG-A",        "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY00190 / MY00139C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-h-tTG-G",        "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY00191 / MY00140C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-DGP GLIADINE-A", "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY00192 / MY00141C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-DGP-G",          "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY00193 / MY00142C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-GAD",            "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY00194 / MY00143C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-IA2",            "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY00195 / MY00144C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-ICA",            "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY00198 / MY00147C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-ENA Mix-1",      "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY00969 / MY00980C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-CTD",            "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY00197 / MY00146C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-IF",             "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY00196 / MY00145C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-PCA",            "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY02006 / MY02007C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-ZnT8",           "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01703 / MY01704C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-MDA5",           "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
+    { "ref": "MY00148 / MY00097C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-dsDNA",         "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY00149 / MY00098C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-Ro-60",         "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY00150 / MY00099C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-SS-B/La",       "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY00151 / MY00100C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-nRNP/Sm",       "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY00152 / MY00101C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-Sm",             "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY00153 / MY00102C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-Jo-1",           "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY00154 / MY00103C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-Scl-70",         "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY00155 / MY00104C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-Ro-52",          "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY00156 / MY00105C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-Rib-P",          "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY00157 / MY00106C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-PCNA",           "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY00158 / MY00107C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-PM-Scl",         "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY00159 / MY00108C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-His",            "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY00160 / MY00109C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-CENP-B",         "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY00161 / MY00110C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-Nuc",            "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY00162 / MY00111C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-MPO",            "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY00163 / MY00112C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-PR3",            "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY00164 / MY00113C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-GBM",            "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY00165 / MY00114C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-gp210",          "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY00166 / MY00115C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-sp100",          "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY00167 / MY00116C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-LKM-1",          "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY00168 / MY00117C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-LC-1",           "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY00169 / MY00118C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-AMA-M2",         "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY00170 / MY00119C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-SLA/LP",         "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY00171 / MY00120C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-aCL-A",          "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY00172 / MY00121C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-aCL-G",          "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY00173 / MY00122C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-aCL-M",          "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY00174 / MY00123C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-aCL-A/M/G",      "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY00175 / MY00124C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-β2GP1-A",        "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY00176 / MY00125C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-β2GP1-G",        "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY00177 / MY00126C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-β2GP1-M",        "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY00178 / MY00127C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-β2GP1-A/M/G",    "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY00179 / MY00128C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-RF-A",           "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY00180 / MY00129C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-RF-G",           "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY00181 / MY00130C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-RF-M",           "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY00182 / MY00131C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-RF-A/M/G",       "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY00183 / MY00132C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-CCP",            "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY00184 / MY00133C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-IAA",            "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY00189 / MY00138C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-h-tTG-A",        "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY00190 / MY00139C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-h-tTG-G",        "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY00191 / MY00140C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-DGP GLIADINE-A", "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY00192 / MY00141C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-DGP-G",          "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY00193 / MY00142C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-GAD",            "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY00194 / MY00143C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-IA2",            "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY00195 / MY00144C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-ICA",            "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY00198 / MY00147C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-ENA Mix-1",      "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY00969 / MY00980C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-CTD",            "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY00197 / MY00146C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-IF",             "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY00196 / MY00145C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-PCA",            "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY02006 / MY02007C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-ZnT8",           "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01703 / MY01704C",  "kind": "product", "type": "reactif", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-MDA5",           "cat": "autoimmunite", "conditionnement": "100 Tests/Kit, 50 Tests/kit", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
     {
         "label":  "Allergie : BioCLIA 1900 & 500 & BioCLIA 6500",
         "kind":  "section"
     },
-    { "ref": "MY00405",  "kind": "product", "type": "consommable", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-Substrate",                          "cat": "allergie", "conditionnement": "4 X 600 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01312",  "kind": "product", "type": "consommable", "description": "", "marque": "HOB Biotech", "desc": "Conjugate and Microparticle Reagent Kit",    "cat": "allergie", "conditionnement": "150 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01315",  "kind": "product", "type": "controle",    "description": "", "marque": "HOB Biotech", "desc": "Calibrator and Control Set",                  "cat": "allergie", "conditionnement": "CAL:0.5mLx7; CON:1mLx2", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01190",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit G3",         "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01191",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit G8",         "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01192",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit G12",        "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01193",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit T3",         "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01194",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit T4",         "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01195",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit F1",         "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01196",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit F203",       "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01197",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit T11",        "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01198",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit E94",        "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01199",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit G6",         "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01200",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit K82",        "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01201",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit T9",         "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01202",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit F44",        "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01203",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit F45",        "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01204",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit F47",        "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01205",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit F84",        "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01206",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit F85",        "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01207",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit F89",        "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01208",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit F92",        "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01209",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit T7",         "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01210",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit T23",        "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01211",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit F20",        "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01212",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit D202",       "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01213",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit D203",       "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01214",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit F423",       "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01215",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit F351",       "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01216",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit T224",       "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01217",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit T215",       "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01218",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit G213",       "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01219",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit F76",        "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01220",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit F77",        "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01221",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit F78",        "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01222",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit Fx25",       "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01223",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit Fx26",       "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01224",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit Fx28",       "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01282",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit D1",         "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01283",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit D2",         "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01284",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit E1",         "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01285",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit E5",         "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01286",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit F2",         "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01287",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit F3",         "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01288",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit F4",         "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01289",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit F10",        "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01290",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit F13",        "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01291",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit F14",        "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01292",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit F23",        "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01293",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit F24",        "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01294",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit F27",        "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01295",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit F88",        "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01296",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit F245",       "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01297",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit W1",         "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01298",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit W6",         "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01299",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit T12",        "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01300",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit M6",         "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01301",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit M3",         "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01302",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit H1",         "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01303",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit I6",         "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01688",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit BioCLIATOP", "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01306",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit Sx1",        "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01307",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit Fx5",        "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01689",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit Fx27",       "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01690",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit Fx24",       "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01691",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit F17",        "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01692",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit Mx1",        "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01693",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit Gx1",        "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01694",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit D201",       "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01695",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit F256",       "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01696",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit F31",        "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01697",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit I1",         "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01698",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit I3",         "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01699",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit M2",         "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01700",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit F75",        "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01701",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit F422",       "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01702",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit F424",       "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
-    { "ref": "MY01317",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Total IgE Reagent Kit TOTAL",         "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/ga-ifa-kit.jpg" },
+    { "ref": "MY00405",  "kind": "product", "type": "consommable", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-Substrate",                          "cat": "allergie", "conditionnement": "4 X 600 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01312",  "kind": "product", "type": "consommable", "description": "", "marque": "HOB Biotech", "desc": "Conjugate and Microparticle Reagent Kit",    "cat": "allergie", "conditionnement": "150 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01315",  "kind": "product", "type": "controle",    "description": "", "marque": "HOB Biotech", "desc": "Calibrator and Control Set",                  "cat": "allergie", "conditionnement": "CAL:0.5mLx7; CON:1mLx2", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01190",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit G3",         "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01191",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit G8",         "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01192",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit G12",        "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01193",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit T3",         "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01194",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit T4",         "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01195",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit F1",         "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01196",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit F203",       "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01197",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit T11",        "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01198",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit E94",        "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01199",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit G6",         "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01200",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit K82",        "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01201",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit T9",         "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01202",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit F44",        "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01203",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit F45",        "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01204",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit F47",        "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01205",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit F84",        "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01206",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit F85",        "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01207",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit F89",        "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01208",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit F92",        "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01209",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit T7",         "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01210",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit T23",        "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01211",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit F20",        "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01212",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit D202",       "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01213",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit D203",       "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01214",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit F423",       "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01215",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit F351",       "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01216",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit T224",       "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01217",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit T215",       "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01218",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit G213",       "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01219",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit F76",        "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01220",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit F77",        "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01221",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit F78",        "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01222",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit Fx25",       "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01223",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit Fx26",       "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01224",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit Fx28",       "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01282",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit D1",         "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01283",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit D2",         "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01284",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit E1",         "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01285",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit E5",         "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01286",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit F2",         "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01287",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit F3",         "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01288",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit F4",         "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01289",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit F10",        "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01290",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit F13",        "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01291",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit F14",        "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01292",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit F23",        "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01293",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit F24",        "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01294",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit F27",        "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01295",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit F88",        "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01296",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit F245",       "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01297",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit W1",         "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01298",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit W6",         "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01299",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit T12",        "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01300",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit M6",         "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01301",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit M3",         "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01302",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit H1",         "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01303",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit I6",         "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01688",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit BioCLIATOP", "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01306",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit Sx1",        "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01307",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit Fx5",        "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01689",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit Fx27",       "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01690",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit Fx24",       "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01691",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit F17",        "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01692",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit Mx1",        "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01693",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit Gx1",        "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01694",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit D201",       "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01695",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit F256",       "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01696",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit F31",        "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01697",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit I1",         "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01698",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit I3",         "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01699",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit M2",         "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01700",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit F75",        "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01701",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit F422",       "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01702",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit F424",       "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01317",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Total IgE Reagent Kit TOTAL",         "cat": "allergie", "conditionnement": "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
     {
         "label":  "Allergie - Reactifs BioLINE DOT",
         "kind":  "section"
@@ -3652,7 +3652,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "BioLINE Allergy FOOD FD-1 + CCD",
         "cat":  "allergie",
         "conditionnement":  "24 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/hob-bioclia-kit.jpg"
     },
     {
         "ref":  "MB00269",
@@ -3663,7 +3663,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "BioLINE Allergy INHALATION INH-1 + CCD",
         "cat":  "allergie",
         "conditionnement":  "24 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/hob-bioclia-kit.jpg"
     },
     {
         "ref":  "MB00272",
@@ -3674,7 +3674,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "BioLINE Allergy MIX-20 A",
         "cat":  "allergie",
         "conditionnement":  "24 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/hob-bioclia-kit.jpg"
     },
     {
         "ref":  "MB00277",
@@ -3685,7 +3685,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "BioLINE Allergy MIX-14 A1",
         "cat":  "allergie",
         "conditionnement":  "24 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/hob-bioclia-kit.jpg"
     },
     {
         "ref":  "MB00278",
@@ -3696,7 +3696,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "BioLINE Allergy INH-7 A2",
         "cat":  "allergie",
         "conditionnement":  "24 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/hob-bioclia-kit.jpg"
     },
     {
         "ref":  "MB00279",
@@ -3707,7 +3707,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "BioLINE Allergy INH-7 A3",
         "cat":  "allergie",
         "conditionnement":  "24 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/hob-bioclia-kit.jpg"
     },
     {
         "ref":  "MB00273",
@@ -3718,7 +3718,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "BioLINE Allergy MIX-20 B",
         "cat":  "allergie",
         "conditionnement":  "24 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/hob-bioclia-kit.jpg"
     },
     {
         "ref":  "MB00280",
@@ -3729,7 +3729,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "BioLINE Allergy INH-10 B1",
         "cat":  "allergie",
         "conditionnement":  "24 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/hob-bioclia-kit.jpg"
     },
     {
         "ref":  "MB00281",
@@ -3740,7 +3740,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "BioLINE Allergy FD-10 B2",
         "cat":  "allergie",
         "conditionnement":  "24 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/hob-bioclia-kit.jpg"
     },
     {
         "ref":  "MB00274",
@@ -3751,7 +3751,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "BioLINE Allergy MIX-20 C",
         "cat":  "allergie",
         "conditionnement":  "24 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/hob-bioclia-kit.jpg"
     },
     {
         "ref":  "MB00282",
@@ -3762,7 +3762,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "BioLINE Allergy INH-10 C1",
         "cat":  "allergie",
         "conditionnement":  "24 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/hob-bioclia-kit.jpg"
     },
     {
         "ref":  "MB00283",
@@ -3773,7 +3773,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "BioLINE Allergy INH-10 C2",
         "cat":  "allergie",
         "conditionnement":  "24 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/hob-bioclia-kit.jpg"
     },
     {
         "ref":  "MB00275",
@@ -3784,7 +3784,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "BioLINE Allergy MIX-20 D + CCD",
         "cat":  "allergie",
         "conditionnement":  "24 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/hob-bioclia-kit.jpg"
     },
     {
         "ref":  "MB00284",
@@ -3795,7 +3795,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "BioLINE Allergy MIX-16 D1 + CCD",
         "cat":  "allergie",
         "conditionnement":  "24 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/hob-bioclia-kit.jpg"
     },
     {
         "ref":  "MB00285",
@@ -3806,7 +3806,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "BioLINE Allergy INH-10 D2 + CCD",
         "cat":  "allergie",
         "conditionnement":  "24 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/hob-bioclia-kit.jpg"
     },
     {
         "ref":  "MB00286",
@@ -3817,7 +3817,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "BioLINE Allergy FD-8 D3",
         "cat":  "allergie",
         "conditionnement":  "24 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/hob-bioclia-kit.jpg"
     },
     {
         "ref":  "MB00287",
@@ -3828,7 +3828,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "BioLINE Allergy MIX-12 D4 + CCD",
         "cat":  "allergie",
         "conditionnement":  "24 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/hob-bioclia-kit.jpg"
     },
     {
         "ref":  "MB00276",
@@ -3839,7 +3839,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "BioLINE Allergy MIX-20 E",
         "cat":  "allergie",
         "conditionnement":  "24 Tests",
-        "image":  "/images/reactifs/ga-ifa-kit.jpg"
+        "image":  "/images/reactifs/hob-bioclia-kit.jpg"
     },
     {
         "label":  "Parasitologie -Western Blot",
