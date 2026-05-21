@@ -88,7 +88,27 @@ export const FICHES_TECHNIQUES: Record<string, FicheTechnique[]> = {
   "HEM00059": [{ type: "IFU", label: "Notice IFU", langue: "A", url: "https://www.erbalachema.com/en/akce/prilohy/priloha/stahnout/4851/" }],
   "HEM00061": [{ type: "IFU", label: "Notice IFU", langue: "A", url: "https://www.erbalachema.com/en/akce/prilohy/priloha/stahnout/4851/" }],
   "HEM00064": [{ type: "IFU", label: "Notice IFU", langue: "A", url: "https://www.erbalachema.com/en/akce/prilohy/priloha/stahnout/4852/" }],
+  // Generic Assays — LINE immunoblots (IFU public via fybreeds.com)
+  "4289": [{ type: "IFU", label: "Notice IFU", langue: "A", url: "https://fybreeds.com/userfiles/files/ANA%2012%20LINE%204289.pdf" }],
+  // Urinary analysis — urine strips & analyzers
+  "REG00053": [{ type: "IFU", label: "Notice IFU", langue: "A", url: "https://www.erbalachema.com/en/akce/prilohy/priloha/stahnout/3822/" }],
+  "REG00060": [{ type: "IFU", label: "Notice IFU", langue: "A", url: "https://www.erbalachema.com/en/akce/prilohy/priloha/stahnout/3825/" }],
   "REG00059": [{ type: "IFU", label: "Notice IFU", langue: "A", url: "https://www.erbalachema.com/en/akce/prilohy/priloha/stahnout/4863/" }],
+  // Critical care — EC cartridge (blood gas / electrolytes)
+  "REG00056": [{ type: "IFU", label: "Notice IFU", langue: "A", url: "https://www.erbalachema.com/en/akce/prilohy/priloha/stahnout/3758/" }],
+  "REG00057": [{ type: "IFU", label: "Notice IFU", langue: "A", url: "https://www.erbalachema.com/en/akce/prilohy/priloha/stahnout/3758/" }],
+  "REG00058": [{ type: "IFU", label: "Notice IFU", langue: "A", url: "https://www.erbalachema.com/en/akce/prilohy/priloha/stahnout/3758/" }],
+  "REG00065": [{ type: "IFU", label: "Notice IFU", langue: "A", url: "https://www.erbalachema.com/en/akce/prilohy/priloha/stahnout/3762/" }],
+  // Critical care — EC cartridge plus iCa
+  "REG00061": [{ type: "IFU", label: "Notice IFU", langue: "A", url: "https://www.erbalachema.com/en/akce/prilohy/priloha/stahnout/3761/" }],
+  "REG00062": [{ type: "IFU", label: "Notice IFU", langue: "A", url: "https://www.erbalachema.com/en/akce/prilohy/priloha/stahnout/3761/" }],
+  "REG00063": [{ type: "IFU", label: "Notice IFU", langue: "A", url: "https://www.erbalachema.com/en/akce/prilohy/priloha/stahnout/3761/" }],
+  "REG00066": [{ type: "IFU", label: "Notice IFU", langue: "A", url: "https://www.erbalachema.com/en/akce/prilohy/priloha/stahnout/3761/" }],
+  // Urinary analysis — PHAN LAURA / PHAN AUTO strips
+  "URPH0028": [{ type: "IFU", label: "Notice IFU", langue: "A", url: "https://www.erbalachema.com/en/akce/prilohy/priloha/stahnout/3837/" }],
+  "URPH0029": [{ type: "IFU", label: "Notice IFU", langue: "A", url: "https://www.erbalachema.com/en/akce/prilohy/priloha/stahnout/3841/" }],
+  "URPH0030": [{ type: "IFU", label: "Notice IFU", langue: "A", url: "https://www.erbalachema.com/en/akce/prilohy/priloha/stahnout/3843/" }],
+  "URPH0031": [{ type: "IFU", label: "Notice IFU", langue: "A", url: "https://www.erbalachema.com/en/akce/prilohy/priloha/stahnout/3843/" }],
   "XSYS0001": [{ type: "IFU", label: "Notice IFU", langue: "A", url: "https://www.erbalachema.com/en/akce/prilohy/priloha/stahnout/4205/" }],
   "XSYS0002": [{ type: "IFU", label: "Notice IFU", langue: "A", url: "https://www.erbalachema.com/en/akce/prilohy/priloha/stahnout/4210/" }],
   "XSYS0003": [{ type: "IFU", label: "Notice IFU", langue: "A", url: "https://www.erbalachema.com/en/akce/prilohy/priloha/stahnout/4206/" }],
