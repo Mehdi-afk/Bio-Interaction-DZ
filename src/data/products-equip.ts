@@ -14,7 +14,7 @@ export const EQUIPEMENTS: GridItem[] = [
         "desc":  "ERBA XL 200",
         "cat":  "biochimie",
         "conditionnement":  "200 tests/h",
-        "image": "/images/equipements/ERBA XL 200.jpg",
+        "image": "/images/equipements/ERBA XL 200.webp",
     },
     {
         "ref":  "INS00008",

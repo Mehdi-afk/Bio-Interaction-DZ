@@ -115,4 +115,8 @@ export const FICHES_MEDIPAN: Record<string, MedipanFiche> = {
   "4063": { dlId: "1963", langue: "EN", fallback: true },
   "4065": { dlId: "1963", langue: "EN", fallback: true },
   "4121": { dlId: "1959", langue: "EN", fallback: true },
+  "4122": { dlId: "1959", langue: "EN", fallback: true },
+  "4272": { dlId: "1964", langue: "EN", fallback: true },
+  "4277": { dlId: "1965", langue: "EN", fallback: true },
+  "4471": { dlId: "1975", langue: "EN", fallback: true },
 };

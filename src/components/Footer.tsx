@@ -54,7 +54,7 @@ export default function Footer() {
               className="block text-[20px] text-white mb-3"
               style={{ fontFamily: "var(--font-dm-serif, 'Geist', sans-serif)" }}
             >
-              bioInteraction
+              Bio Interaction Algérie
             </span>
             <p className="text-[13px] text-white/45 leading-[1.7]">
               Actif depuis 2016 dans le domaine du diagnostic médical.

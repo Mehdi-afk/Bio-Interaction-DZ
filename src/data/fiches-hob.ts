@@ -1,7 +1,9 @@
 // IFU BioCLIA — HOB Biotech (fichiers locaux dans public/notices/bioclia/)
 // Autoimmune : DOCX FR (2022-09) | Allergie : PDF FR
+// Generic Assays locaux dans public/notices/generic-assays/
 
-const B = "/notices/bioclia/";
+const B  = "/notices/bioclia/";
+const GA = "/notices/generic-assays/";
 
 export type HobFiche = {
   path:   string;        // URL relative au domaine
@@ -44,6 +46,76 @@ export const FICHES_HOB: Record<string, HobFiche> = {
   "MY01700": { path: B + "bioclia-allergy-F75.pdf",         langue: "FR", type: "pdf" },
   "MY01701": { path: B + "bioclia-allergy-F422.pdf",        langue: "FR", type: "pdf" },
   "MY01702": { path: B + "bioclia-allergy-F424.pdf",        langue: "FR", type: "pdf" },
+
+  // ── Allergie — kits individuels (ajout) ──────────────────────────────────
+  "MY01193": { path: B + "bioclia-allergy-T3.pdf",          langue: "FR", type: "pdf" },
+  "MY01195": { path: B + "bioclia-allergy-F1.pdf",          langue: "FR", type: "pdf" },
+  "MY01198": { path: B + "bioclia-allergy-E94.pdf",         langue: "FR", type: "pdf" },
+  "MY01199": { path: B + "bioclia-allergy-G6.pdf",          langue: "FR", type: "pdf" },
+  "MY01203": { path: B + "bioclia-allergy-F45.pdf",         langue: "FR", type: "pdf" },
+  "MY01204": { path: B + "bioclia-allergy-F47.pdf",         langue: "FR", type: "pdf" },
+  "MY01205": { path: B + "bioclia-allergy-F84.pdf",         langue: "FR", type: "pdf" },
+  "MY01210": { path: B + "bioclia-allergy-T23.pdf",         langue: "FR", type: "pdf" },
+  "MY01211": { path: B + "bioclia-allergy-F20.pdf",         langue: "FR", type: "pdf" },
+  "MY01212": { path: B + "bioclia-allergy-D202.pdf",        langue: "FR", type: "pdf" },
+  "MY01213": { path: B + "bioclia-allergy-D203.pdf",        langue: "FR", type: "pdf" },
+  "MY01214": { path: B + "bioclia-allergy-F423.pdf",        langue: "FR", type: "pdf" },
+  "MY01215": { path: B + "bioclia-allergy-F351.pdf",        langue: "FR", type: "pdf" },
+  "MY01216": { path: B + "bioclia-allergy-T224.pdf",        langue: "FR", type: "pdf" },
+  "MY01219": { path: B + "bioclia-allergy-F76.pdf",         langue: "FR", type: "pdf" },
+  "MY01220": { path: B + "bioclia-allergy-F77.pdf",         langue: "FR", type: "pdf" },
+  "MY01221": { path: B + "bioclia-allergy-F78.pdf",         langue: "FR", type: "pdf" },
+  "MY01222": { path: B + "bioclia-allergy-Fx25.pdf",        langue: "FR", type: "pdf" },
+  "MY01224": { path: B + "bioclia-allergy-Fx28.pdf",        langue: "FR", type: "pdf" },
+  "MY01282": { path: B + "bioclia-allergy-D1.pdf",          langue: "FR", type: "pdf" },
+  "MY01283": { path: B + "bioclia-allergy-D2.pdf",          langue: "FR", type: "pdf" },
+  "MY01284": { path: B + "bioclia-allergy-E1.pdf",          langue: "FR", type: "pdf" },
+  "MY01285": { path: B + "bioclia-allergy-E5.pdf",          langue: "FR", type: "pdf" },
+  "MY01286": { path: B + "bioclia-allergy-F2.pdf",          langue: "FR", type: "pdf" },
+  "MY01287": { path: B + "bioclia-allergy-F3.pdf",          langue: "FR", type: "pdf" },
+  "MY01288": { path: B + "bioclia-allergy-F4.pdf",          langue: "FR", type: "pdf" },
+  "MY01289": { path: B + "bioclia-allergy-F10.pdf",         langue: "FR", type: "pdf" },
+  "MY01290": { path: B + "bioclia-allergy-F13.pdf",         langue: "FR", type: "pdf" },
+  "MY01291": { path: B + "bioclia-allergy-F14.pdf",         langue: "FR", type: "pdf" },
+  "MY01292": { path: B + "bioclia-allergy-F23.pdf",         langue: "FR", type: "pdf" },
+  "MY01293": { path: B + "bioclia-allergy-F24.pdf",         langue: "FR", type: "pdf" },
+  "MY01294": { path: B + "bioclia-allergy-F27.pdf",         langue: "FR", type: "pdf" },
+  "MY01296": { path: B + "bioclia-allergy-F245.pdf",        langue: "FR", type: "pdf" },
+  "MY01297": { path: B + "bioclia-allergy-W1.pdf",          langue: "FR", type: "pdf" },
+  "MY01298": { path: B + "bioclia-allergy-W6.pdf",          langue: "FR", type: "pdf" },
+  "MY01299": { path: B + "bioclia-allergy-T12.pdf",         langue: "FR", type: "pdf" },
+  "MY01300": { path: B + "bioclia-allergy-M6.pdf",          langue: "FR", type: "pdf" },
+  "MY01301": { path: B + "bioclia-allergy-M3.pdf",          langue: "FR", type: "pdf" },
+  "MY01302": { path: B + "bioclia-allergy-H1.pdf",          langue: "FR", type: "pdf" },
+  "MY01303": { path: B + "bioclia-allergy-I6.pdf",          langue: "FR", type: "pdf" },
+  "MY01306": { path: B + "bioclia-allergy-Sx1.pdf",         langue: "FR", type: "pdf" },
+  "MY01307": { path: B + "bioclia-allergy-Fx5.pdf",         langue: "FR", type: "pdf" },
+  "MY01317": { path: B + "bioclia-allergy-BioCLIATOP.pdf",  langue: "FR", type: "pdf" },
+
+  // ── Allergie — kits système ───────────────────────────────────────────────
+  "MY00405": { path: B + "bioclia-system-substrate.pdf",              langue: "FR", type: "pdf" },
+  "MY01312": { path: B + "bioclia-allergy-conjugate-microparticle.pdf", langue: "FR", type: "pdf" },
+  "MY01315": { path: B + "bioclia-allergy-calibrator-control.pdf",    langue: "FR", type: "pdf" },
+
+  // ── BioLINE Allergy Panels ────────────────────────────────────────────────
+  "MB00272": { path: B + "bioclia-biolines-A.pdf",  langue: "FR", type: "pdf" },
+  "MB00277": { path: B + "bioclia-biolines-A.pdf",  langue: "FR", type: "pdf" },
+  "MB00273": { path: B + "bioclia-biolines-B.pdf",  langue: "FR", type: "pdf" },
+  "MB00280": { path: B + "bioclia-biolines-B.pdf",  langue: "FR", type: "pdf" },
+  "MB00281": { path: B + "bioclia-biolines-FD.pdf", langue: "FR", type: "pdf" },
+  "MB00274": { path: B + "bioclia-biolines-C.pdf",  langue: "FR", type: "pdf" },
+  "MB00282": { path: B + "bioclia-biolines-C.pdf",  langue: "FR", type: "pdf" },
+  "MB00283": { path: B + "bioclia-biolines-C.pdf",  langue: "FR", type: "pdf" },
+  "MB00275": { path: B + "bioclia-biolines-D.pdf",  langue: "FR", type: "pdf" },
+  "MB00284": { path: B + "bioclia-biolines-D.pdf",  langue: "FR", type: "pdf" },
+  "MB00285": { path: B + "bioclia-biolines-D.pdf",  langue: "FR", type: "pdf" },
+  "MB00287": { path: B + "bioclia-biolines-D.pdf",  langue: "FR", type: "pdf" },
+  "MB00276": { path: B + "bioclia-biolines-E.pdf",  langue: "FR", type: "pdf" },
+  "MB00268": { path: B + "bioclia-biolines-FD.pdf", langue: "FR", type: "pdf" },
+  "MB00286": { path: B + "bioclia-biolines-FD.pdf", langue: "FR", type: "pdf" },
+  "MB00269": { path: B + "bioclia-biolines-INH.pdf", langue: "FR", type: "pdf" },
+  "MB00278": { path: B + "bioclia-biolines-INH.pdf", langue: "FR", type: "pdf" },
+  "MB00279": { path: B + "bioclia-biolines-INH.pdf", langue: "FR", type: "pdf" },
 
   // ── Autoimmune — Connective tissue disease ────────────────────────────────
   "CLIA-dsDNA":     { path: B + "bioclia-dsDNA.docx",       langue: "FR", type: "docx" },
@@ -158,4 +230,9 @@ export const FICHES_HOB: Record<string, HobFiche> = {
   "MY00197 / MY00146C": { path: B + "bioclia-IF.docx",            langue: "FR", type: "docx" },
   "MY00198 / MY00147C": { path: B + "bioclia-ENA-Screen.docx",    langue: "FR", type: "docx" },
   "MY00969 / MY00980C": { path: B + "bioclia-CTD-Screen.docx",    langue: "FR", type: "docx" },
+
+  // ── Generic Assays — fichiers locaux ─────────────────────────────────────
+  "4131": { path: GA + "ga-4131-4132.pdf", langue: "FR", type: "pdf" },
+  "4132": { path: GA + "ga-4131-4132.pdf", langue: "FR", type: "pdf" },
+  "4282": { path: GA + "ga-4282.pdf",      langue: "FR", type: "pdf" },
 };
