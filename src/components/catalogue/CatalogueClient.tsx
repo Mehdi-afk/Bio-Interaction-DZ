@@ -535,7 +535,7 @@ function ProductPage({
 // ── Main component ─────────────────────────────────────────────────────────────
 
 export default function CatalogueClient({
-  items, title, cats, brands, showTypeFilter, backHref, hideSidebar,
+  items, title, cats, brands, showTypeFilter, backHref, hideSidebar, sectionDisplayName,
 }: {
   items: GridItem[];
   title: string;
@@ -544,6 +544,7 @@ export default function CatalogueClient({
   showTypeFilter?: boolean;
   backHref?: string;
   hideSidebar?: boolean;
+  sectionDisplayName?: string;
 }) {
   const router = useRouter();
   const searchParams  = useSearchParams();
@@ -873,8 +874,24 @@ export default function CatalogueClient({
           </button>
         )}
 
-        {/* Back link */}
-        {backHref && (
+        {/* Breadcrumb / Back link */}
+        {hideSidebar && sectionDisplayName ? (
+          <nav className="flex items-center gap-1.5 mb-5 text-[13px] text-[#A9ADAA] flex-wrap">
+            <Link href="/catalogue/reactifs" className="no-underline hover:text-[#29A864] transition-colors duration-150">
+              Réactifs
+            </Link>
+            <span>›</span>
+            {backHref ? (
+              <Link href={backHref} className="no-underline hover:text-[#29A864] transition-colors duration-150">
+                {cats.find(c => c.value === activeCat)?.label ?? activeCat}
+              </Link>
+            ) : (
+              <span>{cats.find(c => c.value === activeCat)?.label ?? activeCat}</span>
+            )}
+            <span>›</span>
+            <span className="text-[#1B1F1D] font-medium">{sectionDisplayName}</span>
+          </nav>
+        ) : backHref ? (
           <Link
             href={backHref}
             className="
@@ -888,7 +905,7 @@ export default function CatalogueClient({
             </svg>
             Retour
           </Link>
-        )}
+        ) : null}
 
         {/* Header */}
         <div className="flex items-center justify-between mb-7 gap-4 max-[600px]:mb-4">
@@ -1007,7 +1024,7 @@ export default function CatalogueClient({
       {selected && (
         <ProductPage
           product={selected}
-          sectionLabel={selectedSection || CAT_LABELS[selected.cat] || selected.cat}
+          sectionLabel={selectedSection ? (sectionDisplayName || selectedSection) : (CAT_LABELS[selected.cat] || selected.cat)}
           onClose={() => setSelected(null)}
           onAddToCart={handleAddToCart}
           onRequestDevis={handleRequestDevis}

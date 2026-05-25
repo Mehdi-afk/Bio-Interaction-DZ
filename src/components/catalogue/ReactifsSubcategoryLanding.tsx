@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 
-const SECTION_DISPLAY: Record<string, string> = {
+export const SECTION_DISPLAY: Record<string, string> = {
   "Biochimie Clinique - Reactifs Systeme Ferme":          "Réactifs Système Fermé",
   "Biochimie Clinique - Controles et Calibrants":          "Contrôles & Calibrants",
   "Biochimie Clinique - Reactifs Systeme Ouvert":          "Réactifs Système Ouvert",

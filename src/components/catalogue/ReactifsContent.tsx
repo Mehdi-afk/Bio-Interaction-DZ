@@ -4,7 +4,7 @@ import { useSearchParams } from "next/navigation";
 import { useMemo } from "react";
 import CatalogueClient from "@/src/components/catalogue/CatalogueClient";
 import ReactifsLanding from "@/src/components/catalogue/ReactifsLanding";
-import ReactifsSubcategoryLanding from "@/src/components/catalogue/ReactifsSubcategoryLanding";
+import ReactifsSubcategoryLanding, { SECTION_DISPLAY } from "@/src/components/catalogue/ReactifsSubcategoryLanding";
 import { REACTIFS } from "@/src/data/products-reactifs";
 import type { GridItem, SectionLabel } from "@/src/data/products-reactifs";
 
@@ -122,6 +122,7 @@ export default function ReactifsContent() {
       showTypeFilter
       backHref={backHref}
       hideSidebar={!!section}
+      sectionDisplayName={section ? (SECTION_DISPLAY[section] ?? section) : undefined}
     />
   );
 }
