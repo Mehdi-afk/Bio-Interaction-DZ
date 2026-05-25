@@ -2257,7 +2257,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "ANA HEP-2 PLUS",
         "cat":  "autoimmunite",
         "conditionnement":  "120 Tests (10 Lames de 12 Puits)",
-        "image":  "/images/reactifs/hob-ifi-manuel-kit.png"
+        "image":  "/images/reactifs/ga-ifi-hep2.jpg"
     },
     {
         "ref":  "81040",
@@ -2268,7 +2268,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "ANA HEP-2 PLUS XL",
         "cat":  "autoimmunite",
         "conditionnement":  "480 Tests (40 Lames de 12 Puits)",
-        "image":  "/images/reactifs/hob-ifi-manuel-kit.png"
+        "image":  "/images/reactifs/ga-ifi-hep2.jpg"
     },
     {
         "ref":  "86048",
@@ -2279,7 +2279,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "IFA EmA S",
         "cat":  "autoimmunite",
         "conditionnement":  "48 Tests (12 Lames de 4 Puits)",
-        "image":  "/images/reactifs/hob-ifi-manuel-kit.png"
+        "image":  "/images/reactifs/ga-ifi-hep2.jpg"
     },
     {
         "ref":  "86096",
@@ -2290,7 +2290,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "IFA EmA L",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests (12 Lames de 8 Puits)",
-        "image":  "/images/reactifs/hob-ifi-manuel-kit.png"
+        "image":  "/images/reactifs/ga-ifi-hep2.jpg"
     },
     {
         "ref":  "81050",
@@ -2301,7 +2301,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "IFA plus nDNA S",
         "cat":  "autoimmunite",
         "conditionnement":  "60 Tests (10 Lames de 6 Puits)",
-        "image":  "/images/reactifs/hob-ifi-manuel-kit.png"
+        "image":  "/images/reactifs/ga-ifi-hep2.jpg"
     },
     {
         "ref":  "81100",
@@ -2312,7 +2312,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "IFA plus nDNA L",
         "cat":  "autoimmunite",
         "conditionnement":  "120 Tests (10 Lames de 12 Puits)",
-        "image":  "/images/reactifs/hob-ifi-manuel-kit.png"
+        "image":  "/images/reactifs/ga-ifi-hep2.jpg"
     },
     {
         "ref":  "8049",
@@ -2323,7 +2323,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "IFA Anti-MuSK",
         "cat":  "autoimmunite",
         "conditionnement":  "60 Tests (10 Lames de 6 Puits)",
-        "image":  "/images/reactifs/hob-ifi-manuel-kit.png"
+        "image":  "/images/reactifs/ga-ifi-hep2.jpg"
     },
     {
         "ref":  "83048",
@@ -2334,7 +2334,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "IFA AMA",
         "cat":  "autoimmunite",
         "conditionnement":  "48 Tests (12 Lames de 4 Puits)",
-        "image":  "/images/reactifs/hob-ifi-manuel-kit.png"
+        "image":  "/images/reactifs/ga-ifi-hep2.jpg"
     },
     {
         "ref":  "84048",
@@ -2345,7 +2345,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "IFA ASMA",
         "cat":  "autoimmunite",
         "conditionnement":  "48 Tests (12 Lames de 4 Puits)",
-        "image":  "/images/reactifs/hob-ifi-manuel-kit.png"
+        "image":  "/images/reactifs/ga-ifi-hep2.jpg"
     },
     {
         "ref":  "85048",
@@ -2356,7 +2356,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "IFA Triple Substrat LKS S",
         "cat":  "autoimmunite",
         "conditionnement":  "48 Tests (12 Lames de 4 Puits)",
-        "image":  "/images/reactifs/hob-ifi-manuel-kit.png"
+        "image":  "/images/reactifs/ga-ifi-hep2.jpg"
     },
     {
         "ref":  "85096",
@@ -2367,7 +2367,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "IFA Triple Substrat LKS L",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests (12 Lames de 8 Puits)",
-        "image":  "/images/reactifs/hob-ifi-manuel-kit.png"
+        "image":  "/images/reactifs/ga-ifi-hep2.jpg"
     },
     {
         "ref":  "85848",
@@ -2378,7 +2378,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "IFA ICA",
         "cat":  "autoimmunite",
         "conditionnement":  "48 Tests (12 Lames de 4 Puits)",
-        "image":  "/images/reactifs/hob-ifi-manuel-kit.png"
+        "image":  "/images/reactifs/ga-ifi-hep2.jpg"
     },
     {
         "ref":  "86148",
@@ -2389,7 +2389,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "IFA ASA",
         "cat":  "autoimmunite",
         "conditionnement":  "48 Tests (12 Lames de 4 Puits)",
-        "image":  "/images/reactifs/hob-ifi-manuel-kit.png"
+        "image":  "/images/reactifs/ga-ifi-hep2.jpg"
     },
     {
         "ref":  "86448",
@@ -2400,7 +2400,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "IFA Anti-GBM",
         "cat":  "autoimmunite",
         "conditionnement":  "48 Tests (12 Lames de 4 Puits)",
-        "image":  "/images/reactifs/hob-ifi-manuel-kit.png"
+        "image":  "/images/reactifs/ga-ifi-hep2.jpg"
     },
     {
         "ref":  "87061",
@@ -2411,7 +2411,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "IFA plus cANCA",
         "cat":  "autoimmunite",
         "conditionnement":  "60 Tests (10 Lames de 6 Puits)",
-        "image":  "/images/reactifs/hob-ifi-manuel-kit.png"
+        "image":  "/images/reactifs/ga-ifi-hep2.jpg"
     },
     {
         "ref":  "87161",
@@ -2422,7 +2422,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "IFA plus pANCA",
         "cat":  "autoimmunite",
         "conditionnement":  "60 Tests (10 Lames de 6 Puits)",
-        "image":  "/images/reactifs/hob-ifi-manuel-kit.png"
+        "image":  "/images/reactifs/ga-ifi-hep2.jpg"
     },
     {
         "ref":  "87261",
@@ -2433,7 +2433,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "IFA ANCA DUAL",
         "cat":  "autoimmunite",
         "conditionnement":  "24 Tests (6 Lames de 4 Puits)",
-        "image":  "/images/reactifs/hob-ifi-manuel-kit.png"
+        "image":  "/images/reactifs/ga-ifi-hep2.jpg"
     },
     {
         "ref":  "8063",
@@ -2444,7 +2444,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "CytoBead ANCA",
         "cat":  "autoimmunite",
         "conditionnement":  "48 Tests (6 Lames de 8 Puits)",
-        "image":  "/images/reactifs/generic-assays-logo.png"
+        "image":  "/images/reactifs/ga-cytobead-slides.png"
     },
     {
         "ref":  "8064",
@@ -2455,7 +2455,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "CytoBead CeliAK",
         "cat":  "autoimmunite",
         "conditionnement":  "48 Tests (6 Lames de 8 Puits)",
-        "image":  "/images/reactifs/generic-assays-logo.png"
+        "image":  "/images/reactifs/ga-cytobead-slides.png"
     },
     {
         "ref":  "8065",
@@ -2466,18 +2466,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "CytoBead ANA",
         "cat":  "autoimmunite",
         "conditionnement":  "80 Tests (10 Lames de 6 Puits)",
-        "image":  "/images/reactifs/generic-assays-logo.png"
-    },
-    {
-        "ref":  "8066",
-        "kind":  "product",
-        "type":  "reactif",
-        "description":  "",
-        "marque":  "Generic Assays",
-        "desc":  "CytoBead RPGN",
-        "cat":  "autoimmunite",
-        "conditionnement":  "48 Tests (6 Lames de 8 Puits)",
-        "image":  "/images/reactifs/generic-assays-logo.png"
+        "image":  "/images/reactifs/ga-cytobead-slides.png"
     },
     {
         "ref":  "8220",
@@ -2488,7 +2477,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "CytoBead ANA 2",
         "cat":  "autoimmunite",
         "conditionnement":  "80 Tests (10 Lames de 6 Puits)",
-        "image":  "/images/reactifs/generic-assays-logo.png"
+        "image":  "/images/reactifs/ga-ifi-hep2.jpg"
     },
     {
         "label":  "Auto-Immunite -Reactifs DOT Automatises",

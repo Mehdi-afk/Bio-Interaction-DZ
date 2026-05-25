@@ -131,7 +131,9 @@ const ProductCard = memo(function ProductCard({
             src={product.image}
             alt={product.desc}
             loading="lazy"
-            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+            className={`w-full h-full transition-transform duration-300 group-hover:scale-105 ${
+              product.image?.includes("logo") ? "object-contain p-4" : "object-cover"
+            }`}
           />
         ) : (
           <span className="text-[42px]" style={{ opacity: 0.55 }}>{typeIcon(product.type)}</span>
@@ -399,7 +401,9 @@ function ProductPage({
                 <img
                   src={product.image}
                   alt={product.desc}
-                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                  className={`w-full h-full transition-transform duration-300 hover:scale-105 ${
+                    product.image?.includes("logo") ? "object-contain p-6" : "object-cover"
+                  }`}
                 />
               ) : (
                 <div className="flex flex-col items-center gap-2">
