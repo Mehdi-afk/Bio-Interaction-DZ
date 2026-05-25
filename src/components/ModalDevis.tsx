@@ -14,41 +14,6 @@ const inputCls = `
   focus:border-[#29A864]
 `;
 
-// ── XLSX download ──────────────────────────────────────────────────────────────
-
-async function downloadDevisXlsx(fields: {
-  organisme: string; nom: string; tel: string; email: string;
-}, products: { name: string; ref: string }[]) {
-  const XLSX = await import("xlsx");
-  const now  = new Date();
-  const pad  = (n: number) => String(n).padStart(2, "0");
-  const dateStr  = now.toLocaleDateString("fr-DZ");
-  const heureStr = `${pad(now.getHours())}:${pad(now.getMinutes())}`;
-  const produits = products.map((p) => `${p.name} (Réf. ${p.ref})`).join("\n");
-
-  const data = [
-    ["Champ", "Valeur"],
-    ["Date de la demande", dateStr],
-    ["Heure", heureStr],
-    ["Organisme / Société", fields.organisme],
-    ["Nom & Prénom", fields.nom],
-    ["Téléphone", fields.tel],
-    ["Email", fields.email],
-    ["Produits / Références souhaités", produits],
-  ];
-
-  const wb = XLSX.utils.book_new();
-  const ws = XLSX.utils.aoa_to_sheet(data);
-  ws["!cols"] = [{ wch: 32 }, { wch: 55 }];
-  XLSX.utils.book_append_sheet(wb, ws, "Devis");
-
-  const fileName =
-    `Devis_bioInteraction_${now.getFullYear()}${pad(now.getMonth() + 1)}${pad(now.getDate())}` +
-    `_${pad(now.getHours())}${pad(now.getMinutes())}.xlsx`;
-
-  XLSX.writeFile(wb, fileName);
-}
-
 // ── Component ──────────────────────────────────────────────────────────────────
 
 export default function ModalDevis() {
@@ -87,19 +52,15 @@ export default function ModalDevis() {
     } else {
       setSending(true);
       try {
-        // Send email + download XLSX in parallel
-        const [emailRes] = await Promise.all([
-          fetch("/api/send-devis", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ ...clientInfo, products: cart }),
-          }),
-          downloadDevisXlsx(clientInfo, cart),
-        ]);
-        if (!emailRes.ok) {
-          showToast("⚠️ Fiche téléchargée, mais l'envoi email a échoué.");
+        const res = await fetch("/api/send-devis", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ ...clientInfo, products: cart }),
+        });
+        if (!res.ok) {
+          showToast("⚠️ L'envoi a échoué, veuillez réessayer.");
         } else {
-          showToast("✓ Devis téléchargé et envoyé !");
+          showToast("✓ Devis envoyé ! Nous vous répondons sous 24h.");
         }
       } catch {
         showToast("⚠️ Erreur lors de l'envoi, réessayez.");
