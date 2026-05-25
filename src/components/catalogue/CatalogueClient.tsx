@@ -535,7 +535,7 @@ function ProductPage({
 // ── Main component ─────────────────────────────────────────────────────────────
 
 export default function CatalogueClient({
-  items, title, cats, brands, showTypeFilter, backHref,
+  items, title, cats, brands, showTypeFilter, backHref, hideSidebar,
 }: {
   items: GridItem[];
   title: string;
@@ -543,6 +543,7 @@ export default function CatalogueClient({
   brands: BrandConfig[];
   showTypeFilter?: boolean;
   backHref?: string;
+  hideSidebar?: boolean;
 }) {
   const router = useRouter();
   const searchParams  = useSearchParams();
@@ -763,25 +764,27 @@ export default function CatalogueClient({
 
   return (
     <div
-      className="
-        grid min-[900px]:[grid-template-columns:260px_1fr]
-        max-w-[1280px] mx-auto px-12 py-10 gap-8
+      className={`
+        grid max-w-[1280px] mx-auto px-12 py-10 gap-8
         min-h-[calc(100vh-68px)]
         max-[1024px]:px-6 max-[1024px]:py-8
         max-[900px]:px-5 max-[900px]:gap-0 max-[900px]:py-5
         max-[600px]:px-4 max-[600px]:py-3
-      "
+        ${!hideSidebar ? "min-[900px]:[grid-template-columns:260px_1fr]" : ""}
+      `}
     >
       {/* ── Sidebar desktop ── */}
-      <aside
-        className="
-          pt-1 sticky top-[84px] max-h-[calc(100vh-100px)] overflow-y-auto
-          hidden min-[900px]:block
-          [scrollbar-width:thin] [scrollbar-color:#E5E3DC_transparent]
-        "
-      >
-        {sidebarContent}
-      </aside>
+      {!hideSidebar && (
+        <aside
+          className="
+            pt-1 sticky top-[84px] max-h-[calc(100vh-100px)] overflow-y-auto
+            hidden min-[900px]:block
+            [scrollbar-width:thin] [scrollbar-color:#E5E3DC_transparent]
+          "
+        >
+          {sidebarContent}
+        </aside>
+      )}
 
       {/* ── Sidebar mobile overlay ── */}
       {sidebarOpen && (
@@ -847,18 +850,20 @@ export default function CatalogueClient({
         </div>
 
         {/* Mobile filter toggle */}
-        <button
-          onClick={() => setSidebarOpen(true)}
-          className="
-            hidden max-[900px]:flex items-center gap-2
-            w-full px-4 py-2.5 mb-4
-            border border-[#E5E3DC] rounded-lg bg-white
-            text-[14px] font-medium text-[#6E6E6E]
-            cursor-pointer hover:border-[#29A864] hover:text-[#29A864] transition-colors
-          "
-        >
-          ⚙ Filtres
-        </button>
+        {!hideSidebar && (
+          <button
+            onClick={() => setSidebarOpen(true)}
+            className="
+              hidden max-[900px]:flex items-center gap-2
+              w-full px-4 py-2.5 mb-4
+              border border-[#E5E3DC] rounded-lg bg-white
+              text-[14px] font-medium text-[#6E6E6E]
+              cursor-pointer hover:border-[#29A864] hover:text-[#29A864] transition-colors
+            "
+          >
+            ⚙ Filtres
+          </button>
+        )}
 
         {/* Back link */}
         {backHref && (

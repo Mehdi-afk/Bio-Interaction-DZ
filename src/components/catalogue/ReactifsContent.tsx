@@ -121,6 +121,7 @@ export default function ReactifsContent() {
       brands={BRANDS}
       showTypeFilter
       backHref={backHref}
+      hideSidebar={!!section}
     />
   );
 }

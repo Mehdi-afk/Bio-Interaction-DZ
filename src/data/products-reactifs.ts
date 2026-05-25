@@ -2198,7 +2198,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "LINE ANA 12",
         "cat":  "autoimmunite",
         "conditionnement":  "20 Tests",
-        "image":  "/images/reactifs/ldbio-aspergillus-wb.jpg"
+        "image":  "/images/reactifs/medipan-dot-manuel-kit.jpg"
     },
     {
         "ref":  "4291",
