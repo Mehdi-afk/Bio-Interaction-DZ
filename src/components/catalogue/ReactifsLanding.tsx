@@ -18,14 +18,17 @@ const CATS = [
   { value: "parasitologie", label: "Parasitologie & Mycologie", icon: "🦠",  bg: "#F8E8EC", color: "#B30C2F", iconBg: "#EDBBCA" },
 ];
 
-export default function ReactifsLanding() {
-  const counts: Record<string, number> = {};
-  for (const item of REACTIFS) {
-    if (item.kind === "product") {
-      counts[item.cat] = (counts[item.cat] ?? 0) + 1;
-    }
+// Computed once at module level — REACTIFS is static imported data
+const PRODUCT_COUNTS: Record<string, number> = {};
+let PRODUCT_TOTAL = 0;
+for (const item of REACTIFS) {
+  if (item.kind === "product") {
+    PRODUCT_COUNTS[item.cat] = (PRODUCT_COUNTS[item.cat] ?? 0) + 1;
+    PRODUCT_TOTAL++;
   }
+}
 
+export default function ReactifsLanding() {
   return (
     <div className="max-w-[1200px] mx-auto px-12 py-16 max-[1024px]:px-6 max-[1024px]:py-12 max-[600px]:px-4 max-[600px]:py-9">
 
@@ -54,7 +57,7 @@ export default function ReactifsLanding() {
           </svg>
           Voir tous les réactifs
           <span className="text-[12px] px-1.5 py-0.5 bg-[#F7F6F2] rounded-full text-[#A9ADAA]">
-            {Object.values(counts).reduce((a, b) => a + b, 0)}
+            {PRODUCT_TOTAL}
           </span>
         </Link>
       </div>
@@ -89,7 +92,7 @@ export default function ReactifsLanding() {
               className="inline-block text-[11px] font-semibold tracking-[0.4px] uppercase px-2.5 py-[3px] rounded-full"
               style={{ background: cat.bg, color: cat.color }}
             >
-              {counts[cat.value] ?? 0} références
+              {PRODUCT_COUNTS[cat.value] ?? 0} références
             </span>
           </Link>
         ))}

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo, useEffect, useRef } from "react";
+import { useState, useMemo, useEffect, useRef, useCallback, memo } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
@@ -97,12 +97,13 @@ function FilterCheck({ active }: { active: boolean }) {
 
 // ── ProductCard ────────────────────────────────────────────────────────────────
 
-function ProductCard({
-  product, isList, onSelect, onAddToCart,
+const ProductCard = memo(function ProductCard({
+  product, section, isList, onSelect, onAddToCart,
 }: {
   product: Product;
+  section: string;
   isList: boolean;
-  onSelect: (p: Product) => void;
+  onSelect: (p: Product, section: string) => void;
   onAddToCart: (p: Product) => void;
 }) {
   const { bg, color } = catStyle(product.cat);
@@ -115,8 +116,8 @@ function ProductCard({
         transition-[box-shadow,border-color,transform] duration-200
         hover:shadow-[0_4px_16px_rgba(0,0,0,0.10)] hover:border-[#BDD0EA] hover:-translate-y-0.5
         ${isList ? "flex flex-row" : ""}`}
-      onClick={() => onSelect(product)}
-      onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") onSelect(product); }}
+      onClick={() => onSelect(product, section)}
+      onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") onSelect(product, section); }}
     >
       {/* Image area */}
       <div
@@ -138,47 +139,44 @@ function ProductCard({
       </div>
 
       {/* Body */}
-      <div className={`p-4 pb-5 ${isList ? "flex-1 min-w-0" : ""}`}>
-        <span
-          className="text-[10px] font-semibold tracking-[0.4px] uppercase px-2 py-[2px] rounded-full mb-2 inline-block"
-          style={{ background: bg, color }}
-        >
-          {catLabel(product.cat)}
-        </span>
-        <h3 className="text-[14px] font-semibold mb-1 leading-[1.4]">{product.desc}</h3>
-        <div className="text-[12px] text-[#A9ADAA] mb-2">
-          Ref. {product.ref} &middot; {product.type.charAt(0).toUpperCase() + product.type.slice(1)}
+      <div className={isList ? "p-3 flex-1 min-w-0 flex flex-col gap-2 overflow-hidden" : "p-4 pb-5"}>
+        <div className={isList ? "min-w-0" : ""}>
+          <span
+            className="text-[10px] font-semibold tracking-[0.4px] uppercase px-2 py-[2px] rounded-full mb-2 inline-block"
+            style={{ background: bg, color }}
+          >
+            {catLabel(product.cat)}
+          </span>
+          <h3 className={`text-[14px] font-semibold mb-1 leading-[1.4] ${isList ? "truncate" : ""}`}>{product.desc}</h3>
+          <div className="text-[12px] text-[#A9ADAA] mb-2">
+            Ref. {product.ref} &middot; {product.type.charAt(0).toUpperCase() + product.type.slice(1)}
+          </div>
+
+          {isList && (
+            <>
+              <div className="flex flex-wrap gap-1.5 mt-1">
+                {product.marque && (
+                  <span className="text-[12px] px-2 py-[3px] bg-[#F7F6F2] rounded-[6px]">
+                    Marque : <strong>{product.marque}</strong>
+                  </span>
+                )}
+                {product.conditionnement && (
+                  <span className="text-[12px] px-2 py-[3px] bg-[#F7F6F2] rounded-[6px]">
+                    Conditionnement : <strong>{product.conditionnement}</strong>
+                  </span>
+                )}
+                {product.testsKit && (
+                  <span className="text-[12px] px-2 py-[3px] bg-[#F7F6F2] rounded-[6px]">
+                    Tests/kit : <strong>{product.testsKit}</strong>
+                  </span>
+                )}
+              </div>
+            </>
+          )}
         </div>
 
-        {isList && (
-          <>
-            {product.description && (
-              <p className="text-[13px] text-[#6E6E6E] leading-[1.5] my-1.5">
-                {product.description}
-              </p>
-            )}
-            <div className="flex flex-wrap gap-1.5 mt-2 mb-3">
-              {product.marque && (
-                <span className="text-[12px] px-2 py-[3px] bg-[#F7F6F2] rounded-[6px]">
-                  Marque : <strong>{product.marque}</strong>
-                </span>
-              )}
-              {product.conditionnement && (
-                <span className="text-[12px] px-2 py-[3px] bg-[#F7F6F2] rounded-[6px]">
-                  Conditionnement : <strong>{product.conditionnement}</strong>
-                </span>
-              )}
-              {product.testsKit && (
-                <span className="text-[12px] px-2 py-[3px] bg-[#F7F6F2] rounded-[6px]">
-                  Tests/kit : <strong>{product.testsKit}</strong>
-                </span>
-              )}
-            </div>
-          </>
-        )}
-
         <button
-          className={`py-2 bg-[#EDF8F1] text-[#29A864] border-none rounded-[7px] text-[13px] font-medium cursor-pointer transition-[background,color] duration-[120ms] hover:bg-[#29A864] hover:text-white ${isList ? "px-4" : "w-full"}`}
+          className={`py-2 bg-[#EDF8F1] text-[#29A864] border-none rounded-[7px] text-[13px] font-medium cursor-pointer transition-[background,color] duration-[120ms] hover:bg-[#29A864] hover:text-white ${isList ? "px-4 shrink-0" : "w-full"}`}
           onClick={(e) => { e.stopPropagation(); onAddToCart(product); }}
         >
           Ajouter au panier
@@ -186,7 +184,7 @@ function ProductCard({
       </div>
     </div>
   );
-}
+});
 
 // ── FicheTechniqueButton ───────────────────────────────────────────────────────
 
@@ -422,7 +420,7 @@ function ProductPage({
               <img
                 src={product.image}
                 alt={product.desc}
-                className="max-w-[90vw] max-h-[90vh] object-contain rounded-xl shadow-2xl"
+                className="max-w-[90vw] max-h-[90vh] object-cover rounded-xl shadow-2xl"
                 onClick={(e) => e.stopPropagation()}
               />
               <button
@@ -635,20 +633,12 @@ export default function CatalogueClient({
 
   const visibleCount = filteredGrid.filter((i) => i.kind === "product").length;
 
-  // Add to cart + open devis modal (from panel "Demander un devis" button)
-  function handleRequestDevis(product: Product) {
-    handleAddToCart(product);
-    openDevis();
-  }
-
-  // Add to cart with client info gate
-  function handleAddToCart(product: Product) {
+  const handleAddToCart = useCallback((product: Product) => {
     if (!hasClientInfo()) {
       showToast("⚠️ Renseignez vos coordonnées avant d'ajouter au panier.");
       openDevis();
       return;
     }
-    // Don't add duplicates
     const alreadyIn = cart.some((c) => c.ref === product.ref);
     if (alreadyIn) {
       showToast(`⚠️ ${product.desc} est déjà dans le panier.`);
@@ -656,10 +646,14 @@ export default function CatalogueClient({
     }
     addToCart({ name: product.desc, ref: product.ref });
     showToast(`✓ ${product.desc} ajouté au panier`);
-  }
+  }, [cart, hasClientInfo, openDevis, showToast, addToCart]);
 
-  // Navigate to compatible reactifs
-  function handleShowCompat(ref: string) {
+  const handleRequestDevis = useCallback((product: Product) => {
+    handleAddToCart(product);
+    openDevis();
+  }, [handleAddToCart, openDevis]);
+
+  const handleShowCompat = useCallback((ref: string) => {
     const compat = COMPAT_MAP[ref];
     if (!compat) return;
     setSelected(null);
@@ -668,7 +662,12 @@ export default function CatalogueClient({
     if (compat.marque) params.set("marque", compat.marque);
     if (compat.q)      params.set("q",      compat.q);
     router.push(`/catalogue/reactifs?${params.toString()}`);
-  }
+  }, [router]);
+
+  const handleSelect = useCallback((p: Product, section: string) => {
+    setSelected(p);
+    setSelectedSection(section);
+  }, []);
 
   // ── Sidebar markup (shared desktop + mobile) ──
 
@@ -930,7 +929,7 @@ export default function CatalogueClient({
           </div>
         ) : (
           <div
-            className={view === "list" ? "flex flex-col gap-0" : ""}
+            className={view === "list" ? "flex flex-col gap-3" : ""}
             style={
               view === "grid"
                 ? { display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))", gap: "20px" }
@@ -975,8 +974,9 @@ export default function CatalogueClient({
                   <ProductCard
                     key={`${item.ref}-${item.desc}-${i}`}
                     product={item}
+                    section={sectionForCard}
                     isList={view === "list"}
-                    onSelect={(p) => { setSelected(p); setSelectedSection(sectionForCard); } }
+                    onSelect={handleSelect}
                     onAddToCart={handleAddToCart}
                   />
                 );

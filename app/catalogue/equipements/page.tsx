@@ -4,7 +4,7 @@ import CatalogueClient from "@/src/components/catalogue/CatalogueClient";
 import { EQUIPEMENTS } from "@/src/data/products-equip";
 
 export const metadata: Metadata = {
-  title: "Nos Produit Équipements",
+  title: "Nos Équipements",
   description:
     "20 instruments de précision — analyseurs biochimie, automates hématologie, " +
     "coagulomètres, analyseurs urines et chaînes ELISA. Marque ERBA, Generic Assays, HOB Biotech.",

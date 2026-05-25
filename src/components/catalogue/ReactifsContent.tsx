@@ -1,6 +1,7 @@
 "use client";
 
 import { useSearchParams } from "next/navigation";
+import { useMemo } from "react";
 import CatalogueClient from "@/src/components/catalogue/CatalogueClient";
 import ReactifsLanding from "@/src/components/catalogue/ReactifsLanding";
 import ReactifsSubcategoryLanding from "@/src/components/catalogue/ReactifsSubcategoryLanding";
@@ -84,7 +85,7 @@ export default function ReactifsContent() {
     );
   }
 
-  const sections = getSectionsForCat(REACTIFS, cat!);
+  const sections = useMemo(() => getSectionsForCat(REACTIFS, cat!), [cat]);
 
   // ── 2. Compat redirect (marque or q present) → skip landing, show filtered catalogue ──
   if (marque || q) {
@@ -114,7 +115,7 @@ export default function ReactifsContent() {
   return (
     <CatalogueClient
       items={items}
-      title="Nos Produit"
+      title="Nos Réactifs"
       cats={CATS}
       brands={BRANDS}
       showTypeFilter

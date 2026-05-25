@@ -197,7 +197,7 @@ export default function HomePage() {
             Nos gammes de produits
           </h2>
           <p className="text-[#6E6E6E] text-[16px]">
-            Des solutions complètes pour chaque application analytique et de recherche.
+            Des solutions complètes pour chaque application de recherche.
           </p>
         </div>
 

@@ -23,6 +23,12 @@ function ActionContent() {
       return;
     }
 
+    if (!auth) {
+      setStatus("error");
+      setMessage("Service d'authentification non disponible.");
+      return;
+    }
+
     applyActionCode(auth, oobCode)
       .then(() => {
         setStatus("success");

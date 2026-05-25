@@ -19,7 +19,6 @@ export default function Toast() {
         animate-[slideUp_0.2s_ease]
         max-[600px]:right-4 max-[600px]:left-4 max-[600px]:justify-center max-[600px]:bottom-5
       "
-      style={{ animation: "slideUp 0.2s ease" }}
     >
       {toastMsg}
     </div>

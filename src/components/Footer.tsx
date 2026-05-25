@@ -65,7 +65,7 @@ export default function Footer() {
 
           {/* Catalogue */}
           <div>
-            <h4 className={colHeadCls}>Nos Produit</h4>
+            <h4 className={colHeadCls}>Nos Produits</h4>
             {CATALOGUE_LINKS.map(({ href, label }) => (
               <Link key={href} href={href} className={colLinkCls}>
                 {label}

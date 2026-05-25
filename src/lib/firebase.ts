@@ -12,7 +12,14 @@ const firebaseConfig = {
   appId:             process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
 };
 
-const app = getApps().length ? getApps()[0] : initializeApp(firebaseConfig);
-export const auth    = getAuth(app);
-export const db      = getFirestore(app);
-export const storage = getStorage(app);
+// Firebase client SDK is browser-only — avoid initializing during SSR/build
+const app = firebaseConfig.apiKey
+  ? (getApps().length ? getApps()[0] : initializeApp(firebaseConfig))
+  : null;
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const auth    = app ? getAuth(app)      : null as any;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const db      = app ? getFirestore(app) : null as any;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const storage = app ? getStorage(app)   : null as any;
