@@ -68,6 +68,9 @@ export default function ReactifsContent() {
   const q       = searchParams.get("q");
   const all     = searchParams.get("all");
 
+  // Always call hooks before any conditional return
+  const sections = useMemo(() => cat ? getSectionsForCat(REACTIFS, cat) : [], [cat]);
+
   // ── 1. No cat and no "all" → category landing ──
   if (!cat && !all) return <ReactifsLanding />;
 
@@ -84,8 +87,6 @@ export default function ReactifsContent() {
       />
     );
   }
-
-  const sections = useMemo(() => getSectionsForCat(REACTIFS, cat!), [cat]);
 
   // ── 2. Compat redirect (marque or q present) → skip landing, show filtered catalogue ──
   if (marque || q) {
