@@ -1066,7 +1066,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Erba H360 Dil",
         "cat":  "hematologie",
         "conditionnement":  "20 L",
-        "image":  "/images/reactifs/erba-h360-kit.jpg"
+        "image":  "/images/reactifs/erba-logo.jpg"
     },
     {
         "ref":  "HEM00029",
@@ -1077,7 +1077,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Erba H360 Lyse",
         "cat":  "hematologie",
         "conditionnement":  "500 mL",
-        "image":  "/images/reactifs/erba-h360-kit.jpg"
+        "image":  "/images/reactifs/erba-logo.jpg"
     },
     {
         "ref":  "HEM00023",
@@ -1088,7 +1088,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "ELite H Clean",
         "cat":  "hematologie",
         "conditionnement":  "50 mL",
-        "image":  "/images/reactifs/erba-h360-kit.jpg"
+        "image":  "/images/reactifs/erba-logo.jpg"
     },
     {
         "ref":  "HEM00033",
@@ -1099,7 +1099,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Erba H3 CON L",
         "cat":  "hematologie",
         "conditionnement":  "3 mL",
-        "image":  "/images/reactifs/erba-h360-kit.jpg"
+        "image":  "/images/reactifs/erba-logo.jpg"
     },
     {
         "ref":  "HEM00034",
@@ -1110,7 +1110,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Erba H3 CON N",
         "cat":  "hematologie",
         "conditionnement":  "3 mL",
-        "image":  "/images/reactifs/erba-h360-kit.jpg"
+        "image":  "/images/reactifs/erba-logo.jpg"
     },
     {
         "ref":  "HEM00035",
@@ -1121,7 +1121,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Erba H3 CON H",
         "cat":  "hematologie",
         "conditionnement":  "3 mL",
-        "image":  "/images/reactifs/erba-h360-kit.jpg"
+        "image":  "/images/reactifs/erba-logo.jpg"
     },
     {
         "ref":  "HEM00027",
@@ -1132,7 +1132,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "ELite HEM Calibrator",
         "cat":  "hematologie",
         "conditionnement":  "3 mL",
-        "image":  "/images/reactifs/erba-h360-kit.jpg"
+        "image":  "/images/reactifs/erba-logo.jpg"
     },
     {
         "label":  "Hematologie -Reactifs H560",
@@ -1147,7 +1147,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Erba H560 Dil",
         "cat":  "hematologie",
         "conditionnement":  "20 L",
-        "image":  "/images/reactifs/erba-h560-kit.jpg"
+        "image":  "/images/reactifs/erba-logo.jpg"
     },
     {
         "ref":  "HEM00031",
@@ -1158,7 +1158,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Erba H560 Lyse1",
         "cat":  "hematologie",
         "conditionnement":  "200 mL",
-        "image":  "/images/reactifs/erba-h560-kit.jpg"
+        "image":  "/images/reactifs/erba-logo.jpg"
     },
     {
         "ref":  "HEM00032",
@@ -1169,7 +1169,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Erba H560 Lyse2",
         "cat":  "hematologie",
         "conditionnement":  "500 mL",
-        "image":  "/images/reactifs/erba-h560-kit.jpg"
+        "image":  "/images/reactifs/erba-logo.jpg"
     },
     {
         "ref":  "HEM00023",
@@ -1180,7 +1180,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "ELite H Clean",
         "cat":  "hematologie",
         "conditionnement":  "50 mL",
-        "image":  "/images/reactifs/erba-h560-kit.jpg"
+        "image":  "/images/reactifs/erba-logo.jpg"
     },
     {
         "ref":  "HEM00024",
@@ -1191,7 +1191,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "ELite H5 CON L",
         "cat":  "hematologie",
         "conditionnement":  "3 mL",
-        "image":  "/images/reactifs/erba-h560-kit.jpg"
+        "image":  "/images/reactifs/erba-logo.jpg"
     },
     {
         "ref":  "HEM00025",
@@ -1202,7 +1202,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "ELite H5 CON N",
         "cat":  "hematologie",
         "conditionnement":  "3 mL",
-        "image":  "/images/reactifs/erba-h560-kit.jpg"
+        "image":  "/images/reactifs/erba-logo.jpg"
     },
     {
         "ref":  "HEM00026",
@@ -1213,7 +1213,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "ELite H5 CON H",
         "cat":  "hematologie",
         "conditionnement":  "3 mL",
-        "image":  "/images/reactifs/erba-h560-kit.jpg"
+        "image":  "/images/reactifs/erba-logo.jpg"
     },
     {
         "ref":  "HEM00027",
@@ -1224,7 +1224,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "ELite HEM Calibrator",
         "cat":  "hematologie",
         "conditionnement":  "3 mL",
-        "image":  "/images/reactifs/erba-h560-kit.jpg"
+        "image":  "/images/reactifs/erba-logo.jpg"
     },
     {
         "label":  "Hematologie -Reactifs ELITE 580",
@@ -1239,7 +1239,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "ELite H580 Dil",
         "cat":  "hematologie",
         "conditionnement":  "20 L",
-        "image":  "/images/reactifs/erba-h580-kit.jpg"
+        "image":  "/images/reactifs/erba-logo.jpg"
     },
     {
         "ref":  "HEM00020",
@@ -1250,7 +1250,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "ELite H580 Lyse1",
         "cat":  "hematologie",
         "conditionnement":  "500 mL",
-        "image":  "/images/reactifs/erba-h580-kit.jpg"
+        "image":  "/images/reactifs/erba-logo.jpg"
     },
     {
         "ref":  "HEM00021",
@@ -1261,7 +1261,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "ELite H580 Lyse2",
         "cat":  "hematologie",
         "conditionnement":  "500 mL",
-        "image":  "/images/reactifs/erba-h580-kit.jpg"
+        "image":  "/images/reactifs/erba-logo.jpg"
     },
     {
         "ref":  "HEM00022",
@@ -1272,7 +1272,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "ELite H580 Lyse3",
         "cat":  "hematologie",
         "conditionnement":  "1 L",
-        "image":  "/images/reactifs/erba-h580-kit.jpg"
+        "image":  "/images/reactifs/erba-logo.jpg"
     },
     {
         "ref":  "HEM00023",
@@ -1283,7 +1283,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "ELite H Clean",
         "cat":  "hematologie",
         "conditionnement":  "50 mL",
-        "image":  "/images/reactifs/erba-h580-kit.jpg"
+        "image":  "/images/reactifs/erba-logo.jpg"
     },
     {
         "ref":  "HEM00024",
@@ -1294,7 +1294,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "ELite H5 CON L",
         "cat":  "hematologie",
         "conditionnement":  "3 mL",
-        "image":  "/images/reactifs/erba-h580-kit.jpg"
+        "image":  "/images/reactifs/erba-logo.jpg"
     },
     {
         "ref":  "HEM00025",
@@ -1305,7 +1305,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "ELite H5 CON N",
         "cat":  "hematologie",
         "conditionnement":  "3 mL",
-        "image":  "/images/reactifs/erba-h580-kit.jpg"
+        "image":  "/images/reactifs/erba-logo.jpg"
     },
     {
         "ref":  "HEM00026",
@@ -1316,7 +1316,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "ELite H5 CON H",
         "cat":  "hematologie",
         "conditionnement":  "3 mL",
-        "image":  "/images/reactifs/erba-h580-kit.jpg"
+        "image":  "/images/reactifs/erba-logo.jpg"
     },
     {
         "ref":  "HEM00027",
@@ -1327,7 +1327,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "ELite HEM Calibrator",
         "cat":  "hematologie",
         "conditionnement":  "3 mL",
-        "image":  "/images/reactifs/erba-h580-kit.jpg"
+        "image":  "/images/reactifs/erba-logo.jpg"
     },
     {
         "label":  "Hematologie -Reactifs H7100",
@@ -2492,7 +2492,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "DotDiver CeliAK IgA",
         "cat":  "autoimmunite",
         "conditionnement":  "24 Tests",
-        "image":  "/images/reactifs/medipan-dot-manuel-kit.jpg"
+        "image":  "/images/reactifs/medipan-dot-diver.png"
     },
     {
         "ref":  "5015",
@@ -2503,7 +2503,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "DotDiver CeliAK IgG",
         "cat":  "autoimmunite",
         "conditionnement":  "24 Tests",
-        "image":  "/images/reactifs/medipan-dot-manuel-kit.jpg"
+        "image":  "/images/reactifs/medipan-dot-diver.png"
     },
     {
         "ref":  "5016",
@@ -2514,7 +2514,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "DotDiver ANA",
         "cat":  "autoimmunite",
         "conditionnement":  "24 Tests",
-        "image":  "/images/reactifs/medipan-dot-manuel-kit.jpg"
+        "image":  "/images/reactifs/medipan-dot-diver.png"
     },
     {
         "ref":  "5017",
@@ -2525,7 +2525,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "DotDiver PmScl",
         "cat":  "autoimmunite",
         "conditionnement":  "24 Tests",
-        "image":  "/images/reactifs/medipan-dot-manuel-kit.jpg"
+        "image":  "/images/reactifs/medipan-dot-diver.png"
     },
     {
         "ref":  "5045",
@@ -2536,7 +2536,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "DotDiver PmScl 12",
         "cat":  "autoimmunite",
         "conditionnement":  "24 Tests",
-        "image":  "/images/reactifs/medipan-dot-manuel-kit.jpg"
+        "image":  "/images/reactifs/medipan-dot-diver.png"
     },
     {
         "ref":  "5066",
@@ -2547,7 +2547,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "DotDiver ANAcyto 10",
         "cat":  "autoimmunite",
         "conditionnement":  "24 Tests",
-        "image":  "/images/reactifs/medipan-dot-manuel-kit.jpg"
+        "image":  "/images/reactifs/medipan-dot-diver.png"
     },
     {
         "ref":  "5020",
@@ -2558,7 +2558,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "DotDiver Quantrix ANA",
         "cat":  "autoimmunite",
         "conditionnement":  "24 Tests",
-        "image":  "/images/reactifs/medipan-dot-manuel-kit.jpg"
+        "image":  "/images/reactifs/medipan-dot-diver.png"
     },
     {
         "ref":  "5018",
@@ -2569,7 +2569,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "DotDiver ANCA",
         "cat":  "autoimmunite",
         "conditionnement":  "24 Tests",
-        "image":  "/images/reactifs/medipan-dot-manuel-kit.jpg"
+        "image":  "/images/reactifs/medipan-dot-diver.png"
     },
     {
         "ref":  "5019",
@@ -2580,7 +2580,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "DotDiver BiermAK",
         "cat":  "autoimmunite",
         "conditionnement":  "24 Tests",
-        "image":  "/images/reactifs/medipan-dot-manuel-kit.jpg"
+        "image":  "/images/reactifs/medipan-dot-diver.png"
     },
     {
         "ref":  "5070",
@@ -2591,7 +2591,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "DotDiver HepAK 10",
         "cat":  "autoimmunite",
         "conditionnement":  "24 Tests",
-        "image":  "/images/reactifs/medipan-dot-manuel-kit.jpg"
+        "image":  "/images/reactifs/medipan-dot-diver.png"
     },
     {
         "ref":  "5021",
@@ -2602,7 +2602,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "DotDiver HepAK 7plus",
         "cat":  "autoimmunite",
         "conditionnement":  "24 Tests",
-        "image":  "/images/reactifs/medipan-dot-manuel-kit.jpg"
+        "image":  "/images/reactifs/medipan-dot-diver.png"
     },
     {
         "ref":  "50301",
@@ -2613,7 +2613,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "DotDiver Anti Gangliosid screen",
         "cat":  "autoimmunite",
         "conditionnement":  "24 Tests",
-        "image":  "/images/reactifs/medipan-dot-manuel-kit.jpg"
+        "image":  "/images/reactifs/medipan-dot-diver.png"
     },
     {
         "ref":  "5035",
@@ -2624,7 +2624,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "DotDiver ANA PCNA",
         "cat":  "autoimmunite",
         "conditionnement":  "24 Tests",
-        "image":  "/images/reactifs/medipan-dot-manuel-kit.jpg"
+        "image":  "/images/reactifs/medipan-dot-diver.png"
     },
     {
         "ref":  "50381",
@@ -2635,7 +2635,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "DotDiver Anti Gangliosid IgG",
         "cat":  "autoimmunite",
         "conditionnement":  "24 Tests",
-        "image":  "/images/reactifs/medipan-dot-manuel-kit.jpg"
+        "image":  "/images/reactifs/medipan-dot-diver.png"
     },
     {
         "ref":  "50391",
@@ -2646,7 +2646,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "DotDiver Anti Gangliosid IgM",
         "cat":  "autoimmunite",
         "conditionnement":  "24 Tests",
-        "image":  "/images/reactifs/medipan-dot-manuel-kit.jpg"
+        "image":  "/images/reactifs/medipan-dot-diver.png"
     },
     {
         "ref":  "50401",
@@ -2657,7 +2657,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "DotDiver Anti Phospholipid IgG",
         "cat":  "autoimmunite",
         "conditionnement":  "24 Tests",
-        "image":  "/images/reactifs/medipan-dot-manuel-kit.jpg"
+        "image":  "/images/reactifs/medipan-dot-diver.png"
     },
     {
         "ref":  "50411",
@@ -2668,7 +2668,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "DotDiver Anti Phospholipid IgM",
         "cat":  "autoimmunite",
         "conditionnement":  "24 Tests",
-        "image":  "/images/reactifs/medipan-dot-manuel-kit.jpg"
+        "image":  "/images/reactifs/medipan-dot-diver.png"
     },
     {
         "ref":  "5069",
@@ -2679,7 +2679,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "DotDiver Scleroderma 10",
         "cat":  "autoimmunite",
         "conditionnement":  "24 Tests",
-        "image":  "/images/reactifs/medipan-dot-manuel-kit.jpg"
+        "image":  "/images/reactifs/medipan-dot-diver.png"
     },
     {
         "ref":  "5093",
@@ -2690,7 +2690,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "DotDiver Myositis 12",
         "cat":  "autoimmunite",
         "conditionnement":  "24 Tests",
-        "image":  "/images/reactifs/medipan-dot-manuel-kit.jpg"
+        "image":  "/images/reactifs/medipan-dot-diver.png"
     },
     {
         "ref":  "5291",
@@ -2701,7 +2701,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "DotDiver ANA 18",
         "cat":  "autoimmunite",
         "conditionnement":  "24 Tests",
-        "image":  "/images/reactifs/medipan-dot-manuel-kit.jpg"
+        "image":  "/images/reactifs/medipan-dot-diver.png"
     },
     {
         "label":  "Auto-Immunite -Reactifs IFI Automatises AKLIDES",
@@ -3460,7 +3460,7 @@ export const REACTIFS: GridItem[] = [
         "image":  "/images/reactifs/hob-bioclia-kit.jpg"
     },
     {
-        "label":  "Allergie : BioCLIA 1900 & 500 & BioCLIA 6500",
+        "label":  "Allergie : BioCLIA 1900 & 500",
         "kind":  "section"
     },
     { "ref": "MY00405",  "kind": "product", "type": "consommable", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-Substrate",                          "cat": "allergie", "conditionnement": "4 X 600 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
