@@ -598,8 +598,14 @@ export default function CatalogueClient({
   );
 
   const catCounts = useMemo(() => {
-    const c: Record<string, number> = { all: allProducts.length };
-    for (const p of allProducts) c[p.cat] = (c[p.cat] ?? 0) + 1;
+    const seen = new Set<string>();
+    const c: Record<string, number> = { all: 0 };
+    for (const p of allProducts) {
+      if (seen.has(p.ref)) continue;
+      seen.add(p.ref);
+      c.all++;
+      c[p.cat] = (c[p.cat] ?? 0) + 1;
+    }
     return c;
   }, [allProducts]);
 
@@ -617,6 +623,7 @@ export default function CatalogueClient({
 
     const result: GridItem[] = [];
     let pendingLabel: GridItem | null = null;
+    const seenRefs = new Set<string>();
 
     for (const item of items) {
       if (item.kind === "section") {
@@ -627,7 +634,8 @@ export default function CatalogueClient({
           result.push(item);
         }
       } else {
-        if (passes(item)) {
+        if (!seenRefs.has(item.ref) && passes(item)) {
+          seenRefs.add(item.ref);
           if (pendingLabel) { result.push(pendingLabel); pendingLabel = null; }
           result.push(item);
         }

@@ -20,10 +20,10 @@ const SECTION_DISPLAY: Record<string, string> = {
   "Auto-Immunite -Reactifs DOT Automatises":               "Réactifs DOT Automatisés",
   "Auto-Immunite -Reactifs IFI Automatises AKLIDES":       "Réactifs IFI Automatisés AKLIDES",
   "Auto-Immunite - Reactifs CLIA":                         "Réactifs CLIA",
+  "Allergie : BioCLIA 1900 & 500":                         "Réactifs BioCLIA",
   "Allergie - Reactifs BioLINE DOT":                       "Réactifs BioLINE DOT",
   "Parasitologie -Western Blot":                           "Western Blot",
   "Parasitologie -Tests Rapides ICT":                      "Tests Rapides ICT",
-  "Parasitologie -Consommables Western Blot":              "Consommables Western Blot",
 };
 
 const CAT_META: Record<string, { label: string; bg: string; color: string; iconBg: string }> = {
