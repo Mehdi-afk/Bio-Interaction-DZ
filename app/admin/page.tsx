@@ -88,11 +88,13 @@ export default function AdminPage() {
 
   const pendingCount = allUsers.filter((u) => u.status === "pending").length;
 
-  const statusLabel: Record<string, { label: string; cls: string }> = {
+  const STATUS_LABEL: Record<string, { label: string; cls: string }> = {
     pending:  { label: "En attente", cls: "bg-[#FEF3CD] text-[#D97706]" },
     approved: { label: "Approuvé",   cls: "bg-[#EDF8F1] text-[#29A864]" },
     rejected: { label: "Refusé",     cls: "bg-[#F8E8EC] text-[#B30C2F]" },
   };
+  const statusLabel = (s: string) =>
+    STATUS_LABEL[s] ?? { label: s || "Inconnu", cls: "bg-[#F3F4F6] text-[#374151]" };
 
   return (
     <div className="min-h-[calc(100vh-68px)] bg-[#FAFAF8] px-6 py-10 max-w-3xl mx-auto">
@@ -100,11 +102,26 @@ export default function AdminPage() {
       <div className="flex items-center justify-between mb-8">
         <div>
           <h1 className="font-serif text-[26px] text-[#1B1F1D]">Administration</h1>
-          <p className="text-[13px] text-[#A9ADAA] mt-1">Gestion des comptes utilisateurs</p>
+          <p className="text-[13px] text-[#A9ADAA] mt-1">
+            Gestion des comptes utilisateurs
+            {allUsers.length > 0 && ` — ${allUsers.length} compte${allUsers.length > 1 ? "s" : ""}`}
+          </p>
         </div>
-        <Link href="/" className="text-[13px] text-[#6E6E6E] hover:text-[#29A864] transition-colors">
-          ← Accueil
-        </Link>
+        <div className="flex items-center gap-3">
+          <button
+            onClick={fetchUsers}
+            disabled={fetching}
+            title="Rafraîchir"
+            className="flex items-center justify-center w-8 h-8 border border-[#E5E3DC] rounded-lg bg-white text-[#6E6E6E] hover:border-[#29A864] hover:text-[#29A864] transition-colors disabled:opacity-40 cursor-pointer"
+          >
+            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" className={`w-4 h-4 ${fetching ? "animate-spin" : ""}`}>
+              <path d="M4 10a6 6 0 1 0 1.5-3.9"/><path d="M4 6v4h4"/>
+            </svg>
+          </button>
+          <Link href="/" className="text-[13px] text-[#6E6E6E] hover:text-[#29A864] transition-colors">
+            ← Accueil
+          </Link>
+        </div>
       </div>
 
       {/* Tabs */}
@@ -151,7 +168,7 @@ export default function AdminPage() {
       ) : (
         <div className="flex flex-col gap-3">
           {displayed.map((u) => {
-            const st = statusLabel[u.status];
+            const st = statusLabel(u.status);
             const busy = actionUid === u.uid;
             const date = u.createdAt
               ? new Date(u.createdAt.seconds * 1000).toLocaleDateString("fr-DZ", { day: "2-digit", month: "short", year: "numeric" })
