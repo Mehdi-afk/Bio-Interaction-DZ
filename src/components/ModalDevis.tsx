@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { useApp } from "@/src/context/AppContext";
 import { useAuth } from "@/src/context/AuthContext";
@@ -36,6 +36,17 @@ export default function ModalDevis() {
     return () => document.removeEventListener("keydown", handler);
   }, [closeDevis]);
 
+  // Pré-remplit Nom / Email depuis Firebase la 1ère fois que la modale s'ouvre pour un utilisateur connecté.
+  const prefilledFor = useRef<string | null>(null);
+  useEffect(() => {
+    if (!devisOpen || !user || prefilledFor.current === user.uid) return;
+    const patch: Partial<typeof clientInfo> = {};
+    if (!clientInfo.nom.trim()   && user.displayName) patch.nom   = user.displayName;
+    if (!clientInfo.email.trim() && user.email)       patch.email = user.email;
+    if (Object.keys(patch).length > 0) updateClientInfo(patch);
+    prefilledFor.current = user.uid;
+  }, [devisOpen, user, clientInfo.nom, clientInfo.email, updateClientInfo]);
+
   if (!devisOpen) return null;
 
   const cartEmpty = cart.length === 0;
@@ -52,14 +63,24 @@ export default function ModalDevis() {
       router.push("/catalogue/equipements");
       showToast("✓ Coordonnées enregistrées — choisissez vos produits dans Nos Produit !");
     } else {
+      if (!user) {
+        showToast("⚠️ Connexion requise pour envoyer un devis.");
+        return;
+      }
       setSending(true);
+      let ok = false;
       try {
+        const idToken = await user.getIdToken();
         const res = await fetch("/api/send-devis", {
           method: "POST",
-          headers: { "Content-Type": "application/json" },
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${idToken}`,
+          },
           body: JSON.stringify({ ...clientInfo, products: cart }),
         });
-        if (!res.ok) {
+        ok = res.ok;
+        if (!ok) {
           showToast("⚠️ L'envoi a échoué, veuillez réessayer.");
         } else {
           showToast("✓ Devis envoyé ! Nous vous répondons sous 24h.");
@@ -68,14 +89,30 @@ export default function ModalDevis() {
         showToast("⚠️ Erreur lors de l'envoi, réessayez.");
       } finally {
         setSending(false);
-        clearCart();
-        closeDevis();
+        if (ok) {
+          clearCart();
+          closeDevis();
+        }
       }
     }
   }
 
-  // Auth check — show login prompt if not connected
-  if (!authLoading && !user) {
+  // Auth check — bloque tant que Firebase n'a pas résolu l'état, puis si non connecté
+  if (authLoading) {
+    return (
+      <div
+        className="fixed inset-0 z-[2000] flex items-center justify-center"
+        style={{ background: "rgba(15,25,40,0.55)", backdropFilter: "blur(4px)" }}
+        onClick={(e) => { if (e.target === e.currentTarget) closeDevis(); }}
+      >
+        <div className="bg-white rounded-2xl px-8 py-6 flex items-center gap-3 shadow-[0_20px_60px_rgba(0,0,0,0.18)]">
+          <span className="inline-block w-4 h-4 border-2 border-[#E5E3DC] border-t-[#29A864] rounded-full animate-spin" />
+          <span className="text-[14px] text-[#6E6E6E]">Chargement…</span>
+        </div>
+      </div>
+    );
+  }
+  if (!user) {
     return (
       <div
         className="fixed inset-0 z-[2000] flex items-center justify-center max-[600px]:items-end"

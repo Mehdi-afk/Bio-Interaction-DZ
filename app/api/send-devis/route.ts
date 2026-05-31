@@ -1,9 +1,22 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
+import { adminAuth } from "@/src/lib/firebase-admin";
 
 const RECIPIENT = "messaoudenemehdi8@gmail.com";
 
 export async function POST(req: NextRequest) {
+  // ── Auth : exige un Firebase ID token valide ─────────────────────────────────
+  const authHeader = req.headers.get("authorization") ?? "";
+  const idToken = authHeader.startsWith("Bearer ") ? authHeader.slice(7) : "";
+  if (!idToken) {
+    return NextResponse.json({ error: "Authentification requise." }, { status: 401 });
+  }
+  try {
+    await adminAuth.verifyIdToken(idToken);
+  } catch {
+    return NextResponse.json({ error: "Session expirée ou invalide." }, { status: 401 });
+  }
+
   const resend = new Resend(process.env.RESEND_API_KEY);
   const { organisme, nom, tel, email, products } = await req.json() as {
     organisme: string;
