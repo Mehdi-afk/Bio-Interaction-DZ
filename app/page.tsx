@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import CardGrid from "@/src/components/CardGrid";
 import DevisButton from "@/src/components/DevisButton";
+import PinnedShowcase from "@/src/components/homepage/PinnedShowcase";
 
 export const metadata: Metadata = {
   title: "Accueil",
@@ -176,9 +177,10 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Ghost number */}
+        {/* Ghost number — parallax */}
         <div
-          className="absolute -bottom-6 right-0 font-serif leading-none text-[#1B1F1D]/[0.045] pointer-events-none select-none"
+          className="parallax absolute -bottom-6 right-0 font-serif leading-none text-[#1B1F1D]/[0.045] pointer-events-none select-none"
+          data-speed="0.22"
           style={{ fontSize: "clamp(140px, 22vw, 300px)" }}
           aria-hidden="true"
         >
@@ -250,15 +252,22 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Ghost number */}
+        {/* Ghost number — parallax */}
         <div
-          className="absolute -bottom-6 left-0 font-serif leading-none text-white/[0.03] pointer-events-none select-none"
+          className="parallax absolute -bottom-6 left-0 font-serif leading-none text-white/[0.03] pointer-events-none select-none"
+          data-speed="0.22"
           style={{ fontSize: "clamp(140px, 22vw, 300px)" }}
           aria-hidden="true"
         >
           353
         </div>
       </section>
+
+
+      {/* ════════════════════════════════════════════════════════
+          3.5 PINNED SHOWCASE — scroll horizontal (desktop)
+          ════════════════════════════════════════════════════════ */}
+      <PinnedShowcase />
 
 
       {/* ════════════════════════════════════════════════════════
