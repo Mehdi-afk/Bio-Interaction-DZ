@@ -37,6 +37,8 @@ export default function EquipementsContent() {
       brands={BRANDS}
       backHref="/catalogue/equipements"
       defaultView="grid"
+      hideSidebar={!!cat}
+      hideSectionLabels={!!cat}
       catBanner={cat ? <EquipementsCatBanner cat={cat} /> : undefined}
     />
   );

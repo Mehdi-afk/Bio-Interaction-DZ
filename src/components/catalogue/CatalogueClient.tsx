@@ -535,7 +535,7 @@ function ProductPage({
 // ── Main component ─────────────────────────────────────────────────────────────
 
 export default function CatalogueClient({
-  items, title, cats, brands, showTypeFilter, backHref, hideSidebar, sectionDisplayName, defaultView, catBanner,
+  items, title, cats, brands, showTypeFilter, backHref, hideSidebar, hideSectionLabels, sectionDisplayName, defaultView, catBanner,
 }: {
   items: GridItem[];
   title: string;
@@ -544,6 +544,7 @@ export default function CatalogueClient({
   showTypeFilter?: boolean;
   backHref?: string;
   hideSidebar?: boolean;
+  hideSectionLabels?: boolean;
   sectionDisplayName?: string;
   defaultView?: "grid" | "list";
   catBanner?: ReactNode;
@@ -1023,6 +1024,7 @@ export default function CatalogueClient({
               return filteredGrid.map((item, i) => {
                 if (item.kind === "section") {
                   currentSection = item.label;
+                  if (hideSectionLabels) return null;
                   return (
                     <div
                       key={`label-${i}`}

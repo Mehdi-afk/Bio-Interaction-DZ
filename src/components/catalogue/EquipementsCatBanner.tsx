@@ -143,7 +143,7 @@ export default function EquipementsCatBanner({ cat }: { cat: string }) {
             {banner.blocks.map((b) => (
               <div
                 key={b.title}
-                className="bg-white rounded-xl border border-[#E5E3DC] p-4"
+                className="bg-white rounded-xl border border-[#E5E3DC] p-4 flex flex-col items-center text-center"
               >
                 <div className="w-9 h-9 rounded-[8px] bg-[#E8F7EF] flex items-center justify-center text-[#29A864] mb-3">
                   <Icon name={b.icon} className="w-[18px] h-[18px]" />
@@ -167,7 +167,7 @@ export default function EquipementsCatBanner({ cat }: { cat: string }) {
         {banner.blocks.map((b) => (
           <div
             key={b.title}
-            className="bg-white rounded-xl border border-[#E5E3DC] p-4"
+            className="bg-white rounded-xl border border-[#E5E3DC] p-4 flex flex-col items-center text-center"
           >
             <div className="w-9 h-9 rounded-[8px] bg-[#E8F7EF] flex items-center justify-center text-[#29A864] mb-3">
               <Icon name={b.icon} className="w-[18px] h-[18px]" />
