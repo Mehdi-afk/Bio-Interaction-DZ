@@ -3463,9 +3463,9 @@ export const REACTIFS: GridItem[] = [
         "label":  "Allergie : BioCLIA 1900 & 500",
         "kind":  "section"
     },
-    { "ref": "MY00405",  "kind": "product", "type": "consommable", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-Substrate",                          "cat": "allergie", "conditionnement":  "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
-    { "ref": "MY01312",  "kind": "product", "type": "consommable", "description": "", "marque": "HOB Biotech", "desc": "Conjugate and Microparticle Reagent Kit",    "cat": "allergie", "conditionnement":  "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
-    { "ref": "MY01315",  "kind": "product", "type": "controle",    "description": "", "marque": "HOB Biotech", "desc": "Calibrator and Control Set",                  "cat": "allergie", "conditionnement":  "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY00405",  "kind": "product", "type": "consommable", "description": "", "marque": "HOB Biotech", "desc": "BioCLIA-Substrate",                          "cat": "allergie", "conditionnement":  "4 X 600 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01312",  "kind": "product", "type": "consommable", "description": "", "marque": "HOB Biotech", "desc": "Conjugate and Microparticle Reagent Kit",    "cat": "allergie", "conditionnement":  "150 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
+    { "ref": "MY01315",  "kind": "product", "type": "controle",    "description": "", "marque": "HOB Biotech", "desc": "Calibrator and Control Set",                  "cat": "allergie", "conditionnement":  "CAL:0.5mLx7; CON:1mLx2", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
     { "ref": "MY01190",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit G3",         "cat": "allergie", "conditionnement":  "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
     { "ref": "MY01191",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit G8",         "cat": "allergie", "conditionnement":  "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
     { "ref": "MY01192",  "kind": "product", "type": "reactif",     "description": "", "marque": "HOB Biotech", "desc": "BioCLIA Specific IgE Reagent Kit G12",        "cat": "allergie", "conditionnement":  "50 Tests", "image":  "/images/reactifs/hob-bioclia-kit.jpg" },
