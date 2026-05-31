@@ -2928,7 +2928,7 @@ export const REACTIFS: GridItem[] = [
         "marque":  "HOB Biotech",
         "desc":  "BioCLIA dsDNA",
         "cat":  "autoimmunite",
-        "conditionnement":  "50 test combo (controle et calibrant inclus)",
+        "conditionnement":  "50 Tests combo (controle et calibrant inclus)",
         "image":  "/images/reactifs/bioclia-ai-reagents.jpg"
     },
     {
@@ -2939,7 +2939,7 @@ export const REACTIFS: GridItem[] = [
         "marque":  "HOB Biotech",
         "desc":  "BioCLIA Ro-60",
         "cat":  "autoimmunite",
-        "conditionnement":  "50 test combo (controle et calibrant inclus)",
+        "conditionnement":  "50 Tests combo (controle et calibrant inclus)",
         "image":  "/images/reactifs/bioclia-ai-reagents.jpg"
     },
     {
@@ -2950,7 +2950,7 @@ export const REACTIFS: GridItem[] = [
         "marque":  "HOB Biotech",
         "desc":  "BioCLIA SS-B/La",
         "cat":  "autoimmunite",
-        "conditionnement":  "50 test combo (controle et calibrant inclus)",
+        "conditionnement":  "50 Tests combo (controle et calibrant inclus)",
         "image":  "/images/reactifs/bioclia-ai-reagents.jpg"
     },
     {
@@ -2961,7 +2961,7 @@ export const REACTIFS: GridItem[] = [
         "marque":  "HOB Biotech",
         "desc":  "BioCLIA nRNP/Sm",
         "cat":  "autoimmunite",
-        "conditionnement":  "50 test combo (controle et calibrant inclus)",
+        "conditionnement":  "50 Tests combo (controle et calibrant inclus)",
         "image":  "/images/reactifs/bioclia-ai-reagents.jpg"
     },
     {
@@ -2972,7 +2972,7 @@ export const REACTIFS: GridItem[] = [
         "marque":  "HOB Biotech",
         "desc":  "BioCLIA Sm",
         "cat":  "autoimmunite",
-        "conditionnement":  "50 test combo (controle et calibrant inclus)",
+        "conditionnement":  "50 Tests combo (controle et calibrant inclus)",
         "image":  "/images/reactifs/bioclia-ai-reagents.jpg"
     },
     {
@@ -2983,7 +2983,7 @@ export const REACTIFS: GridItem[] = [
         "marque":  "HOB Biotech",
         "desc":  "BioCLIA Jo-1",
         "cat":  "autoimmunite",
-        "conditionnement":  "50 test combo (controle et calibrant inclus)",
+        "conditionnement":  "50 Tests combo (controle et calibrant inclus)",
         "image":  "/images/reactifs/bioclia-ai-reagents.jpg"
     },
     {
@@ -2994,7 +2994,7 @@ export const REACTIFS: GridItem[] = [
         "marque":  "HOB Biotech",
         "desc":  "BioCLIA Scl-70",
         "cat":  "autoimmunite",
-        "conditionnement":  "50 test combo (controle et calibrant inclus)",
+        "conditionnement":  "50 Tests combo (controle et calibrant inclus)",
         "image":  "/images/reactifs/bioclia-ai-reagents.jpg"
     },
     {
@@ -3005,7 +3005,7 @@ export const REACTIFS: GridItem[] = [
         "marque":  "HOB Biotech",
         "desc":  "BioCLIA Ro-52",
         "cat":  "autoimmunite",
-        "conditionnement":  "50 test combo (controle et calibrant inclus)",
+        "conditionnement":  "50 Tests combo (controle et calibrant inclus)",
         "image":  "/images/reactifs/bioclia-ai-reagents.jpg"
     },
     {
@@ -3016,7 +3016,7 @@ export const REACTIFS: GridItem[] = [
         "marque":  "HOB Biotech",
         "desc":  "BioCLIA Rib-P",
         "cat":  "autoimmunite",
-        "conditionnement":  "50 test combo (controle et calibrant inclus)",
+        "conditionnement":  "50 Tests combo (controle et calibrant inclus)",
         "image":  "/images/reactifs/bioclia-ai-reagents.jpg"
     },
     {
@@ -3027,7 +3027,7 @@ export const REACTIFS: GridItem[] = [
         "marque":  "HOB Biotech",
         "desc":  "BioCLIA PCNA",
         "cat":  "autoimmunite",
-        "conditionnement":  "50 test combo (controle et calibrant inclus)",
+        "conditionnement":  "50 Tests combo (controle et calibrant inclus)",
         "image":  "/images/reactifs/bioclia-ai-reagents.jpg"
     },
     {
@@ -3038,7 +3038,7 @@ export const REACTIFS: GridItem[] = [
         "marque":  "HOB Biotech",
         "desc":  "BioCLIA PM-Scl",
         "cat":  "autoimmunite",
-        "conditionnement":  "50 test combo (controle et calibrant inclus)",
+        "conditionnement":  "50 Tests combo (controle et calibrant inclus)",
         "image":  "/images/reactifs/bioclia-ai-reagents.jpg"
     },
     {
@@ -3049,7 +3049,7 @@ export const REACTIFS: GridItem[] = [
         "marque":  "HOB Biotech",
         "desc":  "BioCLIA His",
         "cat":  "autoimmunite",
-        "conditionnement":  "50 test combo (controle et calibrant inclus)",
+        "conditionnement":  "50 Tests combo (controle et calibrant inclus)",
         "image":  "/images/reactifs/bioclia-ai-reagents.jpg"
     },
     {
@@ -3060,7 +3060,7 @@ export const REACTIFS: GridItem[] = [
         "marque":  "HOB Biotech",
         "desc":  "BioCLIA CENP-B",
         "cat":  "autoimmunite",
-        "conditionnement":  "50 test combo (controle et calibrant inclus)",
+        "conditionnement":  "50 Tests combo (controle et calibrant inclus)",
         "image":  "/images/reactifs/bioclia-ai-reagents.jpg"
     },
     {
@@ -3071,7 +3071,7 @@ export const REACTIFS: GridItem[] = [
         "marque":  "HOB Biotech",
         "desc":  "BioCLIA Nuc",
         "cat":  "autoimmunite",
-        "conditionnement":  "50 test combo (controle et calibrant inclus)",
+        "conditionnement":  "50 Tests combo (controle et calibrant inclus)",
         "image":  "/images/reactifs/bioclia-ai-reagents.jpg"
     },
     {
@@ -3082,7 +3082,7 @@ export const REACTIFS: GridItem[] = [
         "marque":  "HOB Biotech",
         "desc":  "BioCLIA MPO",
         "cat":  "autoimmunite",
-        "conditionnement":  "50 test combo (controle et calibrant inclus)",
+        "conditionnement":  "50 Tests combo (controle et calibrant inclus)",
         "image":  "/images/reactifs/bioclia-ai-reagents.jpg"
     },
     {
@@ -3093,7 +3093,7 @@ export const REACTIFS: GridItem[] = [
         "marque":  "HOB Biotech",
         "desc":  "BioCLIA PR3",
         "cat":  "autoimmunite",
-        "conditionnement":  "50 test combo (controle et calibrant inclus)",
+        "conditionnement":  "50 Tests combo (controle et calibrant inclus)",
         "image":  "/images/reactifs/bioclia-ai-reagents.jpg"
     },
     {
@@ -3104,7 +3104,7 @@ export const REACTIFS: GridItem[] = [
         "marque":  "HOB Biotech",
         "desc":  "BioCLIA GBM",
         "cat":  "autoimmunite",
-        "conditionnement":  "50 test combo (controle et calibrant inclus)",
+        "conditionnement":  "50 Tests combo (controle et calibrant inclus)",
         "image":  "/images/reactifs/bioclia-ai-reagents.jpg"
     },
     {
@@ -3115,7 +3115,7 @@ export const REACTIFS: GridItem[] = [
         "marque":  "HOB Biotech",
         "desc":  "BioCLIA gp210",
         "cat":  "autoimmunite",
-        "conditionnement":  "50 test combo (controle et calibrant inclus)",
+        "conditionnement":  "50 Tests combo (controle et calibrant inclus)",
         "image":  "/images/reactifs/bioclia-ai-reagents.jpg"
     },
     {
@@ -3126,7 +3126,7 @@ export const REACTIFS: GridItem[] = [
         "marque":  "HOB Biotech",
         "desc":  "BioCLIA sp100",
         "cat":  "autoimmunite",
-        "conditionnement":  "50 test combo (controle et calibrant inclus)",
+        "conditionnement":  "50 Tests combo (controle et calibrant inclus)",
         "image":  "/images/reactifs/bioclia-ai-reagents.jpg"
     },
     {
@@ -3137,7 +3137,7 @@ export const REACTIFS: GridItem[] = [
         "marque":  "HOB Biotech",
         "desc":  "BioCLIA LKM-1",
         "cat":  "autoimmunite",
-        "conditionnement":  "50 test combo (controle et calibrant inclus)",
+        "conditionnement":  "50 Tests combo (controle et calibrant inclus)",
         "image":  "/images/reactifs/bioclia-ai-reagents.jpg"
     },
     {
@@ -3148,7 +3148,7 @@ export const REACTIFS: GridItem[] = [
         "marque":  "HOB Biotech",
         "desc":  "BioCLIA LC-1",
         "cat":  "autoimmunite",
-        "conditionnement":  "50 test combo (controle et calibrant inclus)",
+        "conditionnement":  "50 Tests combo (controle et calibrant inclus)",
         "image":  "/images/reactifs/bioclia-ai-reagents.jpg"
     },
     {
@@ -3159,7 +3159,7 @@ export const REACTIFS: GridItem[] = [
         "marque":  "HOB Biotech",
         "desc":  "BioCLIA AMA-M2",
         "cat":  "autoimmunite",
-        "conditionnement":  "50 test combo (controle et calibrant inclus)",
+        "conditionnement":  "50 Tests combo (controle et calibrant inclus)",
         "image":  "/images/reactifs/bioclia-ai-reagents.jpg"
     },
     {
@@ -3170,7 +3170,7 @@ export const REACTIFS: GridItem[] = [
         "marque":  "HOB Biotech",
         "desc":  "BioCLIA SLA/LP",
         "cat":  "autoimmunite",
-        "conditionnement":  "50 test combo (controle et calibrant inclus)",
+        "conditionnement":  "50 Tests combo (controle et calibrant inclus)",
         "image":  "/images/reactifs/bioclia-ai-reagents.jpg"
     },
     {
@@ -3181,7 +3181,7 @@ export const REACTIFS: GridItem[] = [
         "marque":  "HOB Biotech",
         "desc":  "BioCLIA aCL-A",
         "cat":  "autoimmunite",
-        "conditionnement":  "50 test combo (controle et calibrant inclus)",
+        "conditionnement":  "50 Tests combo (controle et calibrant inclus)",
         "image":  "/images/reactifs/bioclia-ai-reagents.jpg"
     },
     {
@@ -3192,7 +3192,7 @@ export const REACTIFS: GridItem[] = [
         "marque":  "HOB Biotech",
         "desc":  "BioCLIA aCL-G",
         "cat":  "autoimmunite",
-        "conditionnement":  "50 test combo (controle et calibrant inclus)",
+        "conditionnement":  "50 Tests combo (controle et calibrant inclus)",
         "image":  "/images/reactifs/bioclia-ai-reagents.jpg"
     },
     {
@@ -3203,7 +3203,7 @@ export const REACTIFS: GridItem[] = [
         "marque":  "HOB Biotech",
         "desc":  "BioCLIA aCL-M",
         "cat":  "autoimmunite",
-        "conditionnement":  "50 test combo (controle et calibrant inclus)",
+        "conditionnement":  "50 Tests combo (controle et calibrant inclus)",
         "image":  "/images/reactifs/bioclia-ai-reagents.jpg"
     },
     {
@@ -3214,7 +3214,7 @@ export const REACTIFS: GridItem[] = [
         "marque":  "HOB Biotech",
         "desc":  "BioCLIA aCL-A/M/G",
         "cat":  "autoimmunite",
-        "conditionnement":  "50 test combo (controle et calibrant inclus)",
+        "conditionnement":  "50 Tests combo (controle et calibrant inclus)",
         "image":  "/images/reactifs/bioclia-ai-reagents.jpg"
     },
     {
@@ -3225,7 +3225,7 @@ export const REACTIFS: GridItem[] = [
         "marque":  "HOB Biotech",
         "desc":  "BioCLIA beta2GP1-A",
         "cat":  "autoimmunite",
-        "conditionnement":  "50 test combo (controle et calibrant inclus)",
+        "conditionnement":  "50 Tests combo (controle et calibrant inclus)",
         "image":  "/images/reactifs/bioclia-ai-reagents.jpg"
     },
     {
@@ -3236,7 +3236,7 @@ export const REACTIFS: GridItem[] = [
         "marque":  "HOB Biotech",
         "desc":  "BioCLIA beta2GP1-G",
         "cat":  "autoimmunite",
-        "conditionnement":  "50 test combo (controle et calibrant inclus)",
+        "conditionnement":  "50 Tests combo (controle et calibrant inclus)",
         "image":  "/images/reactifs/bioclia-ai-reagents.jpg"
     },
     {
@@ -3247,7 +3247,7 @@ export const REACTIFS: GridItem[] = [
         "marque":  "HOB Biotech",
         "desc":  "BioCLIA beta2GP1-M",
         "cat":  "autoimmunite",
-        "conditionnement":  "50 test combo (controle et calibrant inclus)",
+        "conditionnement":  "50 Tests combo (controle et calibrant inclus)",
         "image":  "/images/reactifs/bioclia-ai-reagents.jpg"
     },
     {
@@ -3258,7 +3258,7 @@ export const REACTIFS: GridItem[] = [
         "marque":  "HOB Biotech",
         "desc":  "BioCLIA beta2GP1-A/M/G",
         "cat":  "autoimmunite",
-        "conditionnement":  "50 test combo (controle et calibrant inclus)",
+        "conditionnement":  "50 Tests combo (controle et calibrant inclus)",
         "image":  "/images/reactifs/bioclia-ai-reagents.jpg"
     },
     {
@@ -3269,7 +3269,7 @@ export const REACTIFS: GridItem[] = [
         "marque":  "HOB Biotech",
         "desc":  "BioCLIA RF-A",
         "cat":  "autoimmunite",
-        "conditionnement":  "50 test combo (controle et calibrant inclus)",
+        "conditionnement":  "50 Tests combo (controle et calibrant inclus)",
         "image":  "/images/reactifs/bioclia-ai-reagents.jpg"
     },
     {
@@ -3280,7 +3280,7 @@ export const REACTIFS: GridItem[] = [
         "marque":  "HOB Biotech",
         "desc":  "BioCLIA RF-G",
         "cat":  "autoimmunite",
-        "conditionnement":  "50 test combo (controle et calibrant inclus)",
+        "conditionnement":  "50 Tests combo (controle et calibrant inclus)",
         "image":  "/images/reactifs/bioclia-ai-reagents.jpg"
     },
     {
@@ -3291,7 +3291,7 @@ export const REACTIFS: GridItem[] = [
         "marque":  "HOB Biotech",
         "desc":  "BioCLIA RF-M",
         "cat":  "autoimmunite",
-        "conditionnement":  "50 test combo (controle et calibrant inclus)",
+        "conditionnement":  "50 Tests combo (controle et calibrant inclus)",
         "image":  "/images/reactifs/bioclia-ai-reagents.jpg"
     },
     {
@@ -3302,7 +3302,7 @@ export const REACTIFS: GridItem[] = [
         "marque":  "HOB Biotech",
         "desc":  "BioCLIA RF-A/M/G",
         "cat":  "autoimmunite",
-        "conditionnement":  "50 test combo (controle et calibrant inclus)",
+        "conditionnement":  "50 Tests combo (controle et calibrant inclus)",
         "image":  "/images/reactifs/bioclia-ai-reagents.jpg"
     },
     {
@@ -3313,7 +3313,7 @@ export const REACTIFS: GridItem[] = [
         "marque":  "HOB Biotech",
         "desc":  "BioCLIA CCP",
         "cat":  "autoimmunite",
-        "conditionnement":  "50 test combo (controle et calibrant inclus)",
+        "conditionnement":  "50 Tests combo (controle et calibrant inclus)",
         "image":  "/images/reactifs/bioclia-ai-reagents.jpg"
     },
     {
@@ -3324,7 +3324,7 @@ export const REACTIFS: GridItem[] = [
         "marque":  "HOB Biotech",
         "desc":  "BioCLIA IAA",
         "cat":  "autoimmunite",
-        "conditionnement":  "50 test combo (controle et calibrant inclus)",
+        "conditionnement":  "50 Tests combo (controle et calibrant inclus)",
         "image":  "/images/reactifs/bioclia-ai-reagents.jpg"
     },
     {
@@ -3335,7 +3335,7 @@ export const REACTIFS: GridItem[] = [
         "marque":  "HOB Biotech",
         "desc":  "BioCLIA h-tTG-A",
         "cat":  "autoimmunite",
-        "conditionnement":  "50 test combo (controle et calibrant inclus)",
+        "conditionnement":  "50 Tests combo (controle et calibrant inclus)",
         "image":  "/images/reactifs/bioclia-ai-reagents.jpg"
     },
     {
@@ -3346,7 +3346,7 @@ export const REACTIFS: GridItem[] = [
         "marque":  "HOB Biotech",
         "desc":  "BioCLIA h-tTG-G",
         "cat":  "autoimmunite",
-        "conditionnement":  "50 test combo (controle et calibrant inclus)",
+        "conditionnement":  "50 Tests combo (controle et calibrant inclus)",
         "image":  "/images/reactifs/bioclia-ai-reagents.jpg"
     },
     {
@@ -3357,7 +3357,7 @@ export const REACTIFS: GridItem[] = [
         "marque":  "HOB Biotech",
         "desc":  "BioCLIA DGP GLIADINE-A",
         "cat":  "autoimmunite",
-        "conditionnement":  "50 test combo (controle et calibrant inclus)",
+        "conditionnement":  "50 Tests combo (controle et calibrant inclus)",
         "image":  "/images/reactifs/bioclia-ai-reagents.jpg"
     },
     {
@@ -3368,7 +3368,7 @@ export const REACTIFS: GridItem[] = [
         "marque":  "HOB Biotech",
         "desc":  "BioCLIA DGP-G",
         "cat":  "autoimmunite",
-        "conditionnement":  "50 test combo (controle et calibrant inclus)",
+        "conditionnement":  "50 Tests combo (controle et calibrant inclus)",
         "image":  "/images/reactifs/bioclia-ai-reagents.jpg"
     },
     {
@@ -3379,7 +3379,7 @@ export const REACTIFS: GridItem[] = [
         "marque":  "HOB Biotech",
         "desc":  "BioCLIA GAD",
         "cat":  "autoimmunite",
-        "conditionnement":  "50 test combo (controle et calibrant inclus)",
+        "conditionnement":  "50 Tests combo (controle et calibrant inclus)",
         "image":  "/images/reactifs/bioclia-ai-reagents.jpg"
     },
     {
@@ -3390,7 +3390,7 @@ export const REACTIFS: GridItem[] = [
         "marque":  "HOB Biotech",
         "desc":  "BioCLIA IA2",
         "cat":  "autoimmunite",
-        "conditionnement":  "50 test combo (controle et calibrant inclus)",
+        "conditionnement":  "50 Tests combo (controle et calibrant inclus)",
         "image":  "/images/reactifs/bioclia-ai-reagents.jpg"
     },
     {
@@ -3401,7 +3401,7 @@ export const REACTIFS: GridItem[] = [
         "marque":  "HOB Biotech",
         "desc":  "BioCLIA ICA",
         "cat":  "autoimmunite",
-        "conditionnement":  "50 test combo (controle et calibrant inclus)",
+        "conditionnement":  "50 Tests combo (controle et calibrant inclus)",
         "image":  "/images/reactifs/bioclia-ai-reagents.jpg"
     },
     {
@@ -3412,7 +3412,7 @@ export const REACTIFS: GridItem[] = [
         "marque":  "HOB Biotech",
         "desc":  "BioCLIA ENA Mix-1",
         "cat":  "autoimmunite",
-        "conditionnement":  "50 test combo (controle et calibrant inclus)",
+        "conditionnement":  "50 Tests combo (controle et calibrant inclus)",
         "image":  "/images/reactifs/bioclia-ai-reagents.jpg"
     },
     {
@@ -3423,7 +3423,7 @@ export const REACTIFS: GridItem[] = [
         "marque":  "HOB Biotech",
         "desc":  "BioCLIA CTD",
         "cat":  "autoimmunite",
-        "conditionnement":  "50 test combo (controle et calibrant inclus)",
+        "conditionnement":  "50 Tests combo (controle et calibrant inclus)",
         "image":  "/images/reactifs/bioclia-ai-reagents.jpg"
     },
     {
@@ -3434,7 +3434,7 @@ export const REACTIFS: GridItem[] = [
         "marque":  "HOB Biotech",
         "desc":  "BioCLIA IF",
         "cat":  "autoimmunite",
-        "conditionnement":  "50 test combo (controle et calibrant inclus)",
+        "conditionnement":  "50 Tests combo (controle et calibrant inclus)",
         "image":  "/images/reactifs/bioclia-ai-reagents.jpg"
     },
     {
@@ -3445,7 +3445,7 @@ export const REACTIFS: GridItem[] = [
         "marque":  "HOB Biotech",
         "desc":  "BioCLIA PCA",
         "cat":  "autoimmunite",
-        "conditionnement":  "50 test combo (controle et calibrant inclus)",
+        "conditionnement":  "50 Tests combo (controle et calibrant inclus)",
         "image":  "/images/reactifs/bioclia-ai-reagents.jpg"
     },
     {
@@ -3456,7 +3456,7 @@ export const REACTIFS: GridItem[] = [
         "marque":  "HOB Biotech",
         "desc":  "BioCLIA MDA5",
         "cat":  "autoimmunite",
-        "conditionnement":  "50 test combo (controle et calibrant inclus)",
+        "conditionnement":  "50 Tests combo (controle et calibrant inclus)",
         "image":  "/images/reactifs/bioclia-ai-reagents.jpg"
     },
     {
