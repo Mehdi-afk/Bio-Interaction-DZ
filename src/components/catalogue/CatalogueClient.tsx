@@ -573,12 +573,17 @@ export default function CatalogueClient({
     if (window.innerWidth <= 768) setView("list");
   }, []);
 
-  // Close product panel when navbar tab is clicked
+  // Close product panel when navbar tab is clicked OR when URL changes (SPA navigation)
   useEffect(() => {
     const handler = () => setSelected(null);
     window.addEventListener("nav:closePanel", handler);
     return () => window.removeEventListener("nav:closePanel", handler);
   }, []);
+
+  useEffect(() => {
+    setSelected(null);
+    setSidebarOpen(false);
+  }, [searchParams]);
 
   useEffect(() => {
     function handler(e: MouseEvent) {
@@ -883,10 +888,10 @@ export default function CatalogueClient({
             <span>›</span>
             {backHref ? (
               <Link href={backHref} className="no-underline hover:text-[#29A864] transition-colors duration-150">
-                {cats.find(c => c.value === activeCat)?.label ?? activeCat}
+                {cats.find(c => c.value === initialCat)?.label ?? initialCat}
               </Link>
             ) : (
-              <span>{cats.find(c => c.value === activeCat)?.label ?? activeCat}</span>
+              <span>{cats.find(c => c.value === initialCat)?.label ?? initialCat}</span>
             )}
             <span>›</span>
             <span className="text-[#1B1F1D] font-medium">{sectionDisplayName}</span>
