@@ -3,7 +3,15 @@ import Image from "next/image";
 import Link from "next/link";
 import CardGrid from "@/src/components/CardGrid";
 import DevisButton from "@/src/components/DevisButton";
-import PinnedShowcase from "@/src/components/homepage/PinnedShowcase";
+import PinnedShowcase, { type PinnedItem } from "@/src/components/homepage/PinnedShowcase";
+
+const HOME_SHOWCASE: readonly PinnedItem[] = [
+  { key: "biochimie",    href: "/catalogue/equipements?cat=biochimie",    label: "Biochimie Clinique", desc: "Jusqu'à 1 000 tests/heure avec réactifs à tag RFID.",   image: "/images/equipements/ERBA XL 1000.webp" },
+  { key: "hematologie",  href: "/catalogue/equipements?cat=hematologie",  label: "Hématologie",        desc: "Formule sanguine complète en moins de 60 secondes.",     image: "/images/equipements/ERBA H580.jpg" },
+  { key: "hemostase",    href: "/catalogue/equipements?cat=hemostase",    label: "Hémostase",          desc: "TP, TCA, fibrinogène par coagulométrie optique.",        image: "/images/equipements/ERBA ECL 760.jpg" },
+  { key: "urines",       href: "/catalogue/equipements?cat=urines",       label: "Analyse des Urines", desc: "Chimie sèche et sédiment urinaire automatisé.",          image: "/images/equipements/ERBA EC 90.jpg" },
+  { key: "autoimmunite", href: "/catalogue/equipements?cat=autoimmunite", label: "Auto-Immunité",      desc: "Immunofluorescence digitalisée AKLIDES®.",               image: "/images/equipements/AKIRON NEO.png" },
+];
 
 export const metadata: Metadata = {
   title: "Accueil",
@@ -267,7 +275,11 @@ export default function HomePage() {
       {/* ════════════════════════════════════════════════════════
           3.5 PINNED SHOWCASE — scroll horizontal (desktop)
           ════════════════════════════════════════════════════════ */}
-      <PinnedShowcase />
+      <PinnedShowcase
+        badge="Nos analyseurs"
+        title={<>Une gamme pour chaque <em className="text-[#29A864] not-italic">spécialité</em>.</>}
+        items={HOME_SHOWCASE}
+      />
 
 
       {/* ════════════════════════════════════════════════════════

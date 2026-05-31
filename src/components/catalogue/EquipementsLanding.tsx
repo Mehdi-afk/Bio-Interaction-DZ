@@ -2,6 +2,16 @@
 
 import Link from "next/link";
 import { EQUIPEMENTS } from "@/src/data/products-equip";
+import PinnedShowcase, { type PinnedItem } from "@/src/components/homepage/PinnedShowcase";
+
+const FLAGSHIP: readonly PinnedItem[] = [
+  { key: "xl1000",   href: "/catalogue/equipements?cat=biochimie",    label: "ERBA XL 1000",  desc: "Biochimie clinique haute cadence — 800 tests/heure photométriques.", image: "/images/equipements/ERBA XL 1000.webp" },
+  { key: "h7100",    href: "/catalogue/equipements?cat=hematologie",  label: "ERBA H7100",    desc: "Hématologie 5-DIFF, jusqu'à 100 échantillons/heure.",                image: "/images/equipements/ERBA H7100.jpg" },
+  { key: "ecl760",   href: "/catalogue/equipements?cat=hemostase",    label: "ERBA ECL 760",  desc: "Coagulométrie multi-paramètres TP, TCA, fibrinogène.",               image: "/images/equipements/ERBA ECL 760.jpg" },
+  { key: "lauraxl",  href: "/catalogue/equipements?cat=urines",       label: "LAURA XL",      desc: "Analyse complète des urines avec chimie sèche.",                     image: "/images/equipements/LAURA XL.webp" },
+  { key: "bioclia1900", href: "/catalogue/equipements?cat=autoimmunite", label: "BioCLIA 1900", desc: "Immunoanalyseur CLIA automatisé.",                                  image: "/images/equipements/BIOCLIA 1900.webp" },
+  { key: "akiron",   href: "/catalogue/equipements?cat=autoimmunite", label: "AKIRON NEO",    desc: "Lecteur d'immunofluorescence indirecte AKLIDES®.",                   image: "/images/equipements/AKIRON NEO.png" },
+];
 
 // ── SVG icons — feather-style 24×24 ──────────────────────────────────────────
 
@@ -73,6 +83,7 @@ for (const item of EQUIPEMENTS) {
 export default function EquipementsLanding() {
   return (
     <>
+      {/* ── Pinned scroll horizontal showcase (desktop) ─────────── */}
       {/* ── Header sombre ──────────────────────────────────────── */}
       <section className="bg-[#1D1D1F] py-20 px-12 max-[1024px]:px-6 max-[600px]:px-4 max-[600px]:py-14 border-b border-white/[0.07]">
         <div className="max-w-[1200px] mx-auto flex items-end justify-between gap-6 flex-wrap">
@@ -155,6 +166,13 @@ export default function EquipementsLanding() {
           </div>
         </div>
       </section>
+
+      {/* ── Pinned scroll horizontal showcase (desktop ≥ 900px) ─── */}
+      <PinnedShowcase
+        badge="Sélection phare"
+        title={<>Nos analyseurs <em className="text-[#29A864] not-italic">de référence</em>.</>}
+        items={FLAGSHIP}
+      />
     </>
   );
 }

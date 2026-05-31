@@ -1,47 +1,32 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, type ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-const SHOWCASE = [
-  {
-    cat: "biochimie",
-    label: "Biochimie Clinique",
-    desc: "Jusqu'à 1 000 tests/heure avec réactifs à tag RFID.",
-    image: "/images/equipements/ERBA XL 1000.webp",
-  },
-  {
-    cat: "hematologie",
-    label: "Hématologie",
-    desc: "Formule sanguine complète en moins de 60 secondes.",
-    image: "/images/equipements/ERBA H580.jpg",
-  },
-  {
-    cat: "hemostase",
-    label: "Hémostase",
-    desc: "TP, TCA, fibrinogène par coagulométrie optique.",
-    image: "/images/equipements/ERBA ECL 760.jpg",
-  },
-  {
-    cat: "urines",
-    label: "Analyse des Urines",
-    desc: "Chimie sèche et sédiment urinaire automatisé.",
-    image: "/images/equipements/ERBA EC 90.jpg",
-  },
-  {
-    cat: "autoimmunite",
-    label: "Auto-Immunité",
-    desc: "Immunofluorescence digitalisée AKLIDES®.",
-    image: "/images/equipements/AKIRON NEO.png",
-  },
-] as const;
+export type PinnedItem = {
+  key:   string;
+  href:  string;
+  label: string;
+  desc:  string;
+  image: string;
+};
 
-export default function PinnedShowcase() {
+type Props = {
+  badge: string;
+  title: ReactNode;
+  items: readonly PinnedItem[];
+  /** Tailwind shorthand for section bg, e.g. "bg-[#0A0A0A]" (default). */
+  bg?:   string;
+};
+
+export default function PinnedShowcase({ badge, title, items, bg = "bg-[#0A0A0A]" }: Props) {
   const sectionRef  = useRef<HTMLDivElement>(null);
   const trackRef    = useRef<HTMLDivElement>(null);
   const progressRef = useRef<HTMLDivElement>(null);
   const counterRef  = useRef<HTMLSpanElement>(null);
+
+  const total = items.length;
 
   useEffect(() => {
     let raf = 0;
@@ -53,10 +38,10 @@ export default function PinnedShowcase() {
       const counter     = counterRef.current;
       if (!section || !track) return;
 
-      const rect           = section.getBoundingClientRect();
-      const sectionHeight  = section.offsetHeight;
-      const windowHeight   = window.innerHeight;
-      const totalScroll    = sectionHeight - windowHeight;
+      const rect          = section.getBoundingClientRect();
+      const sectionHeight = section.offsetHeight;
+      const windowHeight  = window.innerHeight;
+      const totalScroll   = sectionHeight - windowHeight;
       if (totalScroll <= 0) return;
 
       const scrolled = Math.max(0, Math.min(totalScroll, -rect.top));
@@ -71,7 +56,7 @@ export default function PinnedShowcase() {
       if (progressBar) progressBar.style.transform = `scaleX(${progress})`;
 
       if (counter) {
-        const idx = Math.min(SHOWCASE.length, Math.floor(progress * SHOWCASE.length) + 1);
+        const idx = Math.min(total, Math.floor(progress * total) + 1);
         counter.textContent = String(idx).padStart(2, "0");
       }
     }
@@ -89,14 +74,18 @@ export default function PinnedShowcase() {
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("resize", onScroll);
     };
-  }, []);
+  }, [total]);
+
+  // Scroll duration scales with item count (≈ 70vh per extra card beyond the first)
+  const sectionHeight = `${100 + Math.max(0, total - 1) * 60}vh`;
+  const totalLabel    = String(total).padStart(2, "0");
 
   return (
     <section
       ref={sectionRef}
-      className="relative bg-[#0A0A0A] hidden min-[900px]:block"
-      style={{ height: "340vh" }}
-      aria-label="Showcase analyseurs"
+      className={`relative ${bg} hidden min-[900px]:block`}
+      style={{ height: sectionHeight }}
+      aria-label={badge}
     >
       <div className="sticky top-0 h-screen flex flex-col justify-center overflow-hidden">
 
@@ -115,39 +104,36 @@ export default function PinnedShowcase() {
         <div
           className="absolute -bottom-1/4 left-1/2 -translate-x-1/2 w-[1200px] h-[600px] pointer-events-none"
           aria-hidden="true"
-          style={{
-            background: "radial-gradient(ellipse at 50% 100%, rgba(41,168,100,0.08) 0%, transparent 70%)",
-          }}
+          style={{ background: "radial-gradient(ellipse at 50% 100%, rgba(41,168,100,0.08) 0%, transparent 70%)" }}
         />
 
-        {/* Heading — top centered */}
+        {/* Heading */}
         <div className="absolute top-[9vh] left-0 right-0 z-10 px-6 max-w-[800px] mx-auto text-center">
           <span className="inline-block text-[11px] font-semibold tracking-[0.7px] uppercase text-[#29A864] mb-3">
-            Nos analyseurs
+            {badge}
           </span>
           <h2
             className="font-serif text-white leading-[1.08]"
             style={{ fontSize: "clamp(30px, 4.5vw, 58px)" }}
           >
-            Une gamme pour chaque{" "}
-            <em className="text-[#29A864] not-italic">spécialité</em>.
+            {title}
           </h2>
         </div>
 
-        {/* Horizontal track */}
+        {/* Track */}
         <div
           ref={trackRef}
           className="flex gap-7 pl-[8vw] pr-[40vw] will-change-transform"
         >
-          {SHOWCASE.map(({ cat, label, desc, image }, i) => (
+          {items.map(({ key, href, label, desc, image }, i) => (
             <Link
-              key={cat}
-              href={`/catalogue/equipements?cat=${cat}`}
+              key={key}
+              href={href}
               className="shrink-0 w-[440px] no-underline group block"
             >
               <div className="relative aspect-[4/5] rounded-3xl overflow-hidden bg-gradient-to-br from-white/[0.06] to-white/[0.02] border border-white/10 mb-5">
                 <span className="absolute top-5 left-5 z-10 text-white/30 text-[10px] font-mono tracking-[1.5px]">
-                  {String(i + 1).padStart(2, "0")} / 05
+                  {String(i + 1).padStart(2, "0")} / {totalLabel}
                 </span>
                 <Image
                   src={image}
@@ -174,11 +160,11 @@ export default function PinnedShowcase() {
           ))}
         </div>
 
-        {/* Bottom bar: counter + progress + cue */}
+        {/* Bottom bar */}
         <div className="absolute bottom-[6vh] left-0 right-0 px-[8vw] flex items-center gap-6">
           <span className="text-white/40 text-[12px] font-mono tracking-[1.5px]">
             <span ref={counterRef}>01</span>
-            <span className="text-white/15"> / 05</span>
+            <span className="text-white/15"> / {totalLabel}</span>
           </span>
           <div className="flex-1 h-px bg-white/10 relative overflow-hidden">
             <div
