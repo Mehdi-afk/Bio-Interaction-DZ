@@ -12,6 +12,7 @@ const NAV_LINKS = [
   { href: "/catalogue/equipements", label: "Équipements", mobileIcon: "🔭" },
   { href: "/catalogue/reactifs", label: "Réactifs", mobileIcon: "⚗️" },
   { href: "/blog", label: "Blog", mobileIcon: "📝" },
+  { href: "/partenaires", label: "Partenaires", mobileIcon: "🤝" },
   { href: "/a-propos", label: "À propos", mobileIcon: "ℹ️" },
 ];
 
