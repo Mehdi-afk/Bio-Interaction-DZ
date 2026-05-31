@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
-import CatalogueClient from "@/src/components/catalogue/CatalogueClient";
-import { EQUIPEMENTS } from "@/src/data/products-equip";
+import EquipementsContent from "@/src/components/catalogue/EquipementsContent";
 
 export const metadata: Metadata = {
   title: "Nos Équipements",
@@ -10,29 +9,10 @@ export const metadata: Metadata = {
     "coagulomètres, analyseurs urines et chaînes ELISA. Marque ERBA, Generic Assays, HOB Biotech.",
 };
 
-const CATS = [
-  { value: "biochimie",    label: "Biochimie Clinique" },
-  { value: "hematologie",  label: "Hématologie" },
-  { value: "hemostase",    label: "Hémostase" },
-  { value: "urines",       label: "Analyse des Urines" },
-  { value: "autoimmunite", label: "Auto-Immunité" },
-];
-
-const BRANDS = [
-  { value: "ERBA",          label: "ERBA — Europe" },
-  { value: "Generic Assays",label: "Generic Assays / Medipan" },
-  { value: "HOB Biotech",   label: "HOB Biotech" },
-];
-
 export default function EquipementsPage() {
   return (
     <Suspense>
-      <CatalogueClient
-        items={EQUIPEMENTS}
-        title="Équipements"
-        cats={CATS}
-        brands={BRANDS}
-      />
+      <EquipementsContent />
     </Suspense>
   );
 }
