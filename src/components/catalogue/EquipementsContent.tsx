@@ -35,6 +35,7 @@ export default function EquipementsContent() {
       cats={CATS}
       brands={BRANDS}
       backHref="/catalogue/equipements"
+      defaultView="grid"
     />
   );
 }

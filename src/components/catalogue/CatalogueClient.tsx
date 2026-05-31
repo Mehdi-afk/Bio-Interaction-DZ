@@ -535,7 +535,7 @@ function ProductPage({
 // ── Main component ─────────────────────────────────────────────────────────────
 
 export default function CatalogueClient({
-  items, title, cats, brands, showTypeFilter, backHref, hideSidebar, sectionDisplayName,
+  items, title, cats, brands, showTypeFilter, backHref, hideSidebar, sectionDisplayName, defaultView,
 }: {
   items: GridItem[];
   title: string;
@@ -545,6 +545,7 @@ export default function CatalogueClient({
   backHref?: string;
   hideSidebar?: boolean;
   sectionDisplayName?: string;
+  defaultView?: "grid" | "list";
 }) {
   const router = useRouter();
   const searchParams  = useSearchParams();
@@ -560,7 +561,7 @@ export default function CatalogueClient({
     initialMarque ? new Set([initialMarque]) : new Set()
   );
   const [activeTypes,  setActiveTypes]  = useState<Set<string>>(new Set());
-  const [view,         setView]         = useState<"grid" | "list">("list");
+  const [view,         setView]         = useState<"grid" | "list">(defaultView ?? "list");
   const [selected,     setSelected]     = useState<Product | null>(null);
   const [selectedSection, setSelectedSection] = useState<string>("");
   const [sidebarOpen,  setSidebarOpen]  = useState(false);
