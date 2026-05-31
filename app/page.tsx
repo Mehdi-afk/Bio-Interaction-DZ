@@ -69,26 +69,25 @@ export default function HomePage() {
         {/* Badge */}
         <div className="reveal reveal-d1 relative z-10 inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#29A864]/35 bg-[#29A864]/10 text-[#29A864] text-[11px] font-semibold tracking-[0.7px] uppercase mb-8">
           <span className="w-[7px] h-[7px] rounded-full bg-[#29A864] animate-pulse shrink-0" />
-          Spécialiste du diagnostic médical depuis 2016
+          Spécialiste du domaine depuis 2016
         </div>
 
         {/* Title */}
         <h1
-          className="reveal reveal-d2 relative z-10 font-serif leading-[1.07] mb-7 max-w-[880px]"
+          className="reveal reveal-d2 relative z-10 font-serif leading-[1.07] mb-7 max-w-[900px]"
           style={{ fontSize: "clamp(34px, 6.5vw, 78px)" }}
         >
-          Réactifs &amp; Équipements<br />
-          pour votre{" "}
-          <em className="text-[#29A864] not-italic">laboratoire</em>.
+          Réactifs &amp; Équipements pour votre{" "}
+          <em className="text-[#29A864] not-italic">laboratoire</em>
         </h1>
 
         {/* Subtitle */}
         <p
-          className="reveal reveal-d3 relative z-10 text-white/50 leading-[1.7] mb-10 max-w-[460px]"
+          className="reveal reveal-d3 relative z-10 text-white/55 leading-[1.7] mb-10 max-w-[560px]"
           style={{ fontSize: "clamp(15px, 1.7vw, 18px)" }}
         >
-          Solutions diagnostiques de qualité internationale.
-          Distribution exclusive en Algérie depuis Alger.
+          Votre partenaire de confiance pour l&apos;approvisionnement en équipement,
+          réactif et consommable de laboratoire d&apos;analyses médicales.
         </p>
 
         {/* CTAs */}
@@ -103,7 +102,7 @@ export default function HomePage() {
               hover:bg-[#48BC7E] hover:-translate-y-0.5 hover:shadow-[0_8px_28px_rgba(41,168,100,0.45)]
             "
           >
-            Explorer le catalogue
+            Voir Nos Produits
             <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth={2.2} strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4" aria-hidden="true">
               <path d="M3 8h10M9 4l4 4-4 4" />
             </svg>
@@ -139,20 +138,20 @@ export default function HomePage() {
       ">
         <div className="reveal relative z-10 max-w-[760px] mx-auto">
           <span className="inline-block text-[11px] font-semibold tracking-[0.7px] uppercase text-[#29A864] mb-5">
-            Analyseurs &amp; Instruments
+            Équipements de laboratoire
           </span>
           <h2
             className="font-serif text-[#1B1F1D] leading-[1.08] mb-6"
             style={{ fontSize: "clamp(32px, 5.5vw, 64px)" }}
           >
-            La précision au service<br className="max-[600px]:hidden" /> du diagnostic.
+            +20 modèles<br className="max-[600px]:hidden" /> haute performance.
           </h2>
           <p
-            className="text-[#6E6E6E] leading-[1.75] mb-9 mx-auto max-w-[460px]"
+            className="text-[#6E6E6E] leading-[1.75] mb-9 mx-auto max-w-[520px]"
             style={{ fontSize: "clamp(15px, 1.6vw, 17px)" }}
           >
-            Biochimie clinique, hématologie, hémostase, urines et auto-immunité.
-            20 modèles haute performance de ERBA, Generic Assays et HOB Biotech.
+            Biochimie Clinique · Hématologie · Hémostase · Analyse des Urines ·
+            Chaîne ELISA · Auto-Immunité
           </p>
           <div className="flex items-center justify-center gap-3 flex-wrap">
             <Link
@@ -219,15 +218,15 @@ export default function HomePage() {
             className="font-serif leading-[1.08] mb-6"
             style={{ fontSize: "clamp(32px, 5.5vw, 64px)" }}
           >
-            Plus de 353 références.<br className="max-[600px]:hidden" />{" "}
+            +353 références.<br className="max-[600px]:hidden" />{" "}
             <em className="text-[#29A864] not-italic">Toujours disponibles.</em>
           </h2>
           <p
-            className="text-white/50 leading-[1.75] mb-9 mx-auto max-w-[460px]"
+            className="text-white/55 leading-[1.75] mb-9 mx-auto max-w-[520px]"
             style={{ fontSize: "clamp(15px, 1.6vw, 17px)" }}
           >
-            Biochimie, hématologie, auto-immunité, allergie, parasitologie —
-            des réactifs certifiés pour chaque spécialité de votre laboratoire.
+            Biochimie Clinique · Hématologie · Hémostase ·
+            Analyse des Urines · Auto-Immunité · Allergie · Parasitologie
           </p>
           <div className="flex items-center justify-center gap-3 flex-wrap">
             <Link
@@ -389,16 +388,16 @@ export default function HomePage() {
           aria-hidden="true"
         />
 
-        <div className="reveal relative z-10 max-w-[560px] mx-auto">
+        <div className="reveal relative z-10 max-w-[620px] mx-auto">
           <h2
             className="font-serif text-white leading-[1.1] mb-5"
             style={{ fontSize: "clamp(32px, 5vw, 56px)" }}
           >
-            Un produit<br />en tête&nbsp;?
+            Un produit spécifique<br />en tête&nbsp;?
           </h2>
-          <p className="text-white/65 leading-[1.75] mb-10" style={{ fontSize: "clamp(15px, 1.6vw, 17px)" }}>
-            Notre équipe technique est disponible pour vous orienter
-            vers la solution la mieux adaptée à vos besoins.
+          <p className="text-white/70 leading-[1.75] mb-10" style={{ fontSize: "clamp(15px, 1.6vw, 17px)" }}>
+            Notre équipe technique est disponible pour vous orienter vers la solution
+            la mieux adaptée à vos besoins et préparer un devis personnalisé.
           </p>
           <DevisButton
             label="Obtenir un devis →"

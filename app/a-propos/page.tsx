@@ -112,19 +112,19 @@ export default function AProposPage() {
         </div>
 
         <h1
-          className="reveal reveal-d1 font-serif text-white leading-[1.06] max-w-[800px] mb-6"
+          className="reveal reveal-d1 font-serif text-white leading-[1.06] max-w-[820px] mb-6"
           style={{ fontSize: "clamp(32px, 5.5vw, 70px)" }}
         >
-          Expertise scientifique,<br />
-          <em className="text-[#29A864] not-italic">service de proximité</em>.
+          Expertise scientifique,{" "}
+          <em className="text-[#29A864] not-italic">service de proximité</em>
         </h1>
 
         <p
-          className="reveal reveal-d2 text-white/45 leading-[1.75] max-w-[440px]"
+          className="reveal reveal-d2 text-white/55 leading-[1.75] max-w-[600px]"
           style={{ fontSize: "clamp(15px, 1.6vw, 17px)" }}
         >
           Actif depuis 2016 dans le domaine du diagnostic médical, Bio Interaction
-          Algérie accompagne les laboratoires algériens avec des solutions
+          Algérie accompagne les laboratoires algériens avec des réactifs et équipements
           de qualité internationale.
         </p>
 
@@ -143,13 +143,13 @@ export default function AProposPage() {
 
           <div className="reveal mb-16 max-[600px]:mb-10">
             <span className="inline-block text-[11px] font-semibold tracking-[0.7px] uppercase text-[#29A864] mb-4">
-              Notre histoire
+              À propos
             </span>
             <h2
               className="font-serif text-[#1B1F1D] leading-[1.1]"
               style={{ fontSize: "clamp(28px, 4vw, 54px)" }}
             >
-              Fondés sur la confiance,<br className="max-[768px]:hidden" /> engagés pour l&apos;excellence.
+              Notre histoire.
             </h2>
           </div>
 
@@ -215,13 +215,13 @@ export default function AProposPage() {
 
           <div className="reveal mb-14 text-center max-[600px]:mb-10">
             <span className="inline-block text-[11px] font-semibold tracking-[0.7px] uppercase text-[#29A864] mb-4">
-              Nos valeurs
+              Engagements
             </span>
             <h2
               className="font-serif text-white leading-[1.1]"
               style={{ fontSize: "clamp(28px, 4vw, 52px)" }}
             >
-              Ce qui nous définit.
+              Nos valeurs.
             </h2>
           </div>
 

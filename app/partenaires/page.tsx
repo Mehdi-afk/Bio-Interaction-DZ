@@ -15,7 +15,6 @@ type Partner = {
   logoW: number;
   country: string;
   flag: string;
-  specialty: string;
   description: string;
   website: string;
 };
@@ -27,11 +26,9 @@ const PARTNERS: Partner[] = [
     logoW: 180,
     country: "Allemagne",
     flag: "🇩🇪",
-    specialty: "Biochimie · Hématologie · Immunologie",
     description:
       "Solutions IVD complètes en biochimie clinique, hématologie, immunologie, " +
-      "coagulation et urinalyse. Présent dans plus de 100 pays avec des analyseurs " +
-      "haute cadence dotés de réactifs à tag RFID.",
+      "coagulation et urinalyse. Présent dans plus de 100 pays.",
     website: "https://www.erbalachema.com/en/",
   },
   {
@@ -40,11 +37,9 @@ const PARTNERS: Partner[] = [
     logoW: 160,
     country: "Allemagne",
     flag: "🇩🇪",
-    specialty: "ELISA · RIA · Immunofluorescence",
     description:
       "Kits ELISA, RIA et immunofluorescence pour le diagnostic différentiel " +
-      "des maladies auto-immunes, inflammatoires et chroniques. Référence mondiale " +
-      "en sérologie spécialisée.",
+      "des maladies auto-immunes, inflammatoires et chroniques.",
     website: "https://www.medipan.de",
   },
   {
@@ -53,11 +48,9 @@ const PARTNERS: Partner[] = [
     logoW: 150,
     country: "Allemagne",
     flag: "🇩🇪",
-    specialty: "Auto-immunité · AKLIDES®",
     description:
       "Systèmes automatisés pour l'évaluation des tests d'immunofluorescence " +
-      "(AKLIDES®) et le diagnostic des maladies auto-immunes. Leader européen " +
-      "en digitalisation du diagnostic.",
+      "(AKLIDES®) et le diagnostic des maladies auto-immunes.",
     website: "https://www.medipan.de",
   },
   {
@@ -66,11 +59,9 @@ const PARTNERS: Partner[] = [
     logoW: 130,
     country: "Chine",
     flag: "🇨🇳",
-    specialty: "Allergie · Auto-immunité",
     description:
       "Leader en diagnostic des allergies en Chine et acteur émergent dans " +
-      "le diagnostic des maladies auto-immunes. Fabrication certifiée ISO 13485 " +
-      "avec présence dans plus de 60 pays.",
+      "le diagnostic des maladies auto-immunes. Fabrication certifiée ISO 13485.",
     website: "https://en.hob-biotech.com",
   },
   {
@@ -79,11 +70,9 @@ const PARTNERS: Partner[] = [
     logoW: 155,
     country: "France",
     flag: "🇫🇷",
-    specialty: "Parasitologie · Mycologie",
     description:
       "Tests sérologiques de confirmation en parasitologie et mycologie " +
-      "par Western Blot avec antigènes naturels. Basé à Lyon, reconnu pour " +
-      "la précision de ses antigènes natifs.",
+      "par Western Blot avec antigènes naturels. Basé à Lyon.",
     website: "https://ldbiodiagnostics.com",
   },
 ];
@@ -128,17 +117,15 @@ export default function PartenairesPage() {
           className="reveal reveal-d1 font-serif text-white leading-[1.06] max-w-[820px] mb-6"
           style={{ fontSize: "clamp(34px, 6vw, 74px)" }}
         >
-          5 marques internationales.<br />
-          <em className="text-[#29A864] not-italic">Une seule adresse</em>{" "}
-          en Algérie.
+          Nos <em className="text-[#29A864] not-italic">partenaires</em>
         </h1>
 
         <p
-          className="reveal reveal-d2 text-white/45 leading-[1.75] max-w-[420px]"
+          className="reveal reveal-d2 text-white/55 leading-[1.75] max-w-[640px]"
           style={{ fontSize: "clamp(15px, 1.6vw, 17px)" }}
         >
-          Des fabricants européens et internationaux de référence,
-          distribués en exclusivité sur le marché algérien depuis 2016.
+          Nous représentons en exclusivité sur le marché algérien 5 marques européennes
+          et internationales de référence dans le diagnostic médical.
         </p>
 
         {/* Scroll cue */}
@@ -152,7 +139,7 @@ export default function PartenairesPage() {
       {/* ════════════════════════════════════════════════════════
           PARTENAIRES — sections alternantes
           ════════════════════════════════════════════════════════ */}
-      {PARTNERS.map(({ name, logo, logoW, country, flag, specialty, description, website }, i) => {
+      {PARTNERS.map(({ name, logo, logoW, country, flag, description, website }, i) => {
         const isEven   = i % 2 === 0;
         const bgClass  = isEven ? "bg-white" : "bg-[#F5F5F7]";
         const revealDir = isEven ? "reveal-left" : "reveal-right";
@@ -186,7 +173,7 @@ export default function PartenairesPage() {
               {/* Content */}
               <div className={`${revealDir} flex-1`}>
                 <span className="inline-block text-[11px] font-semibold tracking-[0.7px] uppercase text-[#29A864] mb-4">
-                  {specialty}
+                  Partenaire exclusif
                 </span>
                 <h2
                   className="font-serif text-[#1B1F1D] leading-[1.1] mb-5"
