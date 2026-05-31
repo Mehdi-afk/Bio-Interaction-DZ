@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { useApp } from "@/src/context/AppContext";
+import { useAuth } from "@/src/context/AuthContext";
 
 // ── Shared field styles ────────────────────────────────────────────────────────
 
@@ -21,9 +22,10 @@ export default function ModalDevis() {
   const {
     devisOpen, closeDevis,
     cart, clearCart, removeFromCart,
-    clientInfo, updateClientInfo, hasClientInfo,
+    clientInfo, updateClientInfo,
     showToast,
   } = useApp();
+  const { user, loading: authLoading } = useAuth();
 
   const [sending, setSending] = useState(false);
 
@@ -70,6 +72,64 @@ export default function ModalDevis() {
         closeDevis();
       }
     }
+  }
+
+  // Auth check — show login prompt if not connected
+  if (!authLoading && !user) {
+    return (
+      <div
+        className="fixed inset-0 z-[2000] flex items-center justify-center max-[600px]:items-end"
+        style={{ background: "rgba(15,25,40,0.55)", backdropFilter: "blur(4px)" }}
+        onClick={(e) => { if (e.target === e.currentTarget) closeDevis(); }}
+      >
+        <div className="
+          bg-white rounded-2xl p-9 w-[420px] max-w-[95vw]
+          shadow-[0_20px_60px_rgba(0,0,0,0.18)]
+          max-[600px]:rounded-b-none max-[600px]:w-full max-[600px]:max-w-full max-[600px]:p-6
+        ">
+          {/* Icône cadenas */}
+          <div className="w-14 h-14 rounded-2xl bg-[#EDF8F1] flex items-center justify-center text-[#29A864] mb-5">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" className="w-7 h-7">
+              <rect x="3" y="11" width="18" height="11" rx="2" />
+              <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+            </svg>
+          </div>
+          <h2 className="font-serif text-[22px] mb-2">Connexion requise</h2>
+          <p className="text-[#6E6E6E] text-[14px] leading-[1.65] mb-7">
+            Pour soumettre une demande de devis, vous devez être connecté à votre compte.
+          </p>
+          <div className="flex flex-col gap-3">
+            <button
+              onClick={() => { closeDevis(); router.push("/auth/login"); }}
+              className="
+                w-full py-[10px] px-6 bg-[#29A864] text-white border-none rounded-[9px]
+                text-[15px] font-medium cursor-pointer
+                transition-colors duration-150 hover:bg-[#48BC7E]
+              "
+            >
+              Se connecter →
+            </button>
+            <button
+              onClick={() => { closeDevis(); router.push("/auth/signup"); }}
+              className="
+                w-full py-[10px] px-6 bg-transparent text-[#1B1F1D]
+                border border-[#E5E3DC] rounded-[9px]
+                text-[15px] font-medium cursor-pointer
+                transition-colors duration-150 hover:bg-[#F7F6F2]
+              "
+            >
+              Créer un compte
+            </button>
+            <button
+              onClick={closeDevis}
+              className="text-[13px] text-[#6E6E6E] underline-offset-2 hover:underline cursor-pointer bg-transparent border-none mt-1"
+            >
+              Annuler
+            </button>
+          </div>
+        </div>
+      </div>
+    );
   }
 
   return (
