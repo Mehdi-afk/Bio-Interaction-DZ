@@ -127,12 +127,14 @@ export default function EquipementsCatBanner({ cat }: { cat: string }) {
   if (banner.layout === "biochimie") {
     return (
       <div className="reveal rounded-2xl border border-[#E5E3DC] bg-[#F7F6F2] p-6 max-[600px]:p-4">
-        <span className="inline-block text-[11px] font-semibold tracking-[0.6px] uppercase text-[#29A864] mb-2">
-          Points forts
-        </span>
-        <p className="text-[14px] text-[#6E6E6E] leading-[1.65] mb-5">
-          {banner.intro}
-        </p>
+        <div className="text-center mb-5">
+          <span className="inline-block text-[11px] font-semibold tracking-[0.6px] uppercase text-[#29A864] mb-2">
+            Points forts
+          </span>
+          <p className="text-[14px] text-[#6E6E6E] leading-[1.65] max-w-[620px] mx-auto">
+            {banner.intro}
+          </p>
+        </div>
         <div className="grid grid-cols-4 gap-3 max-[768px]:grid-cols-2 max-[480px]:grid-cols-1">
           {banner.blocks.map((b) => (
             <div
