@@ -6,7 +6,7 @@ import {
   verifyBearer, unauthorizedResponse, badRequestResponse,
 } from "@/src/lib/api-security";
 
-const RECIPIENT = "messaoudenemehdi8@gmail.com";
+const RECIPIENT = "messaoudenemehdi0@gmail.com";
 
 export async function POST(req: NextRequest) {
   // ── CSRF gate (same-origin) ──────────────────────────────────────────────────
