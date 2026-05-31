@@ -127,32 +127,25 @@ export default function EquipementsCatBanner({ cat }: { cat: string }) {
   if (banner.layout === "biochimie") {
     return (
       <div className="reveal rounded-2xl border border-[#E5E3DC] bg-[#F7F6F2] p-6 max-[600px]:p-4">
-        <div className="
-          grid grid-cols-[1fr_1fr] gap-8 items-start
-          max-[768px]:grid-cols-1 max-[768px]:gap-6
-        ">
-          <div>
-            <span className="inline-block text-[11px] font-semibold tracking-[0.6px] uppercase text-[#29A864] mb-3">
-              Points forts
-            </span>
-            <p className="text-[14px] text-[#6E6E6E] leading-[1.65]">
-              {banner.intro}
-            </p>
-          </div>
-          <div className="grid grid-cols-2 gap-3">
-            {banner.blocks.map((b) => (
-              <div
-                key={b.title}
-                className="bg-white rounded-xl border border-[#E5E3DC] p-4 flex flex-col items-center text-center"
-              >
-                <div className="w-9 h-9 rounded-[8px] bg-[#E8F7EF] flex items-center justify-center text-[#29A864] mb-3">
-                  <Icon name={b.icon} className="w-[18px] h-[18px]" />
-                </div>
-                <p className="font-semibold text-[14px] text-[#1B1F1D] mb-1">{b.title}</p>
-                <p className="text-[12px] text-[#6E6E6E] leading-[1.55]">{b.desc}</p>
+        <span className="inline-block text-[11px] font-semibold tracking-[0.6px] uppercase text-[#29A864] mb-2">
+          Points forts
+        </span>
+        <p className="text-[14px] text-[#6E6E6E] leading-[1.65] mb-5">
+          {banner.intro}
+        </p>
+        <div className="grid grid-cols-4 gap-3 max-[768px]:grid-cols-2 max-[480px]:grid-cols-1">
+          {banner.blocks.map((b) => (
+            <div
+              key={b.title}
+              className="bg-white rounded-xl border border-[#E5E3DC] p-4 flex flex-col items-center text-center"
+            >
+              <div className="w-9 h-9 rounded-[8px] bg-[#E8F7EF] flex items-center justify-center text-[#29A864] mb-3">
+                <Icon name={b.icon} className="w-[18px] h-[18px]" />
               </div>
-            ))}
-          </div>
+              <p className="font-semibold text-[14px] text-[#1B1F1D] mb-1">{b.title}</p>
+              <p className="text-[12px] text-[#6E6E6E] leading-[1.55]">{b.desc}</p>
+            </div>
+          ))}
         </div>
       </div>
     );
