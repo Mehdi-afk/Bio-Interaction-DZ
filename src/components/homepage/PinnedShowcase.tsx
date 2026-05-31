@@ -29,48 +29,74 @@ export default function PinnedShowcase({ badge, title, items, bg = "bg-[#0A0A0A]
   const total = items.length;
 
   useEffect(() => {
-    let raf = 0;
+    let rafId          = 0;
+    let targetProgress = 0;
+    let smoothProgress = 0;
+    let lastCounterIdx = -1;
+    const LERP = 0.11; // smoothing — lower = smoother & laggier, higher = snappier
 
-    function update() {
-      const section     = sectionRef.current;
-      const track       = trackRef.current;
-      const progressBar = progressRef.current;
-      const counter     = counterRef.current;
-      if (!section || !track) return;
-
+    function computeTarget() {
+      const section = sectionRef.current;
+      if (!section) return;
       const rect          = section.getBoundingClientRect();
       const sectionHeight = section.offsetHeight;
       const windowHeight  = window.innerHeight;
       const totalScroll   = sectionHeight - windowHeight;
-      if (totalScroll <= 0) return;
-
+      if (totalScroll <= 0) { targetProgress = 0; return; }
       const scrolled = Math.max(0, Math.min(totalScroll, -rect.top));
-      const progress = scrolled / totalScroll;
+      targetProgress = scrolled / totalScroll;
+    }
+
+    function apply() {
+      const track       = trackRef.current;
+      const progressBar = progressRef.current;
+      const counter     = counterRef.current;
+      if (!track) return;
 
       const trackWidth   = track.scrollWidth;
       const visibleWidth = window.innerWidth;
       const maxTranslate = Math.max(0, trackWidth - visibleWidth + 80);
 
-      track.style.transform = `translate3d(${-progress * maxTranslate}px, 0, 0)`;
+      track.style.transform = `translate3d(${-smoothProgress * maxTranslate}px, 0, 0)`;
 
-      if (progressBar) progressBar.style.transform = `scaleX(${progress})`;
+      if (progressBar) progressBar.style.transform = `scaleX(${smoothProgress})`;
 
       if (counter) {
-        const idx = Math.min(total, Math.floor(progress * total) + 1);
-        counter.textContent = String(idx).padStart(2, "0");
+        const idx = Math.min(total, Math.floor(smoothProgress * total) + 1);
+        if (idx !== lastCounterIdx) {
+          counter.textContent = String(idx).padStart(2, "0");
+          lastCounterIdx = idx;
+        }
       }
     }
 
-    function onScroll() {
-      cancelAnimationFrame(raf);
-      raf = requestAnimationFrame(update);
+    function tick() {
+      const diff = targetProgress - smoothProgress;
+      if (Math.abs(diff) < 0.0002) {
+        smoothProgress = targetProgress;
+        apply();
+        rafId = 0;
+        return;
+      }
+      smoothProgress += diff * LERP;
+      apply();
+      rafId = requestAnimationFrame(tick);
     }
 
-    update();
+    function onScroll() {
+      computeTarget();
+      if (!rafId) rafId = requestAnimationFrame(tick);
+    }
+
+    // Snap on mount so we don't animate from 0 if the section is already mid-scroll
+    computeTarget();
+    smoothProgress = targetProgress;
+    apply();
+
     window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("resize", onScroll);
     return () => {
-      cancelAnimationFrame(raf);
+      cancelAnimationFrame(rafId);
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("resize", onScroll);
     };

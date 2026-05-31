@@ -78,26 +78,57 @@ export default function RevealObserver() {
     });
     mo.observe(document.body, { childList: true, subtree: true });
 
-    // ── Parallax ──────────────────────────────────────────────
-    function onScroll() {
-      document
-        .querySelectorAll<HTMLElement>(".parallax[data-speed]")
-        .forEach((el) => {
-          const speed  = parseFloat(el.dataset.speed ?? "0.2");
-          const parent = el.closest("section");
-          if (!parent) return;
-          const rect   = parent.getBoundingClientRect();
-          const center = window.innerHeight / 2 - rect.top - rect.height / 2;
-          el.style.transform = `translateY(${center * speed}px)`;
-        });
+    // ── Parallax with lerp smoothing ─────────────────────────
+    const PARALLAX_LERP = 0.12;
+    const state = new WeakMap<HTMLElement, { target: number; current: number }>();
+    let parallaxRaf = 0;
+
+    function computeParallaxTargets() {
+      document.querySelectorAll<HTMLElement>(".parallax[data-speed]").forEach((el) => {
+        const speed  = parseFloat(el.dataset.speed ?? "0.2");
+        const parent = el.closest("section");
+        if (!parent) return;
+        const rect   = parent.getBoundingClientRect();
+        const center = window.innerHeight / 2 - rect.top - rect.height / 2;
+        const target = center * speed;
+        const s = state.get(el);
+        if (s) s.target = target;
+        else state.set(el, { target, current: target });
+      });
     }
-    window.addEventListener("scroll", onScroll, { passive: true });
+
+    function parallaxTick() {
+      let needsMore = false;
+      document.querySelectorAll<HTMLElement>(".parallax[data-speed]").forEach((el) => {
+        const s = state.get(el);
+        if (!s) return;
+        const diff = s.target - s.current;
+        if (Math.abs(diff) < 0.05) {
+          s.current = s.target;
+        } else {
+          s.current += diff * PARALLAX_LERP;
+          needsMore = true;
+        }
+        el.style.transform = `translateY(${s.current}px)`;
+      });
+      parallaxRaf = needsMore ? requestAnimationFrame(parallaxTick) : 0;
+    }
+
+    function onParallaxScroll() {
+      computeParallaxTargets();
+      if (!parallaxRaf) parallaxRaf = requestAnimationFrame(parallaxTick);
+    }
+    computeParallaxTargets();
+    window.addEventListener("scroll", onParallaxScroll, { passive: true });
+    window.addEventListener("resize", onParallaxScroll);
 
     return () => {
       revealIO.disconnect();
       countIO.disconnect();
       mo.disconnect();
-      window.removeEventListener("scroll", onScroll);
+      cancelAnimationFrame(parallaxRaf);
+      window.removeEventListener("scroll", onParallaxScroll);
+      window.removeEventListener("resize", onParallaxScroll);
     };
   }, []);
 
