@@ -1688,7 +1688,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Medizym Anti TPO",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-elisa-plate.jpg"
     },
     {
         "ref":  "3102",
@@ -1699,7 +1699,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Medizym Anti Tg",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-elisa-plate.jpg"
     },
     {
         "ref":  "3505",
@@ -1710,7 +1710,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Medizym TRA human",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-elisa-plate.jpg"
     },
     {
         "ref":  "3506",
@@ -1721,7 +1721,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Medizym IA2 M",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-elisa-plate.jpg"
     },
     {
         "ref":  "3507",
@@ -1732,7 +1732,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Medizym Anti GAD M",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-elisa-plate.jpg"
     },
     {
         "ref":  "3806",
@@ -1743,7 +1743,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Medizym IAA",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-elisa-plate.jpg"
     },
     {
         "ref":  "3600",
@@ -1754,7 +1754,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Anti Intrinsic Factor",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-elisa-plate.jpg"
     },
     {
         "ref":  "3610",
@@ -1765,7 +1765,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Anti GPC",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-elisa-plate.jpg"
     },
     {
         "ref":  "3665",
@@ -1776,7 +1776,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Anti CCP",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-elisa-plate.jpg"
     },
     {
         "ref":  "3710",
@@ -1787,7 +1787,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "GliaDea IgA",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-elisa-plate.jpg"
     },
     {
         "ref":  "3810",
@@ -1798,7 +1798,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "GliaDea IgG",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-elisa-plate.jpg"
     },
     {
         "ref":  "4033",
@@ -1809,7 +1809,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Anti hu Ttg IgA",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-elisa-plate.jpg"
     },
     {
         "ref":  "4044",
@@ -1820,7 +1820,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Anti hu tTG IgG",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-elisa-plate.jpg"
     },
     {
         "ref":  "4035",
@@ -1831,7 +1831,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "CeliaK EmA IgA",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-elisa-plate.jpg"
     },
     {
         "ref":  "4045",
@@ -1842,7 +1842,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "CeliaK EmA IgG",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-elisa-plate.jpg"
     },
     {
         "ref":  "3950",
@@ -1853,7 +1853,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Pancreatitis GP2",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-elisa-plate.jpg"
     },
     {
         "ref":  "3900",
@@ -1864,7 +1864,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Anti ASGPR",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-elisa-plate.jpg"
     },
     {
         "ref":  "4006",
@@ -1875,7 +1875,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "ASCA IgA",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-elisa-plate.jpg"
     },
     {
         "ref":  "4007",
@@ -1886,7 +1886,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "ASCA IgG",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-elisa-plate.jpg"
     },
     {
         "ref":  "4010",
@@ -1897,7 +1897,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "ANA screen",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-elisa-plate.jpg"
     },
     {
         "ref":  "4012",
@@ -1908,7 +1908,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "ANA Pro",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-elisa-plate.jpg"
     },
     {
         "ref":  "4015",
@@ -1919,7 +1919,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Anti dsDNA",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-elisa-plate.jpg"
     },
     {
         "ref":  "3750",
@@ -1930,7 +1930,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Anti GP2 IgA",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-elisa-plate.jpg"
     },
     {
         "ref":  "3850",
@@ -1941,7 +1941,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Anti GP2 IgG",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-elisa-plate.jpg"
     },
     {
         "ref":  "4036",
@@ -1952,7 +1952,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Anti beta2GP-I Screen",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-elisa-plate.jpg"
     },
     {
         "ref":  "4041",
@@ -1963,7 +1963,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Anti beta2GP-I",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-elisa-plate.jpg"
     },
     {
         "ref":  "4014",
@@ -1974,7 +1974,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Anti cardiolipine screen",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-elisa-plate.jpg"
     },
     {
         "ref":  "4016",
@@ -1985,7 +1985,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Anti cardiolipin IgG IgM",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-elisa-plate.jpg"
     },
     {
         "ref":  "4050",
@@ -1996,7 +1996,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Anti Phospholipid Screen",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-elisa-plate.jpg"
     },
     {
         "ref":  "4056",
@@ -2007,7 +2007,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Anti phosphatidyl-serin",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-elisa-plate.jpg"
     },
     {
         "ref":  "4027",
@@ -2018,7 +2018,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "RF IgA",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-elisa-plate.jpg"
     },
     {
         "ref":  "4046",
@@ -2029,7 +2029,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "RF IgM",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-elisa-plate.jpg"
     },
     {
         "ref":  "4085",
@@ -2040,7 +2040,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "RF IgG",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-elisa-plate.jpg"
     },
     {
         "ref":  "4058",
@@ -2051,7 +2051,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Anti MPO",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-elisa-plate.jpg"
     },
     {
         "ref":  "4259",
@@ -2062,7 +2062,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Anti PR3",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-elisa-plate.jpg"
     },
     {
         "ref":  "4052",
@@ -2073,7 +2073,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Anti M2",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-elisa-plate.jpg"
     },
     {
         "ref":  "4053",
@@ -2084,7 +2084,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Anti LKM1",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-elisa-plate.jpg"
     },
     {
         "ref":  "4067",
@@ -2095,7 +2095,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Anti Faktor H",
         "cat":  "autoimmunite",
         "conditionnement":  "48 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-elisa-plate.jpg"
     },
     {
         "ref":  "6012",
@@ -2106,7 +2106,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Helicobacter pylori Antigen",
         "cat":  "autoimmunite",
         "conditionnement":  "48/96 tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-elisa-plate.jpg"
     },
     {
         "label":  "Auto-Immunite -DOT Manuel",
@@ -2121,7 +2121,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Dot Anti gangiosid",
         "cat":  "autoimmunite",
         "conditionnement":  "20 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/medipan-dot-manuel-kit.jpg"
     },
     {
         "ref":  "5012",
@@ -2132,7 +2132,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Dot Anti phospholipide 10",
         "cat":  "autoimmunite",
         "conditionnement":  "20 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/medipan-dot-manuel-kit.jpg"
     },
     {
         "ref":  "4028",
@@ -2143,7 +2143,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Dot ANCA",
         "cat":  "autoimmunite",
         "conditionnement":  "20 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/medipan-dot-manuel-kit.jpg"
     },
     {
         "ref":  "4030",
@@ -2154,7 +2154,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Dot HepAk plus",
         "cat":  "autoimmunite",
         "conditionnement":  "24 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/medipan-dot-manuel-kit.jpg"
     },
     {
         "ref":  "4099",
@@ -2165,7 +2165,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Dot HepAk 7plus",
         "cat":  "autoimmunite",
         "conditionnement":  "24 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/medipan-dot-manuel-kit.jpg"
     },
     {
         "ref":  "4074",
@@ -2176,7 +2176,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Dot ANAscl plus",
         "cat":  "autoimmunite",
         "conditionnement":  "24 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/medipan-dot-manuel-kit.jpg"
     },
     {
         "ref":  "4049",
@@ -2187,7 +2187,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "Dot PMScl plus",
         "cat":  "autoimmunite",
         "conditionnement":  "24 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/medipan-dot-manuel-kit.jpg"
     },
     {
         "ref":  "4289",
@@ -2198,7 +2198,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "LINE ANA 12",
         "cat":  "autoimmunite",
         "conditionnement":  "20 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/medipan-dot-manuel-kit.jpg"
     },
     {
         "ref":  "4291",
@@ -2209,7 +2209,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "LINE ANA 18",
         "cat":  "autoimmunite",
         "conditionnement":  "20 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/medipan-dot-manuel-kit.jpg"
     },
     {
         "ref":  "4202",
@@ -2220,7 +2220,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "LINE CELIAK IgG",
         "cat":  "autoimmunite",
         "conditionnement":  "20 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/medipan-dot-manuel-kit.jpg"
     },
     {
         "ref":  "4208",
@@ -2231,7 +2231,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "LINE CELIAK IgA",
         "cat":  "autoimmunite",
         "conditionnement":  "20 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/medipan-dot-manuel-kit.jpg"
     },
     {
         "ref":  "4220",
@@ -2242,7 +2242,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "LINE BiermAK",
         "cat":  "autoimmunite",
         "conditionnement":  "20 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/medipan-dot-manuel-kit.jpg"
     },
     {
         "label":  "Auto-Immunite -IFI Manuel",
@@ -2257,7 +2257,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "ANA HEP-2 PLUS",
         "cat":  "autoimmunite",
         "conditionnement":  "120 Tests (10 Lames de 12 Puits)",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-ifi-hep2.jpg"
     },
     {
         "ref":  "81040",
@@ -2268,7 +2268,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "ANA HEP-2 PLUS XL",
         "cat":  "autoimmunite",
         "conditionnement":  "480 Tests (40 Lames de 12 Puits)",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-ifi-hep2.jpg"
     },
     {
         "ref":  "86048",
@@ -2279,7 +2279,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "IFA EmA S",
         "cat":  "autoimmunite",
         "conditionnement":  "48 Tests (12 Lames de 4 Puits)",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-ifi-hep2.jpg"
     },
     {
         "ref":  "86096",
@@ -2290,7 +2290,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "IFA EmA L",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests (12 Lames de 8 Puits)",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-ifi-hep2.jpg"
     },
     {
         "ref":  "81050",
@@ -2301,7 +2301,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "IFA plus nDNA S",
         "cat":  "autoimmunite",
         "conditionnement":  "60 Tests (10 Lames de 6 Puits)",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-ifi-hep2.jpg"
     },
     {
         "ref":  "81100",
@@ -2312,7 +2312,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "IFA plus nDNA L",
         "cat":  "autoimmunite",
         "conditionnement":  "120 Tests (10 Lames de 12 Puits)",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-ifi-hep2.jpg"
     },
     {
         "ref":  "8049",
@@ -2323,7 +2323,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "IFA Anti-MuSK",
         "cat":  "autoimmunite",
         "conditionnement":  "60 Tests (10 Lames de 6 Puits)",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-ifi-hep2.jpg"
     },
     {
         "ref":  "83048",
@@ -2334,7 +2334,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "IFA AMA",
         "cat":  "autoimmunite",
         "conditionnement":  "48 Tests (12 Lames de 4 Puits)",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-ifi-hep2.jpg"
     },
     {
         "ref":  "84048",
@@ -2345,7 +2345,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "IFA ASMA",
         "cat":  "autoimmunite",
         "conditionnement":  "48 Tests (12 Lames de 4 Puits)",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-ifi-hep2.jpg"
     },
     {
         "ref":  "85048",
@@ -2356,7 +2356,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "IFA Triple Substrat LKS S",
         "cat":  "autoimmunite",
         "conditionnement":  "48 Tests (12 Lames de 4 Puits)",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-ifi-hep2.jpg"
     },
     {
         "ref":  "85096",
@@ -2367,7 +2367,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "IFA Triple Substrat LKS L",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests (12 Lames de 8 Puits)",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-ifi-hep2.jpg"
     },
     {
         "ref":  "85848",
@@ -2378,7 +2378,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "IFA ICA",
         "cat":  "autoimmunite",
         "conditionnement":  "48 Tests (12 Lames de 4 Puits)",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-ifi-hep2.jpg"
     },
     {
         "ref":  "86148",
@@ -2389,7 +2389,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "IFA ASA",
         "cat":  "autoimmunite",
         "conditionnement":  "48 Tests (12 Lames de 4 Puits)",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-ifi-hep2.jpg"
     },
     {
         "ref":  "86448",
@@ -2400,7 +2400,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "IFA Anti-GBM",
         "cat":  "autoimmunite",
         "conditionnement":  "48 Tests (12 Lames de 4 Puits)",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-ifi-hep2.jpg"
     },
     {
         "ref":  "87061",
@@ -2411,7 +2411,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "IFA plus cANCA",
         "cat":  "autoimmunite",
         "conditionnement":  "60 Tests (10 Lames de 6 Puits)",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-ifi-hep2.jpg"
     },
     {
         "ref":  "87161",
@@ -2422,7 +2422,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "IFA plus pANCA",
         "cat":  "autoimmunite",
         "conditionnement":  "60 Tests (10 Lames de 6 Puits)",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-ifi-hep2.jpg"
     },
     {
         "ref":  "87261",
@@ -2433,7 +2433,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "IFA ANCA DUAL",
         "cat":  "autoimmunite",
         "conditionnement":  "24 Tests (6 Lames de 4 Puits)",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-ifi-hep2.jpg"
     },
     {
         "ref":  "8063",
@@ -2444,7 +2444,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "CytoBead ANCA",
         "cat":  "autoimmunite",
         "conditionnement":  "48 Tests (6 Lames de 8 Puits)",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-cytobead-slides.png"
     },
     {
         "ref":  "8064",
@@ -2455,7 +2455,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "CytoBead CeliAK",
         "cat":  "autoimmunite",
         "conditionnement":  "48 Tests (6 Lames de 8 Puits)",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-cytobead-slides.png"
     },
     {
         "ref":  "8065",
@@ -2466,7 +2466,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "CytoBead ANA",
         "cat":  "autoimmunite",
         "conditionnement":  "80 Tests (10 Lames de 6 Puits)",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-cytobead-slides.png"
     },
     {
         "ref":  "8220",
@@ -2477,7 +2477,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "CytoBead ANA 2",
         "cat":  "autoimmunite",
         "conditionnement":  "80 Tests (10 Lames de 6 Puits)",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-ifi-hep2.jpg"
     },
     {
         "label":  "Auto-Immunite -Reactifs DOT Automatises",
@@ -2492,7 +2492,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "DotDiver CeliAK IgA",
         "cat":  "autoimmunite",
         "conditionnement":  "24 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/medipan-dot-diver.png"
     },
     {
         "ref":  "5015",
@@ -2503,7 +2503,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "DotDiver CeliAK IgG",
         "cat":  "autoimmunite",
         "conditionnement":  "24 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/medipan-dot-diver.png"
     },
     {
         "ref":  "5016",
@@ -2514,7 +2514,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "DotDiver ANA",
         "cat":  "autoimmunite",
         "conditionnement":  "24 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/medipan-dot-diver.png"
     },
     {
         "ref":  "5017",
@@ -2525,7 +2525,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "DotDiver PmScl",
         "cat":  "autoimmunite",
         "conditionnement":  "24 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/medipan-dot-diver.png"
     },
     {
         "ref":  "5045",
@@ -2536,7 +2536,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "DotDiver PmScl 12",
         "cat":  "autoimmunite",
         "conditionnement":  "24 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/medipan-dot-diver.png"
     },
     {
         "ref":  "5066",
@@ -2547,7 +2547,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "DotDiver ANAcyto 10",
         "cat":  "autoimmunite",
         "conditionnement":  "24 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/medipan-dot-diver.png"
     },
     {
         "ref":  "5020",
@@ -2558,7 +2558,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "DotDiver Quantrix ANA",
         "cat":  "autoimmunite",
         "conditionnement":  "24 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/medipan-dot-diver.png"
     },
     {
         "ref":  "5018",
@@ -2569,7 +2569,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "DotDiver ANCA",
         "cat":  "autoimmunite",
         "conditionnement":  "24 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/medipan-dot-diver.png"
     },
     {
         "ref":  "5019",
@@ -2580,7 +2580,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "DotDiver BiermAK",
         "cat":  "autoimmunite",
         "conditionnement":  "24 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/medipan-dot-diver.png"
     },
     {
         "ref":  "5070",
@@ -2591,7 +2591,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "DotDiver HepAK 10",
         "cat":  "autoimmunite",
         "conditionnement":  "24 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/medipan-dot-diver.png"
     },
     {
         "ref":  "5021",
@@ -2602,7 +2602,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "DotDiver HepAK 7plus",
         "cat":  "autoimmunite",
         "conditionnement":  "24 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/medipan-dot-diver.png"
     },
     {
         "ref":  "50301",
@@ -2613,7 +2613,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "DotDiver Anti Gangliosid screen",
         "cat":  "autoimmunite",
         "conditionnement":  "24 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/medipan-dot-diver.png"
     },
     {
         "ref":  "5035",
@@ -2624,7 +2624,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "DotDiver ANA PCNA",
         "cat":  "autoimmunite",
         "conditionnement":  "24 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/medipan-dot-diver.png"
     },
     {
         "ref":  "50381",
@@ -2635,7 +2635,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "DotDiver Anti Gangliosid IgG",
         "cat":  "autoimmunite",
         "conditionnement":  "24 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/medipan-dot-diver.png"
     },
     {
         "ref":  "50391",
@@ -2646,7 +2646,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "DotDiver Anti Gangliosid IgM",
         "cat":  "autoimmunite",
         "conditionnement":  "24 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/medipan-dot-diver.png"
     },
     {
         "ref":  "50401",
@@ -2657,7 +2657,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "DotDiver Anti Phospholipid IgG",
         "cat":  "autoimmunite",
         "conditionnement":  "24 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/medipan-dot-diver.png"
     },
     {
         "ref":  "50411",
@@ -2668,7 +2668,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "DotDiver Anti Phospholipid IgM",
         "cat":  "autoimmunite",
         "conditionnement":  "24 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/medipan-dot-diver.png"
     },
     {
         "ref":  "5069",
@@ -2679,7 +2679,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "DotDiver Scleroderma 10",
         "cat":  "autoimmunite",
         "conditionnement":  "24 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/medipan-dot-diver.png"
     },
     {
         "ref":  "5093",
@@ -2690,7 +2690,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "DotDiver Myositis 12",
         "cat":  "autoimmunite",
         "conditionnement":  "24 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/medipan-dot-diver.png"
     },
     {
         "ref":  "5291",
@@ -2701,7 +2701,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "DotDiver ANA 18",
         "cat":  "autoimmunite",
         "conditionnement":  "24 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/medipan-dot-diver.png"
     },
     {
         "label":  "Auto-Immunite -Reactifs IFI Automatises AKLIDES",
@@ -2716,7 +2716,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "AKLIDES cANCA",
         "cat":  "autoimmunite",
         "conditionnement":  "60 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-aklides-ifa-slide.png"
     },
     {
         "ref":  "4065",
@@ -2727,7 +2727,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "AKLIDES ANA plus S",
         "cat":  "autoimmunite",
         "conditionnement":  "120 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-aklides-ifa-slide.png"
     },
     {
         "ref":  "4063",
@@ -2738,7 +2738,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "AKLIDES ANA plus L",
         "cat":  "autoimmunite",
         "conditionnement":  "480 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-aklides-ifa-slide.png"
     },
     {
         "ref":  "4072",
@@ -2749,7 +2749,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "AKLIDES pANCA",
         "cat":  "autoimmunite",
         "conditionnement":  "60 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-aklides-ifa-slide.png"
     },
     {
         "ref":  "4117",
@@ -2760,7 +2760,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "AKLIDES AMA",
         "cat":  "autoimmunite",
         "conditionnement":  "48 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-aklides-ifa-slide.png"
     },
     {
         "ref":  "4119",
@@ -2771,7 +2771,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "AKLIDES ASMA",
         "cat":  "autoimmunite",
         "conditionnement":  "48 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-aklides-ifa-slide.png"
     },
     {
         "ref":  "4121",
@@ -2782,7 +2782,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "AKLIDES Triple substrat LKS S",
         "cat":  "autoimmunite",
         "conditionnement":  "48 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-aklides-ifa-slide.png"
     },
     {
         "ref":  "4122",
@@ -2793,7 +2793,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "AKLIDES Triple substrat LKS L",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-aklides-ifa-slide.png"
     },
     {
         "ref":  "4123",
@@ -2804,7 +2804,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "AKLIDES Anti-GBM",
         "cat":  "autoimmunite",
         "conditionnement":  "48 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-aklides-ifa-slide.png"
     },
     {
         "ref":  "4125",
@@ -2815,7 +2815,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "AKLIDES ASA",
         "cat":  "autoimmunite",
         "conditionnement":  "60 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-aklides-ifa-slide.png"
     },
     {
         "ref":  "4129",
@@ -2826,7 +2826,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "AKLIDES ICA",
         "cat":  "autoimmunite",
         "conditionnement":  "48 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-aklides-ifa-slide.png"
     },
     {
         "ref":  "4131",
@@ -2837,7 +2837,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "AKLIDES EmA Endomysium S",
         "cat":  "autoimmunite",
         "conditionnement":  "48 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-aklides-ifa-slide.png"
     },
     {
         "ref":  "4132",
@@ -2848,7 +2848,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "AKLIDES EmA Endomysium L",
         "cat":  "autoimmunite",
         "conditionnement":  "96 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-aklides-ifa-slide.png"
     },
     {
         "ref":  "4282",
@@ -2859,7 +2859,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "AKLIDES Ndna",
         "cat":  "autoimmunite",
         "conditionnement":  "60 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-aklides-ifa-slide.png"
     },
     {
         "ref":  "4270",
@@ -2870,7 +2870,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "AKLIDES CytoBead ANCA",
         "cat":  "autoimmunite",
         "conditionnement":  "48 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-cytobead-slides.png"
     },
     {
         "ref":  "4271",
@@ -2881,7 +2881,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "AKLIDES CytoBead CeliAK",
         "cat":  "autoimmunite",
         "conditionnement":  "48 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-cytobead-slides.png"
     },
     {
         "ref":  "4272",
@@ -2892,7 +2892,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "AKLIDES CytoBead ANA",
         "cat":  "autoimmunite",
         "conditionnement":  "80 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-cytobead-slides.png"
     },
     {
         "ref":  "4277",
@@ -2903,7 +2903,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "AKLIDES CytoBead ANA 2",
         "cat":  "autoimmunite",
         "conditionnement":  "80 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-cytobead-slides.png"
     },
     {
         "ref":  "4471",
@@ -2914,7 +2914,7 @@ export const REACTIFS: GridItem[] = [
         "desc":  "AKLIDES ANCA DUAL",
         "cat":  "autoimmunite",
         "conditionnement":  "60 Tests",
-        "image":  "/images/partenaires/erba.png"
+        "image":  "/images/reactifs/ga-aklides-ifa-slide.png"
     },
     {
         "label":  "Auto-Immunite - Reactifs CLIA",
