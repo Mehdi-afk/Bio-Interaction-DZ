@@ -132,7 +132,7 @@ const ProductCard = memo(function ProductCard({
             alt={product.desc}
             loading="lazy"
             className={`w-full h-full transition-transform duration-300 group-hover:scale-105 ${
-              product.image?.includes("logo") ? "object-contain p-4" : "object-cover"
+              product.image?.includes("logo") || product.image?.includes("/partenaires/") ? "object-contain p-4" : "object-cover"
             }`}
           />
         ) : (
@@ -402,7 +402,7 @@ function ProductPage({
                   src={product.image}
                   alt={product.desc}
                   className={`w-full h-full transition-transform duration-300 hover:scale-105 ${
-                    product.image?.includes("logo") ? "object-contain p-6" : "object-cover"
+                    product.image?.includes("logo") || product.image?.includes("/partenaires/") ? "object-contain p-6" : "object-cover"
                   }`}
                 />
               ) : (

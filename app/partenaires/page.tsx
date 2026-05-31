@@ -24,7 +24,7 @@ const PARTNERS: Partner[] = [
     description:
       "Solutions IVD complètes en biochimie clinique, hématologie, immunologie, " +
       "coagulation et urinalyse. Présent dans plus de 100 pays.",
-    website: "https://www.erbamannheim.com",
+    website: "https://www.erbalachema.com/en/",
   },
   {
     name: "Generic Assays",
