@@ -2,17 +2,6 @@
 
 import Link from "next/link";
 import { REACTIFS } from "@/src/data/products-reactifs";
-import PinnedShowcase, { type PinnedItem } from "@/src/components/homepage/PinnedShowcase";
-
-const FLAGSHIP: readonly PinnedItem[] = [
-  { key: "xl-syspack",  href: "/catalogue/reactifs?cat=biochimie",     label: "ERBA XL Syspack",       desc: "Réactifs biochimie clinique à tag RFID pour analyseurs ERBA XL.", image: "/images/reactifs/erba-xl-syspack.jpg" },
-  { key: "h580-kit",    href: "/catalogue/reactifs?cat=hematologie",   label: "ERBA H-Series Kit",     desc: "Réactifs hématologie 6-DIFF pour analyseurs ERBA Elite 580.",     image: "/images/reactifs/erba-h580-kit.jpg" },
-  { key: "ecl-kit",     href: "/catalogue/reactifs?cat=hemostase",     label: "ERBA ECL Kit",          desc: "Réactifs hémostase TP, TCA, fibrinogène, D-Dimères.",             image: "/images/reactifs/erba-ecl-kit.webp" },
-  { key: "ec90-cart",   href: "/catalogue/reactifs?cat=urines",        label: "ERBA EC 90 Cartridge", desc: "Bandelettes urinaires pour analyseur ERBA EC 90.",                image: "/images/reactifs/erba-ec90-cartridge.jpg" },
-  { key: "aklides-ifa", href: "/catalogue/reactifs?cat=autoimmunite",  label: "GA AKLIDES® IFA",       desc: "Lames d'immunofluorescence indirecte pour diagnostic auto-immun.", image: "/images/reactifs/ga-aklides-ifa-slide.png" },
-  { key: "hob-ifi",     href: "/catalogue/reactifs?cat=allergie",      label: "HOB IFI Manual",        desc: "Tests d'immunofluorescence pour diagnostic allergique.",           image: "/images/reactifs/hob-ifi-manuel-kit.png" },
-  { key: "ldbio-wb",    href: "/catalogue/reactifs?cat=parasitologie", label: "LDBIO Western Blot",   desc: "Tests sérologiques de confirmation parasitologie & mycologie.",    image: "/images/reactifs/ldbio-aspergillus-wb.jpg" },
-];
 
 // ── SVG icons — feather-style 24×24 ──────────────────────────────────────────
 
@@ -183,13 +172,6 @@ export default function ReactifsLanding() {
           </div>
         </div>
       </section>
-
-      {/* ── Pinned scroll horizontal showcase (desktop ≥ 900px) ─── */}
-      <PinnedShowcase
-        badge="Sélection phare"
-        title={<>Nos réactifs <em className="text-[#29A864] not-italic">de référence</em>.</>}
-        items={FLAGSHIP}
-      />
     </>
   );
 }
