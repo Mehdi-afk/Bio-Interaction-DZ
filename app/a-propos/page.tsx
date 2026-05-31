@@ -8,9 +8,6 @@ export const metadata: Metadata = {
     "accompagne les laboratoires algériens avec des réactifs et équipements de qualité internationale.",
 };
 
-// ── Icônes SVG — grille 32×32, stroke 2, linecap/linejoin round, fill none ──
-// Conformes au Brand Book BioInteraction 2026 · page 16 — Iconographie
-
 function IconCertified({ className }: { className?: string }) {
   return (
     <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true">
@@ -19,16 +16,13 @@ function IconCertified({ className }: { className?: string }) {
     </svg>
   );
 }
-
 function IconClock({ className }: { className?: string }) {
   return (
     <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true">
-      <circle cx="16" cy="16" r="11" />
-      <polyline points="16,10 16,16 20,19" />
+      <circle cx="16" cy="16" r="11" /><polyline points="16,10 16,16 20,19" />
     </svg>
   );
 }
-
 function IconWrench({ className }: { className?: string }) {
   return (
     <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true">
@@ -37,7 +31,6 @@ function IconWrench({ className }: { className?: string }) {
     </svg>
   );
 }
-
 function IconLink({ className }: { className?: string }) {
   return (
     <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true">
@@ -46,7 +39,6 @@ function IconLink({ className }: { className?: string }) {
     </svg>
   );
 }
-
 function IconPhone({ className }: { className?: string }) {
   return (
     <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true">
@@ -54,16 +46,13 @@ function IconPhone({ className }: { className?: string }) {
     </svg>
   );
 }
-
 function IconMail({ className }: { className?: string }) {
   return (
     <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true">
-      <rect x="4" y="8" width="24" height="18" rx="2" />
-      <polyline points="4,8 16,18 28,8" />
+      <rect x="4" y="8" width="24" height="18" rx="2" /><polyline points="4,8 16,18 28,8" />
     </svg>
   );
 }
-
 function IconPin({ className }: { className?: string }) {
   return (
     <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true">
@@ -72,8 +61,6 @@ function IconPin({ className }: { className?: string }) {
     </svg>
   );
 }
-
-// ── Data ───────────────────────────────────────────────────────────────────────
 
 const VALUES = [
   {
@@ -98,163 +85,219 @@ const VALUES = [
   },
 ] as const;
 
-// ── Page ───────────────────────────────────────────────────────────────────────
-
 export default function AProposPage() {
   return (
     <>
-      {/* ════════════════════════════════════════
-          HERO — dégradé vert #0F4226 → #29A864
-          ════════════════════════════════════════ */}
-      <div
-        className="relative overflow-hidden py-20 px-12 max-[1024px]:px-6 max-[600px]:py-9 max-[600px]:px-4"
-        style={{ background: "linear-gradient(135deg, #0F4226 0%, #29A864 100%)" }}
-      >
-        {/* Cercle décoratif (pseudo-élément recréé) */}
+      {/* ════════════════════════════════════════════════════════
+          HERO — noir cinématique
+          ════════════════════════════════════════════════════════ */}
+      <section className="relative min-h-[calc(100vh-68px)] flex flex-col items-center justify-center bg-[#0A0A0A] text-white px-6 py-24 text-center overflow-hidden">
         <div
-          className="absolute -top-[100px] -right-[100px] w-[500px] h-[500px] rounded-full pointer-events-none"
-          style={{ background: "rgba(255,255,255,0.06)" }}
+          className="absolute inset-0 pointer-events-none"
           aria-hidden="true"
+          style={{ background: "radial-gradient(ellipse 800px 500px at 50% 65%, rgba(41,168,100,0.11) 0%, transparent 68%)" }}
+        />
+        <div
+          className="absolute inset-0 pointer-events-none opacity-[0.02]"
+          aria-hidden="true"
+          style={{
+            backgroundImage: "linear-gradient(rgba(255,255,255,1) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,1) 1px,transparent 1px)",
+            backgroundSize: "80px 80px",
+          }}
         />
 
-        <div className="max-w-[1200px] mx-auto relative">
-          <h1
-            className="reveal font-serif text-[48px] leading-[1.15] text-white mb-4 max-w-[600px]
-              max-[900px]:text-[32px] max-[600px]:text-[26px]"
-          >
-            Expertise scientifique, service de proximité
-          </h1>
-          <p className="reveal reveal-d1 text-white/75 text-[17px] leading-[1.7] max-w-[560px] max-[600px]:text-[15px]">
-            Actif depuis 2016 dans le domaine du diagnostic médical, Bio Interaction
-            Algérie accompagne les laboratoires algériens avec des réactifs et équipements
-            de qualité internationale.
-          </p>
+        <div className="reveal relative z-10 inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#29A864]/30 bg-[#29A864]/8 text-[#29A864] text-[11px] font-semibold tracking-[0.8px] uppercase mb-8">
+          <span className="w-[7px] h-[7px] rounded-full bg-[#29A864] animate-pulse shrink-0" />
+          À propos · Actifs depuis 2016
         </div>
-      </div>
 
-      {/* ════════════════════════════════════════
-          CORPS — Notre histoire + Valeurs
-          ════════════════════════════════════════ */}
-      <div className="max-w-[1200px] mx-auto py-20 px-12 max-[1024px]:px-6 max-[900px]:py-[60px] max-[600px]:py-8 max-[600px]:px-4">
-        <div className="grid grid-cols-2 gap-16 items-start mb-20
-          max-[900px]:grid-cols-1 max-[900px]:gap-10 max-[900px]:mb-12
-          max-[600px]:gap-7 max-[600px]:mb-10">
+        <h1
+          className="reveal reveal-d1 font-serif text-white leading-[1.06] max-w-[800px] mb-6"
+          style={{ fontSize: "clamp(32px, 5.5vw, 70px)" }}
+        >
+          Expertise scientifique,<br />
+          <em className="text-[#29A864] not-italic">service de proximité</em>.
+        </h1>
 
-          {/* ── Notre histoire ── */}
-          <div className="reveal">
-            <h2 className="font-serif text-[32px] mb-5 max-[600px]:text-[26px]">
+        <p
+          className="reveal reveal-d2 text-white/45 leading-[1.75] max-w-[440px]"
+          style={{ fontSize: "clamp(15px, 1.6vw, 17px)" }}
+        >
+          Actif depuis 2016 dans le domaine du diagnostic médical, Bio Interaction
+          Algérie accompagne les laboratoires algériens avec des solutions
+          de qualité internationale.
+        </p>
+
+        <div className="absolute bottom-9 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 max-[600px]:hidden" aria-hidden="true">
+          <span className="text-[10px] font-semibold tracking-[1px] uppercase text-white/20">Notre histoire</span>
+          <div className="w-px h-10 bg-gradient-to-b from-white/25 to-transparent" />
+        </div>
+      </section>
+
+
+      {/* ════════════════════════════════════════════════════════
+          NOTRE HISTOIRE — blanc, typographie large
+          ════════════════════════════════════════════════════════ */}
+      <section className="bg-white py-28 px-12 max-[1024px]:px-6 max-[600px]:px-4 max-[600px]:py-16 overflow-hidden">
+        <div className="max-w-[1100px] mx-auto">
+
+          <div className="reveal mb-16 max-[600px]:mb-10">
+            <span className="inline-block text-[11px] font-semibold tracking-[0.7px] uppercase text-[#29A864] mb-4">
               Notre histoire
+            </span>
+            <h2
+              className="font-serif text-[#1B1F1D] leading-[1.1]"
+              style={{ fontSize: "clamp(28px, 4vw, 54px)" }}
+            >
+              Fondés sur la confiance,<br className="max-[768px]:hidden" /> engagés pour l&apos;excellence.
             </h2>
-            <p className="text-[#6E6E6E] text-[15px] leading-[1.8] mb-3.5">
-              Activant depuis 2016 dans le domaine du diagnostic médical,
-              et étant toujours à l&apos;écoute de nos clients nous travaillons à trouver la
-              meilleure façon de répondre à leurs attentes, en commercialisant des
-              solutions innovantes et de grande qualité, répondant aux besoins des
-              patients, en équipements, réactifs et consommables de laboratoires
-              d&apos;analyses médicales.
-            </p>
-            <p className="text-[#6E6E6E] text-[15px] leading-[1.8] mb-3.5">
-              Passionnés par le métier que nous exerçons, notre réputation
-              est l&apos;un de nos actifs les plus précieux après le bien-être des patients,
-              et la satisfaction de nos partenaires, voilà pourquoi nous ne mesurons
-              pas nos performances uniquement en considérant les résultats en
-              tant que tels mais également la manière de les obtenir.
-            </p>
-            <p className="text-[#6E6E6E] text-[15px] leading-[1.8] mb-3.5">
-              Notre ligne de conduite est dictée par un comportement
-              responsable, éthique, soucieux de développement durable et
-              respectueux des besoins des personnes, de la société ainsi que de
-              l&apos;environnement.
-            </p>
-            <div className="mt-7">
-              <ContactButton
-                label="Nous contacter"
-                className="
-                  inline-flex items-center py-3 px-7
-                  bg-[#29A864] text-white border-none
-                  rounded-[9px] text-[15px] font-medium cursor-pointer
-                  transition-[background-color,transform] duration-150
-                  hover:bg-[#48BC7E] hover:-translate-y-px
-                "
-              />
-            </div>
           </div>
 
-          {/* ── Valeurs (cartes bordées) ── */}
-          <div className="flex flex-col gap-4">
+          <div className="flex gap-14 max-[900px]:flex-col max-[900px]:gap-0">
+            {/* Timeline marker */}
+            <div className="reveal-left shrink-0 flex flex-col items-center max-[900px]:flex-row max-[900px]:items-center max-[900px]:gap-4 max-[900px]:mb-8">
+              <span
+                className="font-serif text-[#29A864]"
+                style={{ fontSize: "clamp(52px, 8vw, 96px)" }}
+              >
+                2016
+              </span>
+              <div className="w-px flex-1 bg-gradient-to-b from-[#29A864]/40 to-transparent mt-4 max-[900px]:hidden" />
+              <div className="h-px flex-1 bg-gradient-to-r from-[#29A864]/40 to-transparent ml-4 min-[900px]:hidden" />
+            </div>
+
+            {/* Text blocks */}
+            <div className="flex-1">
+              <p className="reveal text-[#6E6E6E] text-[15px] leading-[1.85] mb-5">
+                Activant depuis 2016 dans le domaine du diagnostic médical,
+                et étant toujours à l&apos;écoute de nos clients nous travaillons à trouver la
+                meilleure façon de répondre à leurs attentes, en commercialisant des
+                solutions innovantes et de grande qualité, répondant aux besoins des
+                patients, en équipements, réactifs et consommables de laboratoires
+                d&apos;analyses médicales.
+              </p>
+              <p className="reveal reveal-d1 text-[#6E6E6E] text-[15px] leading-[1.85] mb-5">
+                Passionnés par le métier que nous exerçons, notre réputation
+                est l&apos;un de nos actifs les plus précieux après le bien-être des patients,
+                et la satisfaction de nos partenaires, voilà pourquoi nous ne mesurons
+                pas nos performances uniquement en considérant les résultats en
+                tant que tels mais également la manière de les obtenir.
+              </p>
+              <p className="reveal reveal-d2 text-[#6E6E6E] text-[15px] leading-[1.85] mb-9">
+                Notre ligne de conduite est dictée par un comportement
+                responsable, éthique, soucieux de développement durable et
+                respectueux des besoins des personnes, de la société ainsi que de
+                l&apos;environnement.
+              </p>
+              <div className="reveal reveal-d3">
+                <ContactButton
+                  label="Nous contacter"
+                  className="
+                    inline-flex items-center gap-2 py-3.5 px-7
+                    bg-[#1B1F1D] text-white border-none
+                    rounded-full text-[15px] font-semibold cursor-pointer
+                    transition-[background,transform,box-shadow] duration-150
+                    hover:bg-[#2d3330] hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(0,0,0,0.18)]
+                  "
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      {/* ════════════════════════════════════════════════════════
+          NOS VALEURS — fond sombre
+          ════════════════════════════════════════════════════════ */}
+      <section className="bg-[#1D1D1F] py-28 px-12 max-[1024px]:px-6 max-[600px]:px-4 max-[600px]:py-16">
+        <div className="max-w-[1100px] mx-auto">
+
+          <div className="reveal mb-14 text-center max-[600px]:mb-10">
+            <span className="inline-block text-[11px] font-semibold tracking-[0.7px] uppercase text-[#29A864] mb-4">
+              Nos valeurs
+            </span>
+            <h2
+              className="font-serif text-white leading-[1.1]"
+              style={{ fontSize: "clamp(28px, 4vw, 52px)" }}
+            >
+              Ce qui nous définit.
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-2 gap-4 max-[600px]:grid-cols-1">
             {VALUES.map(({ Icon, title, text }, i) => (
               <div
                 key={title}
-                style={{ transitionDelay: `${i * 70}ms` }}
+                style={{ transitionDelay: `${i * 90}ms` }}
                 className="
-                  reveal flex gap-4 items-start
-                  p-5 border border-[#E5E3DC] rounded-[10px]
-                  transition-colors duration-150 hover:border-[#29A864]
+                  reveal-scale flex gap-5 items-start
+                  bg-white/[0.05] border border-white/[0.08] rounded-2xl p-6
+                  transition-[border-color,background] duration-200
+                  hover:bg-white/[0.08] hover:border-white/[0.16]
                 "
               >
-                {/* Icône 44×44, fond vert pâle */}
-                <div className="shrink-0 w-11 h-11 rounded-[10px] bg-[#EDF8F1] flex items-center justify-center text-[#29A864]">
-                  <Icon className="w-5 h-5" />
+                <div className="shrink-0 w-12 h-12 rounded-[12px] bg-[#29A864]/12 flex items-center justify-center text-[#29A864]">
+                  <Icon className="w-6 h-6" />
                 </div>
                 <div>
-                  <h4 className="text-[15px] font-semibold text-[#1B1F1D] mb-1">
-                    {title}
-                  </h4>
-                  <p className="text-[13px] text-[#6E6E6E] leading-[1.65]">{text}</p>
+                  <h4 className="text-white text-[15px] font-semibold mb-1.5">{title}</h4>
+                  <p className="text-white/45 text-[13px] leading-[1.7]">{text}</p>
                 </div>
               </div>
             ))}
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* ════════════════════════════════════════
-          CONTACT BAND — fond paper #F7F6F2
-          ════════════════════════════════════════ */}
-      <div className="bg-[#F7F6F2] border-t border-[#E5E3DC] py-[60px] px-12 max-[1024px]:px-6 max-[600px]:py-9 max-[600px]:px-4">
-        <div className="max-w-[1200px] mx-auto">
-          <h2 className="reveal font-serif text-[30px] mb-2 max-[600px]:text-[24px]">
-            Nous contacter
-          </h2>
-          <p className="reveal reveal-d1 text-[#6E6E6E] mb-8">
-            Notre équipe est disponible du dimanche au jeudi, de 8h à 17h.
-          </p>
 
-          {/* Grille 3 colonnes — cartes blanches */}
+      {/* ════════════════════════════════════════════════════════
+          CONTACT — fond paper
+          ════════════════════════════════════════════════════════ */}
+      <section className="bg-[#F7F6F2] border-t border-[#E5E3DC] py-24 px-12 max-[1024px]:px-6 max-[600px]:py-14 max-[600px]:px-4">
+        <div className="max-w-[1100px] mx-auto">
+
+          <div className="reveal mb-12 max-[600px]:mb-8">
+            <span className="inline-block text-[11px] font-semibold tracking-[0.7px] uppercase text-[#29A864] mb-4">
+              Contact
+            </span>
+            <h2
+              className="font-serif text-[#1B1F1D] leading-[1.1] mb-3"
+              style={{ fontSize: "clamp(26px, 3.5vw, 44px)" }}
+            >
+              Nous contacter
+            </h2>
+            <p className="reveal reveal-d1 text-[#6E6E6E] text-[15px]">
+              Notre équipe est disponible du dimanche au jeudi, de 8h à 17h.
+            </p>
+          </div>
+
           <div className="grid grid-cols-3 gap-5 max-[1024px]:grid-cols-2 max-[600px]:grid-cols-1 max-[600px]:gap-3">
-
-            {/* Téléphone / Fax */}
-            <div className="reveal bg-white border border-[#E5E3DC] rounded-[10px] p-6 flex gap-4 items-start">
-              <div className="shrink-0 w-[42px] h-[42px] rounded-[9px] bg-[#EDF8F1] flex items-center justify-center text-[#29A864]">
+            <div className="reveal bg-white border border-[#E5E3DC] rounded-2xl p-6 flex gap-4 items-start hover:border-[#29A864] transition-colors duration-150">
+              <div className="shrink-0 w-11 h-11 rounded-[10px] bg-[#EDF8F1] flex items-center justify-center text-[#29A864]">
                 <IconPhone className="w-[18px] h-[18px]" />
               </div>
               <div>
                 <h4 className="text-[14px] font-semibold text-[#1B1F1D] mb-1">Téléphone / Fax</h4>
-                <p className="text-[13px] text-[#6E6E6E] leading-[1.7]">
-                  <a href="tel:+213284648300" className="no-underline text-[#6E6E6E] hover:text-[#29A864] transition-colors block">+213.28.46.48.30</a>
-                  <a href="tel:+213284648900" className="no-underline text-[#6E6E6E] hover:text-[#29A864] transition-colors block">+213.28.46.48.90</a>
-                </p>
+                <a href="tel:+213284648300" className="block text-[13px] text-[#6E6E6E] no-underline hover:text-[#29A864] transition-colors">+213.28.46.48.30</a>
+                <a href="tel:+213284648900" className="block text-[13px] text-[#6E6E6E] no-underline hover:text-[#29A864] transition-colors">+213.28.46.48.90</a>
               </div>
             </div>
 
-            {/* Email */}
-            <div className="reveal reveal-d1 bg-white border border-[#E5E3DC] rounded-[10px] p-6 flex gap-4 items-start">
-              <div className="shrink-0 w-[42px] h-[42px] rounded-[9px] bg-[#EDF8F1] flex items-center justify-center text-[#29A864]">
+            <div className="reveal reveal-d1 bg-white border border-[#E5E3DC] rounded-2xl p-6 flex gap-4 items-start hover:border-[#29A864] transition-colors duration-150">
+              <div className="shrink-0 w-11 h-11 rounded-[10px] bg-[#EDF8F1] flex items-center justify-center text-[#29A864]">
                 <IconMail className="w-[18px] h-[18px]" />
               </div>
               <div>
                 <h4 className="text-[14px] font-semibold text-[#1B1F1D] mb-1">Email</h4>
-                <p className="text-[13px] text-[#6E6E6E] leading-[1.7]">
-                  <a href="mailto:support@biointeractiondz.com" className="no-underline text-[#6E6E6E] hover:text-[#29A864] transition-colors block">support@biointeractiondz.com</a>
-                  <a href="mailto:sales@biointeractiondz.com" className="no-underline text-[#6E6E6E] hover:text-[#29A864] transition-colors block">sales@biointeractiondz.com</a>
-                  <a href="mailto:sav@biointeractiondz.com" className="no-underline text-[#6E6E6E] hover:text-[#29A864] transition-colors block">sav@biointeractiondz.com</a>
-                </p>
+                <a href="mailto:support@biointeractiondz.com" className="block text-[13px] text-[#6E6E6E] no-underline hover:text-[#29A864] transition-colors">support@biointeractiondz.com</a>
+                <a href="mailto:sales@biointeractiondz.com" className="block text-[13px] text-[#6E6E6E] no-underline hover:text-[#29A864] transition-colors">sales@biointeractiondz.com</a>
+                <a href="mailto:sav@biointeractiondz.com" className="block text-[13px] text-[#6E6E6E] no-underline hover:text-[#29A864] transition-colors">sav@biointeractiondz.com</a>
               </div>
             </div>
 
-            {/* Adresse */}
-            <div className="reveal reveal-d2 bg-white border border-[#E5E3DC] rounded-[10px] p-6 flex gap-4 items-start">
-              <div className="shrink-0 w-[42px] h-[42px] rounded-[9px] bg-[#EDF8F1] flex items-center justify-center text-[#29A864]">
+            <div className="reveal reveal-d2 bg-white border border-[#E5E3DC] rounded-2xl p-6 flex gap-4 items-start hover:border-[#29A864] transition-colors duration-150">
+              <div className="shrink-0 w-11 h-11 rounded-[10px] bg-[#EDF8F1] flex items-center justify-center text-[#29A864]">
                 <IconPin className="w-[18px] h-[18px]" />
               </div>
               <div>
@@ -267,20 +310,20 @@ export default function AProposPage() {
             </div>
           </div>
 
-          <div className="mt-8">
+          <div className="reveal mt-10">
             <ContactButton
               label="Envoyer un message →"
               className="
-                inline-flex items-center py-3 px-7
+                inline-flex items-center py-3.5 px-7
                 bg-[#29A864] text-white border-none
-                rounded-[9px] text-[15px] font-medium cursor-pointer
-                transition-[background-color,transform] duration-150
-                hover:bg-[#48BC7E] hover:-translate-y-px
+                rounded-full text-[15px] font-semibold cursor-pointer
+                transition-[background,transform,box-shadow] duration-150
+                hover:bg-[#48BC7E] hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(41,168,100,0.35)]
               "
             />
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 }

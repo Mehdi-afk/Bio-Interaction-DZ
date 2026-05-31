@@ -3,22 +3,82 @@
 import Link from "next/link";
 import { REACTIFS } from "@/src/data/products-reactifs";
 
-// Colors derived from supplier brand logos:
-// ERBA Mannheim (blue) → biochimie, hematologie, hemostase, urines
-// Generic Assays / Medipan (magenta) → elisa
-// HOB Biotech (teal) → autoimmunite, allergie
-// LDBIO Diagnostics (red) → parasitologie
-const CATS = [
-  { value: "biochimie",     label: "Biochimie Clinique",        icon: "⚗️",  bg: "#E6EEF8", color: "#004B9D", iconBg: "#BDD1EF" },
-  { value: "hematologie",   label: "Hématologie",               icon: "🩸",  bg: "#E6EEF8", color: "#004B9D", iconBg: "#BDD1EF" },
-  { value: "hemostase",     label: "Hémostase",                 icon: "💉",  bg: "#E6EEF8", color: "#004B9D", iconBg: "#BDD1EF" },
-  { value: "urines",        label: "Analyse des Urines",        icon: "🧫",  bg: "#E6EEF8", color: "#004B9D", iconBg: "#BDD1EF" },
-  { value: "autoimmunite",  label: "Auto-Immunité",             icon: "🛡️", bg: "#E5F3F7", color: "#0082A0", iconBg: "#B8DCE8" },
-  { value: "allergie",      label: "Allergie",                  icon: "🌿",  bg: "#E5F3F7", color: "#0082A0", iconBg: "#B8DCE8" },
-  { value: "parasitologie", label: "Parasitologie & Mycologie", icon: "🦠",  bg: "#F8E8EC", color: "#B30C2F", iconBg: "#EDBBCA" },
+// ── SVG icons — feather-style 24×24 ──────────────────────────────────────────
+
+function IconFlask({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true">
+      <path d="M9 3h6M10 3v5L6 16a4 4 0 0 0 .5 5 4 4 0 0 0 3 1h5a4 4 0 0 0 3-1 4 4 0 0 0 .5-5L14 8V3"/>
+      <line x1="6.5" y1="14" x2="17.5" y2="14"/>
+    </svg>
+  );
+}
+function IconDrop({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true">
+      <path d="M12 2C8.5 6.5 5 10.5 5 15a7 7 0 0 0 14 0c0-4.5-3.5-8.5-7-13z"/>
+    </svg>
+  );
+}
+function IconWave({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true">
+      <path d="M2 12c1.5-3 3-4.5 4.5-4.5S9 9 10.5 9 13.5 7.5 15 7.5s3 1.5 4.5 4.5"/>
+      <path d="M2 18c1.5-3 3-4.5 4.5-4.5S9 15 10.5 15s3-1.5 4.5-1.5 3 1.5 4.5 4.5"/>
+    </svg>
+  );
+}
+function IconTube({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true">
+      <path d="M9 3h6v11l3 4H6l3-4V3z"/>
+      <line x1="9" y1="10" x2="15" y2="10"/>
+    </svg>
+  );
+}
+function IconShieldCheck({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true">
+      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+      <polyline points="9 12 11 14 15 10"/>
+    </svg>
+  );
+}
+function IconLeaf({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true">
+      <path d="M12 22V12M12 12C12 6 7 2 7 2s-2 7 0 11c0 0 2.5-5 5-1M12 12c0-6 5-10 5-10s2 7 0 11c0 0-2.5-5-5-1"/>
+    </svg>
+  );
+}
+function IconMicroscope({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true">
+      <path d="M6 20h12M9 20v-4M15 20v-4M9 16a6 6 0 0 1 6 0"/>
+      <circle cx="12" cy="8" r="4"/>
+      <line x1="12" y1="4" x2="12" y2="2"/>
+    </svg>
+  );
+}
+
+type CatDef = {
+  value: string;
+  label: string;
+  Icon: ({ className }: { className?: string }) => React.ReactElement | null;
+  accent: string;
+  bg: string;
+};
+
+const CATS: CatDef[] = [
+  { value: "biochimie",     label: "Biochimie Clinique",        Icon: IconFlask,       accent: "#004B9D", bg: "#E6EEF8" },
+  { value: "hematologie",   label: "Hématologie",               Icon: IconDrop,        accent: "#004B9D", bg: "#E6EEF8" },
+  { value: "hemostase",     label: "Hémostase",                 Icon: IconWave,        accent: "#004B9D", bg: "#E6EEF8" },
+  { value: "urines",        label: "Analyse des Urines",        Icon: IconTube,        accent: "#004B9D", bg: "#E6EEF8" },
+  { value: "autoimmunite",  label: "Auto-Immunité",             Icon: IconShieldCheck, accent: "#0082A0", bg: "#E5F3F7" },
+  { value: "allergie",      label: "Allergie",                  Icon: IconLeaf,        accent: "#0082A0", bg: "#E5F3F7" },
+  { value: "parasitologie", label: "Parasitologie & Mycologie", Icon: IconMicroscope,  accent: "#B30C2F", bg: "#F8E8EC" },
 ];
 
-// Computed once at module level — REACTIFS is static imported data
 const PRODUCT_COUNTS: Record<string, number> = {};
 let PRODUCT_TOTAL = 0;
 for (const item of REACTIFS) {
@@ -30,74 +90,88 @@ for (const item of REACTIFS) {
 
 export default function ReactifsLanding() {
   return (
-    <div className="max-w-[1200px] mx-auto px-12 py-16 max-[1024px]:px-6 max-[1024px]:py-12 max-[600px]:px-4 max-[600px]:py-9">
-
-      <div className="reveal mb-12 max-[600px]:mb-8 flex items-end justify-between gap-4 flex-wrap">
-        <div>
-          <h1 className="font-serif text-[38px] mb-3 max-[600px]:text-[28px]">
-            Réactifs de laboratoire
-          </h1>
-          <p className="text-[#6E6E6E] text-[16px]">
-            Sélectionnez une spécialité pour explorer nos références.
-          </p>
-        </div>
-        <Link
-          href="/catalogue/reactifs?all=1"
-          className="
-            shrink-0 inline-flex items-center gap-2 px-5 py-2.5
-            border border-[#E5E3DC] rounded-xl bg-white no-underline
-            text-[14px] font-medium text-[#6E6E6E]
-            transition-all duration-150
-            hover:border-[#29A864] hover:text-[#29A864] hover:bg-[#EDF8F1]
-          "
-        >
-          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4" aria-hidden="true">
-            <rect x="2" y="2" width="7" height="7" rx="1"/><rect x="11" y="2" width="7" height="7" rx="1"/>
-            <rect x="2" y="11" width="7" height="7" rx="1"/><rect x="11" y="11" width="7" height="7" rx="1"/>
-          </svg>
-          Voir tous les réactifs
-          <span className="text-[12px] px-1.5 py-0.5 bg-[#F7F6F2] rounded-full text-[#A9ADAA]">
-            {PRODUCT_TOTAL}
-          </span>
-        </Link>
-      </div>
-
-      <div className="
-        grid grid-cols-4 gap-5
-        max-[1024px]:grid-cols-3
-        max-[768px]:grid-cols-2
-        max-[480px]:grid-cols-1 max-[480px]:gap-3
-      ">
-        {CATS.map((cat, i) => (
+    <>
+      {/* ── Header sombre ──────────────────────────────────────── */}
+      <section className="bg-[#1D1D1F] py-20 px-12 max-[1024px]:px-6 max-[600px]:px-4 max-[600px]:py-14 border-b border-white/[0.07]">
+        <div className="max-w-[1200px] mx-auto flex items-end justify-between gap-6 flex-wrap">
+          <div>
+            <span className="reveal block text-[11px] font-semibold tracking-[0.7px] uppercase text-[#29A864] mb-4">
+              Catalogue Réactifs
+            </span>
+            <h1
+              className="reveal reveal-d1 font-serif text-white leading-[1.08]"
+              style={{ fontSize: "clamp(30px, 5vw, 58px)" }}
+            >
+              Réactifs de laboratoire
+            </h1>
+            <p className="reveal reveal-d2 text-white/40 text-[15px] mt-3 max-w-[380px]">
+              Sélectionnez une spécialité pour explorer nos références.
+            </p>
+          </div>
           <Link
-            key={cat.value}
-            href={`/catalogue/reactifs?cat=${cat.value}`}
-            style={{ transitionDelay: `${i * 60}ms` }}
+            href="/catalogue/reactifs?all=1"
             className="
-              reveal bg-[#F7F6F2] border border-[#E5E3DC] rounded-2xl p-6 no-underline
-              transition-all duration-200
-              hover:shadow-[0_4px_16px_rgba(0,0,0,0.10)] hover:-translate-y-0.5
+              reveal shrink-0 inline-flex items-center gap-2 px-5 py-3
+              border border-white/15 rounded-full bg-white/5 no-underline
+              text-[14px] font-medium text-white/70
+              transition-all duration-150
+              hover:border-[#29A864]/60 hover:text-[#29A864] hover:bg-[#29A864]/8
             "
           >
-            <div
-              className="w-11 h-11 rounded-[10px] flex items-center justify-center mb-4 text-[22px]"
-              style={{ background: cat.iconBg }}
-              aria-hidden="true"
-            >
-              {cat.icon}
-            </div>
-            <h3 className="text-[15px] font-semibold text-[#1B1F1D] mb-3 leading-[1.4]">
-              {cat.label}
-            </h3>
-            <span
-              className="inline-block text-[11px] font-semibold tracking-[0.4px] uppercase px-2.5 py-[3px] rounded-full"
-              style={{ background: cat.bg, color: cat.color }}
-            >
-              {PRODUCT_COUNTS[cat.value] ?? 0} références
+            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4" aria-hidden="true">
+              <rect x="2" y="2" width="7" height="7" rx="1"/><rect x="11" y="2" width="7" height="7" rx="1"/>
+              <rect x="2" y="11" width="7" height="7" rx="1"/><rect x="11" y="11" width="7" height="7" rx="1"/>
+            </svg>
+            Voir tous les réactifs
+            <span className="text-[12px] px-2 py-0.5 bg-white/8 rounded-full text-white/40">
+              {PRODUCT_TOTAL}
             </span>
           </Link>
-        ))}
-      </div>
-    </div>
+        </div>
+      </section>
+
+      {/* ── Grille catégories ─────────────────────────────────── */}
+      <section className="bg-[#F5F5F7] py-16 px-12 max-[1024px]:px-6 max-[600px]:px-4 max-[600px]:py-10">
+        <div className="max-w-[1200px] mx-auto">
+          <div className="grid grid-cols-4 gap-5 max-[1024px]:grid-cols-3 max-[768px]:grid-cols-2 max-[480px]:grid-cols-1 max-[480px]:gap-3">
+            {CATS.map(({ value, label, Icon, accent, bg }, i) => (
+              <Link
+                key={value}
+                href={`/catalogue/reactifs?cat=${value}`}
+                style={{ transitionDelay: `${i * 60}ms` }}
+                className="
+                  reveal-scale group bg-white border border-[#E5E3DC] rounded-2xl p-6 no-underline
+                  transition-all duration-200
+                  hover:shadow-[0_8px_32px_rgba(0,0,0,0.09)] hover:-translate-y-1 hover:border-transparent
+                "
+              >
+                <div
+                  className="w-11 h-11 rounded-[11px] flex items-center justify-center mb-4 transition-transform duration-200 group-hover:scale-110"
+                  style={{ background: bg, color: accent }}
+                >
+                  <Icon className="w-5 h-5" />
+                </div>
+
+                <h3 className="text-[14px] font-semibold text-[#1B1F1D] mb-3 leading-[1.35]">
+                  {label}
+                </h3>
+
+                <div className="flex items-center justify-between">
+                  <span
+                    className="inline-block text-[11px] font-semibold tracking-[0.4px] uppercase px-2.5 py-[3px] rounded-full"
+                    style={{ background: bg, color: accent }}
+                  >
+                    {PRODUCT_COUNTS[value] ?? 0} réf.
+                  </span>
+                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-3.5 h-3.5 text-[#A9ADAA] group-hover:text-[#29A864] group-hover:translate-x-0.5 transition-all" aria-hidden="true">
+                    <path d="M3 8h10M9 4l4 4-4 4"/>
+                  </svg>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
   );
 }

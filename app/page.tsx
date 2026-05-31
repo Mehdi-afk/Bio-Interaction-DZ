@@ -11,10 +11,10 @@ export const metadata: Metadata = {
 };
 
 const STATS = [
-  { value: "370+",  label: "Références au catalogue" },
-  { value: "200+",  label: "Clients actifs" },
-  { value: "48h",   label: "Délai moyen de livraison" },
-  { value: "10 ans", label: "D'expertise sectorielle" },
+  { num: 370,  suffix: "+",    label: "Références au catalogue" },
+  { num: 200,  suffix: "+",    label: "Clients actifs" },
+  { num: 48,   suffix: "h",    label: "Délai moyen de livraison" },
+  { num: 10,   suffix: " ans", label: "D'expertise sectorielle" },
 ] as const;
 
 const PARTNERS = [
@@ -266,17 +266,19 @@ export default function HomePage() {
           ════════════════════════════════════════════════════════ */}
       <div className="bg-[#29A864] py-16 px-12 max-[1024px]:px-6 max-[600px]:py-12 max-[600px]:px-4">
         <div className="max-w-[1100px] mx-auto grid grid-cols-4 gap-6 max-[900px]:grid-cols-2 max-[600px]:gap-4">
-          {STATS.map(({ value, label }, i) => (
+          {STATS.map(({ num, suffix, label }, i) => (
             <div
-              key={value}
+              key={label}
               className="reveal text-center"
               style={{ transitionDelay: `${i * 80}ms` }}
             >
               <span
-                className="font-serif text-white block mb-1"
+                className="count-up font-serif text-white block mb-1"
+                data-target={num}
+                data-suffix={suffix}
                 style={{ fontSize: "clamp(34px, 4.5vw, 52px)" }}
               >
-                {value}
+                {num}{suffix}
               </span>
               <p className="text-white/60 text-[13px] tracking-[0.2px]">{label}</p>
             </div>
