@@ -1,0 +1,85 @@
+// Firestore Security Rules — BioInteraction Algérie
+//
+// Déployer via Firebase Console > Firestore Database > Rules
+// ou via Firebase CLI : `firebase deploy --only firestore:rules`
+//
+// Principes :
+// - Tout est interdit par défaut (deny-all baseline).
+// - Les utilisateurs peuvent lire/écrire leur propre fiche, mais ne peuvent PAS
+//   modifier les champs sensibles (status, role, uid, email, createdAt).
+// - Seul l'admin (rôle ou email correspondant) peut modifier status / role.
+// - Le blog est en lecture publique, mais en écriture admin uniquement.
+
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ── Helpers ────────────────────────────────────────────────────────────
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isSelf(uid) {
+      return isSignedIn() && request.auth.uid == uid;
+    }
+
+    function isAdmin() {
+      return isSignedIn() && (
+        // Soit via l'email admin configuré côté app (cf. NEXT_PUBLIC_ADMIN_EMAIL)
+        request.auth.token.email == 'admin@biointeractiondz.com' ||
+        // Soit via le rôle stocké en base
+        (exists(/databases/$(database)/documents/users/$(request.auth.uid)) &&
+         get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin')
+      );
+    }
+
+    // Champs verrouillés à la création — l'utilisateur ne peut pas se créer
+    // approved/admin lui-même.
+    function isValidNewUserDoc() {
+      return request.resource.data.uid == request.auth.uid
+          && request.resource.data.email == request.auth.token.email
+          && request.resource.data.status == 'pending'
+          && !('role' in request.resource.data);
+    }
+
+    // Champs qu'un utilisateur normal NE peut PAS modifier sur sa propre fiche.
+    function userOnlyChangedAllowedFields() {
+      let changed = request.resource.data.diff(resource.data).affectedKeys();
+      // L'utilisateur peut éventuellement mettre à jour son nom, rien d'autre.
+      return changed.hasOnly(['name']);
+    }
+
+    // ── users/{uid} ────────────────────────────────────────────────────────
+    match /users/{uid} {
+      // Lecture : soi-même ou admin
+      allow read: if isSelf(uid) || isAdmin();
+
+      // Création : uniquement pour soi, et uniquement avec status="pending"
+      // et sans champ "role".
+      allow create: if isSelf(uid) && isValidNewUserDoc();
+
+      // Mise à jour :
+      //  - admin : libre
+      //  - utilisateur : uniquement son propre doc, et uniquement le champ "name"
+      allow update: if isAdmin()
+                    || (isSelf(uid) && userOnlyChangedAllowedFields());
+
+      // Suppression : admin uniquement
+      allow delete: if isAdmin();
+    }
+
+    // ── articles/{id} ──────────────────────────────────────────────────────
+    match /articles/{id} {
+      allow read:   if true;       // Blog public
+      allow create: if isAdmin();
+      allow update: if isAdmin();
+      allow delete: if isAdmin();
+    }
+
+    // ── Tout le reste — interdit ───────────────────────────────────────────
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

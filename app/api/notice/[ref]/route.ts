@@ -9,9 +9,17 @@ export async function GET(
   { params }: { params: Promise<{ ref: string }> }
 ) {
   const { ref } = await params;
-  const fiche   = FICHES_MEDIPAN[ref];
 
-  if (!fiche) {
+  // Reject prototype-poisoning lookup keys and only return own properties.
+  if (
+    typeof ref !== "string" ||
+    !/^[A-Za-z0-9._\- ]{1,80}$/.test(ref) ||
+    !Object.prototype.hasOwnProperty.call(FICHES_MEDIPAN, ref)
+  ) {
+    return NextResponse.json({ error: "Notice non disponible" }, { status: 404 });
+  }
+  const fiche = FICHES_MEDIPAN[ref];
+  if (!fiche || typeof fiche.dlId !== "string") {
     return NextResponse.json({ error: "Notice non disponible" }, { status: 404 });
   }
 

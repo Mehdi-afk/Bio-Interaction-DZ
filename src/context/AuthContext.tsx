@@ -89,9 +89,13 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         status:    "pending" as UserStatus,
         createdAt: serverTimestamp(),
       });
+      const idToken = await cred.user.getIdToken();
       fetch("/api/admin/notify", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${idToken}`,
+        },
         body: JSON.stringify({ email, name, action: "new_signup" }),
       }).catch(() => {});
       await signOut(auth);
@@ -121,9 +125,13 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   async function signup(name: string, email: string, password: string) {
     const { user: newUser } = await createUserWithEmailAndPassword(auth, email, password);
     await updateProfile(newUser, { displayName: name });
+    const verifToken = await newUser.getIdToken();
     const res = await fetch("/api/auth/send-verification", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${verifToken}`,
+      },
       body: JSON.stringify({ uid: newUser.uid, email, name }),
     });
     await signOut(auth);

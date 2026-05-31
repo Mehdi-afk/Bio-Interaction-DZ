@@ -54,9 +54,13 @@ export default function AdminPage() {
     setActionUid(uid);
     try {
       await updateDoc(doc(db, "users", uid), { status: action });
+      const idToken = await user?.getIdToken();
       fetch("/api/admin/notify", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          ...(idToken ? { Authorization: `Bearer ${idToken}` } : {}),
+        },
         body: JSON.stringify({ email, name, action }),
       }).catch(() => {});
       setAllUsers((prev) => prev.map((u) => u.uid === uid ? { ...u, status: action } : u));

@@ -1,42 +1,61 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
-import { adminAuth } from "@/src/lib/firebase-admin";
+import {
+  escapeHtml, sanitizeHeader, isValidEmail, isNonEmptyString,
+  isSameOrigin, rateLimit, rateLimitResponse,
+  verifyBearer, unauthorizedResponse, badRequestResponse,
+} from "@/src/lib/api-security";
 
 const RECIPIENT = "messaoudenemehdi8@gmail.com";
 
 export async function POST(req: NextRequest) {
-  // ── Auth : exige un Firebase ID token valide ─────────────────────────────────
-  const authHeader = req.headers.get("authorization") ?? "";
-  const idToken = authHeader.startsWith("Bearer ") ? authHeader.slice(7) : "";
-  if (!idToken) {
-    return NextResponse.json({ error: "Authentification requise." }, { status: 401 });
-  }
-  try {
-    await adminAuth.verifyIdToken(idToken);
-  } catch {
-    return NextResponse.json({ error: "Session expirée ou invalide." }, { status: 401 });
-  }
+  // ── CSRF gate (same-origin) ──────────────────────────────────────────────────
+  if (!isSameOrigin(req)) return badRequestResponse("Origine non autorisée.");
 
-  const resend = new Resend(process.env.RESEND_API_KEY);
-  const { organisme, nom, tel, email, products } = await req.json() as {
-    organisme: string;
-    nom: string;
-    tel: string;
-    email: string;
-    products: { name: string; ref: string }[];
+  // ── Auth ─────────────────────────────────────────────────────────────────────
+  const decoded = await verifyBearer(req);
+  if (!decoded) return unauthorizedResponse();
+
+  // ── Rate limit (per IP) — 5 devis / 15 min ──────────────────────────────────
+  const limit = rateLimit(req, "send-devis", { capacity: 5, refillPerMin: 0.34 });
+  if (!limit.ok) return rateLimitResponse(limit.retryAfter);
+
+  // ── Parse + validate input ──────────────────────────────────────────────────
+  let body: unknown;
+  try { body = await req.json(); } catch { return badRequestResponse(); }
+
+  const { organisme, nom, tel, email, products } = (body ?? {}) as {
+    organisme?: unknown; nom?: unknown; tel?: unknown; email?: unknown; products?: unknown;
   };
 
-  if (!nom || !email) {
-    return NextResponse.json({ error: "Champs requis manquants." }, { status: 400 });
-  }
+  if (!isNonEmptyString(nom, 120))   return badRequestResponse("Nom invalide.");
+  if (!isValidEmail(email))          return badRequestResponse("Email invalide.");
 
-  const productRows = products
+  const cleanOrganisme = typeof organisme === "string" ? organisme.slice(0, 200) : "";
+  const cleanTel       = typeof tel       === "string" ? tel.slice(0, 40)        : "";
+
+  if (!Array.isArray(products) || products.length > 200) {
+    return badRequestResponse("Liste de produits invalide.");
+  }
+  const cleanProducts = (products as unknown[]).map((p) => {
+    if (typeof p !== "object" || !p) return null;
+    const o = p as { name?: unknown; ref?: unknown };
+    if (typeof o.name !== "string" || typeof o.ref !== "string") return null;
+    return { name: o.name.slice(0, 200), ref: o.ref.slice(0, 80) };
+  }).filter((p): p is { name: string; ref: string } => p !== null);
+
+  // ── Send email ──────────────────────────────────────────────────────────────
+  const resend = new Resend(process.env.RESEND_API_KEY);
+
+  const subjectName = sanitizeHeader(cleanOrganisme || nom, 120);
+
+  const productRows = cleanProducts
     .map(
       (p) =>
         `<tr>
-          <td style="padding:8px 12px;border-bottom:1px solid #E5E3DC;">${p.name}</td>
-          <td style="padding:8px 12px;border-bottom:1px solid #E5E3DC;color:#6E6E6E;">Réf. ${p.ref}</td>
-        </tr>`
+          <td style="padding:8px 12px;border-bottom:1px solid #E5E3DC;">${escapeHtml(p.name)}</td>
+          <td style="padding:8px 12px;border-bottom:1px solid #E5E3DC;color:#6E6E6E;">Réf. ${escapeHtml(p.ref)}</td>
+        </tr>`,
     )
     .join("");
 
@@ -44,7 +63,7 @@ export async function POST(req: NextRequest) {
     from: "bioInteraction <onboarding@resend.dev>",
     to: RECIPIENT,
     replyTo: email,
-    subject: `[bioInteraction] Demande de devis — ${organisme || nom}`,
+    subject: `[bioInteraction] Demande de devis — ${subjectName}`,
     html: `
       <div style="font-family:sans-serif;max-width:600px;margin:0 auto;color:#1B1F1D;">
         <div style="background:#29A864;padding:20px 24px;border-radius:10px 10px 0 0;">
@@ -52,15 +71,16 @@ export async function POST(req: NextRequest) {
         </div>
         <div style="border:1px solid #E5E3DC;border-top:none;padding:24px;border-radius:0 0 10px 10px;">
           <table style="width:100%;border-collapse:collapse;font-size:14px;margin-bottom:20px;">
-            <tr><td style="padding:8px 0;color:#6E6E6E;width:140px;">Organisme</td><td style="padding:8px 0;font-weight:600;">${organisme || "—"}</td></tr>
-            <tr><td style="padding:8px 0;color:#6E6E6E;">Nom</td><td style="padding:8px 0;font-weight:600;">${nom}</td></tr>
-            <tr><td style="padding:8px 0;color:#6E6E6E;">Téléphone</td><td style="padding:8px 0;">${tel || "—"}</td></tr>
-            <tr><td style="padding:8px 0;color:#6E6E6E;">Email</td><td style="padding:8px 0;"><a href="mailto:${email}" style="color:#29A864;">${email}</a></td></tr>
+            <tr><td style="padding:8px 0;color:#6E6E6E;width:140px;">Organisme</td><td style="padding:8px 0;font-weight:600;">${escapeHtml(cleanOrganisme || "—")}</td></tr>
+            <tr><td style="padding:8px 0;color:#6E6E6E;">Nom</td><td style="padding:8px 0;font-weight:600;">${escapeHtml(nom)}</td></tr>
+            <tr><td style="padding:8px 0;color:#6E6E6E;">Téléphone</td><td style="padding:8px 0;">${escapeHtml(cleanTel || "—")}</td></tr>
+            <tr><td style="padding:8px 0;color:#6E6E6E;">Email</td><td style="padding:8px 0;"><a href="mailto:${escapeHtml(email)}" style="color:#29A864;">${escapeHtml(email)}</a></td></tr>
+            <tr><td style="padding:8px 0;color:#6E6E6E;">Compte UID</td><td style="padding:8px 0;color:#A9ADAA;font-family:monospace;font-size:12px;">${escapeHtml(decoded.uid)}</td></tr>
           </table>
 
           ${
-            products.length > 0
-              ? `<p style="font-size:12px;color:#6E6E6E;font-weight:600;text-transform:uppercase;letter-spacing:.5px;margin:0 0 8px;">Produits souhaités (${products.length})</p>
+            cleanProducts.length > 0
+              ? `<p style="font-size:12px;color:#6E6E6E;font-weight:600;text-transform:uppercase;letter-spacing:.5px;margin:0 0 8px;">Produits souhaités (${cleanProducts.length})</p>
                  <table style="width:100%;border-collapse:collapse;font-size:14px;border:1px solid #E5E3DC;border-radius:8px;overflow:hidden;">
                    <thead><tr style="background:#F7F6F2;">
                      <th style="padding:8px 12px;text-align:left;color:#6E6E6E;font-weight:600;">Produit</th>

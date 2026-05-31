@@ -1,35 +1,56 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
+import {
+  escapeHtml, sanitizeHeader, isValidEmail,
+  isSameOrigin, rateLimit, rateLimitResponse,
+  requireAdmin, forbiddenResponse, badRequestResponse,
+} from "@/src/lib/api-security";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 const FROM   = "BioInteraction <noreply@biointeractiondz.com>";
 const ADMIN  = process.env.NEXT_PUBLIC_ADMIN_EMAIL ?? "";
 
-function esc(s: string) {
-  return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
-}
+const VALID_ACTIONS = new Set(["approved", "rejected", "new_signup"]);
 
 export async function POST(req: NextRequest) {
-  const { email, name, action } = (await req.json()) as {
-    email:  string;
-    name:   string;
-    action: "approved" | "rejected" | "new_signup";
+  // ── CSRF gate ──────────────────────────────────────────────────────────────
+  if (!isSameOrigin(req)) return badRequestResponse("Origine non autorisée.");
+
+  // ── Rate limit (per IP) ────────────────────────────────────────────────────
+  const limit = rateLimit(req, "admin-notify", { capacity: 10, refillPerMin: 2 });
+  if (!limit.ok) return rateLimitResponse(limit.retryAfter);
+
+  // ── Parse ──────────────────────────────────────────────────────────────────
+  let body: unknown;
+  try { body = await req.json(); } catch { return badRequestResponse(); }
+
+  const { email, name, action } = (body ?? {}) as {
+    email?: unknown; name?: unknown; action?: unknown;
   };
 
-  if (!email || !action) {
-    return NextResponse.json({ error: "Paramètres manquants." }, { status: 400 });
+  if (typeof action !== "string" || !VALID_ACTIONS.has(action)) {
+    return badRequestResponse("Action invalide.");
   }
+  if (!isValidEmail(email)) return badRequestResponse("Email invalide.");
 
-  const safeName  = esc(name  ?? "");
-  const safeEmail = esc(email ?? "");
+  const safeName  = escapeHtml(typeof name === "string" ? name.slice(0, 120) : "");
+  const safeEmail = escapeHtml(email);
 
-  // Notification to admin on new signup
+  // ── Auth ───────────────────────────────────────────────────────────────────
+  // `new_signup` is triggered from the signup flow by the freshly-created user,
+  // so we only require a valid Firebase token whose email matches the payload.
+  // All other actions (approved/rejected) are admin-only.
   if (action === "new_signup") {
+    const { verifyBearer, unauthorizedResponse } = await import("@/src/lib/api-security");
+    const decoded = await verifyBearer(req);
+    if (!decoded) return unauthorizedResponse();
+    if (decoded.email !== email) return forbiddenResponse();
+
     try {
       await resend.emails.send({
         from:    FROM,
         to:      ADMIN,
-        subject: `Nouvelle demande de compte — ${safeName}`,
+        subject: sanitizeHeader(`Nouvelle demande de compte — ${safeName}`),
         html:    `<p>Une nouvelle demande de compte a été soumise :</p>
                   <ul>
                     <li><strong>Nom :</strong> ${safeName}</li>
@@ -43,7 +64,10 @@ export async function POST(req: NextRequest) {
     }
   }
 
-  // Notification to user on approve/reject
+  // approved / rejected → admin only
+  const decoded = await requireAdmin(req);
+  if (!decoded) return forbiddenResponse();
+
   const subject =
     action === "approved"
       ? "Votre compte BioInteraction a été approuvé"
@@ -60,7 +84,7 @@ export async function POST(req: NextRequest) {
          <p>Cordialement,<br/>L'équipe BioInteraction</p>`;
 
   try {
-    await resend.emails.send({ from: FROM, to: email, subject, html });
+    await resend.emails.send({ from: FROM, to: email, subject: sanitizeHeader(subject), html });
     return NextResponse.json({ ok: true });
   } catch {
     return NextResponse.json({ error: "Échec d'envoi de l'email." }, { status: 500 });
