@@ -94,7 +94,7 @@ export default function PinnedShowcase() {
   return (
     <section
       ref={sectionRef}
-      className="relative bg-[#0A0A0A] overflow-hidden hidden min-[900px]:block"
+      className="relative bg-[#0A0A0A] hidden min-[900px]:block"
       style={{ height: "340vh" }}
       aria-label="Showcase analyseurs"
     >
