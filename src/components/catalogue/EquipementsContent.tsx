@@ -3,6 +3,7 @@
 import { useSearchParams } from "next/navigation";
 import CatalogueClient from "@/src/components/catalogue/CatalogueClient";
 import EquipementsLanding from "@/src/components/catalogue/EquipementsLanding";
+import EquipementsCatBanner from "@/src/components/catalogue/EquipementsCatBanner";
 import { EQUIPEMENTS } from "@/src/data/products-equip";
 
 const CATS = [
@@ -36,6 +37,7 @@ export default function EquipementsContent() {
       brands={BRANDS}
       backHref="/catalogue/equipements"
       defaultView="grid"
+      catBanner={cat ? <EquipementsCatBanner cat={cat} /> : undefined}
     />
   );
 }
