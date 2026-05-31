@@ -105,11 +105,12 @@ export default function BlogPage() {
         </div>
       ) : (
         <div className="grid grid-cols-3 gap-6 max-[900px]:grid-cols-2 max-[600px]:grid-cols-1">
-          {articles.map((article) => (
+          {articles.map((article, i) => (
             <Link
               key={article.id}
               href={`/blog/${article.slug}`}
-              className="group bg-white border border-[#E5E3DC] rounded-2xl overflow-hidden no-underline transition-[box-shadow,border-color,transform] duration-200 hover:shadow-[0_4px_16px_rgba(0,0,0,0.10)] hover:border-[#BDD0EA] hover:-translate-y-0.5"
+              style={{ transitionDelay: `${i * 60}ms` }}
+              className="reveal group bg-white border border-[#E5E3DC] rounded-2xl overflow-hidden no-underline transition-[box-shadow,border-color,transform] duration-200 hover:shadow-[0_4px_16px_rgba(0,0,0,0.10)] hover:border-[#BDD0EA] hover:-translate-y-0.5"
             >
               {/* Cover */}
               <div className="aspect-square overflow-hidden bg-[#F7F6F2] flex items-center justify-center">

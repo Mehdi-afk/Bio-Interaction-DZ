@@ -43,7 +43,7 @@ export default function HomePage() {
         "
       >
         {/* ── Left : texte ── */}
-        <div>
+        <div className="reveal">
           {/* Logo au-dessus du tag */}
           <div className="mb-5">
             <Image
@@ -120,7 +120,7 @@ export default function HomePage() {
         </div>
 
         {/* ── Right : hero cards ── */}
-        <div className="grid grid-cols-2 gap-4 max-[600px]:grid-cols-1 max-[600px]:gap-3">
+        <div className="reveal reveal-d2 grid grid-cols-2 gap-4 max-[600px]:grid-cols-1 max-[600px]:gap-3">
 
           {/* Card Réactifs — décalée vers le bas sur desktop */}
           <Link
@@ -190,7 +190,7 @@ export default function HomePage() {
           NOS GAMMES DE PRODUITS
           ════════════════════════════════════════ */}
       <section className="max-w-[1200px] mx-auto py-20 px-12 max-[1024px]:px-6 max-[1024px]:py-[60px] max-[600px]:py-9 max-[600px]:px-4">
-        <div className="mb-10">
+        <div className="reveal mb-10">
           <h2
             className="font-serif text-[34px] mb-2 max-[600px]:text-[26px]"
           >
@@ -209,7 +209,7 @@ export default function HomePage() {
           CTA BAND  (masquée sur mobile ≤ 600px)
           ════════════════════════════════════════ */}
       <div className="bg-[#F7F6F2] border-t border-b border-[#E5E3DC] max-[600px]:hidden">
-        <div className="max-w-[1200px] mx-auto py-16 px-12 flex items-center justify-between gap-10 max-[1024px]:px-6 max-[1024px]:py-12">
+        <div className="reveal max-w-[1200px] mx-auto py-16 px-12 flex items-center justify-between gap-10 max-[1024px]:px-6 max-[1024px]:py-12">
           <div>
             <h2 className="font-serif text-[30px] mb-2">
               Un produit spécifique en tête&nbsp;?
@@ -238,8 +238,8 @@ export default function HomePage() {
           ════════════════════════════════════════ */}
       <div className="bg-[#29A864] py-10 px-12 max-[1024px]:px-6 max-[1024px]:py-8 max-[600px]:py-6 max-[600px]:px-4">
         <div className="max-w-[1200px] mx-auto grid grid-cols-4 gap-5 max-[900px]:grid-cols-2 max-[600px]:gap-3">
-          {STATS.map(({ value, label }) => (
-            <div key={value} className="text-center">
+          {STATS.map(({ value, label }, i) => (
+            <div key={value} className="reveal text-center" style={{ transitionDelay: `${i * 80}ms` }}>
               <span
                 className="font-serif text-[36px] text-white block max-[600px]:text-[26px]"
               >

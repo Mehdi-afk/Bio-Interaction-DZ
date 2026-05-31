@@ -82,12 +82,12 @@ export default function PartenairesPage() {
 
         <div className="max-w-[1200px] mx-auto relative">
           <h1
-            className="font-serif text-[48px] leading-[1.15] text-white mb-4 max-w-[700px]
+            className="reveal font-serif text-[48px] leading-[1.15] text-white mb-4 max-w-[700px]
               max-[900px]:text-[32px] max-[600px]:text-[26px]"
           >
             Nos partenaires
           </h1>
-          <p className="text-white/75 text-[17px] leading-[1.7] max-w-[640px] max-[600px]:text-[15px]">
+          <p className="reveal reveal-d1 text-white/75 text-[17px] leading-[1.7] max-w-[640px] max-[600px]:text-[15px]">
             Nous représentons en exclusivité sur le marché algérien 5 marques européennes
             et internationales de référence dans le diagnostic médical.
           </p>
@@ -99,14 +99,15 @@ export default function PartenairesPage() {
           ════════════════════════════════════════ */}
       <div className="max-w-[1200px] mx-auto py-20 px-12 max-[1024px]:px-6 max-[900px]:py-[60px] max-[600px]:py-10 max-[600px]:px-4">
         <div className="grid grid-cols-3 gap-6 max-[900px]:grid-cols-2 max-[600px]:grid-cols-1">
-          {PARTNERS.map(({ name, logo, country, description, website }) => (
+          {PARTNERS.map(({ name, logo, country, description, website }, i) => (
             <a
               key={name}
               href={website}
               target="_blank"
               rel="noopener noreferrer"
+              style={{ transitionDelay: `${i * 65}ms` }}
               className="
-                group flex flex-col bg-white border border-[#E5E3DC] rounded-[12px] overflow-hidden
+                reveal group flex flex-col bg-white border border-[#E5E3DC] rounded-[12px] overflow-hidden
                 no-underline transition-all duration-150
                 hover:border-[#29A864] hover:-translate-y-1 hover:shadow-[0_8px_24px_rgba(0,0,0,0.06)]
               "

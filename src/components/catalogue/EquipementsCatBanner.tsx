@@ -126,7 +126,7 @@ export default function EquipementsCatBanner({ cat }: { cat: string }) {
 
   if (banner.layout === "biochimie") {
     return (
-      <div className="rounded-2xl border border-[#E5E3DC] bg-[#F7F6F2] p-6 max-[600px]:p-4">
+      <div className="reveal rounded-2xl border border-[#E5E3DC] bg-[#F7F6F2] p-6 max-[600px]:p-4">
         <div className="
           grid grid-cols-[1fr_1fr] gap-8 items-start
           max-[768px]:grid-cols-1 max-[768px]:gap-6
@@ -159,7 +159,7 @@ export default function EquipementsCatBanner({ cat }: { cat: string }) {
   }
 
   return (
-    <div className="rounded-2xl border border-[#E5E3DC] bg-[#F7F6F2] p-6 max-[600px]:p-4">
+    <div className="reveal rounded-2xl border border-[#E5E3DC] bg-[#F7F6F2] p-6 max-[600px]:p-4">
       <div className="
         grid grid-cols-3 gap-4
         max-[600px]:grid-cols-1 max-[600px]:gap-3

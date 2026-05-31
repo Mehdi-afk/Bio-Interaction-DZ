@@ -74,8 +74,10 @@ export default function CardGrid() {
         max-[600px]:grid-cols-1 max-[600px]:gap-3
       "
     >
-      {CATEGORY_CARDS.map((card) => (
-        <Card key={card.href} card={card} />
+      {CATEGORY_CARDS.map((card, i) => (
+        <div key={card.href} className="reveal" style={{ transitionDelay: `${i * 65}ms` }}>
+          <Card card={card} />
+        </div>
       ))}
     </div>
   );

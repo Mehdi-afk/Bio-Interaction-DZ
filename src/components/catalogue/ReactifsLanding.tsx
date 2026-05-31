@@ -32,7 +32,7 @@ export default function ReactifsLanding() {
   return (
     <div className="max-w-[1200px] mx-auto px-12 py-16 max-[1024px]:px-6 max-[1024px]:py-12 max-[600px]:px-4 max-[600px]:py-9">
 
-      <div className="mb-12 max-[600px]:mb-8 flex items-end justify-between gap-4 flex-wrap">
+      <div className="reveal mb-12 max-[600px]:mb-8 flex items-end justify-between gap-4 flex-wrap">
         <div>
           <h1 className="font-serif text-[38px] mb-3 max-[600px]:text-[28px]">
             Réactifs de laboratoire
@@ -68,12 +68,13 @@ export default function ReactifsLanding() {
         max-[768px]:grid-cols-2
         max-[480px]:grid-cols-1 max-[480px]:gap-3
       ">
-        {CATS.map((cat) => (
+        {CATS.map((cat, i) => (
           <Link
             key={cat.value}
             href={`/catalogue/reactifs?cat=${cat.value}`}
+            style={{ transitionDelay: `${i * 60}ms` }}
             className="
-              bg-[#F7F6F2] border border-[#E5E3DC] rounded-2xl p-6 no-underline
+              reveal bg-[#F7F6F2] border border-[#E5E3DC] rounded-2xl p-6 no-underline
               transition-all duration-200
               hover:shadow-[0_4px_16px_rgba(0,0,0,0.10)] hover:-translate-y-0.5
             "

@@ -119,12 +119,12 @@ export default function AProposPage() {
 
         <div className="max-w-[1200px] mx-auto relative">
           <h1
-            className="font-serif text-[48px] leading-[1.15] text-white mb-4 max-w-[600px]
+            className="reveal font-serif text-[48px] leading-[1.15] text-white mb-4 max-w-[600px]
               max-[900px]:text-[32px] max-[600px]:text-[26px]"
           >
             Expertise scientifique, service de proximité
           </h1>
-          <p className="text-white/75 text-[17px] leading-[1.7] max-w-[560px] max-[600px]:text-[15px]">
+          <p className="reveal reveal-d1 text-white/75 text-[17px] leading-[1.7] max-w-[560px] max-[600px]:text-[15px]">
             Actif depuis 2016 dans le domaine du diagnostic médical, Bio Interaction
             Algérie accompagne les laboratoires algériens avec des réactifs et équipements
             de qualité internationale.
@@ -141,7 +141,7 @@ export default function AProposPage() {
           max-[600px]:gap-7 max-[600px]:mb-10">
 
           {/* ── Notre histoire ── */}
-          <div>
+          <div className="reveal">
             <h2 className="font-serif text-[32px] mb-5 max-[600px]:text-[26px]">
               Notre histoire
             </h2>
@@ -182,11 +182,12 @@ export default function AProposPage() {
 
           {/* ── Valeurs (cartes bordées) ── */}
           <div className="flex flex-col gap-4">
-            {VALUES.map(({ Icon, title, text }) => (
+            {VALUES.map(({ Icon, title, text }, i) => (
               <div
                 key={title}
+                style={{ transitionDelay: `${i * 70}ms` }}
                 className="
-                  flex gap-4 items-start
+                  reveal flex gap-4 items-start
                   p-5 border border-[#E5E3DC] rounded-[10px]
                   transition-colors duration-150 hover:border-[#29A864]
                 "
@@ -212,10 +213,10 @@ export default function AProposPage() {
           ════════════════════════════════════════ */}
       <div className="bg-[#F7F6F2] border-t border-[#E5E3DC] py-[60px] px-12 max-[1024px]:px-6 max-[600px]:py-9 max-[600px]:px-4">
         <div className="max-w-[1200px] mx-auto">
-          <h2 className="font-serif text-[30px] mb-2 max-[600px]:text-[24px]">
+          <h2 className="reveal font-serif text-[30px] mb-2 max-[600px]:text-[24px]">
             Nous contacter
           </h2>
-          <p className="text-[#6E6E6E] mb-8">
+          <p className="reveal reveal-d1 text-[#6E6E6E] mb-8">
             Notre équipe est disponible du dimanche au jeudi, de 8h à 17h.
           </p>
 
@@ -223,7 +224,7 @@ export default function AProposPage() {
           <div className="grid grid-cols-3 gap-5 max-[1024px]:grid-cols-2 max-[600px]:grid-cols-1 max-[600px]:gap-3">
 
             {/* Téléphone / Fax */}
-            <div className="bg-white border border-[#E5E3DC] rounded-[10px] p-6 flex gap-4 items-start">
+            <div className="reveal bg-white border border-[#E5E3DC] rounded-[10px] p-6 flex gap-4 items-start">
               <div className="shrink-0 w-[42px] h-[42px] rounded-[9px] bg-[#EDF8F1] flex items-center justify-center text-[#29A864]">
                 <IconPhone className="w-[18px] h-[18px]" />
               </div>
@@ -237,7 +238,7 @@ export default function AProposPage() {
             </div>
 
             {/* Email */}
-            <div className="bg-white border border-[#E5E3DC] rounded-[10px] p-6 flex gap-4 items-start">
+            <div className="reveal reveal-d1 bg-white border border-[#E5E3DC] rounded-[10px] p-6 flex gap-4 items-start">
               <div className="shrink-0 w-[42px] h-[42px] rounded-[9px] bg-[#EDF8F1] flex items-center justify-center text-[#29A864]">
                 <IconMail className="w-[18px] h-[18px]" />
               </div>
@@ -252,7 +253,7 @@ export default function AProposPage() {
             </div>
 
             {/* Adresse */}
-            <div className="bg-white border border-[#E5E3DC] rounded-[10px] p-6 flex gap-4 items-start">
+            <div className="reveal reveal-d2 bg-white border border-[#E5E3DC] rounded-[10px] p-6 flex gap-4 items-start">
               <div className="shrink-0 w-[42px] h-[42px] rounded-[9px] bg-[#EDF8F1] flex items-center justify-center text-[#29A864]">
                 <IconPin className="w-[18px] h-[18px]" />
               </div>
