@@ -107,12 +107,82 @@ export default function PinnedShowcase({ badge, title, items, bg = "bg-[#0A0A0A]
   const totalLabel    = String(total).padStart(2, "0");
 
   return (
-    <section
-      ref={sectionRef}
-      className={`relative ${bg} hidden min-[900px]:block`}
-      style={{ height: sectionHeight }}
-      aria-label={badge}
-    >
+    <>
+      {/* ── Mobile / tablet fallback: scroll-snap carousel (< 900px) ── */}
+      <section
+        className={`relative ${bg} min-[900px]:hidden py-16 max-[600px]:py-12 overflow-hidden`}
+        aria-label={badge}
+      >
+        <div
+          className="absolute inset-0 pointer-events-none opacity-[0.022]"
+          aria-hidden="true"
+          style={{
+            backgroundImage:
+              "linear-gradient(rgba(255,255,255,1) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,1) 1px,transparent 1px)",
+            backgroundSize: "60px 60px",
+          }}
+        />
+
+        <div className="relative px-6 max-[480px]:px-4 mb-8 max-w-[700px] mx-auto text-center">
+          <span className="inline-block text-[11px] font-semibold tracking-[0.7px] uppercase text-[#29A864] mb-3">
+            {badge}
+          </span>
+          <h2
+            className="font-serif text-white leading-[1.1]"
+            style={{ fontSize: "clamp(26px, 5.5vw, 42px)" }}
+          >
+            {title}
+          </h2>
+        </div>
+
+        <div
+          className="relative flex gap-4 overflow-x-auto snap-x snap-mandatory pb-5 px-6 max-[480px]:px-4 max-[480px]:gap-3 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+        >
+          {items.map(({ key, href, label, desc, image }, i) => (
+            <Link
+              key={`m-${key}`}
+              href={href}
+              className="shrink-0 w-[78vw] max-w-[340px] snap-start no-underline group block"
+            >
+              <div className="relative aspect-[4/5] rounded-2xl overflow-hidden bg-gradient-to-br from-white/[0.06] to-white/[0.02] border border-white/10 mb-4">
+                <span className="absolute top-4 left-4 z-10 text-white/30 text-[10px] font-mono tracking-[1.5px]">
+                  {String(i + 1).padStart(2, "0")} / {totalLabel}
+                </span>
+                <Image
+                  src={image}
+                  alt={label}
+                  fill
+                  sizes="(max-width: 480px) 78vw, 340px"
+                  className="object-contain p-10"
+                />
+              </div>
+              <div className="px-1">
+                <h3 className="text-white text-[17px] font-semibold mb-1 leading-tight">
+                  {label}
+                </h3>
+                <p className="text-white/45 text-[13px] leading-[1.55]">
+                  {desc}
+                </p>
+              </div>
+            </Link>
+          ))}
+        </div>
+
+        <div className="relative mt-2 flex items-center justify-center gap-2 text-white/30 text-[10px] font-semibold tracking-[1.5px] uppercase">
+          <span>Faites glisser</span>
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4">
+            <path d="M3 10h14M12 5l5 5-5 5"/>
+          </svg>
+        </div>
+      </section>
+
+      {/* ── Desktop pinned scroll (≥ 900px) ───────────────────────── */}
+      <section
+        ref={sectionRef}
+        className={`relative ${bg} hidden min-[900px]:block`}
+        style={{ height: sectionHeight }}
+        aria-label={badge}
+      >
       <div className="sticky top-0 h-screen flex flex-col justify-center overflow-hidden">
 
         {/* Grid overlay */}
@@ -204,6 +274,7 @@ export default function PinnedShowcase({ badge, title, items, bg = "bg-[#0A0A0A]
           </span>
         </div>
       </div>
-    </section>
+      </section>
+    </>
   );
 }
