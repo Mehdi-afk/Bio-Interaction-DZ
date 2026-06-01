@@ -128,8 +128,8 @@ export default function PinnedShowcase({ badge, title, items, bg = "bg-[#0A0A0A]
             {badge}
           </span>
           <h2
-            className="font-serif text-white leading-[1.1]"
-            style={{ fontSize: "clamp(26px, 5.5vw, 42px)" }}
+            className="font-serif text-white leading-[1.1] text-balance"
+            style={{ fontSize: "clamp(20px, 4.5vw, 36px)" }}
           >
             {title}
           </h2>
@@ -209,8 +209,8 @@ export default function PinnedShowcase({ badge, title, items, bg = "bg-[#0A0A0A]
             {badge}
           </span>
           <h2
-            className="font-serif text-white leading-[1.08]"
-            style={{ fontSize: "clamp(30px, 4.5vw, 58px)" }}
+            className="font-serif text-white leading-[1.08] text-balance"
+            style={{ fontSize: "clamp(26px, 3vw, 52px)" }}
           >
             {title}
           </h2>

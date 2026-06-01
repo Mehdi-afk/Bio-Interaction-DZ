@@ -70,7 +70,7 @@ export default function CardGrid() {
     <div
       className="
         grid grid-cols-3 gap-5
-        max-[1024px]:grid-cols-2
+        max-[1280px]:grid-cols-2
         max-[600px]:grid-cols-1 max-[600px]:gap-3
       "
     >
