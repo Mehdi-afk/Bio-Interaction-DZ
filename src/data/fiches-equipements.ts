@@ -98,11 +98,7 @@ export const FICHES_EQUIPEMENTS: Record<string, FicheEquipement> = {
   },
 
   // ── Auto-Immunité — HOB Biotech ───────────────────────────────────────────────
-  "MA01073": {
-    label:  "Brochure BioCLIA 1900",
-    langue: "EN",
-    url:    "https://www.bmd.be/wp-content/uploads/2017/06/Brochure_BioClia_EN-min.pdf",
-  },
+  // MA01073 (BioCLIA 1900) : aucun PDF public disponible chez le constructeur.
   "MA00502": {
     label:  "Brochure BioCLIA 500",
     langue: "EN",
