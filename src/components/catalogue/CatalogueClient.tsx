@@ -209,12 +209,12 @@ function FicheTechniqueButton({ productRef }: { productRef: string }) {
         href={equipFiche.url}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex items-center gap-2 px-3 py-1.5 border border-[#E5E3DC] rounded-lg text-[13px] text-[#6E6E6E] no-underline hover:border-[#29A864] hover:text-[#29A864] transition-colors duration-150"
+        className="flex items-center justify-center gap-2 w-full py-[10px] px-7 bg-transparent text-[#1B1F1D] border-[1.5px] border-[#E5E3DC] rounded-[9px] text-[14px] font-medium no-underline hover:border-[#29A864] hover:text-[#29A864] transition-colors duration-150"
       >
         <DownloadIcon />
-        {equipFiche.label}
+        Télécharger la brochure
         {equipFiche.langue === "EN" && (
-          <span className="text-[10px] text-[#A9ADAA]">(EN)</span>
+          <span className="text-[11px] text-[#A9ADAA] font-normal">(EN)</span>
         )}
       </a>
     );
