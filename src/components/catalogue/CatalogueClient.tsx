@@ -9,6 +9,7 @@ import { FICHES_TECHNIQUES } from "@/src/data/fiches-techniques";
 import { FICHES_LDBIO } from "@/src/data/fiches-ldbio";
 import { FICHES_MEDIPAN } from "@/src/data/fiches-medipan";
 import { FICHES_HOB } from "@/src/data/fiches-hob";
+import { FICHES_EQUIPEMENTS } from "@/src/data/fiches-equipements";
 import { useApp } from "@/src/context/AppContext";
 
 // ── Colour helpers ─────────────────────────────────────────────────────────────
@@ -199,6 +200,25 @@ const DownloadIcon = () => (
 
 function FicheTechniqueButton({ productRef }: { productRef: string }) {
   const [open, setOpen] = useState(false);
+
+  // ── Instruments — brochures constructeurs (priorité sur les IFU réactifs) ──
+  const equipFiche = FICHES_EQUIPEMENTS[productRef];
+  if (equipFiche) {
+    return (
+      <a
+        href={equipFiche.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center gap-2 px-3 py-1.5 border border-[#E5E3DC] rounded-lg text-[13px] text-[#6E6E6E] no-underline hover:border-[#29A864] hover:text-[#29A864] transition-colors duration-150"
+      >
+        <DownloadIcon />
+        {equipFiche.label}
+        {equipFiche.langue === "EN" && (
+          <span className="text-[10px] text-[#A9ADAA]">(EN)</span>
+        )}
+      </a>
+    );
+  }
 
   // ── Medipan / Generic Assays (via API proxy) ──
   const medipanFiche = FICHES_MEDIPAN[productRef];
