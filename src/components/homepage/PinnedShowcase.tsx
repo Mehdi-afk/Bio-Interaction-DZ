@@ -183,7 +183,7 @@ export default function PinnedShowcase({ badge, title, items, bg = "bg-[#0A0A0A]
         style={{ height: sectionHeight }}
         aria-label={badge}
       >
-      <div className="sticky top-0 h-screen flex flex-col justify-center overflow-hidden">
+      <div className="sticky top-0 h-screen flex flex-col overflow-hidden">
 
         {/* Grid overlay */}
         <div
@@ -203,61 +203,63 @@ export default function PinnedShowcase({ badge, title, items, bg = "bg-[#0A0A0A]
           style={{ background: "radial-gradient(ellipse at 50% 100%, rgba(41,168,100,0.08) 0%, transparent 70%)" }}
         />
 
-        {/* Heading */}
-        <div className="absolute top-[9vh] left-0 right-0 z-10 px-6 max-w-[800px] mx-auto text-center">
+        {/* Heading — in flow (shrink-0) so it never overlaps the track */}
+        <div className="relative z-10 shrink-0 px-6 max-w-[800px] w-full mx-auto text-center pt-[7vh] pb-4">
           <span className="inline-block text-[11px] font-semibold tracking-[0.7px] uppercase text-[#29A864] mb-3">
             {badge}
           </span>
           <h2
             className="font-serif text-white leading-[1.08] text-balance"
-            style={{ fontSize: "clamp(26px, 3vw, 52px)" }}
+            style={{ fontSize: "clamp(22px, 2.8vw, 52px)" }}
           >
             {title}
           </h2>
         </div>
 
-        {/* Track */}
-        <div
-          ref={trackRef}
-          className="flex gap-7 pl-[8vw] pr-[40vw] will-change-transform"
-        >
-          {items.map(({ key, href, label, desc, image }, i) => (
-            <Link
-              key={key}
-              href={href}
-              className="shrink-0 w-[440px] no-underline group block"
-            >
-              <div className="relative aspect-[4/5] rounded-3xl overflow-hidden bg-gradient-to-br from-white/[0.06] to-white/[0.02] border border-white/10 mb-5">
-                <span className="absolute top-5 left-5 z-10 text-white/30 text-[10px] font-mono tracking-[1.5px]">
-                  {String(i + 1).padStart(2, "0")} / {totalLabel}
-                </span>
-                <Image
-                  src={image}
-                  alt={label}
-                  fill
-                  sizes="440px"
-                  className="object-contain p-14 transition-transform duration-500 group-hover:scale-[1.04]"
-                />
-              </div>
-              <div className="px-1 flex items-start justify-between gap-4">
-                <div>
-                  <h3 className="text-white text-[19px] font-semibold mb-1.5 leading-tight">
-                    {label}
-                  </h3>
-                  <p className="text-white/45 text-[13px] leading-[1.55] max-w-[330px]">
-                    {desc}
-                  </p>
+        {/* Track — flex-1 + items-center so cards fill & center in remaining height */}
+        <div className="relative flex-1 flex items-center min-h-0 overflow-hidden">
+          <div
+            ref={trackRef}
+            className="flex gap-7 pl-[8vw] pr-[40vw] will-change-transform"
+          >
+            {items.map(({ key, href, label, desc, image }, i) => (
+              <Link
+                key={key}
+                href={href}
+                className="shrink-0 w-[min(440px,38vh)] no-underline group block"
+              >
+                <div className="relative aspect-[4/5] rounded-3xl overflow-hidden bg-gradient-to-br from-white/[0.06] to-white/[0.02] border border-white/10 mb-5">
+                  <span className="absolute top-5 left-5 z-10 text-white/30 text-[10px] font-mono tracking-[1.5px]">
+                    {String(i + 1).padStart(2, "0")} / {totalLabel}
+                  </span>
+                  <Image
+                    src={image}
+                    alt={label}
+                    fill
+                    sizes="(max-height: 800px) 38vh, 440px"
+                    className="object-contain p-10 transition-transform duration-500 group-hover:scale-[1.04]"
+                  />
                 </div>
-                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 mt-1.5 text-white/30 shrink-0 group-hover:text-[#29A864] group-hover:translate-x-1 transition-all">
-                  <path d="M3 8h10M9 4l4 4-4 4" />
-                </svg>
-              </div>
-            </Link>
-          ))}
+                <div className="px-1 flex items-start justify-between gap-4">
+                  <div>
+                    <h3 className="text-white text-[17px] font-semibold mb-1.5 leading-tight">
+                      {label}
+                    </h3>
+                    <p className="text-white/45 text-[13px] leading-[1.55] max-w-[300px]">
+                      {desc}
+                    </p>
+                  </div>
+                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 mt-1 text-white/30 shrink-0 group-hover:text-[#29A864] group-hover:translate-x-1 transition-all">
+                    <path d="M3 8h10M9 4l4 4-4 4" />
+                  </svg>
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
 
-        {/* Bottom bar */}
-        <div className="absolute bottom-[6vh] left-0 right-0 px-[8vw] flex items-center gap-6">
+        {/* Bottom bar — shrink-0 so it stays at bottom */}
+        <div className="relative shrink-0 px-[8vw] pb-[5vh] pt-3 flex items-center gap-6">
           <span className="text-white/40 text-[12px] font-mono tracking-[1.5px]">
             <span ref={counterRef}>01</span>
             <span className="text-white/15"> / {totalLabel}</span>
