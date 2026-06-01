@@ -58,7 +58,7 @@ const CATS: CatDef[] = [
   { value: "hematologie",  label: "Hématologie",         Icon: IconDrop,        accent: "#004B9D", bg: "#E6EEF8" },
   { value: "hemostase",    label: "Hémostase",           Icon: IconWave,        accent: "#004B9D", bg: "#E6EEF8" },
   { value: "urines",       label: "Analyse des Urines",  Icon: IconTube,        accent: "#004B9D", bg: "#E6EEF8" },
-  { value: "autoimmunite", label: "Auto-Immunité",       Icon: IconShieldCheck, accent: "#0082A0", bg: "#E5F3F7" },
+  { value: "autoimmunite", label: "Auto-Immunité / Allergie", Icon: IconShieldCheck, accent: "#0082A0", bg: "#E5F3F7" },
 ];
 
 const COUNTS: Record<string, number> = {};

@@ -11,7 +11,7 @@ const CATS = [
   { value: "hematologie",  label: "Hématologie" },
   { value: "hemostase",    label: "Hémostase" },
   { value: "urines",       label: "Analyse des Urines" },
-  { value: "autoimmunite", label: "Auto-Immunité" },
+  { value: "autoimmunite", label: "Auto-Immunité / Allergie" },
 ];
 
 const BRANDS = [
