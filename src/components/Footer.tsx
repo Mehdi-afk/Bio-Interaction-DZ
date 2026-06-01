@@ -27,7 +27,7 @@ const CONTACT_LINKS = [
 const COMMERCIAL_LINKS = [
   { href: "tel:+213770085453",                 label: "Commercial : +213.770.08.54.53" },
   { href: "mailto:sales@biointeractiondz.com", label: "sales@biointeractiondz.com" },
-  { href: "tel:+213770747250",                 label: "SAV : +213.770.74.72.50" },
+  { href: "tel:+213770747250",                 label: "SAV\n+213.770.74.72.50" },
   { href: "mailto:sav@biointeractiondz.com",   label: "sav@biointeractiondz.com" },
 ] as const;
 
@@ -94,7 +94,9 @@ export default function Footer() {
             <h4 className={colHeadCls}>Commercial &amp; SAV</h4>
             {COMMERCIAL_LINKS.map(({ href, label }) => (
               <a key={href} href={href} className={colLinkCls}>
-                {label}
+                {label.split("\n").map((line, i) => (
+                  <span key={i} className="block">{line}</span>
+                ))}
               </a>
             ))}
           </div>

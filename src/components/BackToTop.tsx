@@ -26,20 +26,25 @@ export default function BackToTop() {
       onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
       aria-label="Retour en haut"
       className="
-        fixed bottom-7 right-[88px] max-[900px]:right-4 z-[2900]
-        w-11 h-11 rounded-full
+        fixed bottom-7 right-[88px] max-[900px]:right-4 max-[600px]:right-4 z-[2900]
+        flex items-center gap-2 px-4 py-2.5 rounded-full
         bg-[#29A864] text-white border-none
-        flex items-center justify-center
-        shadow-[0_4px_16px_rgba(41,168,100,0.4)]
+        text-[13px] font-semibold whitespace-nowrap
+        shadow-[0_4px_20px_rgba(41,168,100,0.45)]
         cursor-pointer
-        transition-[background] duration-150
-        hover:bg-[#48BC7E]
-        max-[600px]:right-4
+        transition-[background,box-shadow] duration-150
+        hover:bg-[#48BC7E] hover:shadow-[0_6px_24px_rgba(41,168,100,0.55)]
       "
     >
-      <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth={2.2} strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
+      <svg
+        viewBox="0 0 20 20" fill="none" stroke="currentColor"
+        strokeWidth={2.4} strokeLinecap="round" strokeLinejoin="round"
+        className="w-4 h-4 shrink-0 animate-nudge-up"
+        aria-hidden="true"
+      >
         <path d="M10 15V5M5 10l5-5 5 5" />
       </svg>
+      Haut de page
     </button>
   );
 }

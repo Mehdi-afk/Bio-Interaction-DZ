@@ -1,18 +1,19 @@
 import { NextRequest, NextResponse } from "next/server";
-import { Resend } from "resend";
+import { getResend } from "@/src/lib/resend";
 import {
   escapeHtml, sanitizeHeader, isValidEmail,
   isSameOrigin, rateLimit, rateLimitResponse,
   requireAdmin, forbiddenResponse, badRequestResponse,
 } from "@/src/lib/api-security";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-const FROM   = "BioInteraction <noreply@biointeractiondz.com>";
-const ADMIN  = process.env.NEXT_PUBLIC_ADMIN_EMAIL ?? "";
+const FROM  = "BioInteraction <noreply@biointeractiondz.com>";
 
 const VALID_ACTIONS = new Set(["approved", "rejected", "new_signup"]);
 
 export async function POST(req: NextRequest) {
+  const resend = getResend();
+  const ADMIN  = process.env.NEXT_PUBLIC_ADMIN_EMAIL ?? "";
+
   // ── CSRF gate ──────────────────────────────────────────────────────────────
   if (!isSameOrigin(req)) return badRequestResponse("Origine non autorisée.");
 

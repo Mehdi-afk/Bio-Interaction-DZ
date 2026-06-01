@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo, useEffect, useRef, useCallback, memo } from "react";
+import { useState, useMemo, useEffect, useRef, useCallback, memo, type ReactNode } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
@@ -9,6 +9,7 @@ import { FICHES_TECHNIQUES } from "@/src/data/fiches-techniques";
 import { FICHES_LDBIO } from "@/src/data/fiches-ldbio";
 import { FICHES_MEDIPAN } from "@/src/data/fiches-medipan";
 import { FICHES_HOB } from "@/src/data/fiches-hob";
+import { FICHES_EQUIPEMENTS } from "@/src/data/fiches-equipements";
 import { useApp } from "@/src/context/AppContext";
 
 // ── Colour helpers ─────────────────────────────────────────────────────────────
@@ -199,6 +200,25 @@ const DownloadIcon = () => (
 
 function FicheTechniqueButton({ productRef }: { productRef: string }) {
   const [open, setOpen] = useState(false);
+
+  // ── Instruments — brochures constructeurs (priorité sur les IFU réactifs) ──
+  const equipFiche = FICHES_EQUIPEMENTS[productRef];
+  if (equipFiche) {
+    return (
+      <a
+        href={equipFiche.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center justify-center gap-2 w-full py-[10px] px-7 bg-transparent text-[#1B1F1D] border-[1.5px] border-[#E5E3DC] rounded-[9px] text-[14px] font-medium no-underline hover:border-[#29A864] hover:text-[#29A864] transition-colors duration-150"
+      >
+        <DownloadIcon />
+        Télécharger la brochure
+        {equipFiche.langue === "EN" && (
+          <span className="text-[11px] text-[#A9ADAA] font-normal">(EN)</span>
+        )}
+      </a>
+    );
+  }
 
   // ── Medipan / Generic Assays (via API proxy) ──
   const medipanFiche = FICHES_MEDIPAN[productRef];
@@ -535,7 +555,7 @@ function ProductPage({
 // ── Main component ─────────────────────────────────────────────────────────────
 
 export default function CatalogueClient({
-  items, title, cats, brands, showTypeFilter, backHref, hideSidebar, sectionDisplayName,
+  items, title, cats, brands, showTypeFilter, backHref, hideSidebar, hideSectionLabels, sectionDisplayName, defaultView, catBanner,
 }: {
   items: GridItem[];
   title: string;
@@ -544,7 +564,10 @@ export default function CatalogueClient({
   showTypeFilter?: boolean;
   backHref?: string;
   hideSidebar?: boolean;
+  hideSectionLabels?: boolean;
   sectionDisplayName?: string;
+  defaultView?: "grid" | "list";
+  catBanner?: ReactNode;
 }) {
   const router = useRouter();
   const searchParams  = useSearchParams();
@@ -560,7 +583,7 @@ export default function CatalogueClient({
     initialMarque ? new Set([initialMarque]) : new Set()
   );
   const [activeTypes,  setActiveTypes]  = useState<Set<string>>(new Set());
-  const [view,         setView]         = useState<"grid" | "list">("list");
+  const [view,         setView]         = useState<"grid" | "list">(defaultView ?? "list");
   const [selected,     setSelected]     = useState<Product | null>(null);
   const [selectedSection, setSelectedSection] = useState<string>("");
   const [sidebarOpen,  setSidebarOpen]  = useState(false);
@@ -913,41 +936,82 @@ export default function CatalogueClient({
         ) : null}
 
         {/* Header */}
-        <div className="flex items-center justify-between mb-7 gap-4 max-[600px]:mb-4">
-          <h1 className="font-serif text-[28px] max-[600px]:text-[22px]">{title}</h1>
-          <div className="flex gap-1">
-            <button
-              title="Grille"
-              onClick={() => setView("grid")}
-              className={`w-[34px] h-[34px] max-[900px]:w-11 max-[900px]:h-11 border rounded-[7px] flex items-center justify-center cursor-pointer transition-all duration-[120ms] ${
-                view === "grid" ? "bg-[#29A864] border-[#29A864] text-white" : "bg-white border-[#E5E3DC] text-[#6E6E6E]"
-              }`}
-            >
-              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-4 h-4">
-                <rect x="1" y="1" width="6" height="6" rx="1" /><rect x="9" y="1" width="6" height="6" rx="1" />
-                <rect x="1" y="9" width="6" height="6" rx="1" /><rect x="9" y="9" width="6" height="6" rx="1" />
-              </svg>
-            </button>
-            <button
-              title="Liste"
-              onClick={() => setView("list")}
-              className={`w-[34px] h-[34px] max-[900px]:w-11 max-[900px]:h-11 border rounded-[7px] flex items-center justify-center cursor-pointer transition-all duration-[120ms] ${
-                view === "list" ? "bg-[#29A864] border-[#29A864] text-white" : "bg-white border-[#E5E3DC] text-[#6E6E6E]"
-              }`}
-            >
-              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-4 h-4">
-                <line x1="1" y1="4" x2="15" y2="4" strokeLinecap="round" />
-                <line x1="1" y1="8" x2="15" y2="8" strokeLinecap="round" />
-                <line x1="1" y1="12" x2="15" y2="12" strokeLinecap="round" />
-              </svg>
-            </button>
-          </div>
-        </div>
-
-        {/* Results count */}
-        <div className="text-[13px] text-[#A9ADAA] mb-5">
-          {visibleCount} produit{visibleCount !== 1 ? "s" : ""} disponible{visibleCount !== 1 ? "s" : ""}
-        </div>
+        {catBanner ? (
+          <>
+            <div className="text-center mb-6 max-[600px]:mb-5">
+              <h1 className="font-serif text-[32px] max-[600px]:text-[24px]">{title}</h1>
+            </div>
+            {catBanner}
+            <div className="flex items-center justify-between mt-6 mb-5 gap-4">
+              <div className="text-[13px] text-[#A9ADAA]">
+                {visibleCount} produit{visibleCount !== 1 ? "s" : ""} disponible{visibleCount !== 1 ? "s" : ""}
+              </div>
+              <div className="flex gap-1">
+                <button
+                  title="Grille"
+                  onClick={() => setView("grid")}
+                  className={`w-[34px] h-[34px] max-[900px]:w-11 max-[900px]:h-11 border rounded-[7px] flex items-center justify-center cursor-pointer transition-all duration-[120ms] ${
+                    view === "grid" ? "bg-[#29A864] border-[#29A864] text-white" : "bg-white border-[#E5E3DC] text-[#6E6E6E]"
+                  }`}
+                >
+                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-4 h-4">
+                    <rect x="1" y="1" width="6" height="6" rx="1" /><rect x="9" y="1" width="6" height="6" rx="1" />
+                    <rect x="1" y="9" width="6" height="6" rx="1" /><rect x="9" y="9" width="6" height="6" rx="1" />
+                  </svg>
+                </button>
+                <button
+                  title="Liste"
+                  onClick={() => setView("list")}
+                  className={`w-[34px] h-[34px] max-[900px]:w-11 max-[900px]:h-11 border rounded-[7px] flex items-center justify-center cursor-pointer transition-all duration-[120ms] ${
+                    view === "list" ? "bg-[#29A864] border-[#29A864] text-white" : "bg-white border-[#E5E3DC] text-[#6E6E6E]"
+                  }`}
+                >
+                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-4 h-4">
+                    <line x1="1" y1="4" x2="15" y2="4" strokeLinecap="round" />
+                    <line x1="1" y1="8" x2="15" y2="8" strokeLinecap="round" />
+                    <line x1="1" y1="12" x2="15" y2="12" strokeLinecap="round" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </>
+        ) : (
+          <>
+            <div className="flex items-center justify-between mb-7 gap-4 max-[600px]:mb-4">
+              <h1 className="font-serif text-[28px] max-[600px]:text-[22px]">{title}</h1>
+              <div className="flex gap-1">
+                <button
+                  title="Grille"
+                  onClick={() => setView("grid")}
+                  className={`w-[34px] h-[34px] max-[900px]:w-11 max-[900px]:h-11 border rounded-[7px] flex items-center justify-center cursor-pointer transition-all duration-[120ms] ${
+                    view === "grid" ? "bg-[#29A864] border-[#29A864] text-white" : "bg-white border-[#E5E3DC] text-[#6E6E6E]"
+                  }`}
+                >
+                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-4 h-4">
+                    <rect x="1" y="1" width="6" height="6" rx="1" /><rect x="9" y="1" width="6" height="6" rx="1" />
+                    <rect x="1" y="9" width="6" height="6" rx="1" /><rect x="9" y="9" width="6" height="6" rx="1" />
+                  </svg>
+                </button>
+                <button
+                  title="Liste"
+                  onClick={() => setView("list")}
+                  className={`w-[34px] h-[34px] max-[900px]:w-11 max-[900px]:h-11 border rounded-[7px] flex items-center justify-center cursor-pointer transition-all duration-[120ms] ${
+                    view === "list" ? "bg-[#29A864] border-[#29A864] text-white" : "bg-white border-[#E5E3DC] text-[#6E6E6E]"
+                  }`}
+                >
+                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-4 h-4">
+                    <line x1="1" y1="4" x2="15" y2="4" strokeLinecap="round" />
+                    <line x1="1" y1="8" x2="15" y2="8" strokeLinecap="round" />
+                    <line x1="1" y1="12" x2="15" y2="12" strokeLinecap="round" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div className="text-[13px] text-[#A9ADAA] mb-5">
+              {visibleCount} produit{visibleCount !== 1 ? "s" : ""} disponible{visibleCount !== 1 ? "s" : ""}
+            </div>
+          </>
+        )}
 
         {/* Product grid / list */}
         {visibleCount === 0 ? (
@@ -980,6 +1044,7 @@ export default function CatalogueClient({
               return filteredGrid.map((item, i) => {
                 if (item.kind === "section") {
                   currentSection = item.label;
+                  if (hideSectionLabels) return null;
                   return (
                     <div
                       key={`label-${i}`}

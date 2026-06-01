@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { Resend } from "resend";
+import { getResend } from "@/src/lib/resend";
 import { adminAuth } from "@/src/lib/firebase-admin";
 import {
   escapeHtml, sanitizeHeader, isValidEmail,
@@ -7,11 +7,11 @@ import {
   verifyBearer, unauthorizedResponse, forbiddenResponse,
 } from "@/src/lib/api-security";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-const FROM   = "BioInteraction <noreply@biointeractiondz.com>";
-const BASE   = process.env.NEXT_PUBLIC_SITE_URL ?? "https://biointeractiondz.com";
+const FROM = "BioInteraction <noreply@biointeractiondz.com>";
+const BASE = process.env.NEXT_PUBLIC_SITE_URL ?? "https://biointeractiondz.com";
 
 export async function POST(req: NextRequest) {
+  const resend = getResend();
   // ── CSRF gate ──────────────────────────────────────────────────────────────
   if (!isSameOrigin(req)) return badRequestResponse("Origine non autorisée.");
 

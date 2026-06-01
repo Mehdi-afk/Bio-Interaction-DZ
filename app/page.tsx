@@ -3,8 +3,15 @@ import Image from "next/image";
 import Link from "next/link";
 import CardGrid from "@/src/components/CardGrid";
 import DevisButton from "@/src/components/DevisButton";
+import PinnedShowcase, { type PinnedItem } from "@/src/components/homepage/PinnedShowcase";
 
-// ── SEO ───────────────────────────────────────────────────────────────────────
+const HOME_SHOWCASE: readonly PinnedItem[] = [
+  { key: "biochimie",    href: "/catalogue/equipements?cat=biochimie",    label: "Biochimie Clinique", desc: "Jusqu'à 1 000 tests/heure avec réactifs à tag RFID.",   image: "/images/equipements/ERBA XL 1000.webp" },
+  { key: "hematologie",  href: "/catalogue/equipements?cat=hematologie",  label: "Hématologie",        desc: "Formule sanguine complète en moins de 60 secondes.",     image: "/images/equipements/ERBA H580.jpg" },
+  { key: "hemostase",    href: "/catalogue/equipements?cat=hemostase",    label: "Hémostase",          desc: "TP, TCA, fibrinogène par coagulométrie optique.",        image: "/images/equipements/ERBA ECL 760.jpg" },
+  { key: "urines",       href: "/catalogue/equipements?cat=urines",       label: "Analyse des Urines", desc: "Chimie sèche et sédiment urinaire automatisé.",          image: "/images/equipements/ERBA EC 90.jpg" },
+  { key: "autoimmunite", href: "/catalogue/equipements?cat=autoimmunite", label: "Auto-Immunité",      desc: "Immunofluorescence digitalisée AKLIDES®.",               image: "/images/equipements/AKIRON NEO.png" },
+];
 
 export const metadata: Metadata = {
   title: "Accueil",
@@ -12,246 +19,400 @@ export const metadata: Metadata = {
     "Votre partenaire de confiance pour l'approvisionnement en équipement, réactif et consommable de laboratoire d'analyse médical.",
 };
 
-// ── Static data ───────────────────────────────────────────────────────────────
-
 const STATS = [
-  { value: "370+",  label: "Références au catalogue" },
-  { value: "200+",  label: "Clients actifs" },
-  { value: "48h",   label: "Délai moyen de livraison" },
-  { value: "10 ans", label: "D'expertise sectorielle" },
+  { num: 370,  suffix: "+",    label: "Références au catalogue" },
+  { num: 200,  suffix: "+",    label: "Clients actifs" },
+  { num: 48,   suffix: "h",    label: "Délai moyen de livraison" },
+  { num: 10,   suffix: " ans", label: "D'expertise sectorielle" },
 ] as const;
 
-// ── Page ──────────────────────────────────────────────────────────────────────
+const PARTNERS = [
+  { name: "ERBA Mannheim",     logo: "/images/partenaires/erba.png",           w: 130 },
+  { name: "Generic Assays",    logo: "/images/partenaires/generic-assays.png", w: 115 },
+  { name: "Medipan",           logo: "/images/partenaires/medipan.png",        w: 105 },
+  { name: "HOB Biotech",       logo: "/images/partenaires/hob.png",            w: 95  },
+  { name: "LDBIO Diagnostics", logo: "/images/partenaires/ldbio.svg",          w: 115 },
+] as const;
 
 export default function HomePage() {
   return (
     <>
-      {/* ════════════════════════════════════════
-          HERO
-          ════════════════════════════════════════ */}
-      <section
-        className="
-          grid grid-cols-2 items-center gap-[60px]
-          py-20 px-12
-          max-w-[1200px] mx-auto
-          min-h-[calc(100vh-68px)]
-          border-b border-[#E5E3DC]
-          max-[1024px]:px-6 max-[1024px]:py-[60px] max-[1024px]:gap-10
-          max-[900px]:grid-cols-1 max-[900px]:px-5 max-[900px]:py-10
-          max-[900px]:gap-8 max-[900px]:min-h-0
-          max-[600px]:px-4 max-[600px]:pt-7 max-[600px]:pb-6 max-[600px]:gap-6
-        "
-      >
-        {/* ── Left : texte ── */}
-        <div>
-          {/* Logo au-dessus du tag */}
-          <div className="mb-5">
-            <Image
-              src="/images/icon-color.svg"
-              width={80}
-              height={80}
-              alt="BioInteraction"
-              priority
-            />
-          </div>
 
-          {/* Tag "depuis 2016" */}
-          <div className="inline-flex items-center gap-1.5 bg-[#EDF8F1] text-[#15623A] text-[12px] font-semibold tracking-[0.6px] uppercase px-3 py-[5px] rounded-full mb-6">
-            <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth={1.8} className="w-3.5 h-3.5" aria-hidden="true">
-              <circle cx="7" cy="7" r="5" />
-              <path d="M7 4v3l2 2" />
-            </svg>
-            Spécialiste du domaine depuis 2016
-          </div>
+      {/* ════════════════════════════════════════════════════════
+          1. HERO — fond noir cinématique
+          ════════════════════════════════════════════════════════ */}
+      <section className="
+        relative min-h-[calc(100vh-68px)] flex flex-col items-center justify-center
+        bg-black text-white px-6 py-28 text-center overflow-hidden
+      ">
+        {/* Radial glow */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          aria-hidden="true"
+          style={{ background: "radial-gradient(ellipse 1000px 700px at 50% 65%, rgba(41,168,100,0.16) 0%, transparent 70%)" }}
+        />
+        {/* Subtle grid */}
+        <div
+          className="absolute inset-0 pointer-events-none opacity-[0.025]"
+          aria-hidden="true"
+          style={{
+            backgroundImage: "linear-gradient(rgba(255,255,255,1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px)",
+            backgroundSize: "64px 64px",
+          }}
+        />
 
-          {/* Titre principal */}
-          <h1
-            className="
-              font-serif text-[52px] leading-[1.12] mb-5
-              max-[1024px]:text-[42px]
-              max-[900px]:text-[34px]
-              max-[600px]:text-[28px]
-            "
-          >
-            Réactifs &amp; Équipements pour votre{" "}
-            <em className="text-[#29A864] not-italic">laboratoire</em>
-          </h1>
-
-          {/* Sous-titre */}
-          <p
-            className="
-              text-[#6E6E6E] text-[17px] leading-[1.7] mb-10 max-w-[480px]
-              max-[900px]:text-[15px] max-[900px]:max-w-full
-              max-[600px]:text-sm
-            "
-          >
-            Votre partenaire de confiance pour l&apos;approvisionnement en équipement,
-            réactif et consommable de laboratoire d&apos;analyses médicales.
-          </p>
-
-          {/* CTA buttons */}
-          <div className="flex gap-3 flex-wrap max-[600px]:flex-col">
-            <Link
-              href="/catalogue/equipements"
-              className="
-                inline-flex items-center py-3 px-7
-                bg-[#29A864] text-white no-underline
-                border-none rounded-[9px] text-[15px] font-medium
-                transition-[background-color,transform] duration-150
-                hover:bg-[#48BC7E] hover:-translate-y-px
-                max-[600px]:w-full max-[600px]:justify-center
-              "
-            >
-              Voir Nos Produits →
-            </Link>
-
-            <DevisButton
-              label="Demander un devis"
-              className="
-                inline-flex items-center py-3 px-7
-                bg-transparent text-[#29A864]
-                border-[1.5px] border-[#29A864] rounded-[9px] text-[15px] font-medium
-                transition-all duration-150 cursor-pointer
-                hover:bg-[#EDF8F1]
-                max-[600px]:w-full max-[600px]:justify-center
-              "
-            />
-          </div>
+        {/* Logo */}
+        <div className="reveal relative z-10 mb-7">
+          <Image src="/images/icon-color.svg" width={68} height={68} alt="BioInteraction" priority />
         </div>
 
-        {/* ── Right : hero cards ── */}
-        <div className="grid grid-cols-2 gap-4 max-[600px]:grid-cols-1 max-[600px]:gap-3">
+        {/* Badge */}
+        <div className="reveal reveal-d1 relative z-10 inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#29A864]/35 bg-[#29A864]/10 text-[#29A864] text-[11px] font-semibold tracking-[0.7px] uppercase mb-8">
+          <span className="w-[7px] h-[7px] rounded-full bg-[#29A864] animate-pulse shrink-0" />
+          Spécialiste du domaine depuis 2016
+        </div>
 
-          {/* Card Réactifs — décalée vers le bas sur desktop */}
-          <Link
-            href="/catalogue/reactifs"
-            className="
-              bg-[#F7F6F2] border border-[#E5E3DC] rounded-2xl p-6 px-5 no-underline
-              transition-all duration-200
-              hover:shadow-[0_4px_16px_rgba(0,0,0,0.10)] hover:-translate-y-0.5
-              mt-6 max-[900px]:mt-0
-            "
-          >
-            <div
-              className="w-11 h-11 rounded-[10px] flex items-center justify-center mb-4 text-[22px]"
-              style={{ background: "#eef6e2" }}
-              aria-hidden="true"
-            >
-              🧪
-            </div>
-            <h3 className="text-[15px] font-semibold text-[#1B1F1D] mb-1.5">
-              Réactifs de laboratoire
-            </h3>
-            <p className="text-[13px] text-[#6E6E6E] leading-[1.55]">
-              Biochimie Clinique · Hématologie · Hémostase · Analyse des Urines
-            </p>
-            <span
-              className="inline-block mt-3 text-[11px] font-semibold tracking-[0.4px] uppercase px-2.5 py-[3px] rounded-full"
-              style={{ background: "#EDF8F1", color: "#29A864" }}
-            >
-              +353 RÉFÉRENCES
-            </span>
-          </Link>
+        {/* Title */}
+        <h1
+          className="reveal reveal-d2 relative z-10 font-serif leading-[1.07] mb-7 max-w-[900px]"
+          style={{ fontSize: "clamp(34px, 6.5vw, 78px)" }}
+        >
+          Réactifs &amp; Équipements pour votre{" "}
+          <em className="text-[#29A864] not-italic">laboratoire</em>
+        </h1>
 
-          {/* Card Équipements — décalée vers le haut sur desktop */}
+        {/* Subtitle */}
+        <p
+          className="reveal reveal-d3 relative z-10 text-white/55 leading-[1.7] mb-10 max-w-[560px]"
+          style={{ fontSize: "clamp(15px, 1.7vw, 18px)" }}
+        >
+          Votre partenaire de confiance pour l&apos;approvisionnement en équipement,
+          réactif et consommable de laboratoire d&apos;analyses médicales.
+        </p>
+
+        {/* CTAs */}
+        <div className="reveal reveal-d4 relative z-10 flex items-center gap-3 flex-wrap justify-center">
           <Link
             href="/catalogue/equipements"
             className="
-              bg-[#F7F6F2] border border-[#E5E3DC] rounded-2xl p-6 px-5 no-underline
-              transition-all duration-200
-              hover:shadow-[0_4px_16px_rgba(0,0,0,0.10)] hover:-translate-y-0.5
-              -mt-6 max-[900px]:mt-0
+              inline-flex items-center gap-2
+              px-7 py-3.5 rounded-full
+              bg-[#29A864] text-white text-[15px] font-semibold no-underline
+              transition-[background,transform,box-shadow] duration-150
+              hover:bg-[#48BC7E] hover:-translate-y-0.5 hover:shadow-[0_8px_28px_rgba(41,168,100,0.45)]
             "
           >
-            <div
-              className="w-11 h-11 rounded-[10px] flex items-center justify-center mb-4 text-[22px]"
-              style={{ background: "#dff0c4" }}
-              aria-hidden="true"
-            >
-              🔬
-            </div>
-            <h3 className="text-[15px] font-semibold text-[#1B1F1D] mb-1.5">
-              Équipements de laboratoire
-            </h3>
-            <p className="text-[13px] text-[#6E6E6E] leading-[1.55]">
-              Biochimie Clinique · Hématologie · Hémostase · Analyse des Urines · Chaîne ELISA · Auto-Immunité
-            </p>
-            <span
-              className="inline-block mt-3 text-[11px] font-semibold tracking-[0.4px] uppercase px-2.5 py-[3px] rounded-full"
-              style={{ background: "#D2EFDF", color: "#15623A" }}
-            >
-              +20 MODÈLES
-            </span>
+            Voir Nos Produits
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth={2.2} strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4" aria-hidden="true">
+              <path d="M3 8h10M9 4l4 4-4 4" />
+            </svg>
           </Link>
-        </div>
-      </section>
-
-      {/* ════════════════════════════════════════
-          NOS GAMMES DE PRODUITS
-          ════════════════════════════════════════ */}
-      <section className="max-w-[1200px] mx-auto py-20 px-12 max-[1024px]:px-6 max-[1024px]:py-[60px] max-[600px]:py-9 max-[600px]:px-4">
-        <div className="mb-10">
-          <h2
-            className="font-serif text-[34px] mb-2 max-[600px]:text-[26px]"
-          >
-            Nos gammes de produits
-          </h2>
-          <p className="text-[#6E6E6E] text-[16px]">
-            Des solutions complètes pour chaque application de recherche.
-          </p>
-        </div>
-
-        {/* CardGrid gère ses propres données et son responsive */}
-        <CardGrid />
-      </section>
-
-      {/* ════════════════════════════════════════
-          CTA BAND  (masquée sur mobile ≤ 600px)
-          ════════════════════════════════════════ */}
-      <div className="bg-[#F7F6F2] border-t border-b border-[#E5E3DC] max-[600px]:hidden">
-        <div className="max-w-[1200px] mx-auto py-16 px-12 flex items-center justify-between gap-10 max-[1024px]:px-6 max-[1024px]:py-12">
-          <div>
-            <h2 className="font-serif text-[30px] mb-2">
-              Un produit spécifique en tête&nbsp;?
-            </h2>
-            <p className="text-[#6E6E6E] max-w-[480px]">
-              Notre équipe technique est disponible pour vous orienter vers la solution
-              la mieux adaptée à vos besoins et préparer un devis personnalisé.
-            </p>
-          </div>
-
           <DevisButton
-            label="Obtenir un devis →"
+            label="Demander un devis"
             className="
-              inline-flex items-center py-3 px-7 shrink-0
-              bg-[#29A864] text-white
-              border-none rounded-[9px] text-[15px] font-medium whitespace-nowrap cursor-pointer
-              transition-[background-color,transform] duration-150
-              hover:bg-[#48BC7E] hover:-translate-y-px
+              inline-flex items-center
+              px-7 py-3.5 rounded-full
+              bg-white/[0.07] text-white text-[15px] font-semibold
+              border border-white/[0.14]
+              cursor-pointer
+              transition-[background,transform] duration-150
+              hover:bg-white/[0.13] hover:-translate-y-0.5
             "
           />
         </div>
-      </div>
 
-      {/* ════════════════════════════════════════
-          STATS STRIP
-          ════════════════════════════════════════ */}
-      <div className="bg-[#29A864] py-10 px-12 max-[1024px]:px-6 max-[1024px]:py-8 max-[600px]:py-6 max-[600px]:px-4">
-        <div className="max-w-[1200px] mx-auto grid grid-cols-4 gap-5 max-[900px]:grid-cols-2 max-[600px]:gap-3">
-          {STATS.map(({ value, label }) => (
-            <div key={value} className="text-center">
+        {/* Scroll cue */}
+        <div className="absolute bottom-9 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 max-[600px]:hidden" aria-hidden="true">
+          <span className="text-[10px] font-semibold tracking-[1px] uppercase text-white/20">Défiler</span>
+          <div className="w-px h-9 bg-gradient-to-b from-white/25 to-transparent" />
+        </div>
+      </section>
+
+
+      {/* ════════════════════════════════════════════════════════
+          2. ÉQUIPEMENTS — fond gris clair
+          ════════════════════════════════════════════════════════ */}
+      <section className="
+        relative min-h-[80vh] flex flex-col items-center justify-center
+        bg-[#F5F5F7] px-6 py-28 text-center overflow-hidden
+      ">
+        <div className="reveal relative z-10 max-w-[760px] mx-auto">
+          <span className="inline-block text-[11px] font-semibold tracking-[0.7px] uppercase text-[#29A864] mb-5">
+            Équipements de laboratoire
+          </span>
+          <h2
+            className="font-serif text-[#1B1F1D] leading-[1.08] mb-6"
+            style={{ fontSize: "clamp(32px, 5.5vw, 64px)" }}
+          >
+            +20 modèles<br className="max-[600px]:hidden" /> haute performance.
+          </h2>
+          <p
+            className="text-[#6E6E6E] leading-[1.75] mb-9 mx-auto max-w-[520px]"
+            style={{ fontSize: "clamp(15px, 1.6vw, 17px)" }}
+          >
+            Biochimie Clinique · Hématologie · Hémostase · Analyse des Urines ·
+            Chaîne ELISA · Auto-Immunité
+          </p>
+          <div className="flex items-center justify-center gap-3 flex-wrap">
+            <Link
+              href="/catalogue/equipements"
+              className="
+                inline-flex items-center gap-2
+                px-7 py-3.5 rounded-full
+                bg-[#1B1F1D] text-white text-[15px] font-semibold no-underline
+                transition-[background,transform] duration-150
+                hover:bg-[#3a3f3d] hover:-translate-y-0.5
+              "
+            >
+              Voir les équipements
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth={2.2} strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4" aria-hidden="true">
+                <path d="M3 8h10M9 4l4 4-4 4" />
+              </svg>
+            </Link>
+            <DevisButton
+              label="Demander un devis"
+              className="
+                inline-flex items-center
+                px-7 py-3.5 rounded-full
+                bg-transparent text-[#29A864] text-[15px] font-semibold
+                border border-[#29A864]/40
+                cursor-pointer
+                transition-[background,border-color,transform] duration-150
+                hover:bg-[#EDF8F1] hover:border-[#29A864] hover:-translate-y-0.5
+              "
+            />
+          </div>
+        </div>
+
+        {/* Ghost number — parallax */}
+        <div
+          className="parallax absolute -bottom-6 right-0 font-serif leading-none text-[#1B1F1D]/[0.045] pointer-events-none select-none"
+          data-speed="0.22"
+          style={{ fontSize: "clamp(140px, 22vw, 300px)" }}
+          aria-hidden="true"
+        >
+          20
+        </div>
+      </section>
+
+
+      {/* ════════════════════════════════════════════════════════
+          3. RÉACTIFS — fond sombre
+          ════════════════════════════════════════════════════════ */}
+      <section className="
+        relative min-h-[80vh] flex flex-col items-center justify-center
+        bg-[#1D1D1F] px-6 py-28 text-center overflow-hidden
+      ">
+        {/* Bottom glow */}
+        <div
+          className="absolute bottom-0 left-1/2 -translate-x-1/2 pointer-events-none"
+          style={{ width: "700px", height: "280px", background: "radial-gradient(ellipse at 50% 100%, rgba(41,168,100,0.14) 0%, transparent 70%)" }}
+          aria-hidden="true"
+        />
+
+        <div className="reveal relative z-10 max-w-[760px] mx-auto text-white">
+          <span className="inline-block text-[11px] font-semibold tracking-[0.7px] uppercase text-[#29A864] mb-5">
+            Réactifs de laboratoire
+          </span>
+          <h2
+            className="font-serif leading-[1.08] mb-6"
+            style={{ fontSize: "clamp(32px, 5.5vw, 64px)" }}
+          >
+            +353 références.<br className="max-[600px]:hidden" />{" "}
+            <em className="text-[#29A864] not-italic">Toujours disponibles.</em>
+          </h2>
+          <p
+            className="text-white/55 leading-[1.75] mb-9 mx-auto max-w-[520px]"
+            style={{ fontSize: "clamp(15px, 1.6vw, 17px)" }}
+          >
+            Biochimie Clinique · Hématologie · Hémostase ·
+            Analyse des Urines · Auto-Immunité · Allergie · Parasitologie
+          </p>
+          <div className="flex items-center justify-center gap-3 flex-wrap">
+            <Link
+              href="/catalogue/reactifs"
+              className="
+                inline-flex items-center gap-2
+                px-7 py-3.5 rounded-full
+                bg-white text-[#1D1D1F] text-[15px] font-semibold no-underline
+                transition-[background,transform] duration-150
+                hover:bg-white/90 hover:-translate-y-0.5
+              "
+            >
+              Voir les réactifs
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth={2.2} strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4" aria-hidden="true">
+                <path d="M3 8h10M9 4l4 4-4 4" />
+              </svg>
+            </Link>
+            <DevisButton
+              label="Demander un devis"
+              className="
+                inline-flex items-center
+                px-7 py-3.5 rounded-full
+                bg-transparent text-white text-[15px] font-semibold
+                border border-white/20
+                cursor-pointer
+                transition-[background,transform] duration-150
+                hover:bg-white/[0.08] hover:-translate-y-0.5
+              "
+            />
+          </div>
+        </div>
+
+        {/* Ghost number — parallax */}
+        <div
+          className="parallax absolute -bottom-6 left-0 font-serif leading-none text-white/[0.03] pointer-events-none select-none"
+          data-speed="0.22"
+          style={{ fontSize: "clamp(140px, 22vw, 300px)" }}
+          aria-hidden="true"
+        >
+          353
+        </div>
+      </section>
+
+
+      {/* ════════════════════════════════════════════════════════
+          3.5 PINNED SHOWCASE — scroll horizontal (desktop)
+          ════════════════════════════════════════════════════════ */}
+      <PinnedShowcase
+        badge="Nos analyseurs"
+        title={<>Une gamme pour chaque <em className="text-[#29A864] not-italic">spécialité</em>.</>}
+        items={HOME_SHOWCASE}
+      />
+
+
+      {/* ════════════════════════════════════════════════════════
+          4. STATS — vert
+          ════════════════════════════════════════════════════════ */}
+      <div className="bg-[#29A864] py-16 px-12 max-[1024px]:px-6 max-[600px]:py-12 max-[600px]:px-4">
+        <div className="max-w-[1100px] mx-auto grid grid-cols-4 gap-6 max-[900px]:grid-cols-2 max-[600px]:gap-4">
+          {STATS.map(({ num, suffix, label }, i) => (
+            <div
+              key={label}
+              className="reveal text-center"
+              style={{ transitionDelay: `${i * 80}ms` }}
+            >
               <span
-                className="font-serif text-[36px] text-white block max-[600px]:text-[26px]"
+                className="count-up font-serif text-white block mb-1"
+                data-target={num}
+                data-suffix={suffix}
+                style={{ fontSize: "clamp(34px, 4.5vw, 52px)" }}
               >
-                {value}
+                {num}{suffix}
               </span>
-              <div className="text-[13px] text-white/65 mt-1 max-[600px]:text-[12px]">
-                {label}
-              </div>
+              <p className="text-white/60 text-[13px] tracking-[0.2px]">{label}</p>
             </div>
           ))}
         </div>
       </div>
+
+
+      {/* ════════════════════════════════════════════════════════
+          5. PARTENAIRES — fond blanc
+          ════════════════════════════════════════════════════════ */}
+      <section className="bg-white py-20 px-12 max-[1024px]:px-6 max-[600px]:py-14 max-[600px]:px-4">
+        <div className="max-w-[1000px] mx-auto text-center">
+
+          <div className="reveal mb-12">
+            <span className="inline-block text-[11px] font-semibold tracking-[0.7px] uppercase text-[#A9ADAA] mb-3">
+              Représentations exclusives
+            </span>
+            <h2 className="font-serif text-[#1B1F1D]" style={{ fontSize: "clamp(28px, 3.5vw, 42px)" }}>
+              Nos partenaires
+            </h2>
+          </div>
+
+          <div className="reveal reveal-d1 flex items-center justify-center gap-10 flex-wrap max-[600px]:gap-8">
+            {PARTNERS.map(({ name, logo, w }) => (
+              <div
+                key={name}
+                className="grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-[filter,opacity] duration-300"
+              >
+                <Image
+                  src={logo}
+                  alt={name}
+                  width={w}
+                  height={48}
+                  className="h-9 w-auto object-contain"
+                />
+              </div>
+            ))}
+          </div>
+
+          <div className="reveal reveal-d2 mt-10">
+            <Link
+              href="/partenaires"
+              className="text-[14px] font-medium text-[#29A864] no-underline hover:underline"
+            >
+              En savoir plus sur nos partenaires →
+            </Link>
+          </div>
+        </div>
+      </section>
+
+
+      {/* ════════════════════════════════════════════════════════
+          6. GAMMES — fond gris clair
+          ════════════════════════════════════════════════════════ */}
+      <section className="bg-[#F5F5F7] py-20 px-12 max-[1024px]:px-6 max-[600px]:py-14 max-[600px]:px-4">
+        <div className="max-w-[1200px] mx-auto">
+          <div className="reveal mb-12 text-center">
+            <span className="inline-block text-[11px] font-semibold tracking-[0.7px] uppercase text-[#29A864] mb-3">
+              Catalogue
+            </span>
+            <h2 className="font-serif text-[#1B1F1D]" style={{ fontSize: "clamp(28px, 3.5vw, 42px)" }}>
+              Nos gammes de produits
+            </h2>
+          </div>
+          <CardGrid />
+        </div>
+      </section>
+
+
+      {/* ════════════════════════════════════════════════════════
+          7. CTA FINALE — dégradé vert
+          ════════════════════════════════════════════════════════ */}
+      <section
+        className="relative overflow-hidden py-28 px-12 text-center max-[1024px]:px-6 max-[600px]:py-20 max-[600px]:px-4"
+        style={{ background: "linear-gradient(145deg, #0F4226 0%, #1a7a42 50%, #29A864 100%)" }}
+      >
+        {/* Decorative circles */}
+        <div
+          className="absolute -top-[150px] -right-[150px] w-[550px] h-[550px] rounded-full pointer-events-none"
+          style={{ background: "rgba(255,255,255,0.045)" }}
+          aria-hidden="true"
+        />
+        <div
+          className="absolute -bottom-[120px] -left-[120px] w-[400px] h-[400px] rounded-full pointer-events-none"
+          style={{ background: "rgba(255,255,255,0.03)" }}
+          aria-hidden="true"
+        />
+
+        <div className="reveal relative z-10 max-w-[620px] mx-auto">
+          <h2
+            className="font-serif text-white leading-[1.1] mb-5"
+            style={{ fontSize: "clamp(32px, 5vw, 56px)" }}
+          >
+            Un produit spécifique<br />en tête&nbsp;?
+          </h2>
+          <p className="text-white/70 leading-[1.75] mb-10" style={{ fontSize: "clamp(15px, 1.6vw, 17px)" }}>
+            Notre équipe technique est disponible pour vous orienter vers la solution
+            la mieux adaptée à vos besoins et préparer un devis personnalisé.
+          </p>
+          <DevisButton
+            label="Obtenir un devis →"
+            className="
+              inline-flex items-center
+              px-9 py-4 rounded-full
+              bg-white text-[#0F4226] text-[16px] font-bold
+              border-none cursor-pointer
+              transition-[transform,box-shadow] duration-150
+              hover:-translate-y-0.5 hover:shadow-[0_10px_36px_rgba(0,0,0,0.22)]
+            "
+          />
+        </div>
+      </section>
+
     </>
   );
 }

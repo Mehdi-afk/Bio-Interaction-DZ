@@ -60,7 +60,7 @@ export default function ReactifsSubcategoryLanding({
       </div>
 
       {/* Header */}
-      <div className="mb-10 max-[600px]:mb-7">
+      <div className="reveal mb-10 max-[600px]:mb-7">
         <h1 className="font-serif text-[38px] mb-3 max-[600px]:text-[28px]">
           {meta.label}
         </h1>
@@ -75,15 +75,16 @@ export default function ReactifsSubcategoryLanding({
         max-[1024px]:grid-cols-2
         max-[480px]:grid-cols-1 max-[480px]:gap-3
       ">
-        {sections.map((sec) => {
+        {sections.map((sec, i) => {
           const displayName = SECTION_DISPLAY[sec.label] ?? sec.label;
           const href = `/catalogue/reactifs?cat=${cat}&section=${encodeURIComponent(sec.label)}`;
           return (
             <Link
               key={sec.label}
               href={href}
+              style={{ transitionDelay: `${i * 55}ms` }}
               className="
-                group flex items-center justify-between
+                reveal group flex items-center justify-between
                 bg-white border border-[#E5E3DC] rounded-xl px-5 py-4 no-underline
                 transition-all duration-200
                 hover:shadow-[0_4px_16px_rgba(0,0,0,0.08)] hover:border-[#BDD0EA] hover:-translate-y-0.5
