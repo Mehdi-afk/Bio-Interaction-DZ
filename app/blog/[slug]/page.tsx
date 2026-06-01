@@ -8,6 +8,7 @@ import { db } from "@/src/lib/firebase";
 import { useAuth } from "@/src/context/AuthContext";
 import AuthGateModal from "@/src/components/blog/AuthGateModal";
 import type { Article, ContentBlock } from "@/src/types/blog";
+import { sanitizeHtml } from "@/src/lib/sanitize";
 
 function formatDate(ts: { seconds: number } | null | undefined) {
   if (!ts) return "";
@@ -16,30 +17,160 @@ function formatDate(ts: { seconds: number } | null | undefined) {
   });
 }
 
+/* ── Table helpers (module scope — no closure needed) ── */
+type RawCell = { content: string; colspan?: number; rowspan?: number } | null | string;
+function getCells(row: unknown): RawCell[] {
+  if (Array.isArray(row)) return row as RawCell[];
+  if (row && typeof row === "object" && "cells" in row) return (row as { cells: RawCell[] }).cells;
+  return [];
+}
+function getCell(raw: RawCell) {
+  if (!raw) return null;
+  if (typeof raw === "string") return { content: raw };
+  return raw;
+}
+
 function BlockRenderer({ block }: { block: ContentBlock }) {
   switch (block.type) {
     case "heading2":
-      return <h2 className="font-serif text-[28px] text-[#1B1F1D] mt-10 mb-4 leading-[1.3] max-[600px]:text-[22px]">{block.text}</h2>;
+      return (
+        <h2
+          className="font-serif text-[28px] text-[#1B1F1D] mt-10 mb-4 leading-[1.3] max-[600px]:text-[22px]"
+          style={{ textAlign: block.align ?? "left" }}
+          dangerouslySetInnerHTML={{ __html: sanitizeHtml(block.text) }}
+        />
+      );
     case "heading3":
-      return <h3 className="font-serif text-[20px] text-[#1B1F1D] mt-8 mb-3 leading-[1.3]">{block.text}</h3>;
+      return (
+        <h3
+          className="font-serif text-[20px] text-[#1B1F1D] mt-8 mb-3 leading-[1.3]"
+          style={{ textAlign: block.align ?? "left" }}
+          dangerouslySetInnerHTML={{ __html: sanitizeHtml(block.text) }}
+        />
+      );
     case "paragraph":
-      return <p className="text-[16px] text-[#3A3A3A] leading-[1.85] mb-5 max-[600px]:text-[15px]">{block.text}</p>;
+      return (
+        <p
+          className="text-[16px] text-[#3A3A3A] leading-[1.85] mb-5 max-[600px]:text-[15px]"
+          style={{ textAlign: block.align ?? "left" }}
+          dangerouslySetInnerHTML={{ __html: sanitizeHtml(block.text) }}
+        />
+      );
     case "quote":
       return (
         <blockquote className="my-7 pl-6 border-l-[4px] border-[#29A864]">
-          <p className="text-[17px] text-[#1B1F1D] leading-[1.75] italic font-serif">{block.text}</p>
+          <p className="text-[17px] text-[#1B1F1D] leading-[1.75] italic font-serif"
+            dangerouslySetInnerHTML={{ __html: sanitizeHtml(block.text) }} />
         </blockquote>
       );
-    case "image":
+    case "image": {
+      const isFloatLeft  = block.align === "float-left";
+      const isFloatRight = block.align === "float-right";
+      const isFloat      = isFloatLeft || isFloatRight;
       return (
-        <figure className="my-8">
+        <figure
+          className={`my-6 ${isFloat ? (isFloatLeft ? "float-left mr-6 mb-4" : "float-right ml-6 mb-4") : ""}`}
+          style={isFloat ? { width: "45%" } : undefined}
+        >
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={block.url} alt={block.caption ?? ""} className="w-full rounded-xl object-cover max-h-[520px]" />
+          <img
+            src={block.url}
+            alt={block.caption ?? ""}
+            className={`rounded-xl object-cover ${isFloat ? "w-full" : "w-full max-h-[520px]"}`}
+          />
           {block.caption && (
             <figcaption className="text-center text-[12px] text-[#A9ADAA] mt-2">{block.caption}</figcaption>
           )}
         </figure>
       );
+    }
+    case "list": {
+      const marker = block.listStyle === "bullet" ? "•" : block.listStyle === "dash" ? "—" : null;
+      if (block.listStyle === "numbered") {
+        return (
+          <ol className="text-[16px] text-[#3A3A3A] leading-[1.85] mb-5 pl-6 list-decimal max-[600px]:text-[15px]">
+            {block.items.filter(Boolean).map((item, i) => (
+              <li key={i} className="mb-1" dangerouslySetInnerHTML={{ __html: sanitizeHtml(item) }} />
+            ))}
+          </ol>
+        );
+      }
+      return (
+        <ul className="text-[16px] text-[#3A3A3A] leading-[1.85] mb-5 list-none pl-0 max-[600px]:text-[15px]">
+          {block.items.filter(Boolean).map((item, i) => (
+            <li key={i} className="flex gap-2 mb-1">
+              <span className="text-[#29A864] select-none shrink-0">{marker}</span>
+              <span dangerouslySetInnerHTML={{ __html: sanitizeHtml(item) }} />
+            </li>
+          ))}
+        </ul>
+      );
+    }
+    case "table": {
+      const hasHeader = block.hasHeader ?? true;
+      const allRows   = block.rows;
+      const dataRows  = hasHeader ? allRows.slice(1) : allRows;
+      return (
+        <div className="my-7 overflow-x-auto">
+          <table className="w-full border-collapse text-[14px]">
+            {hasHeader && allRows.length > 0 && (
+              <thead>
+                <tr>
+                  {getCells(allRows[0]).map((raw, ci) => {
+                    const cell = getCell(raw);
+                    if (!cell) return null;
+                    return (
+                      <th key={ci} colSpan={cell.colspan} rowSpan={cell.rowspan}
+                        className="px-4 py-2.5 text-left font-semibold text-[#1B1F1D] bg-[#F2F1EC] border border-[#E5E3DC]"
+                        dangerouslySetInnerHTML={{ __html: sanitizeHtml(cell.content) }}
+                      />
+                    );
+                  })}
+                </tr>
+              </thead>
+            )}
+            <tbody>
+              {dataRows.map((row, ri) => (
+                <tr key={ri} className={ri % 2 === 1 ? "bg-[#FAFAF8]" : "bg-white"}>
+                  {getCells(row).map((raw, ci) => {
+                    const cell = getCell(raw);
+                    if (!cell) return null;
+                    return (
+                      <td key={ci} colSpan={cell.colspan} rowSpan={cell.rowspan}
+                        className="px-4 py-2.5 text-[#3A3A3A] border border-[#E5E3DC]"
+                        dangerouslySetInnerHTML={{ __html: sanitizeHtml(cell.content) }}
+                      />
+                    );
+                  })}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      );
+    }
+    case "divider":
+      return <hr className="my-8 border-0 border-t border-[#E5E3DC]" />;
+    case "button": {
+      const variants: Record<string, string> = {
+        primary:   "bg-[#29A864] text-white hover:bg-[#48BC7E]",
+        secondary: "border-2 border-[#29A864] text-[#29A864] hover:bg-[#EDF8F1]",
+        ghost:     "text-[#29A864] hover:underline",
+      };
+      const sizes: Record<string, string> = {
+        sm: "px-4 py-2 text-[13px]",
+        md: "px-6 py-2.5 text-[15px]",
+        lg: "px-8 py-3 text-[17px]",
+      };
+      const align = block.align ?? "center";
+      return (
+        <div className={`my-6 flex ${align === "center" ? "justify-center" : align === "right" ? "justify-end" : "justify-start"}`}>
+          <a href={block.url} target="_blank" rel="noopener noreferrer"
+            className={`inline-block rounded-xl font-semibold transition-colors no-underline ${variants[block.variant ?? "primary"] ?? variants.primary} ${sizes[block.size ?? "md"] ?? sizes.md}`}
+          >{block.text}</a>
+        </div>
+      );
+    }
     default:
       return null;
   }
@@ -217,7 +348,7 @@ export default function ArticlePage() {
         </div>
 
         {/* Body */}
-        <div>
+        <div className="flow-root [&_a]:text-[#29A864] [&_a]:underline [&_a]:underline-offset-2 [&_a:hover]:text-[#48BC7E] [&_strong]:font-semibold [&_em]:italic [&_u]:underline [&_s]:line-through">
           {article.body.map((block, i) => (
             <BlockRenderer key={i} block={block} />
           ))}
