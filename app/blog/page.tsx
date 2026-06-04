@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, query, where } from "firebase/firestore";
 import { db } from "@/src/lib/firebase";
 import { useAuth } from "@/src/context/AuthContext";
 import type { Article } from "@/src/types/blog";
@@ -45,7 +45,10 @@ export default function BlogPage() {
   useEffect(() => {
     async function load() {
       try {
-        const snap    = await getDocs(collection(db, "articles"));
+        // Non-admins : on filtre côté serveur (publiés uniquement) pour rester
+        // compatible avec les règles Firestore strictes. Admin : tout est lisible.
+        const col  = collection(db, "articles");
+        const snap = await getDocs(isAdmin ? col : query(col, where("status", "==", "published")));
         const all     = snap.docs.map((d) => ({ id: d.id, ...d.data() } as Article));
         const visible = isAdmin ? all : all.filter((a) => a.status === "published");
         visible.sort(

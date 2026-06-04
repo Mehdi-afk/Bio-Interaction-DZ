@@ -30,6 +30,17 @@ function getCell(raw: RawCell) {
   return raw;
 }
 
+// Les hrefs de bouton sont des props React (pas du HTML passé à DOMPurify) : ils
+// échappent donc à la sanitisation. On n'autorise qu'une liste blanche de schémas
+// pour bloquer javascript:, data:, vbscript: et les URLs protocol-relative (//evil).
+function safeHref(url: unknown): string {
+  if (typeof url !== "string") return "#";
+  const u = url.trim();
+  if (/^(https?:|mailto:|tel:)/i.test(u)) return u; // schémas sûrs
+  if (/^\/(?!\/)/.test(u)) return u;                // chemin racine-relatif (pas //)
+  return "#";
+}
+
 function BlockRenderer({ block }: { block: ContentBlock }) {
   switch (block.type) {
     case "heading2":
@@ -165,7 +176,7 @@ function BlockRenderer({ block }: { block: ContentBlock }) {
       const align = block.align ?? "center";
       return (
         <div className={`my-6 flex ${align === "center" ? "justify-center" : align === "right" ? "justify-end" : "justify-start"}`}>
-          <a href={block.url} target="_blank" rel="noopener noreferrer"
+          <a href={safeHref(block.url)} target="_blank" rel="noopener noreferrer"
             className={`inline-block rounded-xl font-semibold transition-colors no-underline ${variants[block.variant ?? "primary"] ?? variants.primary} ${sizes[block.size ?? "md"] ?? sizes.md}`}
           >{block.text}</a>
         </div>
@@ -192,12 +203,33 @@ export default function ArticlePage() {
   }, [loading, user]);
 
   useEffect(() => {
+    async function fetchBySlug() {
+      const col = collection(db, "articles");
+      // Chemin sécurisé : un non-admin ne peut interroger que les articles publiés
+      // (cohérent avec les règles Firestore strictes). Requête composite (slug+status)
+      // → nécessite l'index articles(slug, status).
+      const secure = isAdmin
+        ? query(col, where("slug", "==", slug))
+        : query(col, where("slug", "==", slug), where("status", "==", "published"));
+      try {
+        return await getDocs(secure);
+      } catch {
+        // Fallback de transition : si l'index composite n'est pas encore déployé,
+        // Firestore rejette la requête composite → on retombe sur la requête simple.
+        // Sûr sous les règles permissives ; le filtre client ci-dessous masque les
+        // brouillons. Une fois l'index + règles strictes en place, ce fallback n'est
+        // plus atteint.
+        return await getDocs(query(col, where("slug", "==", slug)));
+      }
+    }
+
     async function load() {
       try {
-        const q    = query(collection(db, "articles"), where("slug", "==", slug));
-        const snap = await getDocs(q);
+        const snap = await fetchBySlug();
         if (snap.empty) { setNotFound(true); return; }
         const data = { id: snap.docs[0].id, ...snap.docs[0].data() } as Article;
+        // Défense en profondeur : masque les brouillons aux non-admins même si le
+        // fallback (règles permissives) en a renvoyé un.
         if (data.status !== "published" && !isAdmin) { setNotFound(true); return; }
         setArticle(data);
       } catch {

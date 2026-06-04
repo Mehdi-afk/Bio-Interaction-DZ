@@ -71,7 +71,10 @@ service cloud.firestore {
 
     // ── articles/{id} ──────────────────────────────────────────────────────
     match /articles/{id} {
-      allow read:   if true;       // Blog public
+      // Lecture : articles publiés visibles de tous ; brouillons réservés à l'admin.
+      // (Les requêtes client non-admin doivent filtrer status=="published" — cf.
+      //  blog/page.tsx et blog/[slug]/page.tsx — sinon Firestore rejette la requête.)
+      allow read:   if resource.data.status == 'published' || isAdmin();
       allow create: if isAdmin();
       allow update: if isAdmin();
       allow delete: if isAdmin();
