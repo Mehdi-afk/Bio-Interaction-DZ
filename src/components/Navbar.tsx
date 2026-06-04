@@ -230,9 +230,9 @@ export default function Navbar() {
                           ))}
                         </div>
 
-                        {/* CTA "Voir tout" */}
+                        {/* CTA "Voir tout" — ?all=1 affiche la liste complète des produits (pas le landing catégories) */}
                         <Link
-                          href={href}
+                          href={`${href}?all=1`}
                           className="inline-flex items-center gap-1.5 mt-4 ml-3 text-[12px] font-semibold text-[#29A864]/60 hover:text-[#29A864] no-underline transition-colors duration-150"
                           onClick={() => { handleNavClick(href); setDropOpen(false); }}
                         >
