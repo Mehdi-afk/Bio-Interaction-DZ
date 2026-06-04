@@ -5,7 +5,6 @@ import Link from "next/link";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "@/src/lib/firebase";
 import { useAuth } from "@/src/context/AuthContext";
-import AuthGateModal from "@/src/components/blog/AuthGateModal";
 import type { Article } from "@/src/types/blog";
 
 function formatDate(ts: { seconds: number } | null | undefined) {
@@ -38,15 +37,10 @@ function SkeletonCard({ featured = false }: { featured?: boolean }) {
 }
 
 export default function BlogPage() {
-  const { user, loading, isAdmin } = useAuth();
+  const { isAdmin } = useAuth();
   const [articles, setArticles]     = useState<Article[]>([]);
   const [fetching, setFetching]     = useState(true);
   const [fetchError, setFetchError] = useState(false);
-  const [showModal, setShowModal]   = useState(false);
-
-  useEffect(() => {
-    if (!loading && !user) setShowModal(true);
-  }, [loading, user]);
 
   useEffect(() => {
     async function load() {
@@ -73,8 +67,6 @@ export default function BlogPage() {
 
   return (
     <>
-      {showModal && <AuthGateModal onClose={() => setShowModal(false)} />}
-
       {/* ════════════════════════════════════════════════════════
           HERO éditorial — fond sombre
           ════════════════════════════════════════════════════════ */}

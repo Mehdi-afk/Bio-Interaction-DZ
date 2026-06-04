@@ -47,3 +47,6 @@ next-env.d.ts
 
 # Generated scraping data (scripts only — src/data/fiches-techniques.ts is committed)
 /data/
+
+# Claude Code worktrees (copies temporaires du repo)
+.claude/worktrees/

@@ -10,6 +10,7 @@ import ModalContact from "@/src/components/ModalContact";
 import Toast from "@/src/components/Toast";
 import BackToTop from "@/src/components/BackToTop";
 import RevealObserver from "@/src/components/RevealObserver";
+import SmartGuide from "@/src/components/SmartGuide";
 
 // ── Polices ───────────────────────────────────────────────────────────────────
 // Originale : Google CDN  ?family=DM+Sans:wght@300;400;500;600&family=Geist:wght@400;500;600
@@ -107,6 +108,7 @@ export default function RootLayout({
           <Toast />
           <BackToTop />
           <RevealObserver />
+          <SmartGuide />
         </AppProvider>
         </AuthProvider>
       </body>

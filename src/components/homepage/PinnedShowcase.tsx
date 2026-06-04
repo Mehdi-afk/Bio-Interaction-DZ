@@ -15,12 +15,14 @@ export type PinnedItem = {
 type Props = {
   badge: string;
   title: ReactNode;
+  desc?:  string;
+  cta?:  { label: string; href: string };
   items: readonly PinnedItem[];
   /** Tailwind shorthand for section bg, e.g. "bg-[#0A0A0A]" (default). */
   bg?:   string;
 };
 
-export default function PinnedShowcase({ badge, title, items, bg = "bg-[#0A0A0A]" }: Props) {
+export default function PinnedShowcase({ badge, title, desc, cta, items, bg = "bg-[#0A0A0A]" }: Props) {
   const sectionRef  = useRef<HTMLDivElement>(null);
   const trackRef    = useRef<HTMLDivElement>(null);
   const progressRef = useRef<HTMLDivElement>(null);
@@ -124,15 +126,20 @@ export default function PinnedShowcase({ badge, title, items, bg = "bg-[#0A0A0A]
         />
 
         <div className="relative px-6 max-[480px]:px-4 mb-8 max-w-[700px] mx-auto text-center">
-          <span className="inline-block text-[11px] font-semibold tracking-[0.7px] uppercase text-[#29A864] mb-3">
+          <span className="inline-block text-[11px] font-semibold tracking-[0.7px] uppercase text-[#29A864] mb-4">
             {badge}
           </span>
           <h2
-            className="font-serif text-white leading-[1.1] text-balance"
-            style={{ fontSize: "clamp(20px, 4.5vw, 36px)" }}
+            className="font-serif text-white leading-[1.1] text-balance mb-4"
+            style={{ fontSize: "clamp(26px, 5.5vw, 42px)" }}
           >
             {title}
           </h2>
+          {desc && (
+            <p className="text-white/50 leading-[1.7]" style={{ fontSize: "clamp(13px, 3.5vw, 15px)" }}>
+              {desc}
+            </p>
+          )}
         </div>
 
         <div
@@ -168,11 +175,24 @@ export default function PinnedShowcase({ badge, title, items, bg = "bg-[#0A0A0A]
           ))}
         </div>
 
-        <div className="relative mt-2 flex items-center justify-center gap-2 text-white/30 text-[10px] font-semibold tracking-[1.5px] uppercase">
-          <span>Faites glisser</span>
-          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4">
-            <path d="M3 10h14M12 5l5 5-5 5"/>
-          </svg>
+        <div className="relative mt-4 flex items-center justify-center gap-5 flex-wrap">
+          <span className="flex items-center gap-2 text-white/30 text-[10px] font-semibold tracking-[1.5px] uppercase">
+            Faites glisser
+            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4">
+              <path d="M3 10h14M12 5l5 5-5 5"/>
+            </svg>
+          </span>
+          {cta && (
+            <Link
+              href={cta.href}
+              className="inline-flex items-center gap-1.5 text-[13px] font-semibold text-[#29A864] no-underline hover:underline"
+            >
+              {cta.label}
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth={2.2} strokeLinecap="round" strokeLinejoin="round" className="w-3.5 h-3.5" aria-hidden="true">
+                <path d="M3 8h10M9 4l4 4-4 4" />
+              </svg>
+            </Link>
+          )}
         </div>
       </section>
 
@@ -204,16 +224,24 @@ export default function PinnedShowcase({ badge, title, items, bg = "bg-[#0A0A0A]
         />
 
         {/* Heading — in flow (shrink-0) so it never overlaps the track */}
-        <div className="relative z-10 shrink-0 px-6 max-w-[800px] w-full mx-auto text-center pt-[7vh] pb-4">
-          <span className="inline-block text-[11px] font-semibold tracking-[0.7px] uppercase text-[#29A864] mb-3">
+        <div className="relative z-10 shrink-0 px-6 max-w-[800px] w-full mx-auto text-center pt-[5vh] pb-3">
+          <span className="inline-block text-[11px] font-semibold tracking-[0.7px] uppercase text-[#29A864] mb-4">
             {badge}
           </span>
           <h2
-            className="font-serif text-white leading-[1.08] text-balance"
-            style={{ fontSize: "clamp(22px, 2.8vw, 52px)" }}
+            className="font-serif text-white leading-[1.08] text-balance mb-4"
+            style={{ fontSize: "clamp(28px, 4vw, 56px)" }}
           >
             {title}
           </h2>
+          {desc && (
+            <p
+              className="text-white/50 leading-[1.75] mx-auto max-w-[480px]"
+              style={{ fontSize: "clamp(13px, 1.4vw, 15px)" }}
+            >
+              {desc}
+            </p>
+          )}
         </div>
 
         {/* Track — flex-1 + items-center so cards fill & center in remaining height */}
@@ -271,9 +299,21 @@ export default function PinnedShowcase({ badge, title, items, bg = "bg-[#0A0A0A]
               style={{ transform: "scaleX(0)" }}
             />
           </div>
-          <span className="text-white/30 text-[10px] font-semibold tracking-[1.5px] uppercase whitespace-nowrap">
-            Défilez ↓
-          </span>
+          {cta ? (
+            <Link
+              href={cta.href}
+              className="inline-flex items-center gap-1.5 text-white/40 text-[11px] font-semibold tracking-[1.5px] uppercase whitespace-nowrap no-underline transition-colors hover:text-[#29A864]"
+            >
+              {cta.label}
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth={2.2} strokeLinecap="round" strokeLinejoin="round" className="w-3.5 h-3.5" aria-hidden="true">
+                <path d="M3 8h10M9 4l4 4-4 4" />
+              </svg>
+            </Link>
+          ) : (
+            <span className="text-white/30 text-[10px] font-semibold tracking-[1.5px] uppercase whitespace-nowrap">
+              Défilez ↓
+            </span>
+          )}
         </div>
       </div>
       </section>

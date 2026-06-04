@@ -3,15 +3,14 @@ import Image from "next/image";
 import Link from "next/link";
 import CardGrid from "@/src/components/CardGrid";
 import DevisButton from "@/src/components/DevisButton";
-import PinnedShowcase, { type PinnedItem } from "@/src/components/homepage/PinnedShowcase";
 
-const HOME_SHOWCASE: readonly PinnedItem[] = [
+const HOME_SHOWCASE = [
   { key: "biochimie",    href: "/catalogue/equipements?cat=biochimie",    label: "Biochimie Clinique", desc: "Jusqu'à 1 000 tests/heure avec réactifs à tag RFID.",   image: "/images/equipements/ERBA XL 1000.webp" },
   { key: "hematologie",  href: "/catalogue/equipements?cat=hematologie",  label: "Hématologie",        desc: "Formule sanguine complète en moins de 60 secondes.",     image: "/images/equipements/ERBA H580.jpg" },
   { key: "hemostase",    href: "/catalogue/equipements?cat=hemostase",    label: "Hémostase",          desc: "TP, TCA, fibrinogène par coagulométrie optique.",        image: "/images/equipements/ERBA ECL 760.jpg" },
   { key: "urines",       href: "/catalogue/equipements?cat=urines",       label: "Analyse des Urines", desc: "Chimie sèche et sédiment urinaire automatisé.",          image: "/images/equipements/ERBA EC 90.jpg" },
   { key: "autoimmunite", href: "/catalogue/equipements?cat=autoimmunite", label: "Auto-Immunité",      desc: "Immunofluorescence digitalisée AKLIDES®.",               image: "/images/equipements/AKIRON NEO.png" },
-];
+] as const;
 
 export const metadata: Metadata = {
   title: "Accueil",
@@ -42,7 +41,7 @@ export default function HomePage() {
           1. HERO — fond noir cinématique
           ════════════════════════════════════════════════════════ */}
       <section className="
-        relative min-h-[calc(100vh-68px)] flex flex-col items-center justify-center
+        relative min-h-screen -mt-17 pt-17 flex flex-col items-center justify-center
         bg-black text-white px-6 py-28 text-center overflow-hidden
       ">
         {/* Radial glow */}
@@ -272,13 +271,97 @@ export default function HomePage() {
 
 
       {/* ════════════════════════════════════════════════════════
-          3.5 PINNED SHOWCASE — scroll horizontal (desktop)
+          3.5 NOS ANALYSEURS — fond gris clair
           ════════════════════════════════════════════════════════ */}
-      <PinnedShowcase
-        badge="Nos analyseurs"
-        title={<>Une gamme pour chaque <em className="text-[#29A864] not-italic">spécialité</em>.</>}
-        items={HOME_SHOWCASE}
-      />
+      <section className="
+        relative bg-[#F5F5F7] px-6 py-28 overflow-hidden
+        max-[1024px]:px-6 max-[600px]:py-20 max-[600px]:px-4
+      ">
+        {/* Header centré — même structure que les sections 2 et 3 */}
+        <div className="reveal relative z-10 max-w-[760px] mx-auto text-center mb-16 max-[600px]:mb-10">
+          <span className="inline-block text-[11px] font-semibold tracking-[0.7px] uppercase text-[#29A864] mb-5">
+            Nos analyseurs
+          </span>
+          <h2
+            className="font-serif text-[#1B1F1D] leading-[1.08] mb-6"
+            style={{ fontSize: "clamp(32px, 5.5vw, 64px)" }}
+          >
+            Une gamme pour chaque{" "}
+            <em className="text-[#29A864] not-italic">spécialité</em>.
+          </h2>
+          <p
+            className="text-[#6E6E6E] leading-[1.75] mb-9 mx-auto max-w-[520px]"
+            style={{ fontSize: "clamp(15px, 1.6vw, 17px)" }}
+          >
+            Biochimie Clinique · Hématologie · Hémostase · Auto-Immunité · Analyse des Urines
+          </p>
+          <Link
+            href="/catalogue/equipements"
+            className="
+              inline-flex items-center gap-2
+              px-7 py-3.5 rounded-full
+              bg-[#1B1F1D] text-white text-[15px] font-semibold no-underline
+              transition-[background,transform] duration-150
+              hover:bg-[#3a3f3d] hover:-translate-y-0.5
+            "
+          >
+            Voir les équipements
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth={2.2} strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4" aria-hidden="true">
+              <path d="M3 8h10M9 4l4 4-4 4" />
+            </svg>
+          </Link>
+        </div>
+
+        {/* Grille d'analyseurs */}
+        <div className="reveal reveal-d1 relative z-10 max-w-[1200px] mx-auto">
+          <div className="
+            flex gap-5 overflow-x-auto pb-2 snap-x snap-mandatory
+            [scrollbar-width:none] [&::-webkit-scrollbar]:hidden
+            min-[900px]:overflow-visible min-[900px]:grid min-[900px]:grid-cols-5
+            max-[600px]:gap-3
+          ">
+            {HOME_SHOWCASE.map(({ key, href, label, desc, image }) => (
+              <Link
+                key={key}
+                href={href}
+                className="shrink-0 w-[220px] min-[900px]:w-auto snap-start no-underline group"
+              >
+                <div className="
+                  bg-white border border-[#E5E3DC] rounded-2xl overflow-hidden mb-3
+                  transition-all duration-200
+                  group-hover:shadow-[0_4px_16px_rgba(0,0,0,0.10)] group-hover:border-[#29A864]
+                ">
+                  <div className="relative aspect-square">
+                    <Image
+                      src={image}
+                      alt={label}
+                      fill
+                      sizes="(min-width: 900px) 20vw, 220px"
+                      className="object-contain p-7"
+                    />
+                  </div>
+                </div>
+                <h3 className="text-[#1B1F1D] text-[15px] font-semibold mb-1 leading-tight">
+                  {label}
+                </h3>
+                <p className="text-[#6E6E6E] text-[13px] leading-[1.55]">
+                  {desc}
+                </p>
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        {/* Ghost number */}
+        <div
+          className="parallax absolute -bottom-6 right-0 font-serif leading-none text-[#1B1F1D]/[0.045] pointer-events-none select-none"
+          data-speed="0.22"
+          style={{ fontSize: "clamp(140px, 22vw, 300px)" }}
+          aria-hidden="true"
+        >
+          5
+        </div>
+      </section>
 
 
       {/* ════════════════════════════════════════════════════════

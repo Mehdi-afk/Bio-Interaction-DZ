@@ -2,11 +2,11 @@
 import { useEffect } from "react";
 
 const REVEAL_SEL = [
-  ".reveal:not(.visible)",
-  ".reveal-clip:not(.visible)",
-  ".reveal-left:not(.visible)",
-  ".reveal-right:not(.visible)",
-  ".reveal-scale:not(.visible)",
+  ".reveal:not([data-visible])",
+  ".reveal-clip:not([data-visible])",
+  ".reveal-left:not([data-visible])",
+  ".reveal-right:not([data-visible])",
+  ".reveal-scale:not([data-visible])",
 ].join(", ");
 
 function animateCounter(el: HTMLElement) {
@@ -36,7 +36,7 @@ export default function RevealObserver() {
       (entries) => {
         for (const entry of entries) {
           if (!entry.isIntersecting) continue;
-          entry.target.classList.add("visible");
+          (entry.target as HTMLElement).setAttribute("data-visible", "");
           revealIO.unobserve(entry.target);
           entry.target
             .querySelectorAll<HTMLElement>(".count-up:not([data-counted])")
