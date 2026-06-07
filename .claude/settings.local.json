@@ -207,7 +207,8 @@
       "PowerShell($gh = Get-Command gh -ErrorAction SilentlyContinue; if \\($gh\\) { \"FOUND: $\\($gh.Source\\)\" } else { \"NOT FOUND\" })",
       "PowerShell(winget install *)",
       "PowerShell($paths = @\\(\"$env:ProgramFiles\\\\GitHub CLI\\\\gh.exe\", \"${env:ProgramFiles\\(x86\\)}\\\\GitHub CLI\\\\gh.exe\", \"$env:LOCALAPPDATA\\\\Microsoft\\\\WinGet\\\\Links\\\\gh.exe\"\\); $found = $paths | Where-Object { Test-Path $_ } | Select-Object -First 1; if \\($found\\) { \"FOUND: $found\"; & $found --version } else { \"NOT FOUND in standard locations\" })",
-      "PowerShell(& \"C:\\\\Program Files\\\\GitHub CLI\\\\gh.exe\" auth status 2>&1)"
+      "PowerShell(& \"C:\\\\Program Files\\\\GitHub CLI\\\\gh.exe\" auth status 2>&1)",
+      "mcp__ide__getDiagnostics"
     ]
   }
 }
