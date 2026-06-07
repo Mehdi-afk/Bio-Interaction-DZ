@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import CardGrid from "@/src/components/CardGrid";
 import DevisButton from "@/src/components/DevisButton";
+import FaqAssistant from "@/src/components/homepage/FaqAssistant";
 
 const HOME_SHOWCASE = [
   { key: "biochimie",    href: "/catalogue/equipements?cat=biochimie",    label: "Biochimie Clinique", desc: "Jusqu'à 1 000 tests/heure avec réactifs à tag RFID.",   image: "/images/equipements/ERBA XL 1000.webp" },
@@ -450,6 +451,12 @@ export default function HomePage() {
           <CardGrid />
         </div>
       </section>
+
+
+      {/* ════════════════════════════════════════════════════════
+          6.5 FAQ — assistant interactif (fond blanc)
+          ════════════════════════════════════════════════════════ */}
+      <FaqAssistant />
 
 
       {/* ════════════════════════════════════════════════════════
