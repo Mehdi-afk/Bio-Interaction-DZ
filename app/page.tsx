@@ -454,7 +454,7 @@ export default function HomePage() {
 
 
       {/* ════════════════════════════════════════════════════════
-          6.5 FAQ — assistant interactif (fond blanc)
+          6.5 FAQ — assistant interactif (fond noir, comme le Hero)
           ════════════════════════════════════════════════════════ */}
       <FaqAssistant />
 
