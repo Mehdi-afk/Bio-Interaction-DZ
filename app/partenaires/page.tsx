@@ -27,8 +27,19 @@ const PARTNERS: Partner[] = [
     country: "Allemagne",
     flag: "🇩🇪",
     description:
-      "Solutions IVD complètes en biochimie clinique, hématologie, immunologie, " +
-      "coagulation et urinalyse. Présent dans plus de 100 pays.",
+      "Le groupe Erba bénéficie de 50 ans d'expérience dans le développement, la " +
+      "fabrication et la vente de produits d'analyse de chimie clinique, d'hématologie, " +
+      "dosage des ions et de la chimie urinaire. Fournissant ainsi des produits de " +
+      "haute qualité et faciles d'accès pour des analyses fiables, rapides et " +
+      "confortables, permettant un diagnostic précis et une prise en charge plus " +
+      "rapide des patients.\n\n" +
+      "Depuis 2022, notre société entretient un partenariat stratégique avec Erba. " +
+      "Cette collaboration, fondée sur des objectifs communs d'innovation et " +
+      "d'excellence opérationnelle, nous a permis de développer des solutions " +
+      "performantes, d'optimiser nos processus et d'élargir notre offre de services " +
+      "pour mieux répondre aux besoins de nos clients. Ensemble, nous poursuivons une " +
+      "feuille de route axée sur la qualité, la transparence et la création de valeur " +
+      "durable.",
     website: "https://www.erbalachema.com/en/",
   },
   {
@@ -38,9 +49,13 @@ const PARTNERS: Partner[] = [
     country: "Allemagne",
     flag: "🇩🇪",
     description:
-      "Kits ELISA, RIA et immunofluorescence pour le diagnostic différentiel " +
-      "des maladies auto-immunes, inflammatoires et chroniques.",
-    website: "https://www.medipan.de",
+      "GA Generic Assays GmbH, fondée en 2002, est une entreprise spécialisée dans " +
+      "les produits de diagnostic différentiel des maladies auto-immunes.\n\n" +
+      "Depuis 2023, en partenariat avec GA Generic Assays GmbH, nous apportons des " +
+      "solutions aux défis rencontrés dans ce domaine du diagnostic en garantissant " +
+      "une qualité optimale de produits et en participant activement au développement " +
+      "de produits innovants et automatisables.",
+    website: "https://www.medipan.de/ga-generic-assays-gmbh/",
   },
   {
     name: "Medipan",
@@ -49,8 +64,13 @@ const PARTNERS: Partner[] = [
     country: "Allemagne",
     flag: "🇩🇪",
     description:
-      "Systèmes automatisés pour l'évaluation des tests d'immunofluorescence " +
-      "(AKLIDES®) et le diagnostic des maladies auto-immunes.",
+      "Medipan GmbH, fondée en 1992, est une entreprise active dans le domaine du " +
+      "diagnostic médical, notamment grâce à des techniques numériques immunologiques " +
+      "permettant un diagnostic rapide et précis des maladies auto-immunes.\n\n" +
+      "Notre collaboration, qui a débuté en 2023, repose sur un engagement commun en " +
+      "faveur de la qualité et de la fiabilité des services permettant ainsi de " +
+      "répondre aux exigences techniques, réglementaires et qualitatives inhérentes " +
+      "aux activités de diagnostic médical.",
     website: "https://www.medipan.de",
   },
   {
@@ -181,9 +201,11 @@ export default function PartenairesPage() {
                 >
                   {name}
                 </h2>
-                <p className="text-[#6E6E6E] text-[15px] leading-[1.8] mb-8 max-w-[500px]">
-                  {description}
-                </p>
+                <div className="text-[#6E6E6E] text-[15px] leading-[1.8] mb-8 max-w-[500px] space-y-4">
+                  {description.split("\n\n").map((para) => (
+                    <p key={para.slice(0, 32)}>{para}</p>
+                  ))}
+                </div>
                 <a
                   href={website}
                   target="_blank"
