@@ -9,6 +9,7 @@
   description: string;
   testsKit?: string;
   image?: string;
+  badge?: string;   // libellé de pastille forcé (override de catLabel)
 };
 
 export type SectionLabel = {

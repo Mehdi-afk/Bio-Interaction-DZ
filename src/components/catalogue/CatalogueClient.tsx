@@ -148,7 +148,7 @@ const ProductCard = memo(function ProductCard({
             className="text-[10px] font-semibold tracking-[0.4px] uppercase px-2 py-[2px] rounded-full mb-2 inline-block"
             style={{ background: bg, color }}
           >
-            {catLabel(product.cat)}
+            {product.badge ?? catLabel(product.cat)}
           </span>
           <h3 className={`text-[14px] font-semibold mb-1 leading-[1.4] ${isList ? "truncate" : ""}`}>{product.desc}</h3>
           <div className="text-[12px] text-[#A9ADAA] mb-2">
@@ -463,7 +463,7 @@ function ProductPage({
               className="inline-block text-[11px] font-semibold tracking-[0.5px] uppercase px-3 py-1 rounded-full mb-3"
               style={{ background: bg, color }}
             >
-              {catLabel(product.cat)}
+              {product.badge ?? catLabel(product.cat)}
             </span>
 
             <h1 className="font-serif text-[34px] font-normal leading-[1.2] mb-2 max-[900px]:text-[26px]">
