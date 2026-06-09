@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo, useEffect } from "react";
+import Link from "next/link";
 import { useApp } from "@/src/context/AppContext";
 import { FAQ_ITEMS, type FaqItem } from "@/src/data/faq";
 
@@ -20,8 +21,8 @@ function normalize(s: string): string {
   return s
     .toLowerCase()
     .normalize("NFD")
-    .replace(/[̀-ͯ]/g, "") // retire les diacritiques (accents)
-    .replace(/[^a-z0-9\s]/g, " ")    // retire la ponctuation
+    .replace(/[̀-ͯ]/g, "")
+    .replace(/[^a-z0-9\s]/g, " ")
     .replace(/\s+/g, " ")
     .trim();
 }
@@ -67,10 +68,10 @@ function rankFaq(query: string): FaqItem[] {
 
 // Suggestions affichées tant que le champ est vide.
 const SUGGESTIONS: { label: string; query: string }[] = [
+  { label: "Voir nos produits", query: "produits" },
   { label: "Demander un devis", query: "devis" },
   { label: "Délais de livraison", query: "livraison" },
   { label: "Service après-vente", query: "sav" },
-  { label: "Installation & formation", query: "installation" },
   { label: "Nos marques", query: "marques" },
   { label: "Nous contacter", query: "contact" },
 ];
@@ -247,9 +248,45 @@ export default function FaqAssistant() {
                           style={{ gridTemplateRows: open ? "1fr" : "0fr" }}
                         >
                           <div className="overflow-hidden">
-                            <p className="px-5 pb-5 text-white/60 text-[14px] leading-[1.75]">
+                            <p className="px-5 pt-1 pb-4 text-white/60 text-[14px] leading-[1.75]">
                               {item.a}
                             </p>
+                            {item.buttons && item.buttons.length > 0 && (
+                              <div className="px-5 pb-5 flex flex-wrap gap-2">
+                                {item.buttons.map((btn) =>
+                                  btn.href ? (
+                                    <Link
+                                      key={btn.label}
+                                      href={btn.href}
+                                      className="
+                                        inline-flex items-center gap-1.5 px-4 py-2 rounded-full
+                                        bg-[#29A864]/15 border border-[#29A864]/30
+                                        text-[#29A864] text-[13px] font-medium
+                                        hover:bg-[#29A864]/25 transition-colors duration-150
+                                      "
+                                    >
+                                      {btn.label}
+                                      <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-3 h-3" aria-hidden="true">
+                                        <path d="M2 6h8M6.5 3l3 3-3 3" />
+                                      </svg>
+                                    </Link>
+                                  ) : (
+                                    <button
+                                      key={btn.label}
+                                      onClick={() => btn.action === "devis" ? openDevis() : openContact()}
+                                      className="
+                                        inline-flex items-center gap-1.5 px-4 py-2 rounded-full
+                                        bg-[#29A864]/15 border border-[#29A864]/30
+                                        text-[#29A864] text-[13px] font-medium cursor-pointer
+                                        hover:bg-[#29A864]/25 transition-colors duration-150
+                                      "
+                                    >
+                                      {btn.label}
+                                    </button>
+                                  )
+                                )}
+                              </div>
+                            )}
                           </div>
                         </div>
                       </li>

@@ -266,7 +266,12 @@ export default function SmartGuide() {
                 </p>
                 <div className="flex flex-col gap-3">
                   {resultProducts.map(product => (
-                    <div key={product.ref} className="flex gap-3 bg-white/[0.04] border border-white/[0.07] rounded-xl p-3.5">
+                    <Link
+                      key={product.ref}
+                      href={`/catalogue/equipements?cat=${product.cat}&ref=${product.ref}`}
+                      onClick={() => { setOpen(false); setTimeout(reset, 400); }}
+                      className="flex gap-3 bg-white/[0.04] border border-white/[0.07] rounded-xl p-3.5 no-underline hover:bg-white/[0.07] hover:border-[#29A864]/35 transition-all duration-150 group"
+                    >
                       {product.image && (
                         <div className="w-14 h-14 shrink-0 rounded-lg bg-white flex items-center justify-center overflow-hidden">
                           <Image
@@ -279,20 +284,16 @@ export default function SmartGuide() {
                         </div>
                       )}
                       <div className="flex-1 min-w-0">
-                        <div className="text-white text-[13px] font-semibold leading-snug">{product.desc}</div>
+                        <div className="text-white text-[13px] font-semibold leading-snug group-hover:text-[#29A864] transition-colors">{product.desc}</div>
                         <div className="text-white/35 text-[11px] mt-0.5">{product.marque} · {product.conditionnement}</div>
-                        <Link
-                          href={`/catalogue/equipements?cat=${product.cat}`}
-                          onClick={() => setOpen(false)}
-                          className="inline-flex items-center gap-1 mt-2 text-[11px] font-semibold text-[#29A864] hover:text-[#48BC7E] transition-colors no-underline"
-                        >
-                          Voir le produit
+                        <span className="inline-flex items-center gap-1 mt-2 text-[11px] font-semibold text-[#29A864] group-hover:text-[#48BC7E] transition-colors">
+                          Voir la fiche
                           <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-2.5 h-2.5">
                             <path d="M4 2l4 4-4 4" />
                           </svg>
-                        </Link>
+                        </span>
                       </div>
-                    </div>
+                    </Link>
                   ))}
                 </div>
                 <button

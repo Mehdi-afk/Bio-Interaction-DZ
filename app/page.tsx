@@ -4,9 +4,18 @@ import Link from "next/link";
 import CardGrid from "@/src/components/CardGrid";
 import DevisButton from "@/src/components/DevisButton";
 import FaqAssistant from "@/src/components/homepage/FaqAssistant";
+import VoirNosProduitsCTA from "@/src/components/homepage/VoirNosProduitsCTA";
+
+function ArrowIcon() {
+  return (
+    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth={2.2} strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4" aria-hidden="true">
+      <path d="M3 8h10M9 4l4 4-4 4" />
+    </svg>
+  );
+}
 
 const HOME_SHOWCASE = [
-  { key: "biochimie",    href: "/catalogue/equipements?cat=biochimie",    label: "Biochimie Clinique", desc: "Jusqu'à 1 000 tests/heure avec réactifs à tag RFID.",   image: "/images/equipements/ERBA XL 1000.webp" },
+  { key: "biochimie",    href: "/catalogue/equipements?cat=biochimie",    label: "ERBA XL 200",        desc: "Jusqu'à 1 000 tests/heure avec réactifs à tag RFID.",   image: "/images/equipements/ERBA XL 200.webp" },
   { key: "hematologie",  href: "/catalogue/equipements?cat=hematologie",  label: "Hématologie",        desc: "Formule sanguine complète en moins de 60 secondes.",     image: "/images/equipements/ERBA H580.jpg" },
   { key: "hemostase",    href: "/catalogue/equipements?cat=hemostase",    label: "Hémostase",          desc: "TP, TCA, fibrinogène par coagulométrie optique.",        image: "/images/equipements/ERBA ECL 760.jpg" },
   { key: "urines",       href: "/catalogue/equipements?cat=urines",       label: "Analyse des Urines", desc: "Chimie sèche et sédiment urinaire automatisé.",          image: "/images/equipements/ERBA EC 90.jpg" },
@@ -92,21 +101,7 @@ export default function HomePage() {
 
         {/* CTAs */}
         <div className="reveal reveal-d4 relative z-10 flex items-center gap-3 flex-wrap justify-center">
-          <Link
-            href="/catalogue/equipements"
-            className="
-              inline-flex items-center gap-2
-              px-7 py-3.5 rounded-full
-              bg-[#29A864] text-white text-[15px] font-semibold no-underline
-              transition-[background,transform,box-shadow] duration-150
-              hover:bg-[#48BC7E] hover:-translate-y-0.5 hover:shadow-[0_8px_28px_rgba(41,168,100,0.45)]
-            "
-          >
-            Voir Nos Produits
-            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth={2.2} strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4" aria-hidden="true">
-              <path d="M3 8h10M9 4l4 4-4 4" />
-            </svg>
-          </Link>
+          <VoirNosProduitsCTA />
           <DevisButton
             label="Demander un devis"
             className="
@@ -165,9 +160,7 @@ export default function HomePage() {
               "
             >
               Voir les équipements
-              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth={2.2} strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4" aria-hidden="true">
-                <path d="M3 8h10M9 4l4 4-4 4" />
-              </svg>
+              <ArrowIcon />
             </Link>
             <DevisButton
               label="Demander un devis"
@@ -240,9 +233,7 @@ export default function HomePage() {
               "
             >
               Voir les réactifs
-              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth={2.2} strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4" aria-hidden="true">
-                <path d="M3 8h10M9 4l4 4-4 4" />
-              </svg>
+              <ArrowIcon />
             </Link>
             <DevisButton
               label="Demander un devis"
@@ -307,9 +298,7 @@ export default function HomePage() {
             "
           >
             Voir les équipements
-            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth={2.2} strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4" aria-hidden="true">
-              <path d="M3 8h10M9 4l4 4-4 4" />
-            </svg>
+            <ArrowIcon />
           </Link>
         </div>
 
@@ -417,7 +406,7 @@ export default function HomePage() {
                   alt={name}
                   width={w}
                   height={48}
-                  className="h-9 w-auto object-contain"
+                  className="h-12 w-auto object-contain"
                 />
               </div>
             ))}

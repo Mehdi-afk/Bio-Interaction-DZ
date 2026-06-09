@@ -37,27 +37,28 @@ const TYPE_ICON: Record<string, string> = {
 };
 const typeIcon = (t: string) => TYPE_ICON[t] ?? "⚗";
 
-// ── Compatible reactifs map (instruments → reactif filter params) ──────────────
+// ── Compatible reactifs map (instruments → section de réactifs dédiée) ─────────
+// Chaque analyseur pointe vers sa section de réactifs exacte (libellés alignés sur
+// products-reactifs.ts) plutôt que vers une recherche texte approximative.
 
-const COMPAT_MAP: Record<string, { cat: string; marque: string; q: string }> = {
-  INS00002: { cat: "biochimie",    marque: "ERBA",          q: "" },
-  INS00008: { cat: "biochimie",    marque: "ERBA",          q: "" },
-  INS00009: { cat: "biochimie",    marque: "ERBA",          q: "" },
-  INS00014: { cat: "biochimie",    marque: "ERBA",          q: "" },
-  INS00079: { cat: "biochimie",    marque: "ERBA",          q: "EC" },
-  INS00077: { cat: "hematologie",  marque: "ERBA",          q: "H360" },
-  INS00078: { cat: "hematologie",  marque: "ERBA",          q: "H560" },
-  INS00071: { cat: "hematologie",  marque: "ERBA",          q: "H580" },
-  INS00087: { cat: "hematologie",  marque: "ERBA",          q: "H7" },
-  INS00060: { cat: "hemostase",    marque: "ERBA",          q: "" },
-  INS00070: { cat: "hemostase",    marque: "ERBA",          q: "" },
-  INS00064: { cat: "urines",       marque: "ERBA",          q: "" },
-  INS00065: { cat: "urines",       marque: "ERBA",          q: "" },
-  "5075":   { cat: "autoimmunite", marque: "Generic Assays", q: "DotDiver" },
-  "4450":   { cat: "autoimmunite", marque: "Generic Assays", q: "AKLIDES" },
-  MA01073:  { cat: "autoimmunite", marque: "HOB Biotech",   q: "" },
-  MA00502:  { cat: "autoimmunite", marque: "HOB Biotech",   q: "" },
-  MA00243:  { cat: "autoimmunite", marque: "HOB Biotech",   q: "" },
+const COMPAT_MAP: Record<string, { cat: string; section: string }> = {
+  INS00002: { cat: "biochimie",    section: "Biochimie Clinique - Reactifs Systeme Ferme" },
+  INS00008: { cat: "biochimie",    section: "Biochimie Clinique - Reactifs Systeme Ferme" },
+  INS00009: { cat: "biochimie",    section: "Biochimie Clinique - Reactifs Systeme Ferme" },
+  INS00014: { cat: "biochimie",    section: "Biochimie Clinique - Reactifs Systeme Ouvert" },
+  INS00079: { cat: "biochimie",    section: "Biochimie Clinique - Reactifs Ionogramme EC 90" },
+  INS00077: { cat: "hematologie",  section: "Hematologie -Reactifs H360" },
+  INS00078: { cat: "hematologie",  section: "Hematologie -Reactifs H560" },
+  INS00071: { cat: "hematologie",  section: "Hematologie -Reactifs ELITE 580" },
+  INS00087: { cat: "hematologie",  section: "Hematologie -Reactifs H7100" },
+  INS00060: { cat: "hemostase",    section: "Hemostase - Reactifs ECL" },
+  INS00070: { cat: "hemostase",    section: "Hemostase - Reactifs ECL" },
+  INS00064: { cat: "urines",       section: "Urines -Reactifs LAURA Smart" },
+  INS00065: { cat: "urines",       section: "Urines -Reactifs LAURA XL" },
+  "5075":   { cat: "autoimmunite", section: "Auto-Immunite -Reactifs DOT Automatises" },
+  "4450":   { cat: "autoimmunite", section: "Auto-Immunite -Reactifs IFI Automatises AKLIDES" },
+  MA01073:  { cat: "allergie",     section: "Allergie : BioCLIA 1900 & 500" },
+  MA00502:  { cat: "allergie",     section: "Allergie : BioCLIA 1900 & 500" },
 };
 
 // ── Cat / type labels ──────────────────────────────────────────────────────────
@@ -604,11 +605,6 @@ export default function CatalogueClient({
   }, []);
 
   useEffect(() => {
-    setSelected(null);
-    setSidebarOpen(false);
-  }, [searchParams]);
-
-  useEffect(() => {
     function handler(e: MouseEvent) {
       if (!sidebarRef.current?.contains(e.target as Node)) setSidebarOpen(false);
     }
@@ -625,6 +621,15 @@ export default function CatalogueClient({
     () => items.filter((i): i is Product => i.kind === "product"),
     [items]
   );
+
+  // Ouvre directement la fiche d'un produit quand ?ref= est présent dans l'URL
+  // (utilisé par le Guide intelligent). Sinon, ferme la fiche lors d'une navigation.
+  useEffect(() => {
+    const ref = searchParams.get("ref");
+    const product = ref ? allProducts.find((p) => p.ref === ref) : null;
+    setSelected(product ?? null);
+    setSidebarOpen(false);
+  }, [searchParams, allProducts]);
 
   const catCounts = useMemo(() => {
     const seen = new Set<string>();
@@ -700,9 +705,8 @@ export default function CatalogueClient({
     if (!compat) return;
     setSelected(null);
     const params = new URLSearchParams();
-    if (compat.cat)    params.set("cat",    compat.cat);
-    if (compat.marque) params.set("marque", compat.marque);
-    if (compat.q)      params.set("q",      compat.q);
+    params.set("cat",     compat.cat);
+    params.set("section", compat.section);
     router.push(`/catalogue/reactifs?${params.toString()}`);
   }, [router]);
 

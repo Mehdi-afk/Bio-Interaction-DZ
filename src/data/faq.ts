@@ -3,11 +3,16 @@
 // `keywords` = synonymes / variantes utilisés par le moteur de correspondance local
 // (src/components/homepage/FaqAssistant.tsx). Plus il y en a, plus le matching est fiable.
 
+export type FaqButton =
+  | { label: string; href: string; action?: never }
+  | { label: string; action: "devis" | "contact"; href?: never };
+
 export type FaqItem = {
   id: string;
   q: string;
   a: string;
   keywords?: string[];
+  buttons?: FaqButton[];
 };
 
 export const FAQ_ITEMS: FaqItem[] = [
@@ -15,11 +20,11 @@ export const FAQ_ITEMS: FaqItem[] = [
     id: "devis",
     q: "Comment demander un devis ?",
     a:
-      "Cliquez sur « Demander un devis » (présent en haut et en bas de chaque page) puis " +
-      "renseignez vos coordonnées et les produits souhaités. Vous pouvez aussi constituer " +
-      "une liste depuis le catalogue et l'envoyer en un clic. Notre équipe commerciale vous " +
-      "répond généralement sous 24 à 48 heures.",
+      "Renseignez vos coordonnées et les produits souhaités via le formulaire de devis. Vous " +
+      "pouvez aussi constituer une liste depuis le catalogue et l'envoyer en un clic. Notre " +
+      "équipe commerciale vous répond généralement sous 24 à 48 heures.",
     keywords: ["devis", "prix", "tarif", "cotation", "commander", "commande", "acheter", "achat", "demande"],
+    buttons: [{ label: "Demander un devis", action: "devis" }],
   },
   {
     id: "delais",
@@ -63,6 +68,7 @@ export const FAQ_ITEMS: FaqItem[] = [
       "Nous représentons en exclusivité sur le marché algérien cinq marques internationales de " +
       "référence : ERBA Mannheim, Generic Assays, Medipan, HOB Biotech et LDBIO Diagnostics.",
     keywords: ["marque", "marques", "partenaire", "partenaires", "fournisseur", "fabricant", "erba", "generic assays", "medipan", "hob", "ldbio", "exclusivite"],
+    buttons: [{ label: "Voir nos partenaires", href: "/partenaires" }],
   },
   {
     id: "clients",
@@ -77,8 +83,27 @@ export const FAQ_ITEMS: FaqItem[] = [
     q: "Comment vous contacter ?",
     a:
       "Par téléphone au +213.28.46.48.30, par e-mail à support@biointeractiondz.com, ou via le " +
-      "bouton « Nous contacter ». Pour une demande commerciale : +213.770.08.54.53 / " +
+      "formulaire de contact. Pour une demande commerciale : +213.770.08.54.53 / " +
       "sales@biointeractiondz.com.",
     keywords: ["contact", "contacter", "joindre", "telephone", "numero", "appeler", "email", "mail", "adresse", "coordonnees"],
+    buttons: [{ label: "Nous contacter", action: "contact" }],
+  },
+  {
+    id: "produits",
+    q: "Quels produits proposez-vous au catalogue ?",
+    a:
+      "Notre catalogue regroupe plus de 370 références réparties en deux grandes familles : " +
+      "les équipements d'analyse (analyseurs de biochimie, hématologie, hémostase, urines, " +
+      "auto-immunité) et les réactifs (biochimie, hématologie, auto-immunité, allergie, " +
+      "parasitologie). Tous les produits sont disponibles avec installation et formation.",
+    keywords: [
+      "produit", "produits", "catalogue", "equipement", "equipements", "analyseur", "analyseurs",
+      "reactif", "reactifs", "biochimie", "hematologie", "hemostase", "urines", "autoimmunite",
+      "allergie", "parasitologie", "reference", "references", "gamme", "gammes", "offre",
+    ],
+    buttons: [
+      { label: "Voir les équipements", href: "/catalogue/equipements" },
+      { label: "Voir les réactifs", href: "/catalogue/reactifs" },
+    ],
   },
 ];

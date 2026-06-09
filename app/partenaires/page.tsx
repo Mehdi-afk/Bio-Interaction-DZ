@@ -24,8 +24,8 @@ const PARTNERS: Partner[] = [
     name: "ERBA Mannheim",
     logo: "/images/partenaires/erba.png",
     logoW: 180,
-    country: "Allemagne",
-    flag: "🇩🇪",
+    country: "République Tchèque",
+    flag: "🇨🇿",
     description:
       "Le groupe Erba bénéficie de 50 ans d'expérience dans le développement, la " +
       "fabrication et la vente de produits d'analyse de chimie clinique, d'hématologie, " +
@@ -49,12 +49,8 @@ const PARTNERS: Partner[] = [
     country: "Allemagne",
     flag: "🇩🇪",
     description:
-      "GA Generic Assays GmbH, fondée en 2002, est une entreprise spécialisée dans " +
-      "les produits de diagnostic différentiel des maladies auto-immunes.\n\n" +
-      "Depuis 2023, en partenariat avec GA Generic Assays GmbH, nous apportons des " +
-      "solutions aux défis rencontrés dans ce domaine du diagnostic en garantissant " +
-      "une qualité optimale de produits et en participant activement au développement " +
-      "de produits innovants et automatisables.",
+      "GA Generic Assays GmbH, fondée en 2002, est une entreprise spécialisée dans les produits de diagnostic différentiel des maladies auto-immunes.\n\n" +
+      "Depuis 2023, en partenariat avec GA Generic Assays GmbH, nous apportons des solutions aux défis rencontrés dans ce domaine du diagnostic en garantissant une qualité optimale des produits et en participant activement au développement de produits innovants et automatisables.",
     website: "https://www.medipan.de/ga-generic-assays-gmbh/",
   },
   {
@@ -202,8 +198,8 @@ export default function PartenairesPage() {
                   {name}
                 </h2>
                 <div className="text-[#6E6E6E] text-[15px] leading-[1.8] mb-8 max-w-[500px] space-y-4">
-                  {description.split("\n\n").map((para) => (
-                    <p key={para.slice(0, 32)}>{para}</p>
+                  {description.split("\n\n").map((para, idx) => (
+                    <p key={idx}>{para}</p>
                   ))}
                 </div>
                 <a
