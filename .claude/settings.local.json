@@ -220,7 +220,8 @@
       "Bash(python -c ' *)",
       "Bash(echo \"=== exit: $? ===\")",
       "Bash(grep -ivE \"^[+-]\\\\s*$\")",
-      "Bash(python \"C:\\\\Users\\\\PC\\\\AppData\\\\Local\\\\Temp\\\\update_report.py\")"
+      "Bash(python \"C:\\\\Users\\\\PC\\\\AppData\\\\Local\\\\Temp\\\\update_report.py\")",
+      "Bash(python \"C:\\\\Users\\\\PC\\\\AppData\\\\Local\\\\Temp\\\\append_report.py\")"
     ]
   }
 }
