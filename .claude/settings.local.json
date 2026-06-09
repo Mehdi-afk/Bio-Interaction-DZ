@@ -230,7 +230,13 @@
       "Bash(npm outdated *)",
       "Bash(npm view *)",
       "Bash(echo \"firebase-admin: $\\(npm view firebase-admin version 2>/dev/null\\)\")",
-      "Bash(echo \"next: $\\(npm view next version 2>/dev/null\\)\")"
+      "Bash(echo \"next: $\\(npm view next version 2>/dev/null\\)\")",
+      "Bash(npm update *)",
+      "Bash(npm ls *)",
+      "Bash(echo \"next: $\\(npm ls next --depth=0)",
+      "Bash(npm ci *)",
+      "Bash(./node_modules/.bin/tsc --noEmit)",
+      "Bash(python \"C:\\\\Users\\\\PC\\\\AppData\\\\Local\\\\Temp\\\\append_deps.py\")"
     ]
   }
 }
