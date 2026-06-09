@@ -208,7 +208,19 @@
       "PowerShell(winget install *)",
       "PowerShell($paths = @\\(\"$env:ProgramFiles\\\\GitHub CLI\\\\gh.exe\", \"${env:ProgramFiles\\(x86\\)}\\\\GitHub CLI\\\\gh.exe\", \"$env:LOCALAPPDATA\\\\Microsoft\\\\WinGet\\\\Links\\\\gh.exe\"\\); $found = $paths | Where-Object { Test-Path $_ } | Select-Object -First 1; if \\($found\\) { \"FOUND: $found\"; & $found --version } else { \"NOT FOUND in standard locations\" })",
       "PowerShell(& \"C:\\\\Program Files\\\\GitHub CLI\\\\gh.exe\" auth status 2>&1)",
-      "mcp__ide__getDiagnostics"
+      "mcp__ide__getDiagnostics",
+      "WebFetch(domain:jtd.amegroups.org)",
+      "Bash(powershell *)",
+      "Bash(Remove-Item \"C:\\\\Users\\\\PC\\\\AppData\\\\Local\\\\Temp\\\\bugtest.mjs\",\"C:\\\\Users\\\\PC\\\\AppData\\\\Local\\\\Temp\\\\bugtest2.mjs\" -ErrorAction SilentlyContinue)",
+      "Bash(Write-Output \"nettoyé\")",
+      "Bash(python -c \"import openpyxl; print\\('openpyxl', openpyxl.__version__\\)\")",
+      "Bash(python -m pip install openpyxl --quiet)",
+      "Bash(python -c \"import openpyxl; print\\('openpyxl OK', openpyxl.__version__\\)\")",
+      "Bash(python \"C:\\\\Users\\\\PC\\\\AppData\\\\Local\\\\Temp\\\\make_report.py\")",
+      "Bash(python -c ' *)",
+      "Bash(echo \"=== exit: $? ===\")",
+      "Bash(grep -ivE \"^[+-]\\\\s*$\")",
+      "Bash(python \"C:\\\\Users\\\\PC\\\\AppData\\\\Local\\\\Temp\\\\update_report.py\")"
     ]
   }
 }
