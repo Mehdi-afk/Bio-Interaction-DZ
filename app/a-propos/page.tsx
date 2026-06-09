@@ -281,6 +281,10 @@ export default function AProposPage() {
                 <h4 className="text-[14px] font-semibold text-[#1B1F1D] mb-1">Téléphone / Fax</h4>
                 <a href="tel:+213284648300" className="block text-[13px] text-[#6E6E6E] no-underline hover:text-[#29A864] transition-colors">+213.28.46.48.30</a>
                 <a href="tel:+213284648900" className="block text-[13px] text-[#6E6E6E] no-underline hover:text-[#29A864] transition-colors">+213.28.46.48.90</a>
+                <p className="text-[12px] font-semibold text-[#1B1F1D] mt-3 mb-0.5">Commercial</p>
+                <a href="tel:+213770085453" className="block text-[13px] text-[#6E6E6E] no-underline hover:text-[#29A864] transition-colors">+213.770.08.54.53</a>
+                <p className="text-[12px] font-semibold text-[#1B1F1D] mt-2 mb-0.5">SAV</p>
+                <a href="tel:+213770747250" className="block text-[13px] text-[#6E6E6E] no-underline hover:text-[#29A864] transition-colors">+213.770.74.72.50</a>
               </div>
             </div>
 

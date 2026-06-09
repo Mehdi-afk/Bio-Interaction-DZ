@@ -52,10 +52,12 @@ export default function ModalDevis() {
   const cartEmpty = cart.length === 0;
 
   async function handleAction() {
-    const nom   = clientInfo.nom.trim();
-    const email = clientInfo.email.trim();
-    if (!nom || !email) {
-      showToast("⚠️ Veuillez remplir au minimum Nom et Email.");
+    const organisme = clientInfo.organisme.trim();
+    const nom       = clientInfo.nom.trim();
+    const tel       = clientInfo.tel.trim();
+    const email     = clientInfo.email.trim();
+    if (!organisme || !nom || !tel || !email) {
+      showToast("⚠️ Veuillez remplir tous les champs obligatoires.");
       return;
     }
     if (cartEmpty) {
@@ -190,49 +192,53 @@ export default function ModalDevis() {
         <div className="flex flex-col gap-3.5">
           {/* Organisme */}
           <div className="flex flex-col gap-[5px]">
-            <label className={labelCls}>Organisme / Société</label>
+            <label className={labelCls}>Organisme / Société <span className="text-red-500">*</span></label>
             <input
               className={inputCls}
               type="text"
               placeholder="Ex : Laboratoire Central d'Alger"
               value={clientInfo.organisme}
               onChange={(e) => updateClientInfo({ organisme: e.target.value })}
+              required
             />
           </div>
 
           {/* Nom + Téléphone */}
           <div className="grid grid-cols-2 gap-3 max-[480px]:grid-cols-1">
             <div className="flex flex-col gap-[5px]">
-              <label className={labelCls}>Nom &amp; Prénom</label>
+              <label className={labelCls}>Nom &amp; Prénom <span className="text-red-500">*</span></label>
               <input
                 className={inputCls}
                 type="text"
                 placeholder="Votre nom"
                 value={clientInfo.nom}
                 onChange={(e) => updateClientInfo({ nom: e.target.value })}
+                required
               />
             </div>
             <div className="flex flex-col gap-[5px]">
-              <label className={labelCls}>Téléphone</label>
+              <label className={labelCls}>Téléphone <span className="text-red-500">*</span></label>
               <input
                 className={inputCls}
                 type="tel"
                 placeholder="+213 …"
                 value={clientInfo.tel}
                 onChange={(e) => updateClientInfo({ tel: e.target.value })}
+                required
               />
             </div>
           </div>
 
           {/* Email */}
           <div className="flex flex-col gap-[5px]">
-            <label className={labelCls}>Email</label>
+            <label className={labelCls}>Email <span className="text-red-500">*</span></label>
             <input
               className={inputCls}
               type="email"
               placeholder="votre@email.dz"
               value={clientInfo.email}
               onChange={(e) => updateClientInfo({ email: e.target.value })}
+              required
             />
           </div>
 
@@ -247,7 +253,7 @@ export default function ModalDevis() {
                 <div className="flex flex-col gap-1.5 mb-3">
                   {cart.map((item, i) => (
                     <div
-                      key={i}
+                      key={`${item.ref}-${i}`}
                       className="flex items-center gap-2 py-2 px-3 bg-[#F7F6F2] rounded-lg text-[13px]"
                     >
                       <div className="flex-1 min-w-0">
