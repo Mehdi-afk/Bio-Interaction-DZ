@@ -3,7 +3,7 @@ import { Resend } from "resend";
 import {
   escapeHtml, sanitizeHeader, isValidEmail, isNonEmptyString,
   isSameOrigin, rateLimit, rateLimitResponse,
-  verifyBearer, unauthorizedResponse, badRequestResponse,
+  verifyBearer, unauthorizedResponse, forbiddenResponse, badRequestResponse,
 } from "@/src/lib/api-security";
 
 const RECIPIENT = "messaoudenemehdi0@gmail.com";
@@ -15,6 +15,7 @@ export async function POST(req: NextRequest) {
   // ── Auth ─────────────────────────────────────────────────────────────────────
   const decoded = await verifyBearer(req);
   if (!decoded) return unauthorizedResponse();
+  if (!decoded.emailVerified) return forbiddenResponse();
 
   // ── Rate limit (per IP) — 5 devis / 15 min ──────────────────────────────────
   const limit = rateLimit(req, "send-devis", { capacity: 5, refillPerMin: 0.34 });

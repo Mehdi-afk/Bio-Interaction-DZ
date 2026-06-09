@@ -221,7 +221,16 @@
       "Bash(echo \"=== exit: $? ===\")",
       "Bash(grep -ivE \"^[+-]\\\\s*$\")",
       "Bash(python \"C:\\\\Users\\\\PC\\\\AppData\\\\Local\\\\Temp\\\\update_report.py\")",
-      "Bash(python \"C:\\\\Users\\\\PC\\\\AppData\\\\Local\\\\Temp\\\\append_report.py\")"
+      "Bash(python \"C:\\\\Users\\\\PC\\\\AppData\\\\Local\\\\Temp\\\\append_report.py\")",
+      "Bash(npm audit *)",
+      "Bash(grep -iE \"service.?account|private.?key|\\\\.pem$|credentials\")",
+      "Bash(python -c \"import json,sys; d=json.load\\(sys.stdin\\); [print\\('-', v.get\\('name'\\), '|', \\(v.get\\('via'\\)[0].get\\('title'\\) if isinstance\\(v.get\\('via'\\)[0],dict\\) else v.get\\('via'\\)[0]\\), '| sev:', v.get\\('severity'\\)\\) for k,v in d.get\\('vulnerabilities',{}\\).items\\(\\)]\")",
+      "Bash(grep -iE \"\\\\.env\\\\.local|\\\\.env$|serviceAccount|\\\\.pem$\")",
+      "Bash(python \"C:\\\\Users\\\\PC\\\\AppData\\\\Local\\\\Temp\\\\append_audit.py\")",
+      "Bash(npm outdated *)",
+      "Bash(npm view *)",
+      "Bash(echo \"firebase-admin: $\\(npm view firebase-admin version 2>/dev/null\\)\")",
+      "Bash(echo \"next: $\\(npm view next version 2>/dev/null\\)\")"
     ]
   }
 }
