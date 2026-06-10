@@ -12,6 +12,7 @@ Stack : Next.js, TypeScript, Tailwind CSS, Firebase, Vercel.
 @C:\Users\PC\Documents\decupler-votre-claude\base-de-connaissances\wiki\05-equipements.md
 @C:\Users\PC\Documents\decupler-votre-claude\base-de-connaissances\wiki\06-blog-articles.md
 @C:\Users\PC\Documents\decupler-votre-claude\base-de-connaissances\wiki\07-chiffres-cles.md
+@C:\Users\PC\Documents\decupler-votre-claude\base-de-connaissances\wiki\08-fonctionnalites-techniques.md
 @C:\Users\PC\Documents\decupler-votre-claude\base-de-connaissances\wiki\index.md
 
 ## Règles projet
