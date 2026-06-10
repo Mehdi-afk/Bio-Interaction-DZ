@@ -222,7 +222,7 @@ export const EQUIPEMENTS: GridItem[] = [
         "marque":  "ERBA",
         "desc":  "ERBA LISA SCAN",
         "cat":  "immunologie",
-        "conditionnement":  "Lecteur ELISA",
+        "conditionnement":  "100 protocoles de test ELISA programmables par l utilisateur",
         "image": "/images/equipements/ERBA LISA SCAN.jpg",
     },
     {
@@ -233,7 +233,7 @@ export const EQUIPEMENTS: GridItem[] = [
         "marque":  "ERBA",
         "desc":  "ERBA LISA WASH",
         "cat":  "immunologie",
-        "conditionnement":  "Laveur ELISA",
+        "conditionnement":  "50 protocoles de lavage definis par l utilisateur",
         "image": "/images/equipements/ERBA LISA WASH.jpg",
     },
 ];

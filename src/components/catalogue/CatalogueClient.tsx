@@ -59,6 +59,7 @@ const COMPAT_MAP: Record<string, { cat: string; section: string }> = {
   "4450":   { cat: "autoimmunite", section: "Auto-Immunite -Reactifs IFI Automatises AKLIDES" },
   MA01073:  { cat: "allergie",     section: "Allergie : BioCLIA 1900 & 500" },
   MA00502:  { cat: "allergie",     section: "Allergie : BioCLIA 1900 & 500" },
+  "52000121": { cat: "autoimmunite", section: "Auto-Immunite -ELISA Manuel" },
 };
 
 // ── Cat / type labels ──────────────────────────────────────────────────────────
