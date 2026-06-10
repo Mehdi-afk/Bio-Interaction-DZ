@@ -236,7 +236,9 @@
       "Bash(echo \"next: $\\(npm ls next --depth=0)",
       "Bash(npm ci *)",
       "Bash(./node_modules/.bin/tsc --noEmit)",
-      "Bash(python \"C:\\\\Users\\\\PC\\\\AppData\\\\Local\\\\Temp\\\\append_deps.py\")"
+      "Bash(python \"C:\\\\Users\\\\PC\\\\AppData\\\\Local\\\\Temp\\\\append_deps.py\")",
+      "Bash(python \"C:\\\\Users\\\\PC\\\\AppData\\\\Local\\\\Temp\\\\append_fa14.py\")",
+      "Bash(rm -f \"C:\\\\Users\\\\PC\\\\AppData\\\\Local\\\\Temp\\\\append_fa14.py\")"
     ]
   }
 }
