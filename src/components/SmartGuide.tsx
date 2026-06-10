@@ -79,6 +79,12 @@ const STEPS: Record<string, GuideStep> = {
         desc: "IFA, immunoblot, CLIA",
         results: ["5075", "4450", "MA01073", "MA00502"],
       },
+      {
+        id: "immunologie",
+        label: "Immunologie",
+        desc: "Chaîne ELISA microplaques",
+        results: ["52000121", "52000131"],
+      },
     ],
   },
 
