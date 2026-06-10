@@ -19,6 +19,7 @@ const CATALOGUE_LINKS = [
       { href: "/catalogue/equipements?cat=hemostase",    label: "Hémostase" },
       { href: "/catalogue/equipements?cat=urines",       label: "Analyse des Urines" },
       { href: "/catalogue/equipements?cat=autoimmunite", label: "Auto-Immunité / Allergie" },
+      { href: "/catalogue/equipements?cat=immunologie",  label: "Immunologie" },
     ],
   },
   {

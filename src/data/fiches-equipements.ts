@@ -104,4 +104,16 @@ export const FICHES_EQUIPEMENTS: Record<string, FicheEquipement> = {
     langue: "EN",
     url:    "https://www.unimedica-iq.com/wp-content/uploads/2025/01/BioClia-500-1.pdf",
   },
+
+  // ── Immunologie — ERBA (brochure commune LisaScan + LisaWash) ─────────────────
+  "52000121": {
+    label:  "Brochure ERBA LisaScan & LisaWash",
+    langue: "EN",
+    url:    "https://immunology.erbamannheim.com/getmedia/2719f66e-7dae-4c3d-bb2b-3637cfb600df/Erba_LisaScan-LisaWash_Print_2023.pdf.aspx?ext=.pdf",
+  },
+  "52000131": {
+    label:  "Brochure ERBA LisaScan & LisaWash",
+    langue: "EN",
+    url:    "https://immunology.erbamannheim.com/getmedia/2719f66e-7dae-4c3d-bb2b-3637cfb600df/Erba_LisaScan-LisaWash_Print_2023.pdf.aspx?ext=.pdf",
+  },
 };

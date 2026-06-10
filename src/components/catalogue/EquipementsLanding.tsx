@@ -45,6 +45,16 @@ function IconShieldCheck({ className }: { className?: string }) {
   );
 }
 
+function IconPlate({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true">
+      <rect x="3" y="5" width="18" height="14" rx="2"/>
+      <circle cx="7.5" cy="9.5" r="1"/><circle cx="12" cy="9.5" r="1"/><circle cx="16.5" cy="9.5" r="1"/>
+      <circle cx="7.5" cy="14.5" r="1"/><circle cx="12" cy="14.5" r="1"/><circle cx="16.5" cy="14.5" r="1"/>
+    </svg>
+  );
+}
+
 type CatDef = {
   value: string;
   label: string;
@@ -59,6 +69,7 @@ const CATS: CatDef[] = [
   { value: "hemostase",    label: "Hémostase",           Icon: IconWave,        accent: "#004B9D", bg: "#E6EEF8" },
   { value: "urines",       label: "Analyse des Urines",  Icon: IconTube,        accent: "#004B9D", bg: "#E6EEF8" },
   { value: "autoimmunite", label: "Auto-Immunité / Allergie", Icon: IconShieldCheck, accent: "#0082A0", bg: "#E5F3F7" },
+  { value: "immunologie",  label: "Immunologie",          Icon: IconPlate,       accent: "#004B9D", bg: "#E6EEF8" },
 ];
 
 const COUNTS: Record<string, number> = {};

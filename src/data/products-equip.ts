@@ -210,4 +210,30 @@ export const EQUIPEMENTS: GridItem[] = [
         "conditionnement":  "120 tests/h",
         "image": "/images/equipements/BIOCLIA 500.jpg",
     },
+    {
+        "label":  "Immunologie",
+        "kind":  "section"
+    },
+    {
+        "ref":  "52000121",
+        "kind":  "product",
+        "type":  "instrument",
+        "description":  "Lecteur ELISA de microplaques — 100 protocoles de test ELISA programmables, temps de lecture minimum 8 s pour plaques 96 puits, modes blanc / mesure / calcul, logiciel de connexion ELI-LIMS pour gestion des données et contrôle qualité",
+        "marque":  "ERBA",
+        "desc":  "ERBA LISA SCAN",
+        "cat":  "immunologie",
+        "conditionnement":  "Lecteur ELISA",
+        "image": "/images/equipements/ERBA LISA SCAN.jpg",
+    },
+    {
+        "ref":  "52000131",
+        "kind":  "product",
+        "type":  "instrument",
+        "description":  "Laveur automatique ELISA de microplaques — 50 protocoles de lavage définis par l utilisateur, compatible plaques à fond U / V / plat, tête de lavage 8 ou 12 canaux, volume résiduel ≤3 µl",
+        "marque":  "ERBA",
+        "desc":  "ERBA LISA WASH",
+        "cat":  "immunologie",
+        "conditionnement":  "Laveur ELISA",
+        "image": "/images/equipements/ERBA LISA WASH.jpg",
+    },
 ];
