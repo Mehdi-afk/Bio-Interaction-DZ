@@ -76,8 +76,8 @@ const PARTNERS: Partner[] = [
     country: "Chine",
     flag: "🇨🇳",
     description:
-      "Leader en diagnostic des allergies en Chine et acteur émergent dans " +
-      "le diagnostic des maladies auto-immunes. Fabrication certifiée ISO 13485.",
+      "HOB Biotech est une entreprise biotechnologique chinoise fondée en 2007 et spécialisée dans le développement, la fabrication et la commercialisation de solutions de diagnostic in vitro (IVD). Basée à Suzhou, en Chine, elle est particulièrement reconnue pour son expertise dans les domaines de l'allergologie et des maladies auto-immunes.\n\n" +
+      "Depuis le début de notre collaboration en 2023 avec HOB, nous avons pu apprécier le sérieux et le professionnalisme de ce fournisseur. À l'écoute de ses partenaires, HOB fait preuve de réactivité et d'un réel engagement pour répondre aux besoins de ses clients. Cette relation de confiance nous a permis de travailler efficacement ensemble et d'assurer un suivi satisfaisant de nos projets.",
     website: "https://en.hob-biotech.com",
   },
   {
@@ -87,8 +87,7 @@ const PARTNERS: Partner[] = [
     country: "France",
     flag: "🇫🇷",
     description:
-      "Tests sérologiques de confirmation en parasitologie et mycologie " +
-      "par Western Blot avec antigènes naturels. Basé à Lyon.",
+      "Depuis la création de notre société, LDBIO Diagnostics France est l'un de nos partenaires historiques. Cette collaboration de longue date repose sur un engagement commun en faveur de la qualité. Grâce à son expertise dans le diagnostic des maladies parasitaires et mycologiques, LDBIO Diagnostics constitue un partenaire fiable qui accompagne durablement le développement de nos activités.",
     website: "https://ldbiodiagnostics.com",
   },
 ];

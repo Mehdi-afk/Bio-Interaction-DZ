@@ -3,9 +3,9 @@
 import Link from "next/link";
 
 export const SECTION_DISPLAY: Record<string, string> = {
-  "Biochimie Clinique - Reactifs Systeme Ferme":          "Réactifs Système Fermé",
+  "Biochimie Clinique - Reactifs Systeme Ferme":          "Réactifs Adaptés",
   "Biochimie Clinique - Controles et Calibrants":          "Contrôles & Calibrants",
-  "Biochimie Clinique - Reactifs Systeme Ouvert":          "Réactifs Système Ouvert",
+  "Biochimie Clinique - Reactifs Systeme Ouvert":          "Réactifs Système Ouvert / Manuels",
   "Biochimie Clinique - Reactifs Ionogramme EC 90":        "Réactifs Ionogramme EC 90",
   "Hematologie -Reactifs H360":                            "Réactifs H360",
   "Hematologie -Reactifs H560":                            "Réactifs H560",
