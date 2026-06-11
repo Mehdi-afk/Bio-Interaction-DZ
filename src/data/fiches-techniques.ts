@@ -51,8 +51,6 @@ export const FICHES_TECHNIQUES: Record<string, FicheTechnique[]> = {
   "EHL00001": [{ type: "IFU", label: "Notice IFU", langue: "A", url: "https://www.erbalachema.com/en/akce/prilohy/priloha/stahnout/3766/" }],
   "EHL00003": [{ type: "IFU", label: "Notice IFU", langue: "A", url: "https://www.erbalachema.com/en/akce/prilohy/priloha/stahnout/3765/" }],
   "EHL00005": [{ type: "IFU", label: "Notice IFU", langue: "A", url: "https://www.erbalachema.com/en/akce/prilohy/priloha/stahnout/3767/" }],
-  "EHL00007": [{ type: "IFU", label: "Notice IFU", langue: "A", url: "https://www.erbalachema.com/en/akce/prilohy/priloha/stahnout/3770/" }],
-  "EHL00009": [{ type: "IFU", label: "Notice IFU", langue: "A", url: "https://www.erbalachema.com/en/akce/prilohy/priloha/stahnout/3772/" }],
   "EHL00012": [{ type: "IFU", label: "Notice IFU", langue: "A", url: "https://www.erbalachema.com/en/akce/prilohy/priloha/stahnout/3775/" }],
   "EHL00014": [{ type: "IFU", label: "Notice IFU", langue: "A", url: "https://www.erbalachema.com/en/akce/prilohy/priloha/stahnout/3777/" }],
   "EHL00015": [{ type: "IFU", label: "Notice IFU", langue: "A", url: "https://www.erbalachema.com/en/akce/prilohy/priloha/stahnout/3778/" }],

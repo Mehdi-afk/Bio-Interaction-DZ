@@ -1504,28 +1504,6 @@ export const REACTIFS: GridItem[] = [
         "image": "/images/partenaires/erba.png"
     },
     {
-        "ref": "EHL00007",
-        "kind": "product",
-        "type": "reactif",
-        "description": "",
-        "marque": "ERBA",
-        "desc": "ERBA Thrombin Time",
-        "cat": "hemostase",
-        "conditionnement": "2×10 mL",
-        "image": "/images/partenaires/erba.png"
-    },
-    {
-        "ref": "EHL00009",
-        "kind": "product",
-        "type": "reactif",
-        "description": "",
-        "marque": "ERBA",
-        "desc": "Erba Chrom Protein C",
-        "cat": "hemostase",
-        "conditionnement": "1 kit",
-        "image": "/images/partenaires/erba.png"
-    },
-    {
         "ref": "EHL00012",
         "kind": "product",
         "type": "reactif",
@@ -2478,7 +2456,7 @@ export const REACTIFS: GridItem[] = [
         "desc": "CytoBead ANA 2",
         "cat": "autoimmunite",
         "conditionnement": "80 Tests (10 Lames de 6 Puits)",
-        "image": "/images/reactifs/ga-ifi-hep2.jpg"
+        "image": "/images/reactifs/ga-cytobead-slides.png"
     },
     {
         "label": "Auto-Immunite -Reactifs DOT Automatises",
