@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
 import { useRouter } from "next/navigation";
 
 function ArrowIcon() {
@@ -49,7 +50,10 @@ const CHOICES = [
 
 export default function VoirNosProduitsCTA() {
   const [open, setOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const router = useRouter();
+
+  useEffect(() => { setMounted(true); }, []);
 
   useEffect(() => {
     const handler = (e: KeyboardEvent) => { if (e.key === "Escape") setOpen(false); };
@@ -78,14 +82,14 @@ export default function VoirNosProduitsCTA() {
         <ArrowIcon />
       </button>
 
-      {open && (
+      {open && mounted && createPortal(
         <div
           className="fixed inset-0 flex items-center justify-center px-4"
           style={{ zIndex: 2000, background: "rgba(15,25,40,0.72)", backdropFilter: "blur(4px)" }}
           onClick={() => setOpen(false)}
         >
           <div
-            className="relative w-full max-w-[500px] rounded-2xl p-8"
+            className="relative w-full max-w-[500px] max-h-[90dvh] overflow-y-auto rounded-2xl p-8"
             style={{ background: "#0f1928", border: "1px solid rgba(255,255,255,0.08)" }}
             onClick={(e) => e.stopPropagation()}
           >
@@ -134,7 +138,8 @@ export default function VoirNosProduitsCTA() {
               ))}
             </div>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </>
   );

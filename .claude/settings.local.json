@@ -238,7 +238,15 @@
       "Bash(./node_modules/.bin/tsc --noEmit)",
       "Bash(python \"C:\\\\Users\\\\PC\\\\AppData\\\\Local\\\\Temp\\\\append_deps.py\")",
       "Bash(python \"C:\\\\Users\\\\PC\\\\AppData\\\\Local\\\\Temp\\\\append_fa14.py\")",
-      "Bash(rm -f \"C:\\\\Users\\\\PC\\\\AppData\\\\Local\\\\Temp\\\\append_fa14.py\")"
+      "Bash(rm -f \"C:\\\\Users\\\\PC\\\\AppData\\\\Local\\\\Temp\\\\append_fa14.py\")",
+      "Bash(grep -qi \"ready\\\\|localhost:3000\\\\|started server\" dev-preview.log)",
+      "Bash(break)",
+      "Bash(awk -F: '$1>1670 && $1<2130')",
+      "Bash(awk 'NR>=1683 && NR<=2110 && /\"kind\": \"product\"/{c++} END{print c}' src/data/products-reactifs.ts)",
+      "Bash(awk -F: '$1>2080 && $1<2130')",
+      "Bash(PYTHONIOENCODING=utf-8 python -c ' *)",
+      "Bash(xargs ls -la)",
+      "Bash(sort -k5 -n -r)"
     ]
   }
 }

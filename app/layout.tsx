@@ -13,12 +13,12 @@ import RevealObserver from "@/src/components/RevealObserver";
 import SmartGuide from "@/src/components/SmartGuide";
 
 // ── Polices ───────────────────────────────────────────────────────────────────
-// Originale : Google CDN  ?family=DM+Sans:wght@300;400;500;600&family=Geist:wght@400;500;600
+// Originale : Google CDN  ?family=DM+Sans:wght@300;400;500;600;700&family=Geist:wght@400;500;600
 // Next.js auto-héberge les fichiers woff2 au build — plus de requête CDN externe.
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
+  weight: ["300", "400", "500", "600", "700"],
   variable: "--font-dm-sans",
   display: "swap",
 });

@@ -41,7 +41,11 @@ const typeIcon = (t: string) => TYPE_ICON[t] ?? "⚗";
 // Chaque analyseur pointe vers sa section de réactifs exacte (libellés alignés sur
 // products-reactifs.ts) plutôt que vers une recherche texte approximative.
 
-const COMPAT_MAP: Record<string, { cat: string; section: string }> = {
+type CompatTarget = { cat: string; section: string; label?: string };
+
+// Valeur = une section unique, ou un tableau de sections (instrument compatible
+// avec plusieurs gammes de réactifs → l'utilisateur choisit via un pop-up).
+const COMPAT_MAP: Record<string, CompatTarget | CompatTarget[]> = {
   INS00002: { cat: "biochimie",    section: "Biochimie Clinique - Reactifs Systeme Ferme" },
   INS00008: { cat: "biochimie",    section: "Biochimie Clinique - Reactifs Systeme Ferme" },
   INS00009: { cat: "biochimie",    section: "Biochimie Clinique - Reactifs Systeme Ferme" },
@@ -57,10 +61,23 @@ const COMPAT_MAP: Record<string, { cat: string; section: string }> = {
   INS00065: { cat: "urines",       section: "Urines -Reactifs LAURA XL" },
   "5075":   { cat: "autoimmunite", section: "Auto-Immunite -Reactifs DOT Automatises" },
   "4450":   { cat: "autoimmunite", section: "Auto-Immunite -Reactifs IFI Automatises AKLIDES" },
-  MA01073:  { cat: "allergie",     section: "Allergie : BioCLIA 1900 & 500" },
-  MA00502:  { cat: "allergie",     section: "Allergie : BioCLIA 1900 & 500" },
+  // BioCLIA 1900 & 500 : 2 gammes de réactifs compatibles → choix via pop-up
+  MA01073: [
+    { cat: "autoimmunite", section: "Auto-Immunite - Reactifs CLIA",  label: "Réactifs Auto-Immunité (CLIA)" },
+    { cat: "allergie",     section: "Allergie : BioCLIA 1900 & 500",  label: "Réactifs Allergie" },
+  ],
+  MA00502: [
+    { cat: "autoimmunite", section: "Auto-Immunite - Reactifs CLIA",  label: "Réactifs Auto-Immunité (CLIA)" },
+    { cat: "allergie",     section: "Allergie : BioCLIA 1900 & 500",  label: "Réactifs Allergie" },
+  ],
   "52000121": { cat: "autoimmunite", section: "Auto-Immunite -ELISA Manuel" },
 };
+
+// Normalise une entrée COMPAT_MAP en tableau (0, 1 ou N gammes de réactifs).
+function compatTargets(ref: string): CompatTarget[] {
+  const v = COMPAT_MAP[ref];
+  return v ? (Array.isArray(v) ? v : [v]) : [];
+}
 
 // ── Cat / type labels ──────────────────────────────────────────────────────────
 
@@ -347,12 +364,14 @@ function ProductPage({
   onClose: () => void;
   onAddToCart: (p: Product) => void;
   onRequestDevis: (p: Product) => void;
-  onShowCompat: (ref: string) => void;
+  onShowCompat: (target: { cat: string; section: string }) => void;
 }) {
   const { bg, color } = catStyle(product.cat);
   const isInstrument = product.type === "instrument";
-  const hasCompat = isInstrument && !!COMPAT_MAP[product.ref];
+  const compat = compatTargets(product.ref);
+  const hasCompat = isInstrument && compat.length > 0;
   const [lightbox, setLightbox] = useState(false);
+  const [compatOpen, setCompatOpen] = useState(false);
 
   // Instruments: split description into bullet points at " — " or " - "
   const rawPoints = product.description
@@ -372,7 +391,11 @@ function ProductPage({
 
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
-      if (e.key === "Escape") { if (lightbox) setLightbox(false); else onClose(); }
+      if (e.key === "Escape") {
+        if (compatOpen) setCompatOpen(false);
+        else if (lightbox) setLightbox(false);
+        else onClose();
+      }
     };
     document.addEventListener("keydown", handler);
     document.body.style.overflow = "hidden";
@@ -380,7 +403,7 @@ function ProductPage({
       document.removeEventListener("keydown", handler);
       document.body.style.overflow = "";
     };
-  }, [onClose, lightbox]);
+  }, [onClose, lightbox, compatOpen]);
 
   return (
     <div className="fixed inset-0 top-[68px] z-[900] bg-white overflow-y-auto">
@@ -513,7 +536,7 @@ function ProductPage({
               <FicheTechniqueButton productRef={product.ref} />
               {hasCompat && (
                 <button
-                  onClick={() => onShowCompat(product.ref)}
+                  onClick={() => { if (compat.length > 1) setCompatOpen(true); else onShowCompat(compat[0]); }}
                   className="flex items-center justify-center gap-2 w-full py-[11px] px-7 bg-transparent text-[#29A864] border-[1.5px] border-[#29A864] rounded-[9px] text-[14px] font-semibold cursor-pointer hover:bg-[#EDF8F1] transition-colors duration-150"
                 >
                   <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth={1.8} className="w-4 h-4 shrink-0" aria-hidden="true">
@@ -550,6 +573,54 @@ function ProductPage({
         </div>
 
       </div>
+
+      {/* Pop-up : choix de la gamme de réactifs compatibles (instruments multi-gammes) */}
+      {compatOpen && (
+        <div
+          className="fixed inset-0 z-[2000] flex items-center justify-center px-4"
+          style={{ background: "rgba(15,25,40,0.72)", backdropFilter: "blur(4px)" }}
+          onClick={() => setCompatOpen(false)}
+        >
+          <div
+            className="relative w-full max-w-[440px] max-h-[90dvh] overflow-y-auto rounded-2xl bg-white p-7"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setCompatOpen(false)}
+              className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full text-[#A9ADAA] hover:text-[#1B1F1D] hover:bg-[#F2F1EC] transition-colors"
+              aria-label="Fermer"
+            >
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" className="w-4 h-4">
+                <path d="M3 3l10 10M13 3L3 13" />
+              </svg>
+            </button>
+
+            <div className="mb-5">
+              <p className="text-[11px] font-semibold tracking-[0.7px] uppercase text-[#29A864] mb-1.5">Réactifs compatibles</p>
+              <h3 className="font-serif text-[20px] text-[#1B1F1D]">{product.desc}</h3>
+              <p className="text-[13px] text-[#6E6E6E] mt-1">Choisissez la gamme de réactifs à afficher.</p>
+            </div>
+
+            <div className="flex flex-col gap-2.5">
+              {compat.map((t) => (
+                <button
+                  key={`${t.cat}-${t.section}`}
+                  onClick={() => { setCompatOpen(false); onShowCompat(t); }}
+                  className="flex items-center justify-between gap-3 w-full text-left px-4 py-3.5 rounded-xl border border-[#E5E3DC] bg-white hover:border-[#29A864] hover:bg-[#EDF8F1] transition-colors duration-150 cursor-pointer group"
+                >
+                  <span className="flex items-center gap-3">
+                    <span className="w-2.5 h-2.5 rounded-full shrink-0" style={{ background: catStyle(t.cat).color }} />
+                    <span className="text-[14px] font-semibold text-[#1B1F1D]">{t.label ?? CAT_LABELS[t.cat] ?? t.cat}</span>
+                  </span>
+                  <svg viewBox="0 0 12 12" fill="none" stroke="#29A864" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-3.5 h-3.5 shrink-0 opacity-60 group-hover:opacity-100">
+                    <path d="M2 6h8M6.5 3l3 3-3 3" />
+                  </svg>
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
@@ -626,6 +697,10 @@ export default function CatalogueClient({
   // Ouvre directement la fiche d'un produit quand ?ref= est présent dans l'URL
   // (utilisé par le Guide intelligent). Sinon, ferme la fiche lors d'une navigation.
   useEffect(() => {
+    // Resynchronise la catégorie active avec l'URL : la navigation entre
+    // ?cat=… (menu déroulant Navbar) ne remonte pas le composant, donc sans
+    // ça activeCat resterait figé sur la première catégorie sélectionnée.
+    setActiveCat(searchParams.get("cat") ?? "all");
     const ref = searchParams.get("ref");
     const product = ref ? allProducts.find((p) => p.ref === ref) : null;
     setSelected(product ?? null);
@@ -701,13 +776,11 @@ export default function CatalogueClient({
     openDevis();
   }, [handleAddToCart, openDevis]);
 
-  const handleShowCompat = useCallback((ref: string) => {
-    const compat = COMPAT_MAP[ref];
-    if (!compat) return;
+  const handleShowCompat = useCallback((target: { cat: string; section: string }) => {
     setSelected(null);
     const params = new URLSearchParams();
-    params.set("cat",     compat.cat);
-    params.set("section", compat.section);
+    params.set("cat",     target.cat);
+    params.set("section", target.section);
     router.push(`/catalogue/reactifs?${params.toString()}`);
   }, [router]);
 
@@ -1054,11 +1127,11 @@ export default function CatalogueClient({
                     <div
                       key={`label-${i}`}
                       className="
-                        col-span-full flex items-center gap-3.5
-                        text-[13px] font-black text-[#1B1F1D] uppercase tracking-[0.7px]
-                        mt-8 mb-1 px-4 py-3
+                        col-span-full flex items-center justify-center gap-3.5
+                        text-[13px] font-bold text-[#1B1F1D] uppercase tracking-[0.7px]
+                        mt-8 mb-1 px-4 py-5
                         bg-[#EDF8F1] rounded-[10px]
-                        border-l-[6px] border-[#15623A] outline outline-2 outline-[#15623A]
+                        border-x-[6px] border-[#15623A]
                         sticky top-[128px] z-10
                       "
                       style={i === 0 ? { marginTop: 0 } : {}}

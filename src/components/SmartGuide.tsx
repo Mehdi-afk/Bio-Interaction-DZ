@@ -81,8 +81,8 @@ const STEPS: Record<string, GuideStep> = {
       },
       {
         id: "immunologie",
-        label: "Immunologie",
-        desc: "Chaîne ELISA microplaques",
+        label: "Chaîne ELISA",
+        desc: "Lecteur + laveur ELISA microplaques",
         results: ["52000121", "52000131"],
       },
     ],

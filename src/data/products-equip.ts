@@ -168,7 +168,7 @@ export const EQUIPEMENTS: GridItem[] = [
         "ref":  "5075",
         "kind":  "product",
         "type":  "instrument",
-        "description":  "Système compact et intégré pour immuno-dosages automatisés LINE/Dot. Capacité 1-24 échantillons, réactifs prêts à l emploi en cartouches jetables, scanner intégré",
+        "description":  "Système compact et intégré pour immuno-dosages automatisés LINE/Dot. Capacité 1-24 échantillons, réactifs prêts à l'emploi en cartouches jetables, scanner intégré",
         "marque":  "Generic Assays",
         "desc":  "DOT DIVER 2.0",
         "cat":  "autoimmunite",
@@ -211,7 +211,7 @@ export const EQUIPEMENTS: GridItem[] = [
         "image": "/images/equipements/BIOCLIA 500.jpg",
     },
     {
-        "label":  "Immunologie",
+        "label":  "Chaîne ELISA",
         "kind":  "section"
     },
     {
@@ -222,6 +222,7 @@ export const EQUIPEMENTS: GridItem[] = [
         "marque":  "ERBA",
         "desc":  "ERBA LISA SCAN",
         "cat":  "immunologie",
+        "badge":  "Lecteur",
         "conditionnement":  "100 protocoles de test ELISA programmables par l'utilisateur",
         "image": "/images/equipements/ERBA LISA SCAN.jpg",
     },
@@ -233,6 +234,7 @@ export const EQUIPEMENTS: GridItem[] = [
         "marque":  "ERBA",
         "desc":  "ERBA LISA WASH",
         "cat":  "immunologie",
+        "badge":  "Laveur",
         "conditionnement":  "50 protocoles de lavage définis par l'utilisateur",
         "image": "/images/equipements/ERBA LISA WASH.jpg",
     },
