@@ -22,12 +22,15 @@ const CONTACT_LINKS = [
   { href: "tel:+21328464830",                    label: "+213.28.46.48.30" },
   { href: "tel:+21328464890",                    label: "+213.28.46.48.90" },
   { href: "mailto:support@biointeractiondz.com", label: "support@biointeractiondz.com" },
+  { href: "mailto:biointeractionalgerie@gmail.com", label: "biointeractionalgerie@gmail.com" },
 ] as const;
 
 const COMMERCIAL_LINKS = [
   { href: "tel:+213770085453",                 label: "Commercial : +213.770.08.54.53" },
+  { href: "tel:+213560880816",                 label: "+213.560.88.08.16" },
   { href: "mailto:sales@biointeractiondz.com", label: "sales@biointeractiondz.com" },
   { href: "tel:+213770747250",                 label: "SAV\n+213.770.74.72.50" },
+  { href: "tel:+213560880830",                 label: "+213.560.88.08.30" },
   { href: "mailto:sav@biointeractiondz.com",   label: "sav@biointeractiondz.com" },
 ] as const;
 

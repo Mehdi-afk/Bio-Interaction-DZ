@@ -15,7 +15,7 @@ function ArrowIcon() {
 }
 
 const HOME_SHOWCASE = [
-  { key: "biochimie",    href: "/catalogue/equipements?cat=biochimie",    label: "ERBA XL 200",        desc: "Jusqu'à 1 000 tests/heure avec réactifs à tag RFID.",   image: "/images/equipements/ERBA XL 200.webp" },
+  { key: "biochimie",    href: "/catalogue/equipements?cat=biochimie",    label: "Biochimie Clinique", desc: "Famille d'analyseurs haute performance avec réactifs à tag RFID",   image: "/images/equipements/ERBA XL 200.webp" },
   { key: "hematologie",  href: "/catalogue/equipements?cat=hematologie",  label: "Hématologie",        desc: "Formule sanguine complète en moins de 60 secondes.",     image: "/images/equipements/ERBA H580.jpg" },
   { key: "hemostase",    href: "/catalogue/equipements?cat=hemostase",    label: "Hémostase",          desc: "TP, TCA, fibrinogène par coagulométrie optique.",        image: "/images/equipements/ERBA ECL 760.jpg" },
   { key: "urines",       href: "/catalogue/equipements?cat=urines",       label: "Analyse des Urines", desc: "Chimie sèche et sédiment urinaire automatisé.",          image: "/images/equipements/ERBA EC 90.jpg" },
