@@ -339,11 +339,16 @@ function RichListEditor({ block, onChange }: {
 }) {
   const activeEl  = useRef<HTMLDivElement | null>(null);
   const activeIdx = useRef<number>(-1);
-  const stableKeys = useRef<string[]>([]);
   const savedRange = useRef<Range | null>(null);
-  if (stableKeys.current.length !== block.items.length) {
-    while (stableKeys.current.length < block.items.length) stableKeys.current.push(uid());
-    stableKeys.current = stableKeys.current.slice(0, block.items.length);
+  // Clés React stables alignées sur block.items (items = chaînes sans id) — gérées en state.
+  const [keys, setKeys] = useState<string[]>(() => block.items.map(() => uid()));
+  // Garde-fou : si la longueur diverge hors des handlers, on réaligne pendant le rendu
+  // (pattern React « ajuster un state pendant le rendu ») sans lire ni muter de ref.
+  let renderKeys = keys;
+  if (keys.length !== block.items.length) {
+    renderKeys = keys.slice(0, block.items.length);
+    while (renderKeys.length < block.items.length) renderKeys.push(uid());
+    setKeys(renderKeys);
   }
 
   const [isBold,   setIsBold]   = useState(false);
@@ -434,7 +439,7 @@ function RichListEditor({ block, onChange }: {
       <div>
         {block.items.map((item, idx) => (
           <RichListItem
-              key={stableKeys.current[idx]}
+              key={renderKeys[idx]}
               idx={idx}
               initialContent={item}
               marker={block.listStyle === "numbered" ? `${idx+1}.` : block.listStyle === "dash" ? "—" : "•"}
@@ -442,25 +447,25 @@ function RichListEditor({ block, onChange }: {
               onUpdate={(html) => { const items=[...block.items]; items[idx]=html; onChange({...block,items}); }}
               onEnter={() => {
                 const items=[...block.items]; items.splice(idx+1,0,"");
-                stableKeys.current.splice(idx+1,0,uid());
+                setKeys(k => { const n=[...k]; n.splice(idx+1,0,uid()); return n; });
                 onChange({...block,items});
               }}
               onBackspaceEmpty={() => {
                 if (block.items.length<=1) return;
                 const items=block.items.filter((_,i)=>i!==idx);
-                stableKeys.current=stableKeys.current.filter((_,i)=>i!==idx);
+                setKeys(k => k.filter((_,i)=>i!==idx));
                 onChange({...block,items});
               }}
               onDelete={block.items.length>1 ? () => {
                 const items=block.items.filter((_,i)=>i!==idx);
-                stableKeys.current=stableKeys.current.filter((_,i)=>i!==idx);
+                setKeys(k => k.filter((_,i)=>i!==idx));
                 onChange({...block,items});
               } : undefined}
           />
         ))}
       </div>
 
-      <button onClick={() => { stableKeys.current.push(uid()); onChange({...block,items:[...block.items,""]}); }}
+      <button onClick={() => { setKeys(k => [...k, uid()]); onChange({...block,items:[...block.items,""]}); }}
         className="px-3 py-1.5 border border-dashed border-[#E5E3DC] rounded-lg text-[12px] text-[#A9ADAA] hover:border-[#29A864] hover:text-[#29A864] transition-colors bg-transparent cursor-pointer mt-1"
       >+ Ajouter un élément</button>
     </div>
